@@ -108,7 +108,7 @@ failure.** ⚠ Remember the `Lema&icirc;tre` lesson: a grep cannot see what it c
 | Ch. 5 "Designer biosphere?" (pp. 78–99) | ✅ **COMPLETE — pp. 78–99 captured.** 🔴 FENCED (design in biology) + ⚠ evolution sensitivity. Light log below. |
 | Ch. 6 "The nature and scope of evolution" (pp. 100–121) | ✅ **COMPLETE — pp. 100–121 captured.** 🔴🔴 FENCED + DENSE QUOTE-MINE ZONE. Light log below. |
 | Ch. 7 "The origin of life" (pp. 122–134) | ✅ **COMPLETE — pp. 122–134 captured.** 🔴 FENCED-ADJACENT (design in OOL); `originlife.html` is AHEAD. Light log below. |
-| Ch. 8 "The genetic code and its origin" (pp. 135–147) | ⚠ **pp. 135–137 + 140–147 captured; ⚠️ pp. 138–139 SKIPPED (gap).** 🔴 FENCED; `originlife.html` AHEAD. Light log below. |
+| Ch. 8 "The genetic code and its origin" (pp. 135–147) | ✅ **COMPLETE — pp. 135–147 captured (138–139 gap now FILLED).** 🔴 FENCED; `originlife.html` AHEAD. Light log below. |
 | Ch. 9 "Matters of information" (pp. 148–162) | ✅ **COMPLETE — pp. 148–162 captured.** 🔴 FENCED (information/Dembski). Light log below. |
 | Ch. 10 "The monkey machine" (pp. 163–173) | ✅ **COMPLETE — pp. 163–173 captured.** 🔴 FENCED. Light log below. |
 | Ch. 11 "The origin of information" (pp. 174–192) | ⚠ **pp. 174–177 captured; pp. 178–192 MISSING.** 🔴🔴 FENCED (explicit design inference: Dembski/SETI/"it from bit"). Light log below. |
@@ -849,6 +849,14 @@ point; Schützenberger). ⚠ All fenced; standard ID argumentation. Nothing acti
 > **STATUS (ch. 10 complete + ch. 11 opening):** both fenced; nothing actionable. ⚠️ **pp. 138–139 STILL the
 > one open gap.** pp. 178–192 (rest of ch. 11) awaited; then ⭐ **ch. 12 "Violating nature?" (pp. 193–206) —
 > the Hume-on-miracles chapter, which is SAFE to mine and pairs with `library/miracles.html`.**
+
+**✅ GAP FILLED (2026-11-05): pp. 138–139 — "How does the DNA give rise to the proteins?"** (ch. 8). Content
+confirms the page range (sits between p. 137 "What is DNA?" and p. 140 "Is it all in the genes?"): the
+ribosome / mRNA / transcription–translation / codon–tRNA mechanism (the "DNA as magnetic-tape / Turing-
+machine read-head" analogy), then **Carl Woese**, **John Maynard Smith** + **Eörs Szathmáry**, **Robert
+Shapiro**, and the **chicken-or-egg** problem (which came first, proteins or DNA) → the **RNA-world / pre-RNA
+"replicator-first"** discussion that flows into p. 140. 🔴 Fenced (genetic code / OOL); `originlife.html`
+ahead; nothing to mine. **Ch. 8 is now fully captured with no gap.**
 
 ## Still needed to mine this book
 
