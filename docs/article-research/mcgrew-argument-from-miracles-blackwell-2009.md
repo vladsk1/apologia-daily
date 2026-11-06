@@ -135,7 +135,21 @@ themselves now agree), sceptic breadth, and freedom from the numerical apparatus
 ## Live-door status
 Docs-only. Backlog rows **BW-1…BW-6** logged in `docs/content-backlog.md` (2026-11-05). The chapter is
 already on `our-sources.html` twice over — in the auto-generated cited-works list (via minimalfacts's
-bibliography) and now a "studied" card. Executing any BW row re-opens the gate: **resurrection tier =
+bibliography) and now a "studied" card.
+
+**SHIPPED 2026-11-06 to `library/disciplesbelief.html`** (four-lens dual-consensus CLEAN + confirmation; stamp 2026-11-06):
+- **R1 / BW-1** — early-Jerusalem willingness-to-die: Acts 4:18–20; 5:29/33/40–42 added to the Sincerity section, plus **1 Clement 5** (c. AD 96) as the earliest non-legendary external attestation in the Moss reply. All inline, no footnote renumber (sup-li 31/31). ⚠ **Pliny *Ep.* 10.96 was DROPPED** as post-apostolic (c. 112) — it risked turning a clean Moss reply into an overclaim. The 1 Clement sentence was **softened** after neutrality flagged the contested martyrdom-*cause* reading (Zwierlein 2009 / Eastman 2014 read the deaths via *dia zēlon*, envy/strife): manner of death left open, "put to death for their witness" removed, cited **1 Clement 5** (not 5–6; Peter/Paul are named in ch. 5).
+- **R2 / BW-2** — physicality cluster (Luke 24:39–43 / John 20:27 / Acts 2:29–32) added to the vision reply, bounded to what the reports *claim*. ⚠ Do **not** label Luke 24 / John 20 "the earliest reports" — they are late strata; the creed (1 Cor 15:3–5) is earliest (that exact slip was caught and fixed in gate round 1).
+- **R3 / BW-3** — fear/doubt no-expectation cluster (Mark 14:66–72 / John 20:19 / Matt 28:17) extending the point to the Twelve, rebounded to *not-expecting* (dropped the contested hallucination-psychology claim). Wright pp. 200–06 was **already cited** (fn 5/6) = corroboration, not re-added.
+
+**RE-TARGETED 2026-11-06:**
+- **R4 / BW-4** — the James martyrdom dossier was **not** executed in disciplesbelief (the 1 Cor 15:7 appearance is already there, lines 179/229; the Hegesippus *HE* 2.23 parapet narrative is the embellished martyr-literature that essay deliberately excludes). Re-targeted to **`library/sceptics.html`** — still open.
+
+**STILL OPEN:**
+- **R5 / BW-5** → `library/emptytomb.html` §3 (the two rabbinic primaries; keep the existing "do-not-overstate" fence verbatim; MK/ES mirror).
+- **R6 / BW-6** → a general gospel-reliability essay, e.g. `library/consistency.html` (the legal "substantial truth under circumstantial variety" authorities).
+
+Executing a remaining BW row re-opens the gate: **resurrection tier =
 dual consensus** (citations → argument → orthodoxy + neutrality), and the MK/ES mirror rule applies to
-`disciplesbelief`/`emptytomb`. Verify every primary against the Blackwell **print** pagination (not the
+`emptytomb` (no `disciplesbelief` mirror exists). Verify every primary against the Blackwell **print** pagination (not the
 draft PDF) before drafting; keep Ehrman bounded and never claim "history proves God raised him."
