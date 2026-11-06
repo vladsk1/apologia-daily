@@ -120,11 +120,12 @@ mkdirSync(outDir, { recursive: true });
 const clip = { x: 0, y: 0, width: W, height: H, scale: 1 };
 process.stdout.write(`capturing ${nFrames} frames @ ${FPS}fps → ${outDir}\n`);
 const FRAME_TIMEOUT = 20000, MAX_RETRY = 3, MAX_RESTART = 8;
+const START = Math.max(0, parseInt(process.env.REEL_START || '0', 10) || 0);
 
 let c = await connectAndSetup();
 let restarts = 0;
 try {
-  for (let f = 0; f < nFrames; f++) {
+  for (let f = START; f < nFrames; f++) {
     let shot = null, lastErr;
     while (shot === null) {
       for (let attempt = 0; attempt <= MAX_RETRY; attempt++) {

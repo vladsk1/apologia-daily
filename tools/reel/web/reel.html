@@ -272,6 +272,12 @@
 
   /* chiasm mirror: colour-paired twins (gold ↔ sky), centred bars form a diamond */
   .chiasm.mirror{align-items:center}
+  .scene.inv-scene .beat{height:38%; padding-bottom:4px}
+  .structwrap.inv-wrap{top:38%; padding:0; justify-content:center; align-items:flex-start}
+  .invsvg{width:620px; height:484px; overflow:visible; flex:0 0 auto}
+  .scene.fp-scene .beat{height:34%; padding-bottom:4px}
+  .structwrap.fp-wrap{top:34%; padding:0; justify-content:center; align-items:flex-start}
+  .fpsvg{width:392px; height:468px; overflow:visible; flex:0 0 auto}
   .crow .cbar.sky{background:linear-gradient(90deg, rgba(159,195,232,.5), var(--sky))}
   .crow.hot .cbar.sky{box-shadow:0 0 34px rgba(159,195,232,.7)}
 
@@ -470,6 +476,37 @@
         ov.style.strokeDasharray="42 "+len; ov.style.opacity="0"; svg.appendChild(ov);
         s.paths.push({el:p, ov:ov, len:len, ln:s.lnodes[lk[0]], rn:s.rnodes[lk[1]], ll:s.llabs[lk[0]], rl:s.rlabs[lk[1]]}); });
     }
+    else if(def.type==="inversion"){ wrap.classList.add("inv-wrap");
+      var isvg=document.createElementNS(SVGNS,"svg"); isvg.setAttribute("class","invsvg"); isvg.setAttribute("viewBox","0 0 820 640"); wrap.appendChild(isvg);
+      var idef=document.createElementNS(SVGNS,"defs");
+      idef.innerHTML='<filter id="invglow" x="-120%" y="-120%" width="340%" height="340%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>';
+      isvg.appendChild(idef);
+      var gnd=document.createElementNS(SVGNS,"line"); gnd.setAttribute("x1","250"); gnd.setAttribute("y1","590"); gnd.setAttribute("x2","570"); gnd.setAttribute("y2","590"); gnd.setAttribute("stroke","rgba(200,169,81,0.35)"); gnd.setAttribute("stroke-width","2"); isvg.appendChild(gnd);
+      var arc=document.createElementNS(SVGNS,"path"); arc.setAttribute("d","M410,66 C 516,250 318,372 410,520"); arc.setAttribute("fill","none"); arc.setAttribute("stroke","#e6c975"); arc.setAttribute("stroke-width","3.2"); arc.setAttribute("stroke-linecap","round"); arc.setAttribute("filter","url(#invglow)"); isvg.appendChild(arc);
+      var alen=arc.getTotalLength(); arc.style.strokeDasharray=alen; arc.style.strokeDashoffset=alen;
+      var src=document.createElementNS(SVGNS,"circle"); src.setAttribute("cx","410"); src.setAttribute("cy","66"); src.setAttribute("r","9"); src.setAttribute("fill","#fff7df"); src.setAttribute("filter","url(#invglow)"); src.style.opacity="0"; isvg.appendChild(src);
+      var comet=document.createElementNS(SVGNS,"circle"); comet.setAttribute("r","6"); comet.setAttribute("fill","#fff7df"); comet.setAttribute("filter","url(#invglow)"); comet.style.opacity="0"; isvg.appendChild(comet);
+      var rays=[]; for(var ir=0; ir<9; ir++){ var ang=(-90+(ir-4)*26)*Math.PI/180; var r1=46, r2=74, cx0=410, cy0=468;
+        var ray=document.createElementNS(SVGNS,"line"); ray.setAttribute("x1",(cx0+r1*Math.cos(ang)).toFixed(1)); ray.setAttribute("y1",(cy0+r1*Math.sin(ang)).toFixed(1)); ray.setAttribute("x2",(cx0+r2*Math.cos(ang)).toFixed(1)); ray.setAttribute("y2",(cy0+r2*Math.sin(ang)).toFixed(1)); ray.setAttribute("stroke","#f1da94"); ray.setAttribute("stroke-width","2.4"); ray.setAttribute("stroke-linecap","round"); ray.style.opacity="0"; isvg.appendChild(ray); rays.push(ray); }
+      var fig=document.createElementNS(SVGNS,"g"); fig.setAttribute("filter","url(#invglow)"); fig.style.opacity="0";
+      fig.innerHTML='<circle cx="410" cy="468" r="21" fill="#c8a951"/><rect x="395" y="494" width="30" height="84" rx="15" fill="#c8a951"/>'; isvg.appendChild(fig);
+      s.arc=arc; s.alen=alen; s.src=src; s.comet=comet; s.fig=fig; s.rays=rays; s.def=def;
+    }
+    else if(def.type==="fingerprint"){ wrap.classList.add("fp-wrap");
+      var fsvg=document.createElementNS(SVGNS,"svg"); fsvg.setAttribute("class","fpsvg"); fsvg.setAttribute("viewBox","0 0 520 620"); wrap.appendChild(fsvg);
+      var fdef=document.createElementNS(SVGNS,"defs");
+      fdef.innerHTML='<filter id="fpglow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>';
+      fsvg.appendChild(fdef);
+      var fN=def.n||5, fcx=260, fbaseY=556; s.ridges=[];
+      for(var fr=0; fr<fN; fr++){ var fw=52+fr*46, fh=70+fr*62, ftop=fbaseY-fh*1.5;
+        var fd="M"+(fcx-fw*0.45).toFixed(1)+","+fbaseY+" C"+(fcx-fw).toFixed(1)+","+(fbaseY-fh).toFixed(1)+" "+(fcx-fw).toFixed(1)+","+ftop.toFixed(1)+" "+fcx+","+ftop.toFixed(1)+" C"+(fcx+fw).toFixed(1)+","+ftop.toFixed(1)+" "+(fcx+fw).toFixed(1)+","+(fbaseY-fh).toFixed(1)+" "+(fcx+fw*0.45).toFixed(1)+","+fbaseY;
+        var fbp=document.createElementNS(SVGNS,"path"); fbp.setAttribute("d",fd); fbp.setAttribute("fill","none"); fbp.setAttribute("stroke","rgba(200,169,81,0.22)"); fbp.setAttribute("stroke-width","3"); fbp.setAttribute("stroke-linecap","round"); fsvg.appendChild(fbp);
+        var fov=document.createElementNS(SVGNS,"path"); fov.setAttribute("d",fd); fov.setAttribute("fill","none"); fov.setAttribute("stroke","#f1da94"); fov.setAttribute("stroke-width","3.4"); fov.setAttribute("stroke-linecap","round"); fov.setAttribute("filter","url(#fpglow)");
+        var flen=fbp.getTotalLength(); fov.style.strokeDasharray=flen; fov.style.strokeDashoffset=flen; fov.style.opacity="0"; fsvg.appendChild(fov);
+        s.ridges.push({base:fbp, ov:fov, len:flen}); }
+      var fcore=document.createElementNS(SVGNS,"circle"); fcore.setAttribute("cx",fcx); fcore.setAttribute("cy",(fbaseY-70*1.5+16).toFixed(1)); fcore.setAttribute("r","7"); fcore.setAttribute("fill","#fff7df"); fcore.setAttribute("filter","url(#fpglow)"); fcore.style.opacity="0"; fsvg.appendChild(fcore);
+      s.core=fcore; s.def=def;
+    }
     return s;
   }
 
@@ -484,6 +521,8 @@
       if(sc.structure && sc.structure.type==="timeline") el.classList.add("tl-scene");
       if(sc.structure && sc.structure.type==="compare") el.classList.add("cmp-scene");
       if(sc.structure && sc.structure.type==="cone") el.classList.add("cone-scene");
+      if(sc.structure && sc.structure.type==="inversion") el.classList.add("inv-scene");
+      if(sc.structure && sc.structure.type==="fingerprint") el.classList.add("fp-scene");
       if(sc.structure && sc.structure.variant==="premises") el.classList.add("prem");
       if(sc.structure && sc.structure.variant==="traits") el.classList.add("trait");
       var beats=sc.beats||[{center:true, lines:sc.lines, kicker:sc.kicker}];
@@ -728,6 +767,23 @@
         if(lt>start && seq.indexOf(h)<0) cell.classList.add("dim2"); else cell.classList.remove("dim2"); }
       for(var k2=0; k2<done; k2++){ if(s.items[seq[k2]]) s.items[seq[k2]].el.classList.add("hot"); }
       if(s.counterEl){ s.counterEl.style.opacity=ease((lt-start)/500); s.cnum.textContent=String(done); }
+    } else if(s.type==="inversion"){
+      s.src.style.opacity=ease((lt-250)/500).toFixed(3);
+      var dr=ease((lt-520)/1500);
+      s.arc.style.strokeDashoffset=(s.alen*(1-dr)).toFixed(1);
+      if(dr>0 && dr<0.999){ var pt=s.arc.getPointAtLength(s.alen*dr); s.comet.setAttribute("cx",pt.x.toFixed(1)); s.comet.setAttribute("cy",pt.y.toFixed(1)); s.comet.style.opacity="1"; }
+      else s.comet.style.opacity="0";
+      var land=ease((lt-1700)/1000);
+      s.fig.style.opacity=(0.3+0.7*land).toFixed(3);
+      s.fig.style.transform="translateY("+(46*(1-land)).toFixed(1)+"px)";
+      var rb=ease((lt-2150)/700)*0.9;
+      for(var iv=0; iv<s.rays.length; iv++) s.rays[iv].style.opacity=rb.toFixed(3);
+    } else if(s.type==="fingerprint"){
+      for(var fp=0; fp<s.ridges.length; fp++){ var rd=s.ridges[fp];
+        if(fp<cur){ var pz=0.78+0.22*Math.sin(lt/360+fp*1.3); rd.ov.style.strokeDashoffset="0"; rd.ov.style.opacity=pz.toFixed(3); }
+        else if(fp===cur){ var dr2=ease((blt-120)/650); rd.ov.style.strokeDashoffset=(rd.len*(1-dr2)).toFixed(1); rd.ov.style.opacity=(dr2>0?"1":"0"); }
+        else { rd.ov.style.strokeDashoffset=rd.len; rd.ov.style.opacity="0"; } }
+      if(s.core){ var frac=clamp((cur+1)/s.ridges.length); var cg=ease((lt-500)/1400)*frac; s.core.style.opacity=(cg*(0.72+0.28*Math.abs(Math.sin(lt/300)))).toFixed(3); }
     } else if(s.type==="cone"){ drawCone(s.ctx, lt, s.def); }
   }
 
