@@ -17,7 +17,7 @@
 
   var MAP = {
     // God's existence
-    kalam: A, finetuning: A, leibniz: A, cosmic: A, bigbang: A, laws: A, mathematics: A,
+    kalam: A, finetuning: A, leibniz: A, cosmic: A, bigbang: A, laws: A, limits: A, mathematics: A,
     beauty: A, desire: A, religious: A, thomistic: A, privileged: A, ontological: A,
     consciousness: A, reason: A, moral: MORAL, evil: SUFFER,
     originlife: SCI, cambrian: SCI, 'science-history': SCI,

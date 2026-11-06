@@ -60,7 +60,7 @@
     minimalfacts: ['hab','bop'], emptytomb: ['hab','bop'], paulconv: ['hab','bop'], appearances: ['hab','bop'],
     sceptics: ['hab','bop'], burial: ['hab','bop'], disciplesbelief: ['hab','bop'], postres: ['hab','bop'],
     earlycreed: ['hab','bop'],
-    kalam: ['gt'], finetuning: ['gt'], cosmic: ['gt'], originlife: ['gt'], laws: ['gt'], moral: ['gt'],
+    kalam: ['gt'], finetuning: ['gt'], cosmic: ['gt'], originlife: ['gt'], laws: ['gt'], limits: ['gt'], moral: ['gt'],
     manuscript: ['gt'], earlydate: ['gt'], eyewitnesses: ['gt'], jesus_claims: ['gt'], jesus_as_god_nt: ['gt']
   };
   function clubCard(b) {
