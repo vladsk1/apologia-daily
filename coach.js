@@ -58,6 +58,7 @@
   john11:{n:"John 1:1 and the Pre-existence of Christ",c:"Jesus"},
   kalam:{n:"The Kalam Cosmological Argument",c:"God's Existence"},
   laws:{n:"The Argument from the Laws of Nature",c:"Science & Faith"},
+  limits:{n:"Does Science Disprove God? The Scope and Limits of Science",c:"Science & Faith"},
   leibniz:{n:"The Leibniz Contingency Argument",c:"God's Existence"},
   manuscript:{n:"The Manuscript Reliability Argument",c:"Biblical Reliability"},
   mathematics:{n:"The Argument from Mathematics",c:"Science & Faith"},
