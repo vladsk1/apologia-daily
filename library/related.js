@@ -61,7 +61,8 @@
     sceptics: ['hab','bop'], burial: ['hab','bop'], disciplesbelief: ['hab','bop'], postres: ['hab','bop'],
     earlycreed: ['hab','bop'],
     kalam: ['gt'], finetuning: ['gt'], cosmic: ['gt'], originlife: ['gt'], laws: ['gt'], limits: ['gt'], moral: ['gt'],
-    manuscript: ['gt'], earlydate: ['gt'], eyewitnesses: ['gt'], jesus_claims: ['gt'], jesus_as_god_nt: ['gt']
+    manuscript: ['gt'], earlydate: ['gt'], eyewitnesses: ['gt'], jesus_claims: ['gt'], jesus_as_god_nt: ['gt'],
+    'jesus-is-yahweh': ['gt'], 'christ-before-bethlehem': ['gt'], 'crucified-messiah': ['gt'], 'god-crucified': ['gt'], 'jesus-messiah-claim': ['gt'], 'nt-use-of-ot': ['gt']
   };
   function clubCard(b) {
     return '<a href="/reading-club.html?book=' + b.id + '" style="display:flex;flex-direction:column;' +

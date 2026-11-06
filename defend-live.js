@@ -28,11 +28,11 @@
     manuscript: BIB, deadseascrolls: BIB, archaeology: BIB, canon: BIB, earlydate: BIB,
     eyewitnesses: BIB, names: BIB, coincidences: BIB, consistency: BIB, multiatt: BIB,
     hist_jesus: BIB, jewishness: BIB, prophecy: BIB, messianic_prophecy: BIB,
-    daniel70: BIB, typology: BIB, uniqueness: BIB,
+    daniel70: BIB, typology: BIB, 'nt-use-of-ot': BIB, uniqueness: BIB,
     // Jesus and the Trinity
     jesus_claims: DEITY, jesus_as_god_nt: DEITY, titles: DEITY, hands: DEITY, phil2: DEITY,
     john11: DEITY, 'jesus-is-yahweh': DEITY, 'worship-of-jesus': DEITY, 'paul-divinity': DEITY,
-    'christ-before-bethlehem': DEITY, 'crucified-messiah': DEITY, 'jesus-messiah-claim': DEITY, virginbirth: DEITY,
+    'christ-before-bethlehem': DEITY, 'crucified-messiah': DEITY, 'jesus-messiah-claim': DEITY, 'god-crucified': DEITY, virginbirth: DEITY,
     jesuschar: DEITY, humanity: DEITY, nt_trinity: DEITY, ot_trinity: DEITY, shema: DEITY,
     modalism: DEITY, relations: DEITY, philosophical_trinity: DEITY,
     'proto-trinitarian': DEITY, early_church_trinity: DEITY, eternal_generation: DEITY,
