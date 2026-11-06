@@ -135,3 +135,15 @@ All leads sit inside the possibility/historian's-bar lane or the already-concede
 collapses the wall. MM-7 was executed 2026-11-06 under that gate (citations → argument → orthodoxy +
 neutrality; dual-consensus); Paley was verified against the primary before drafting. All of this note's
 rows (MM-1, the MM-2 Craig fold, and MM-7) are now SHIPPED — nothing in this ledger is open.
+
+## Five-surface cross-check — 2026-11-06 (run by session)
+Topic: the problem of miracles + the historicity of the resurrection (Hume's probability calculus; Craig's Bayesian rebuttal to Ehrman). The calculation is a non-recommendation; Ehrman is kept bounded.
+- [x] library/*.html essay(s) — read in full: `library/miracles.html` and `library/minimalfacts.html`. The qualitative kernel of Craig's two moves (Hume's calculus "proves too much"; the resurrection is the best explanation of the facts both sides grant) is already present, stated number-free. Ehrman is bounded — he grants crucifixion and the disciples' sincere belief but disputes the empty tomb, and the essays never put the tomb or resurrection in his mouth.
+- [x] /answers/* — "do-miracles-really-happen", "is there evidence that Jesus rose from the dead", and "wasnt-the-resurrection-a-legend" carry the case; corroboration, no new row.
+- [x] ev-s*.html tab card(s) — ev-s2 (Resurrection) and the arg-miracles card on ev-s5 corroborate; no stale claim.
+- [x] ev-m*.html mastery page(s) — ev-m-minimal / ev-m-postresurrection carry the resurrection side; the miracles side has an ev-s card but no ev-m mastery page (N/A there).
+- [x] /briefs — `miracles-hume-spinoza` and `resurrection-minimal-facts` present and current; corroboration.
+- [x] /sources — N/A / out of scope: Craig's primaries and the debate transcript are modern and barred from the PD-patristic /sources corpus.
+- Mandatory-fix findings (verdict 2): none.
+- Backlog rows logged (verdicts 3/4): none — the Bayes calculation, Swinburne's ~97%, and the "Y to 0 implies the ratio to 1" move are all non-recommendations; the qualitative kernel is already live. (MM-1, the MM-2 Craig fold, and MM-7 — the actionable rows from this note — are SHIPPED.)
+- "Is the source better than our essay anywhere?" — No. Our essays already make the qualitative case and keep Ehrman bounded, which the live debate format does not; the only thing the debate adds is the retired calculation.

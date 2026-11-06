@@ -87,3 +87,15 @@ hazard: the paper's probabilistic title could invite readers toward the math the
 Docs-only. Not promoted to `/sources` or `/briefs`. No row in `docs/content-backlog.md` (the optional
 one-clause wording sharpening is tracked only here, as a discretionary non-row per the P4
 "corroboration-only leads don't get a row" rule).
+
+## Five-surface cross-check — 2026-11-06 (run by session)
+Topic: the formal epistemology underneath the independence-of-witnesses point (agreement-with-variation strengthens testimony). Decisive non-recommendation — the formal/numeric apparatus is exactly what the site does not publish; abstract-level read only.
+- [x] library/*.html essay(s) — read in full: `library/minimalfacts.html` (the fenced McGrew causal-independence paragraph, ~line 185); `library/emptytomb.html` and `library/disciplesbelief.html` skimmed for the independence-of-witnesses language. The qualitative point is present and fenced.
+- [x] /answers/* — "what-are-undesigned-coincidences" and "why-do-the-gospel-resurrection-accounts-differ" carry the qualitative point; corroboration.
+- [x] ev-s*.html tab card(s) — the undesigned-coincidences material on ev-s4 (Reliability) corroborates; no stale claim.
+- [x] ev-m*.html mastery page(s) — ev-m-coincidences.html (undesigned coincidences) carries the point qualitatively; no mastery page needs the formal apparatus.
+- [x] /briefs — `undesigned-coincidences` present and current; corroboration.
+- [x] /sources — N/A / out of scope: a 2020 Springer (*Erkenntnis*) paper can never enter the public-domain-only /sources corpus.
+- Mandatory-fix findings (verdict 2): none.
+- Backlog rows logged (verdicts 3/4): none — this is Lydia McGrew's formal apparatus underneath a point we already make qualitatively; the number-free kernel is already live and the formalisation is a non-recommendation.
+- "Is the source better than our essay anywhere?" — No. It is the same point formalised, and the formalisation (dependence/independence probability math) is precisely what we do not publish.

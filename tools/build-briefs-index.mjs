@@ -71,13 +71,17 @@ const mod =
   'export const VERIFIED_BRIEFS = ' + JSON.stringify(verified) + ';\n';
 
 if (process.argv.includes('--check')) {
+  // Compare logical content only: normalize CRLF -> LF so an autocrlf checkout
+  // (CRLF on Windows) never reads as "stale" against the generator's LF output.
+  // No-op on Linux CI (already LF); real content drift is still caught.
+  const norm = (s) => s.replace(/\r\n/g, '\n').trim();
   let curIdx = ''; try { curIdx = readFileSync(ROOT + OUT, 'utf8'); } catch {}
-  if (curIdx.trim() !== json.trim()) {
+  if (norm(curIdx) !== norm(json)) {
     console.error(`✗ ${OUT} is stale — run: node tools/build-briefs-index.mjs`);
     process.exit(1);
   }
   let curMod = ''; try { curMod = readFileSync(ROOT + MOD_OUT, 'utf8'); } catch {}
-  if (curMod.trim() !== mod.trim()) {
+  if (norm(curMod) !== norm(mod)) {
     console.error(`✗ ${MOD_OUT} is stale — run: node tools/build-briefs-index.mjs`);
     process.exit(1);
   }

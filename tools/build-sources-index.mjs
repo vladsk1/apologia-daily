@@ -70,15 +70,19 @@ const mod =
   'export const VERIFIED_SOURCES = ' + modJson + ';\n';
 
 if (process.argv.includes('--check')) {
+  // Compare logical content only: normalize CRLF -> LF so an autocrlf checkout
+  // (CRLF on Windows) never reads as "stale" against the generator's LF output.
+  // No-op on Linux CI (already LF); real content drift is still caught.
+  const norm = (s) => s.replace(/\r\n/g, '\n').trim();
   let current = '';
   try { current = readFileSync(ROOT + OUT, 'utf8'); } catch {}
-  if (current.trim() !== json.trim()) {
+  if (norm(current) !== norm(json)) {
     console.error(`✗ ${OUT} is stale — run: node tools/build-sources-index.mjs`);
     process.exit(1);
   }
   let curMod = '';
   try { curMod = readFileSync(ROOT + MOD_OUT, 'utf8'); } catch {}
-  if (curMod.trim() !== mod.trim()) {
+  if (norm(curMod) !== norm(mod)) {
     console.error(`✗ ${MOD_OUT} is stale — run: node tools/build-sources-index.mjs`);
     process.exit(1);
   }

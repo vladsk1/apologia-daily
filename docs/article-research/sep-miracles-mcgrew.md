@@ -125,3 +125,15 @@ theological-objection strings ("disfigure … his own work"; "avowal of weakness
 dated 1754** (first ed., ESTC T64655 — 1757 is a later printing). Nothing promoted to `/sources` (SEP is
 not PD-verbatim) or `/briefs`. Any further edit re-opens the gate: citations → argument → orthodoxy
 (resurrection-adjacent leads touching `minimalfacts` are dual-consensus).
+
+## Five-surface cross-check — 2026-11-06 (run by session)
+Topic: miracles epistemology (Hume's "proves too much", Spinoza's impossibility, independent-witness convergence). The quantitative odds form is a site-wide non-recommendation; the possibility/actuality wall holds.
+- [x] library/*.html essay(s) — read in full: `library/miracles.html` (already built from this SEP entry; cites McGrew/Larmer/Earman) and `library/minimalfacts.html` (for the actuality-side leads SEP raises, which belong there, not here). The qualitative kernel — Hume proves too much; independent witnesses — is already present and lands an explicit verdict.
+- [x] /answers/* — "do-miracles-really-happen" carries the qualitative case; corroboration, no new row.
+- [x] ev-s*.html tab card(s) — the arg-miracles card on ev-s5 corroborates the possibility + historian's-bar treatment; no stale claim.
+- [x] ev-m*.html mastery page(s) — N/A: no ev-m-miracles mastery page exists (the miracles topic has an ev-s tab card but no mastery page), so there is no memorised surface for this topic to check.
+- [x] /briefs — `miracles-hume-spinoza` present and current; corroboration.
+- [x] /sources — N/A / out of scope: Hume (1748) and the other primaries SEP names are not in the PD-patristic /sources corpus, and the note's own rule bars SEP text from /sources.
+- Mandatory-fix findings (verdict 2): none.
+- Backlog rows logged (verdicts 3/4): none — every portable lead is either already present (the qualitative kernel) or a non-recommendation (SEP's §2.2.4 odds math).
+- "Is the source better than our essay anywhere?" — No. SEP is a broader survey, but our essay lands an explicit verdict its agnostic framing does not; the only material SEP adds beyond ours is the retired numeric apparatus.
