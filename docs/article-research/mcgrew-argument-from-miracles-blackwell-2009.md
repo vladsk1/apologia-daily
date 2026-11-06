@@ -108,9 +108,10 @@ consistent with the chapter.
 - **R5 (MED-LOW, missing primary):** the women pericope — add **Talmud *Rosh Hashanah* 1.8c + *b. Sotah*
   31b** alongside Josephus, with the same "do-not-overstate / disputed whether formally barred" fence
   emptytomb already carries. → `library/emptytomb.html` §3.
-- **R6 (LOW):** the legal "substantial truth under circumstantial variety" authorities (Starkie 1833,
-  Greenleaf 1874, Paley) — better suited to a general gospel-reliability essay than the four
-  resurrection essays.
+- **R6 (LOW → CLOSED as corroboration 2026-11-06):** the legal "substantial truth under circumstantial
+  variety" authorities (Starkie 1833, Greenleaf 1874, Paley). On a Step Zero read, `library/consistency.html`
+  already carries the principle, the exact phrase, and the Paley attribution via Greenleaf (fn 14), bounded;
+  only Starkie is unnamed, and stacking a third jurist adds no argument. No edit. (See Live-door status.)
 
 **Hazard — ours is better (5):** the chapter's 2009 use of **Habermas's consensus statistics** (the
 ~75% empty-tomb figure; "majority of scholars grant the disciples testified"). Do NOT strengthen our
@@ -148,10 +149,9 @@ bibliography) and now a "studied" card.
 **RE-TARGETED 2026-11-06:**
 - **R4 / BW-4** — the James martyrdom dossier was **not** executed in disciplesbelief (the 1 Cor 15:7 appearance is already there, lines 179/229; the Hegesippus *HE* 2.23 parapet narrative is the embellished martyr-literature that essay deliberately excludes). Re-targeted to **`library/sceptics.html`**, then **CLOSED 2026-11-06 as CORROBORATION** after a Step Zero full read: `sceptics.html` (the dedicated James essay) already carries the whole dossier, certified — Josephus *Ant.* 20.200 (line 157, + the minority "who was called Christ"-gloss caveat), Hegesippus/Eusebius *HE* 2.23 **already fenced as "more legendary… cited with care"** (line 157), and 1 Cor 15:7 with the embarrassment "hardest single line" reading (lines 151–153, 185). The essay is if anything more careful than the mine (Hegesippus kept fenced, not reproduced as reliable). Nothing to add; no edit, no gate. No MK/ES mirror exists.
 
-**STILL OPEN:**
-- **R6 / BW-6** → a general gospel-reliability essay, e.g. `library/consistency.html` (the legal "substantial truth under circumstantial variety" authorities).
+**STILL OPEN:** none — all six BW rows resolved (BW-1/2/3/5 shipped; BW-4 and BW-6 closed as corroboration).
 
-Executing a remaining BW row re-opens the gate: **resurrection tier =
-dual consensus** (citations → argument → orthodoxy + neutrality), and the MK/ES mirror rule applies to
-`emptytomb` (no `disciplesbelief` mirror exists). Verify every primary against the Blackwell **print** pagination (not the
-draft PDF) before drafting; keep Ehrman bounded and never claim "history proves God raised him."
+**CLOSED 2026-11-06 as CORROBORATION (no edit, no gate):**
+- **R6 / BW-6** — the legal "substantial truth under circumstantial variety" authorities. A Step Zero full read of **`library/consistency.html`** ("Are There Contradictions in the Bible?") shows the essay **already carries the entire R6 point**, and more carefully than the mine: body line 171 develops **Simon Greenleaf**, and footnote 14 quotes the exact principle — *"the underlying principle—'substantial truth, under circumstantial variety'—he credits in the same section to William Paley"* — while bounding it ("Greenleaf … wrote as a Christian apologist, and a nineteenth-century courtroom test does not by itself settle a historical question; he is cited here only for the evidentiary principle he names, which is a recognized one"). So the **phrase, its Paley attribution, and a Greenleaf application are all already live and fenced.** Of the mine's trio only **Thomas Starkie (1833)** is unnamed, and adding a third Victorian jurist to a point two already make — on a page gated 2026-11-04 whose legal-authority weight is deliberately calibrated — would be redundant stacking that an adversarial lens would likely flag as over-reliance on dated apologetic legal authorities. The mine rated R6 **LOW**; restraint (verdict 5 — ours is already sufficient and better-bounded) over jurist-stacking. No edit, no gate. No MK/ES mirror of `consistency.html` exists.
+
+All BW rows are now resolved, so no gate work remains for this note. (Had any row still been open: resurrection tier = **dual consensus** (citations → argument → orthodoxy + neutrality), the MK/ES mirror rule applies to `emptytomb`, verify every primary against the Blackwell **print** pagination, keep Ehrman bounded, and never claim "history proves God raised him.")
