@@ -65,7 +65,7 @@ export default async function handler(req, res) {
     // about them from general knowledge instead of from the certified page.
     const essayText = typeof excerpt === 'string' ? excerpt.slice(0, 40000) : '';
     if (inputTooLong([question, argument, category], 8000)) return res.status(413).json({ error: 'input_too_long' });
-    if (await overRateLimit(req, 80, 'tutor')) return res.status(429).json({ error: 'rate_limited' });
+    if (await overRateLimit(req, { anon: 8, user: 15 }, 'tutor')) return res.status(429).json({ error: 'rate_limited' });
 
     // Two live modes share this endpoint: Q&A tutoring, and the "Explain It Back" GRADER
     // (client sends a "score it 1-10 ... respond in this exact JSON" prompt). Grader mode gets a

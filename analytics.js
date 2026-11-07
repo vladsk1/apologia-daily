@@ -35,14 +35,53 @@
     var _inApp = !!(_cap && typeof _cap.isNativePlatform === 'function'
       ? _cap.isNativePlatform() : (_cap && _cap.isNative));
     window.__AD_IN_APP = _inApp;
-    if (_inApp && !window.__AD_FETCH_PATCHED && window.fetch) {
+    var _win = window;   // stable reference for the fetch closure below
+    var _API_BASE = (window.AD_API_BASE || 'https://apologiadaily.com').replace(/\/+$/, '');
+
+    /* Read the signed-in user's Supabase access token straight from localStorage —
+       no second auth client (that would fight the SDK's token refresh and sign
+       people out). Returns '' when signed out. We attach it to our OWN /api/*
+       calls so the backend can give signed-in users a per-user AI budget instead
+       of the small shared per-IP one. STRICT best-effort: any failure → '' → the
+       request is simply treated as anonymous. */
+    function _adAccessToken() {
+      try {
+        var _ls = _win.localStorage;
+        for (var i = 0; i < _ls.length; i++) {
+          var k = _ls.key(i);
+          if (k && /^sb-.*-auth-token$/.test(k)) {
+            var t = JSON.parse(_ls.getItem(k) || '{}');
+            return t.access_token || (t.currentSession && t.currentSession.access_token) || '';
+          }
+        }
+      } catch (e) {}
+      return '';
+    }
+    window.__adAccessToken = _adAccessToken;
+
+    /* ONE fetch patch for both jobs. It fires on web AND in-app:
+         • in-app, a relative "/api/*" is rewritten to the live origin (the page is
+           served from localhost, so it would otherwise hit the app shell);
+         • on both, the caller's token is added as Authorization: Bearer so the
+           per-user rate budget applies. It only ever touches our own "/api/*"
+           string URLs, never a third party, and never overwrites a header a call
+           site set itself (e.g. the account-deletion call). STRICT NO-OP for a
+           signed-out visitor on the web: no token → header untouched, URL
+           untouched. */
+    if (!window.__AD_FETCH_PATCHED && window.fetch) {
       window.__AD_FETCH_PATCHED = true;
-      var _API_BASE = (window.AD_API_BASE || 'https://apologiadaily.com').replace(/\/+$/, '');
       var _origFetch = window.fetch.bind(window);
       window.fetch = function (input, init) {
         try {
           if (typeof input === 'string' && input.indexOf('/api/') === 0) {
-            input = _API_BASE + input;
+            if (_inApp) input = _API_BASE + input;
+            var _tok = _adAccessToken();
+            if (_tok) {
+              init = init || {};
+              var _h = new Headers((init && init.headers) || {});
+              if (!_h.has('Authorization')) _h.set('Authorization', 'Bearer ' + _tok);
+              init.headers = _h;
+            }
           }
         } catch (e) {}
         return _origFetch(input, init);

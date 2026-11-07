@@ -47,7 +47,12 @@ export default async function handler(req, res) {
     if (!apiKey) return res.status(500).json({ error: 'API key not configured' })
 
     if (inputTooLong([messages, topic], 30000)) return res.status(413).json({ error: 'input_too_long' })
-    if (await overRateLimit(req, 150, 'debate')) return res.status(429).json({ error: 'rate_limited' })
+    // Engagement feature: tiny anonymous taste, generous for signed-in users.
+    // Set anon:0 to make it strictly sign-in-required (the limiter returns
+    // 'sign_in_required', handled below) once client token-wiring is verified live.
+    const _rl = await overRateLimit(req, { anon: 2, user: 6 }, 'debate')
+    if (_rl === 'sign_in_required') return res.status(401).json({ error: 'sign_in_required' })
+    if (_rl) return res.status(429).json({ error: 'rate_limited' })
 
     let systemPrompt = '';
 

@@ -51,7 +51,7 @@ export default async function handler(req, res) {
 
   // Per-IP daily cap so a bot ignoring the honeypot can't flood the analytics
   // count. A genuine ask form needs only a handful/day.
-  if (await overRateLimit(req, 10, 'submitq')) {
+  if (await overRateLimit(req, { anon: 3, user: 5 }, 'submitq')) {
     // Never answer a cry for help with "try again tomorrow". The cap is per-IP, so
     // a stranger on the same NAT can exhaust it. Return the referral regardless.
     if (crisis) return res.status(200).json({ ok: true, crisis: true, message: CRISIS_REPLY });

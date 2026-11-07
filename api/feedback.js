@@ -89,7 +89,11 @@ export default async function handler(req, res) {
 
     if (inputTooLong([conversation, theySaid, iSaid, reflection, studyList, userTurns], 20000)) return res.status(413).json({ error: 'input_too_long' })
 
-    if (await overRateLimit(req, 80, 'feedback')) return res.status(429).json({ error: 'rate_limited' })
+    // Engagement feature: tiny anonymous taste, generous for signed-in users.
+    // anon:0 would make it strictly sign-in-required ('sign_in_required' below).
+    const _rl = await overRateLimit(req, { anon: 2, user: 5 }, 'feedback')
+    if (_rl === 'sign_in_required') return res.status(401).json({ error: 'sign_in_required' })
+    if (_rl) return res.status(429).json({ error: 'rate_limited' })
 
     let systemPrompt, userMessage;
 
