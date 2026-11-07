@@ -1334,6 +1334,16 @@
           })
         });
 
+        if (response.status === 401) {
+          // Debate is free but sign-in-required (server returns sign_in_required).
+          // Show a clear prompt, not the generic "connection problem" error.
+          removeTyping();
+          var _em = document.getElementById('error-msg');
+          _em.innerHTML = 'The Debate Arena is free, but you need to <a href="/login.html?next=/debate-arena.html" style="color:inherit;font-weight:600;text-decoration:underline;">sign in</a> to use it.';
+          _em.classList.add('visible');
+          document.getElementById('send-btn').disabled = false;
+          return;
+        }
         if (!response.ok) {
           throw new Error('API responded with status ' + response.status);
         }
