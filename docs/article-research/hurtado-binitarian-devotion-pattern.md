@@ -156,9 +156,16 @@ certified and stamped; live content edited, NOT yet committed (awaiting owner's 
   worship-defense (Dial. 64–65) added to the Justin paragraph as a *lex-orandi* illustration; fn 9
   extended; Hurtado 2008 added to bibliography. Sibling-check confirmed the home is `early_church_trinity`,
   not `titles.html`. Subordinationism fence kept + reinforced.
-- **/sources Dial. 63–65 candidate: NOT promoted** (deliberate). The essay cites the primary inline; a
-  PD `/sources` entry (still absent from `sources/justin-martyr.json`) would raise the verified-source
-  count and is left for a future `/sources` pass if the owner wants it.
+- **/sources Dial. 63–65 candidate: PROMOTED 2026-11-07 (owner-approved) — one entry, `justin-dialogue-63`.**
+  Added to `sources/justin-martyr.json`, `verified:true`, dual-consensus certified (citations verbatim +
+  attribution; orthodoxy + neutrality both STAMPABLE/CLEAN, read-only Explore agents) — now live-quotable via
+  `lib/sources-verified.js` and counted in the verified-source figure. **Dialogue 65 was evaluated and
+  deliberately DROPPED:** standing alone as a live-retrieved quote, stripped of Trypho's Isaiah-42:8 "my glory
+  I will not give to another" premise (a separate, non-contiguous speaker turn — no contiguous verbatim passage
+  carries both), Justin's "God… will give Him whom He has established… glory" reads subordinationist/Arian, and
+  both doctrinal gates flagged it (orthodoxy DRIFT, neutrality WEAK). `justin-dialogue-63` ("deserving to be
+  worshipped, as God and as Christ") carries the same worship-of-Christ-as-God datum self-contained, so it alone
+  was promoted.
 - **Both enrichments cite Hurtado's 2008 article directly** (essay bibliographies), fulfilling the
   owner's "cite Hurtado directly from this article" intent — so it now flows into `our-sources.json` via
   the bibliography generator.
@@ -181,8 +188,9 @@ doctrine. Overwhelmingly corroboration; Hurtado already cited directly site-wide
   the binitarian worship point; no stale claim found in this pass.
 - [x] /briefs — deity-of-Christ / early-worship framing present; corroboration.
 - [x] /sources — `sources/justin-martyr.json` holds verified Justin passages (1 Apol. 13/19/30/61/63/
-  66/67; Dial. 8, 32) but **not Dial. 63–65** (the worship-defense passages) — a PD `/sources`
-  candidate (lead 4b).
+  66/67; Dial. 8, 32) and **now Dial. 63** (`justin-dialogue-63`, the worship-of-Christ-as-God conclusion
+  from Psalm 45), promoted + verified 2026-11-07. Dial. 65 evaluated and dropped (live subordinationist-
+  misread risk — see Live-door status). Lead 4b discharged.
 - Mandatory-fix findings (verdict 2): none.
 - Backlog rows logged (verdicts 3/4): 2 (4a prophetic oracles in Jesus' name; 4b Justin's Isaiah-42:8
   worship-defense + `/sources` candidate). Optional P4 (name Wiles) tracked here only.
