@@ -52,7 +52,10 @@ const EXCLUDE_ROOT_FILES = new Set([
   // IVP agrees otherwise in writing (see docs/DEL_ROSARIO_READING_CLUB.md).
   'reading-club-did-jesus-say-he-was-god.html',
   // Retired from the live site (owner decision 2026-10-08); kept in the repo only.
-  'palace.html'
+  'palace.html',
+  // Un-gated placeholder draft, .vercelignore'd off the live site; must not ship in
+  // the app binary either (it still carries the retired Free-vs-Pro pricing).
+  'homepage-v2.html'
 ]);
 
 // ...and these files inside INCLUDE_DIRS (see step 3 in main()).
