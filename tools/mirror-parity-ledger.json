@@ -124,6 +124,11 @@
       "acceptedAt": "2026-11-07",
       "sourceCommit": "5f76e796",
       "reason": "Spanish mirror deliberately lagged (owner decision 2026-11-07). The 2026-11-07 expert pre-review refinements were synced to English + MACEDONIAN in the same commits (Macedonian is the edition under native review by Dr. Sasho Georgievski); the Spanish mirror sync is a scheduled follow-up pass. Native-Spanish doctrinal review is owed site-wide regardless (docs/STATEMENT_OF_FAITH.md). Clear this entry when the Spanish mirror is synced and gated."
+    },
+    "library/minimalfacts.html -> library/es/minimalfacts.html": {
+      "acceptedAt": "2026-11-07",
+      "sourceCommit": "3ba74b34",
+      "reason": "Spanish mirror deliberately lagged (owner decision 2026-11-07). The 2026-11-07 expert pre-review refinements were synced to English + MACEDONIAN in the same commits (Macedonian is the edition under native review by Dr. Sasho Georgievski); the Spanish mirror sync is a scheduled follow-up pass. Native-Spanish doctrinal review is owed site-wide regardless (docs/STATEMENT_OF_FAITH.md). Clear this entry when the Spanish mirror is synced and gated."
     }
   }
 }
