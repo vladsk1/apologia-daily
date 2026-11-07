@@ -1,6 +1,6 @@
 # Age screen — 2026-10-08 legal/security audit, item 3
 
-**Status: RUN by the owner 2026-10-09** (pre-check: live `join_group_by_code` matched the original, so the replacement only adds the adults-only line; Step 1 SQL: "Success. No rows returned"; checks: `user_age` RLS on = true, grants = `authenticated SELECT` only). ⬜ Still owed: the Step 2 test signup (`age_band` = 18+, `still_in_profile` = false) and the in-site Study Groups test. The owner runs this in the Supabase SQL editor
+**Status: RUN by the owner 2026-10-09** (pre-check: live `join_group_by_code` matched the original, so the replacement only adds the adults-only line; Step 1 SQL: "Success. No rows returned"; checks: `user_age` RLS on = true, grants = `authenticated SELECT` only). ✅ **Step 2 signup prompt confirmed by the owner 2026-11-07** — making a real account showed the age question (the screen is live, not the old 18+ confirm fallback). ⬜ Still owed: the one remaining spot-check that needs a *minor* birthday — make a test account with a 13–17 birth year and confirm Study Groups is blocked at the database level (reading/posting/joining/creating/check-in all refused). The owner runs this in the Supabase SQL editor
 (Dashboard → SQL Editor → New query). Until it runs, the site still works: the pages fall
 back to the old "Press OK if you are 18+" confirm, and nothing below is enforced.
 
