@@ -677,6 +677,26 @@
     window.location.href = 'index.html';
   }
 
+  // Synchronous best-effort sign-in check (reads the Supabase session straight from
+  // localStorage, like progress-sync.js). Used to tell a signed-out visitor UP FRONT
+  // that the arena needs a sign-in, before they pick a topic and type. The server
+  // (/api/debate, anon:0 -> 401) stays the real gate, so an expired token still gets
+  // caught there; this is only to make the requirement visible early.
+  function isSignedIn() {
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && /^sb-.*-auth-token$/.test(k)) {
+          var t = JSON.parse(localStorage.getItem(k) || '{}');
+          var u = t.user || (t.currentSession && t.currentSession.user);
+          if (u && u.id) return true;
+        }
+      }
+    } catch (e) {}
+    return false;
+  }
+  var SIGNIN_MSG = 'The Debate Arena is free, but you need to <a href="/login.html?next=/debate-arena.html" style="color:inherit;font-weight:600;text-decoration:underline;">sign in</a> to use it.';
+
     const state = { opponent: null, difficulty: 'challenging', topic: null, turns: 0, maxTurns: 8, messages: [], debateStarted: false, mode: 'debate', speakOn: false };
 
     // ── MODE SWITCHING ──
@@ -1084,6 +1104,31 @@
     function startDebate() {
       if (!state.opponent || !state.topic) return;
 
+      // Sign-in gate, shown BEFORE the scripted opener so a signed-out visitor is not
+      // let into a fake debate and then blocked on their first reply. Enters the arena
+      // header, shows the prompt, and leaves the input disabled — no opponent opener,
+      // no usage counted. The server remains the real gate for expired tokens.
+      if (!isSignedIn()) {
+        document.getElementById('arena-opp-name').textContent = oppNames[state.opponent];
+        document.getElementById('arena-diff-badge').textContent = state.difficulty.charAt(0).toUpperCase() + state.difficulty.slice(1);
+        document.getElementById('arena-topic-pill').textContent = 'Topic: ' + state.topic;
+        document.getElementById('chat-box').innerHTML = '';
+        addAiNotice();
+        var em = document.getElementById('error-msg');
+        em.innerHTML = SIGNIN_MSG;
+        em.classList.add('visible');
+        var di = document.getElementById('debate-input'); if (di) di.disabled = true;
+        document.getElementById('send-btn').disabled = true;
+        document.getElementById('end-btn').disabled = true;
+        showScreen('screen-arena');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      // Signed in: clear any disabled state the sign-in guard left on a prior attempt.
+      var _di0 = document.getElementById('debate-input'); if (_di0) _di0.disabled = false;
+      document.getElementById('send-btn').disabled = false;
+
       // Check weekly limit
       const { allowed } = checkDebateLimit();
       if (!allowed) {
@@ -1339,7 +1384,7 @@
           // Show a clear prompt, not the generic "connection problem" error.
           removeTyping();
           var _em = document.getElementById('error-msg');
-          _em.innerHTML = 'The Debate Arena is free, but you need to <a href="/login.html?next=/debate-arena.html" style="color:inherit;font-weight:600;text-decoration:underline;">sign in</a> to use it.';
+          _em.innerHTML = SIGNIN_MSG;
           _em.classList.add('visible');
           document.getElementById('send-btn').disabled = false;
           return;
