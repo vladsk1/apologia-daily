@@ -6,9 +6,9 @@
       "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 P3 addition steelmans the Bultmann/Hägerland redaction objection to the Mark 2 forgiveness scene. The mirror is not WRONG, only less complete; nothing false is live in translation. Deliberately NOT hand-translated per the owner's standing preference (no untranslated doctrinal prose no native reviewer will gate); Macedonian/Spanish doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when the mirror is gated up to the English by a native reviewer. UPDATED 2026-09-26: an audit found this entry's 'nothing false is live in translation' was INACCURATE for the mirror as a whole. The stale art-explain box (where it existed) was deleted and the specific retired/false passages were re-translated from the current English and gated (read-only Explore agents, fidelity + orthodoxy lenses, confirmation round). Remaining lag is English-ADD only (sections the mirror still lacks)."
     },
     "library/jesus_claims.html -> library/es/jesus_claims.html": {
-      "acceptedAt": "2026-08-17",
-      "sourceCommit": "1f8f6c9",
-      "reason": "English-ADD only (not a retired-claim fix): the 2026-08-17 P3 addition steelmans the Bultmann/Hägerland redaction objection to the Mark 2 forgiveness scene. The mirror is not WRONG, only less complete; nothing false is live in translation. Deliberately NOT hand-translated per the owner's standing preference (no untranslated doctrinal prose no native reviewer will gate); Macedonian/Spanish doctrinal review is outstanding (docs/STATEMENT_OF_FAITH.md). Clear this entry when the mirror is gated up to the English by a native reviewer."
+      "acceptedAt": "2026-11-07",
+      "sourceCommit": "5f76e796",
+      "reason": "Spanish mirror deliberately lagged (owner decision 2026-11-07). The 2026-11-07 expert pre-review refinements were synced to English + MACEDONIAN in the same commits (Macedonian is the edition under native review by Dr. Sasho Georgievski); the Spanish mirror sync is a scheduled follow-up pass. Native-Spanish doctrinal review is owed site-wide regardless (docs/STATEMENT_OF_FAITH.md). Clear this entry when the Spanish mirror is synced and gated."
     },
     "library/hist_jesus.html -> library/mk/hist_jesus.html": {
       "acceptedAt": "2026-08-17",
@@ -114,6 +114,16 @@
       "acceptedAt": "2026-10-26",
       "sourceCommit": "pending-this-commit",
       "reason": "EN-only minor wording fix (2026-10-26 Biblical-Reliability review): arg-consistency free tier 'resists a purely natural explanation'->'hardest to explain on inheritance alone', matching the card's own corrected deep-dive register (a pointer, not a proof). The MK/ES mirror is not WRONG, only carries the slightly stronger prior phrasing; nothing false is live. Deliberately NOT machine-translated per the standing MK/ES lag; native review outstanding. Clear when a native reviewer syncs."
+    },
+    "library/finetuning.html -> library/es/finetuning.html": {
+      "acceptedAt": "2026-11-07",
+      "sourceCommit": "5f76e796",
+      "reason": "Spanish mirror deliberately lagged (owner decision 2026-11-07). The 2026-11-07 expert pre-review refinements were synced to English + MACEDONIAN in the same commits (Macedonian is the edition under native review by Dr. Sasho Georgievski); the Spanish mirror sync is a scheduled follow-up pass. Native-Spanish doctrinal review is owed site-wide regardless (docs/STATEMENT_OF_FAITH.md). Clear this entry when the Spanish mirror is synced and gated."
+    },
+    "library/kalam.html -> library/es/kalam.html": {
+      "acceptedAt": "2026-11-07",
+      "sourceCommit": "5f76e796",
+      "reason": "Spanish mirror deliberately lagged (owner decision 2026-11-07). The 2026-11-07 expert pre-review refinements were synced to English + MACEDONIAN in the same commits (Macedonian is the edition under native review by Dr. Sasho Georgievski); the Spanish mirror sync is a scheduled follow-up pass. Native-Spanish doctrinal review is owed site-wide regardless (docs/STATEMENT_OF_FAITH.md). Clear this entry when the Spanish mirror is synced and gated."
     }
   }
 }
