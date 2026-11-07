@@ -274,6 +274,7 @@
         </div>
         <div class="ai-question" id="ai-question" style="display:none;"></div>
       </div>
+      <div id="ai-signin-note" style="display:none; font-family:var(--font-ui); font-size:0.85rem; color:var(--text-muted); line-height:1.6; margin-bottom:1rem;"></div>
       <textarea class="ai-input" id="ai-input" placeholder="Type your reflection here…" rows="3"></textarea>
       <button class="ai-submit" id="ai-submit" onclick="submitReflection()" disabled>Submit reflection →</button>
       <div class="ai-response" id="ai-response">
@@ -314,7 +315,7 @@
         <li><a href="evidence-library.html">Evidence Library</a></li>
         <li><a href="debate-arena.html">Debate Arena</a></li>
         <li><a href="worldviews.html">Worldviews</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#pricing">Free</a></li>
       
           <li><a href="video-library.html">Videos</a></li>
                   <li><a href="what-we-believe.html">What We Believe</a></li>
@@ -363,6 +364,24 @@
       buildStreak();
       buildArchive();
     }
+
+    // Synchronous best-effort sign-in check (reads the Supabase session from
+    // localStorage). The AI follow-up (/api/devotional) is sign-in-required
+    // server-side; this surfaces that up front. The default question stays free.
+    function isSignedIn() {
+      try {
+        for (var i = 0; i < localStorage.length; i++) {
+          var k = localStorage.key(i);
+          if (k && /^sb-.*-auth-token$/.test(k)) {
+            var t = JSON.parse(localStorage.getItem(k) || '{}');
+            var u = t.user || (t.currentSession && t.currentSession.user);
+            if (u && u.id) return true;
+          }
+        }
+      } catch (e) {}
+      return false;
+    }
+    var DEVO_SIGNIN_MSG = '✨ <a href="/login.html?next=/daily-devotional.html" style="color:var(--navy-600,#1e4278);font-weight:600;text-decoration:underline;">Sign in</a> for a reflection question tailored to today’s verse — and a personal response when you share your thoughts. It’s free.';
 
     async function signOut() {
       try { await sb.auth.signOut(); } catch(e) {}
@@ -573,6 +592,15 @@
 
     async function loadAIQuestion() {
       if (!todayDevo) return;
+      // Signed out: don't spend a call that will 401. Show the free default question
+      // and surface the sign-in benefit up front, so the requirement is visible now
+      // rather than after they write a reflection and submit.
+      if (!isSignedIn()) {
+        showDefaultQuestion();
+        var _note = document.getElementById('ai-signin-note');
+        if (_note) { _note.innerHTML = DEVO_SIGNIN_MSG; _note.style.display = 'block'; }
+        return;
+      }
       try {
         const res = await fetch('/api/devotional', {
           method: 'POST',
@@ -607,6 +635,15 @@
     async function submitReflection() {
       const input = document.getElementById('ai-input').value.trim();
       if (!input) return;
+      // Signed out: the AI follow-up is sign-in-required. Show the prompt instead of
+      // a call that 401s, and keep their written reflection on screen.
+      if (!isSignedIn()) {
+        var _note = document.getElementById('ai-signin-note');
+        if (_note) { _note.innerHTML = DEVO_SIGNIN_MSG; _note.style.display = 'block'; }
+        document.getElementById('ai-response-text').textContent = 'Sit with your reflection through the day, pray it over, and notice what God brings to mind.';
+        document.getElementById('ai-response').classList.add('visible');
+        return;
+      }
       document.getElementById('ai-submit').disabled = true;
       document.getElementById('ai-submit').textContent = 'Thinking...';
 

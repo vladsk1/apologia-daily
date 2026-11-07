@@ -1092,14 +1092,22 @@
 > - ⭐ **THE OWNER'S SINGLE TO-DO LIST is [`docs/OWNER_TODO.md`](docs/OWNER_TODO.md)** (2026-10-08 audit).
 >   Every step that needs the owner's Supabase/Vercel/PostHog login or information lives there; add new
 >   ones to it rather than scattering them. The two SQL items below are items 1–2 on it.
-> - 🔴 **OWED BY THE OWNER — run `docs/SUPABASE_RLS_HARDENING.md` in the Supabase SQL editor (written
->   2026-10-08, NOT YET RUN).** The 2026-10-08 legal/security audit found no row-level security in the repo
->   for `push_subscriptions` (server-only; if RLS is off, the public anon key on every page can read every
->   subscriber's push endpoint + keys), `flashcards`, `study_plans_progress`, `explain_sessions` and
->   `daily_arguments`, plus missing explicit grants on `coach_signals`. The doc has a read-only Step 1 check
->   (run that first — the tables may already be protected from the dashboard), an idempotent access-only
->   Step 2 fix, a Step 3 re-check, and an optional Step 4 that clears pre-2026-10-08 Explain It Back text.
->   Until it is run, treat those tables as UNVERIFIED. Mark the doc's status line when done.
+> - ✅ **DONE + VERIFIED FROM A SESSION 2026-11-07 — `docs/SUPABASE_RLS_HARDENING.md` is applied.** The
+>   owner ran the doc's read-only Step 1 check live (Supabase SQL editor) and relayed the results: all
+>   **7 of the audited tables that exist** — `user_progress`, `journal_entries`, `push_subscriptions`,
+>   `flashcards`, `study_plans_progress`, `explain_sessions`, `daily_arguments` — report `rls_enabled = true`.
+>   `coach_signals` is **not present on the project** (table never created), so there is nothing to expose
+>   (the coach feature simply stays browser-local, the same no-op pattern as the other sync tables before
+>   their migrations ran) — the missing explicit grants the 2026-10-08 audit named are therefore moot until
+>   that table is ever created. This supersedes the doc header's 2026-10-09 "owner-reported, not
+>   independently verified" status: the RLS-on state is now confirmed from a session via the owner's live
+>   query output. ⚠ **Only the `rls_enabled = true` flag was verified**, not each individual own-row policy's
+>   `using`/`with check` clause, and the Step 3 external anon-key curl was offered but left optional — so
+>   policy *correctness* (vs merely RLS being *enabled*) rests on the doc's idempotent Step 2 having been
+>   applied as written. ⭐ **Side observation from the same query: `user_age` exists and reports
+>   `rls_enabled = true`** — evidence the `docs/AGE_SCREEN.md` migration (next item) was at least partly run;
+>   NOT confirmation, since its functions/trigger (`is_adult()`, `set_my_age()`, the signup trigger, the
+>   group-insert checks) were not checked. Verify those before treating AGE_SCREEN as done.
 > - 🔴 **OWED BY THE OWNER — run `docs/AGE_SCREEN.md` in the Supabase SQL editor (written 2026-10-08,
 >   NOT YET RUN).** Audit item 3: signup now asks month + year of birth (under-13 refused, nothing sent),
 >   and `age-gate.js` fronts Study Groups — but the 18+ rule is only ENFORCED once this SQL adds

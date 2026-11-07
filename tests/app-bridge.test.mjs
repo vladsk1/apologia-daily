@@ -5,10 +5,15 @@
  * Capacitor block would be a SITE-WIDE outage, not an app-only bug. Two
  * invariants matter and are asserted here:
  *
- *   1. On the WEB (window.Capacitor absent) the block is a STRICT no-op —
- *      window.fetch is left untouched, so apologiadaily.com behaves exactly as
- *      it did before the app existed.
- *   2. In the APP, relative "/api/*" calls (and only those) are rewritten to the
+ *   1. On the WEB (window.Capacitor absent) the block does NOT rewrite URLs, and
+ *      for a SIGNED-OUT visitor it is behaviourally a no-op — relative "/api/*"
+ *      calls pass through untouched. (Since 2026-11-07 the wrapper IS installed on
+ *      the web, to attach the signed-in user's token; it only ever adds a header
+ *      to our own "/api/*" calls and never rewrites the URL on the web.)
+ *   2. For a SIGNED-IN caller, an "Authorization: Bearer <token>" header is added
+ *      to "/api/*" requests only — never to a non-api path, never to a third
+ *      party, and never overwriting a header the call site set itself.
+ *   3. In the APP, relative "/api/*" calls (and only those) are rewritten to the
  *      production origin, without double-prefixing absolute URLs that merely
  *      contain "/api/", and idempotently if the block ever runs twice.
  *
@@ -46,16 +51,57 @@ function runBridge(block, { native }) {
   return { win, calls };
 }
 
-test('web: the Capacitor bridge is a strict no-op', () => {
-  const { win, calls } = runBridge(extractBridge(), { native: false });
-  const originalFetch = win.fetch;
+/** Run the real bridge block against a fake window + localStorage, capturing the
+ *  full (url, init) of each fetch so header attachment can be asserted. */
+function runBridgeAuth(block, { native, token }) {
+  const calls = [];
+  const store = token ? { 'sb-proj-auth-token': JSON.stringify({ access_token: token }) } : {};
+  const keys = Object.keys(store);
+  const ls = {
+    get length() { return keys.length; },
+    key: (i) => keys[i],
+    getItem: (k) => (k in store ? store[k] : null),
+  };
+  const win = {
+    fetch: (u, init) => { calls.push({ u, init }); return Promise.resolve('ok'); },
+    Capacitor: native ? { isNativePlatform: () => true } : undefined,
+    localStorage: ls,
+  };
+  const prevWindow = globalThis.window;
+  globalThis.window = win;
+  try { new Function(block)(); } finally { globalThis.window = prevWindow; }
+  return { win, calls };
+}
+const authHeader = (init) => new Headers((init && init.headers) || {}).get('Authorization');
 
-  assert.equal(win.__AD_FETCH_PATCHED, undefined, 'fetch must not be patched on the web');
+test('web, signed out: the bridge rewrites no URL and attaches no token', () => {
+  const { win, calls } = runBridge(extractBridge(), { native: false });
   assert.equal(win.__AD_IN_APP, false);
 
   win.fetch('/api/ask');
   assert.equal(calls[0], '/api/ask', 'relative /api URLs must pass through untouched on the web');
-  assert.equal(win.fetch, originalFetch, 'window.fetch must be the original reference');
+  win.fetch('/library/kalam.html');
+  assert.equal(calls[1], '/library/kalam.html', 'non-api paths must be untouched');
+  // No localStorage token here → no Authorization added (the runBridge mock ignores
+  // init, so the signed-in header behaviour is asserted in runBridgeAuth below).
+});
+
+test('web, signed in: Bearer token is attached to /api/* only', () => {
+  const { win, calls } = runBridgeAuth(extractBridge(), { native: false, token: 'tok123' });
+  assert.equal(win.__AD_IN_APP, false);
+
+  win.fetch('/api/ask');
+  assert.equal(calls[0].u, '/api/ask', 'the web must not rewrite the URL');
+  assert.equal(authHeader(calls[0].init), 'Bearer tok123', 'signed-in /api calls carry the token');
+
+  win.fetch('/library/kalam.html');
+  assert.equal(authHeader(calls[1].init), null, 'non-api requests must never carry the token');
+});
+
+test('an explicit Authorization header set by a call site is never overwritten', () => {
+  const { win, calls } = runBridgeAuth(extractBridge(), { native: false, token: 'tok123' });
+  win.fetch('/api/new-signup?do=delete-account', { headers: { Authorization: 'Bearer explicit' } });
+  assert.equal(authHeader(calls[0].init), 'Bearer explicit', 'a call-site token must win over the auto-attached one');
 });
 
 test('app: only relative /api/* is rewritten to the production origin', () => {

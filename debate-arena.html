@@ -618,10 +618,9 @@
         <button class="btn-outline" onclick="showScreen('screen-setup')">Try a different opponent</button>
         <a href="evidence-library.html" class="btn-outline">Study the Evidence Library</a>
         <div id="post-debate-upgrade" style="display:none;background:linear-gradient(135deg,var(--navy-950),#0f2040);border:1px solid rgba(200,169,81,0.25);border-radius:8px;padding:1.5rem;margin-top:1.5rem;">
-          <div style="font-family:var(--font-display,serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">That was your free debate this week</div>
-          <div style="font-family:var(--font-ui,sans-serif);font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:1.25rem;">Coach&rsquo;s verdict: <span id="post-debate-score" style="color:#c8a951;font-weight:600;">&mdash;</span>. Pro users debate every day &mdash; one session a week is not enough to build the muscle. Consistent practice is how confidence in real conversations develops.</div>
+          <div style="font-family:var(--font-display,serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Keep building the muscle</div>
+          <div style="font-family:var(--font-ui,sans-serif);font-size:0.85rem;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:1.25rem;">Coach&rsquo;s verdict: <span id="post-debate-score" style="color:#c8a951;font-weight:600;">&mdash;</span>. One session is a start &mdash; consistent practice is how confidence in real conversations develops. Come back and take on a different opponent.</div>
           <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
-            <a href="index.html#pricing" style="font-family:var(--font-ui,sans-serif);font-size:0.85rem;font-weight:600;background:#c8a951;color:#050d1a;padding:10px 22px;border-radius:4px;text-decoration:none;">Pro &mdash; launching soon</a>
             <a href="evidence-library.html" style="font-family:var(--font-ui,sans-serif);font-size:0.85rem;font-weight:500;background:none;color:rgba(255,255,255,0.55);padding:10px 18px;border-radius:4px;text-decoration:none;border:1px solid rgba(255,255,255,0.15);">Study the arguments</a>
           </div>
         </div>
@@ -676,6 +675,26 @@
     try { await sb.auth.signOut(); } catch(e) {}
     window.location.href = 'index.html';
   }
+
+  // Synchronous best-effort sign-in check (reads the Supabase session straight from
+  // localStorage, like progress-sync.js). Used to tell a signed-out visitor UP FRONT
+  // that the arena needs a sign-in, before they pick a topic and type. The server
+  // (/api/debate, anon:0 -> 401) stays the real gate, so an expired token still gets
+  // caught there; this is only to make the requirement visible early.
+  function isSignedIn() {
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && /^sb-.*-auth-token$/.test(k)) {
+          var t = JSON.parse(localStorage.getItem(k) || '{}');
+          var u = t.user || (t.currentSession && t.currentSession.user);
+          if (u && u.id) return true;
+        }
+      }
+    } catch (e) {}
+    return false;
+  }
+  var SIGNIN_MSG = 'The Debate Arena is free, but you need to <a href="/login.html?next=/debate-arena.html" style="color:inherit;font-weight:600;text-decoration:underline;">sign in</a> to use it.';
 
     const state = { opponent: null, difficulty: 'challenging', topic: null, turns: 0, maxTurns: 8, messages: [], debateStarted: false, mode: 'debate', speakOn: false };
 
@@ -1059,11 +1078,11 @@
       banner.style.cssText = 'background:#0a1628;border:1px solid rgba(200,169,81,0.3);border-radius:4px;padding:1.5rem 2rem;margin:0 0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;';
       banner.innerHTML = '<div>'
         + '<div style="font-family:var(--font-display,serif);font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px;">You have used your free debate this week</div>'
-        + '<div style="font-family:var(--font-ui,sans-serif);font-size:0.82rem;color:rgba(255,255,255,0.5);">Pro users practise every day -- that is how the improvement compounds. Your limit resets Monday. Ready to go further?</div>'
+        + '<div style="font-family:var(--font-ui,sans-serif);font-size:0.82rem;color:rgba(255,255,255,0.5);">Consistent practice is how the improvement compounds. Your limit resets Monday.</div>'
         + '</div>'
         + '<div style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:center;">'
         + '<button onclick="resetDebateLimit()" style="font-family:var(--font-ui,sans-serif);font-size:0.78rem;padding:8px 14px;border-radius:3px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);cursor:pointer;">Reset weekly limit</button>'
-        + '<a href="index.html#pricing" style="font-family:var(--font-ui,sans-serif);font-size:0.88rem;font-weight:500;padding:10px 22px;border-radius:3px;background:#c8a951;color:#050d1a;text-decoration:none;white-space:nowrap;">Upgrade to Pro</a>'
+        + '<a href="evidence-library.html" style="font-family:var(--font-ui,sans-serif);font-size:0.88rem;font-weight:500;padding:10px 22px;border-radius:3px;background:#c8a951;color:#050d1a;text-decoration:none;white-space:nowrap;">Study the arguments</a>'
         + '</div>';
       const setupBody = document.querySelector('.setup-body') || document.querySelector('.main') || document.body;
       setupBody.insertBefore(banner, setupBody.firstChild);
@@ -1083,6 +1102,31 @@
 
     function startDebate() {
       if (!state.opponent || !state.topic) return;
+
+      // Sign-in gate, shown BEFORE the scripted opener so a signed-out visitor is not
+      // let into a fake debate and then blocked on their first reply. Enters the arena
+      // header, shows the prompt, and leaves the input disabled — no opponent opener,
+      // no usage counted. The server remains the real gate for expired tokens.
+      if (!isSignedIn()) {
+        document.getElementById('arena-opp-name').textContent = oppNames[state.opponent];
+        document.getElementById('arena-diff-badge').textContent = state.difficulty.charAt(0).toUpperCase() + state.difficulty.slice(1);
+        document.getElementById('arena-topic-pill').textContent = 'Topic: ' + state.topic;
+        document.getElementById('chat-box').innerHTML = '';
+        addAiNotice();
+        var em = document.getElementById('error-msg');
+        em.innerHTML = SIGNIN_MSG;
+        em.classList.add('visible');
+        var di = document.getElementById('debate-input'); if (di) di.disabled = true;
+        document.getElementById('send-btn').disabled = true;
+        document.getElementById('end-btn').disabled = true;
+        showScreen('screen-arena');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      // Signed in: clear any disabled state the sign-in guard left on a prior attempt.
+      var _di0 = document.getElementById('debate-input'); if (_di0) _di0.disabled = false;
+      document.getElementById('send-btn').disabled = false;
 
       // Check weekly limit
       const { allowed } = checkDebateLimit();
@@ -1334,6 +1378,16 @@
           })
         });
 
+        if (response.status === 401) {
+          // Debate is free but sign-in-required (server returns sign_in_required).
+          // Show a clear prompt, not the generic "connection problem" error.
+          removeTyping();
+          var _em = document.getElementById('error-msg');
+          _em.innerHTML = SIGNIN_MSG;
+          _em.classList.add('visible');
+          document.getElementById('send-btn').disabled = false;
+          return;
+        }
         if (!response.ok) {
           throw new Error('API responded with status ' + response.status);
         }
