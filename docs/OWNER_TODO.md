@@ -34,7 +34,7 @@ information only you have. Tick each one off (change `[ ]` to `[x]` and add the 
 
 ## When you have Supabase access (Dashboard → SQL Editor)
 
-- [x] **1. Run [`docs/SUPABASE_RLS_HARDENING.md`](SUPABASE_RLS_HARDENING.md)** (audit item 1). ✅ Done, owner-reported 2026-10-09 (optional Step 4 not confirmed).
+- [x] **1. Run [`docs/SUPABASE_RLS_HARDENING.md`](SUPABASE_RLS_HARDENING.md)** (audit item 1). ✅ Done + VERIFIED from a session 2026-11-07 — owner ran the read-only Step 1 check live; all 7 existing audited tables report `rls_enabled = true` (`coach_signals` not present → nothing to expose). Only the RLS-enabled flag was verified (not each policy clause); optional Step 4 still not confirmed.
   Run Step 1 first and keep its output, then Step 2, then the Step 3 checks. Step 4 (clear old
   Explain It Back text) is optional but recommended. Until this runs, `push_subscriptions`,
   `flashcards`, `study_plans_progress`, `explain_sessions` and `daily_arguments` are unverified.
