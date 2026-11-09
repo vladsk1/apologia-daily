@@ -1712,6 +1712,27 @@ guardrail, so the model still weighs its own knowledge and the pastoral path alw
 - Rebuild after edits: `node tools/build-briefs-index.mjs` (CI runs `--check`; emits `briefs-index.json`
   + `lib/briefs-verified.js`). Guarded by `tests/content-integrity.test.mjs` (gated-only + block-stays-optional).
 
+> ### ⭐ STANDING RULE — EVERY NEW OR MEANINGFULLY-IMPROVED ESSAY GETS A MATCHING BRIEF, IN THE SAME SESSION. (Added 2026-11-09, owner-directed.)
+>
+> A brief is the only way a certified essay's substance reaches the **live AI**, and briefs were being made
+> ad hoc — so essays shipped without one and the gap went unnoticed. (A 2026-11-09 audit found **13 certified
+> essays with no brief**, including `library/humanity.html` — leaving the live AI with no "full humanity of
+> Christ" framing.) From here:
+> - **When you create a new certified essay, or meaningfully improve an existing one, you draft and gate a
+>   matching `/briefs` entry in the SAME session** (distilled from that essay; `from` records it), and rebuild
+>   `briefs-index.json` + `lib/briefs-verified.js`.
+> - **Or log one line why not** — the essay's topic is already carried by an adjacent brief (name it), or it is
+>   too niche to retrieve on. A deliberate skip is fine; a silent gap is the thing this rule forbids.
+> - The brief is DOCTRINAL content and clears the normal gate (argument + orthodoxy, **+ neutrality for the
+>   resurrection / deity / Trinity / Islam set** — dual-consensus). Port the framing from the essay; do not
+>   author a claim the essay does not carry (the `from`-provenance rule). Never stamp a gate you did not run.
+> - **To close the existing backlog:** the 13 brief-less essays are the standing work item — lead with the
+>   deity cluster (`humanity`, `jesus-is-yahweh`, `worship-of-jesus`, `god-crucified`, `christ-before-bethlehem`,
+>   `paul-divinity`, `jesus-messiah-claim`, `crucified-messiah`), then `limits-of-science`, `properly-basic`,
+>   `evil-evidence` (the *offensive* argument, distinct from the `problem-of-evil` brief), `nt-use-of-ot`.
+>   ⚠ `proto-trinitarian` ("Was the Trinity Invented at Nicaea?") is likely already covered by the live
+>   `trinity-invented-nicaea` brief — verify before making a duplicate.
+
 ## Owned-book research notes (`docs/book-research/`)
 In-our-own-words **research maps of owned copyrighted apologetics books** — the argument
 structure plus an index of the **primary sources** the book cites (Scripture, Fathers,
