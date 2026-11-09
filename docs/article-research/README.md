@@ -177,6 +177,11 @@ our-own-words material (or a verified PD primary) reaches a visitor.
    > `<placeholder>`, or a missing surface line all trip it. The pre-existing corpus is grandfathered in
    > `tools/crosscheck-baseline.json`; a **new** note must fill the block, not be added to the baseline (there
    > is deliberately no `--update` that would auto-grandfather a fresh skip). `--audit` lists every note's status.
+   >
+   > **Then run the second-lens error-hunter** (CLAUDE.md § *MANDATORY SECOND-LENS ERROR-HUNTER*): a read-only
+   > `Explore` agent, ideally on a different model family, whose only job is to hunt verdict-2 (**error in ours**)
+   > and verdict-3 (**weaker in ours**) across all six surfaces — it is not shown the note's conclusions. Merge
+   > its findings into the note's six-verdict table before the mine is called done, and name the model that ran it.
 4. **Log it in three places:** (a) a row in the **Mined-articles ledger** below (with live-door
    status); (b) a topic row in `INDEX.md`; and (c) for any lead that step 3 classified as an
    **improvement**, a row in [`docs/content-backlog.md`](../content-backlog.md) — the release map.

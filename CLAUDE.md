@@ -1939,6 +1939,35 @@ note** so a later reader can see the scan actually happened. (Standing example: 
 `peterson-academy-ot-canon-canonicity.md` note was logged corroboration-only *after* `library/canon.html`
 was read and found to already cover it — neutrally — so no row was warranted.)
 
+> ### ⭐ MANDATORY SECOND-LENS ERROR-HUNTER — split the "confirm" pass from the "attack" pass. (Added 2026-11-09, owner-directed.)
+>
+> The single greatest weakness of a one-person mine is that the SAME reader who maps the source also judges whether
+> it beats us — and confirming *"we've got this covered"* is far easier than catching *"we got this wrong."* So
+> verdict 2 (**error in ours**) and verdict 3 (**weaker in ours**) — the two most valuable verdicts — are exactly
+> the ones a single confirming pass under-produces. The honest limits of a solo cross-check (the essay read is
+> deep, but the other five surfaces get a lighter confirmation scan; search is blind to what it cannot spell —
+> `Lema&icirc;tre`; error-hunting leans toward confirming) are structural, not fixable by trying harder on one
+> pass. Fix it the way the deploy gate fixes doctrinal blind spots: **a second, independent, read-only lens.**
+>
+> **On every worthwhile mine** (any source not trivially off-topic), after the note's own cross-check is drafted,
+> run a dedicated **error-hunter** as a **read-only `Explore` agent** (no Edit/Write/NotebookEdit tools — the
+> write-access hazard rule applies; verify nothing changed). Its brief is ONE job, stated narrowly: *"Given this
+> source's leads and our live content on this topic, find every place our site is WRONG (verdict 2) or WEAKER than
+> the source (verdict 3), across all six surfaces — `library/*` essay, `/answers/*`, the `ev-s*` card, the `ev-m*`
+> mastery page, `/briefs`, `/sources`. Do not confirm coverage; assume we have gaps and go find them. Quote our
+> exact text and the source's exact lead for each finding."* It reads the surfaces itself and is **NOT** handed the
+> note's conclusions — an agent given the hypothesis returns it confirmed.
+> - **Prefer a different model family** from the pass that wrote the note (the A3 cross-model rule): two lenses from
+>   one model share blind spots. Name the model that ran it in the note's cross-check section.
+> - **Merge its findings into the note's six-verdict table** before the mine is called done. A verdict-2 or -3 it
+>   raises becomes a `content-backlog.md` row like any other; if it finds nothing, record *that* — a clean
+>   independent lens is a stronger result than a single pass's "corroboration."
+> - This is the mining-stage analogue of dual consensus. It does **not** replace Step Zero (the full essay read is
+>   what lets the hunter's findings be judged); it catches what one careful reader, reading to confirm, cannot see.
+> - ⚠ A strong **verdict-5 hazard** ("ours is better — do not let a future session change this back") is worth more
+>   than a note nobody re-reads: where it fits, route it into the mechanical guards (`tools/retired-claims.json` or
+>   `docs/known-traps.md`) in the same breath, so the backward "improvement" is caught by CI, not by memory.
+
 A content session then executes each backlog row in pipeline order — **update/create the certified essay
 (re-gate: citations → argument → orthodoxy, dual-consensus for deity/resurrection) → then the
 brief/`/sources` → rebuild the index** — and marks the row Done + flips the source note's ledger. This is
