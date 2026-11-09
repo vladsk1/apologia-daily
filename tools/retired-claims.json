@@ -1033,6 +1033,39 @@
           "the fine-tuning data is conceded by atheist physicists across the board"
         ]
       }
+    },
+    {
+      "id": "dss-proves-preservation",
+      "netting": "claim",
+      "retired": "2026-11-09",
+      "what": "The slogan that the Dead Sea Scrolls PROVE the Bible never changed / is word-for-word identical / was perfectly preserved.",
+      "why": "False as stated, and library/deadseascrolls.html retires it in its own prose ('the naive slogan is false as stated'): the Great Isaiah Scroll (1QIsaa) differs from the Masoretic Isaiah in something on the order of 2,600 places once every spelling variant and minor difference is tallied. What the Scrolls establish is the STABILITY OF A RECOGNIZABLE TEXT-STREAM across roughly a millennium, not a frozen, letter-perfect identity. Overclaiming 'proof of preservation' hands a reader a slogan a first-year textual critic can puncture; the honest claim is stronger because it is what the evidence actually shows. (Distinct from, and compounding, the standing Bible-reliability guardrail: manuscripts prove accurate PRESERVATION, not that the content is TRUE.)",
+      "instead": "Claim the stability of a recognizable text-stream, not frozen letter-perfect identity: the ancient scroll and the medieval text tell the same story in overwhelmingly the same words, the differences dominated by spelling and obvious copying slips. Archer's 'more than 95 percent' is a fair headline for the SENSE of the text, not a precise statistic, and it summarizes the two Isaiah copies from Cave 1, not 1QIsaa alone.",
+      "patterns": [
+        "(dead sea scrolls|qumran)[^.<\"]{0,70}\\b(prove[sd]?|proof|proving|show[sn]?|demonstrate[sd]?)\\b[^.<\"]{0,50}(ha(s|d|ve)?\\s*n.?t changed|never changed|not changed|unchanged|word.for.word identical|perfectly preserved|perfect preservation|identical to (today|our|the modern|what))",
+        "\\bword.for.word identical\\b[^.<\"]{0,55}\\b(prove[sd]?|proof|proving|show[sn]?)\\b[^.<\"]{0,45}(preserv|unchanged|never changed)"
+      ],
+      "allow": [
+        "library/deadseascrolls.html",
+        "ev-m-deadseascrolls.html",
+        "briefs/_data.json",
+        "briefs-index.json"
+      ],
+      "corpus": {
+        "must_fire": [
+          "the Dead Sea Scrolls prove the Bible never changed",
+          "the Qumran scrolls show the text was word-for-word identical to what we have today",
+          "the Dead Sea Scrolls demonstrate the Old Testament has not changed in a thousand years",
+          "a thousand-year-old scroll that is word-for-word identical, which proves the text was perfectly preserved"
+        ],
+        "must_not_fire": [
+          "the Dead Sea Scrolls show a recognizable, stable text-stream preserved across roughly a thousand years",
+          "manuscripts prove accurate preservation, not that the content is true",
+          "the Great Isaiah Scroll differs from the Masoretic text in something on the order of 2,600 places",
+          "the ancient scroll and the medieval text tell the same story in overwhelmingly the same words"
+        ]
+      },
+      "note": "ALLOW LIST holds ONLY surfaces that QUOTE the slogan ('the Dead Sea Scrolls prove the Bible never changed') in order to call it 'false as stated': the two dedicated DSS pages, plus the gated argument brief (briefs/_data.json and its generated briefs-index.json) whose own text retires the slogan the same way — all four are refutations, not the overclaim. Patterns are anchored on the ABSOLUTE-PROOF overclaim: a Dead-Sea-Scrolls/Qumran token + a prove/show/demonstrate verb + an identity/unchanged/perfect-preservation claim, with tempered gaps. Dry-run 2026-11-09 across all live HTML + JSON fired on exactly these refuting surfaces and nowhere else. If it ever fires on a NEW legitimately-refuting surface, prefer tightening or a sentence-bounded negation guard over widening the allow list (per the quranic-title-compounds tuning lessons above). Never widen to a bare 'Dead Sea Scrolls' + 'preservation', which the honest essays use correctly."
     }
   ]
 }
