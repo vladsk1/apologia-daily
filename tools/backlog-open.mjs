@@ -61,10 +61,22 @@ for (const line of lines) {
   if (!/^\s*\|/.test(line)) continue;                // table row
   if (/^\s*\|\s*-+\s*\|/.test(line)) continue;        // divider
   const cells = line.split('|').slice(1, -1).map((c) => c.trim());
-  if (cells.length < 7) continue;                     // not the 7-col open-backlog table
-  const [P, what, type, surfaced, target, gate, status] = cells;
+  if (cells.length < 7) continue;                     // not the open-backlog table
+  const [P, what, type, surfaced, target] = cells;
   if (!/^P[1-4]$/.test(P)) continue;                  // header / stray row
-  const open = /\bOPEN\b/i.test(status) || /⬜/.test(status);
+  // The authoritative status is the LAST non-empty cell. Rows vary in column count — a
+  // fully-closed row may carry a terse "DONE <date>" final cell while an earlier cell still
+  // shows a now-resolved ⬜ sub-step (that false-positived the CONTINUITY+COST row). Keying
+  // off the last cell, with open/partial markers, reads the row's final verdict instead.
+  const lastCell = [...cells].reverse().find((c) => c.length) || '';
+  const openSig = /\bOPEN\b|⬜|\bTODO\b|\bPARTLY\b|\bPARTIAL\b|\bBLOCKED\b/i.test(lastCell);
+  const doneSig = /🛑|\bDONE\b|\bCLOSED\b|\bDROPPED\b|KEEP OUT|fully closed|RESOLVED|SUPERSEDED|N\/A/i.test(lastCell);
+  let open;
+  if (openSig && !doneSig) open = true;          // plain OPEN / TODO / BLOCKED
+  else if (doneSig && !openSig) open = false;     // plain DONE / CLOSED / 🛑
+  else if (openSig && doneSig)                     // e.g. "PARTLY DONE … ⬜ still OPEN" → open only if work remains
+    open = /⬜\s*(still\s*)?OPEN|still OPEN|\bPARTLY\b|\bREMAINING\b|\bTODO\b/i.test(lastCell);
+  else open = false;                              // narrative/caveat, no live-work signal → treat resolved
   if (!open) continue;
   const surfacedDate = firstDate(surfaced);
   // A mining "verdict 2 (error in ours)" — NOT the backlog's generic "correction" type, which
