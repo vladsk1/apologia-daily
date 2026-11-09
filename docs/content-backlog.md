@@ -23,6 +23,12 @@ until a content session executes them through the pipeline.
 `new-source`. **Priority:** P1 (accuracy fix / correction) > P2 (new topic/objection we lack) >
 P3 (stronger primary / enrichment) > P4 (corroboration only — usually skip).
 
+> **⭐ A mining "verdict 2 (error in ours)" is ALWAYS P1.** If a mine finds the site is *wrong* about
+> something (not merely beatable or incomplete), its row is P1 regardless of how small the fix looks —
+> a live inaccuracy outranks every enrichment. `node tools/backlog-open.mjs` lists the open rows
+> worst-first (P1, then oldest-surfaced) and flags any row that names a verdict-2/"error in ours" but
+> isn't P1. Run it before starting a new mine (owner rule: **fix the open rows before the next mine**).
+
 ## ⭐ Card build program — OWNER-LOCKED 2026-09-25 (full-stack cards from the Fee *Jesus the Lord* mining run)
 Each = **deep-dive essay + `ev-s*` card (free "In plain English" + "Pro — Deep Dive") + `ev-m-*` mastery page**, dual-consensus gated, then wired into the tab hub + `evidence-library.html` + `library/index.html` + `sitemap.xml` + trust-numbers (log the `.mk` mirror as pending). Build order **LOCKED**:
 1. **The Full Humanity of Christ** → `library/humanity.html` + card in the **Jesus tab (ev-s3)** + `ev-m-humanity.html`. The one real **GAP**. ⏳ Essay drafted + dual-consensus gated (0 heresy / 0 BREAK; fixes applied + re-gated STAMPABLE) — **card + mastery + wiring TODO.**

@@ -1989,6 +1989,46 @@ was read and found to already cover it — neutrally — so no row was warranted
 >   than a note nobody re-reads: where it fits, route it into the mechanical guards (`tools/retired-claims.json` or
 >   `docs/known-traps.md`) in the same breath, so the backward "improvement" is caught by CI, not by memory.
 
+> ### ⭐ THE PER-MINE STANDARD — the passes every mine runs, the rows it pins, and what is NOT per-mine. (Added 2026-11-09, owner-directed.)
+>
+> The error-hunter above is one of **two standard read-only passes** every worthwhile mine now runs, plus a few
+> lighter every-mine checks. **Scale them to the mine** — a pure-corroboration source (e.g. Carson, 2026-11-09)
+> collapses most of these to "nothing found, recorded"; a book we barely cover exercises all of them. Run the two
+> agent passes in parallel, different model families where possible (the A3 cross-model rule).
+>
+> **The two standard passes** (read-only `Explore` agents; findings merged into the six-verdict table):
+> 1. **Error-hunter** (accuracy) — "where are we WRONG (②) or WEAKER (③)?" Full brief in the box above.
+> 2. **Argument-upgrade** (strength) — the mirror job: *"take each argument our essay already makes on this topic
+>    and ask whether the source makes it BETTER — a stronger premise, a better-ordered case, a more current number,
+>    a sharper answer to the stated objection, a cleaner concession. Where the source wins, say how, and quote
+>    both."* This is verdict ③ aimed at the arguments we already make **and win** — an essay can be *right and still
+>    beatable*, and a coverage check (present/absent) is blind to that. Not a gap-finder.
+>
+> **The lighter every-mine checks** (one line each in the note; usually quick):
+> - **Cross-source triangulation** — does this source *agree* with our other notes on the same topic? A claim three
+>   mined sources make the same way we can state firmly; a claim only this one makes — or that *contradicts* another
+>   note — is flagged, not shipped on a single witness. (Strengthens what we already say; it is not only gap-finding.)
+> - **Coverage / objection register** — list the objections the source raises on this topic, tick the ones our essay
+>   already answers; an unticked one is a verdict-④ row.
+> - **Skeptic red-team** — read the source *for the other side*: does it hand a skeptic a move our essay leaves
+>   unanswered? If so, that is the strongest kind of ④ row.
+> - **Currency scan** — is any datum the source leans on stale/superseded (a date, a manuscript count, a consensus
+>   that has moved)? If **ours** rests on the same stale datum → verdict-② (**P1**).
+>
+> **Pin the rows at the end — and fix them before the next mine. (Owner rule.)** Every mine note ENDS with a
+> **"Rows this mine logged — awaiting go-ahead"** section listing each new backlog row (verdict-② first), each
+> tagged with its **reader-impact** (homepage / public essay / live-AI **>** a buried page — the one-line tag that
+> decides fix-order *within* a priority). The mining session then **stops**: it does not open another source until
+> the owner gives the go-ahead and the open rows are cleared. `node tools/backlog-open.mjs` lists them worst-first,
+> and a mining ② ("error in ours") is **always P1**. Record the run in `docs/MINE_SCOREBOARD.md` in the same commit.
+>
+> **NOT part of the per-mine standard** (separate habits, each on its own trigger — never a per-mine pass): the
+> **reader-impact tag** is just the one-line label above, not a pass; **citation backward-chaining** (follow a
+> source's own strongest citations to choose the *next* source to mine) runs **when choosing the next source**; and
+> the **live-AI before/after eval** (ask the deployed `/api/ask` the topic question and compare) runs **after a
+> batch of fixes ships**, not per mine — it spends tokens and hits the rate limit, and it measures accumulated
+> improvement across many fixes, not one source.
+
 A content session then executes each backlog row in pipeline order — **update/create the certified essay
 (re-gate: citations → argument → orthodoxy, dual-consensus for deity/resurrection) → then the
 brief/`/sources` → rebuild the index** — and marks the row Done + flips the source note's ledger. This is

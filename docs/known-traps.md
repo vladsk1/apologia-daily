@@ -93,3 +93,21 @@ wrong · what to say instead.
   never list him among the illegal-period witnesses (Pliny c.112, Lucian c.165, Cornelius 251). The
   vivid "impious Galilaeans" line is from the *Letter to Arsacius*, which Van Nuffelen argues is a
   **forgery** — ground him in the undisputed *Fragment of a Letter to a Priest*.
+
+## Gospel authorship & historicity — hazards to not drift INTO (verdict-5 guards)
+
+These are not past production errors but high-value "ours is better / don't reverse it" hazards logged
+from mining runs, parked here because the gates read this file. Keep them from entering a draft. (Too
+subtle for a regex guard — the underlying positions are legitimately *discussed* on-site, hedged; the
+trap is proving them from the wrong source or hardening the hedge into a fact.)
+
+- **John's independence of the Synoptics — don't *prove* it from Dodd/Carson.** John's independence of
+  the Synoptics is a legitimate scholarly position (discuss it hedged, e.g. on `multiatt.html`), but
+  Dodd's independence thesis is contested and **Carson ("Historical Tradition in the Fourth Gospel:
+  After Dodd, What?") is a cautious convert to the *opposite* view** — he grants John likely knew Mark.
+  Never cite Dodd or Carson as *settling* John's independence, and never upgrade the hedged discussion
+  into an asserted fact. (Carson mine, 2026-11-09.)
+- **Johannine authorship — don't assert John son of Zebedee *wrote* John.** Apostolic authorship by
+  the son of Zebedee is a minority position; `eyewitnesses.html` and the Gospels-reliability material
+  stay on the broader "early, within-living-memory, eyewitness-rooted tradition" case. Don't narrow it
+  to a named apostle as though settled. (Carson mine, 2026-11-09.)

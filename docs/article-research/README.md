@@ -182,6 +182,15 @@ our-own-words material (or a verified PD primary) reaches a visitor.
    > `Explore` agent, ideally on a different model family, whose only job is to hunt verdict-2 (**error in ours**)
    > and verdict-3 (**weaker in ours**) across all six surfaces — it is not shown the note's conclusions. Merge
    > its findings into the note's six-verdict table before the mine is called done, and name the model that ran it.
+   >
+   > **The full per-mine standard** (CLAUDE.md § *THE PER-MINE STANDARD*) adds a second read-only pass — the
+   > **argument-upgrade** pass (does the source make an argument we already win *better*? — strength, not gaps) —
+   > plus four lighter every-mine checks (cross-source triangulation · coverage/objection register · skeptic
+   > red-team · currency scan). Scale them to the mine; a pure-corroboration source collapses most to "nothing
+   > found, recorded." Use `node tools/find-in-corpus.mjs "<term>"` for any coverage check so an entity-encoded
+   > name (`Lema&icirc;tre`) isn't mistaken for a gap. **End the note with a "Rows this mine logged — awaiting
+   > go-ahead" section** (verdict-② first, each reader-impact-tagged); the session then stops until the owner
+   > clears the open rows (`node tools/backlog-open.mjs`), and the run is recorded in `docs/MINE_SCOREBOARD.md`.
 4. **Log it in three places:** (a) a row in the **Mined-articles ledger** below (with live-door
    status); (b) a topic row in `INDEX.md`; and (c) for any lead that step 3 classified as an
    **improvement**, a row in [`docs/content-backlog.md`](../content-backlog.md) — the release map.
