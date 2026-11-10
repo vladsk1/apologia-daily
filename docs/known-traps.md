@@ -76,6 +76,13 @@ wrong · what to say instead.
   source* and holds a minority position he himself concedes; **Bauckham** — cite as a historian on
   historical questions only, never in a further-reading list without naming the work (universalism
   fence); **Ehrman/Allison/Stenger/Vermes/BeDuhn** have all been mislabelled here before.
+- **Allison on collective hallucinations — don't enlist him on our side.** Dale Allison argues
+  apparition/collective experiences are *more* common than apologists allow and judges the evidence
+  **equivocal** — never compress this into "even Allison grants the evidence for collective
+  hallucinations is thin." He personally grants the disciples saw a bodily-appearing Jesus but leaves
+  the *cause* open: never "Allison affirms the resurrection," never "Allison is a flat sceptic." This
+  **shipped live in the `resurrection-group-appearances` brief** (feeding `/api/ask`) and was fixed
+  2026-11-10 (RES-A1). Check `docs/scholar-labels.md` before compressing him.
 
 ## Fine-tuning — the fragile one
 
@@ -111,3 +118,10 @@ trap is proving them from the wrong source or hardening the hedge into a fact.)
   the son of Zebedee is a minority position; `eyewitnesses.html` and the Gospels-reliability material
   stay on the broader "early, within-living-memory, eyewitness-rooted tradition" case. Don't narrow it
   to a named apostle as though settled. (Carson mine, 2026-11-09.)
+- **Empty tomb — don't elevate it to minimal-fact consensus.** The empty tomb is the resurrection
+  case's **soft point**, not part of the near-universal consensus that the crucifixion and the
+  appearances enjoy. Habermas's own survey puts it around two-thirds to three-quarters; our essays
+  (`minimalfacts.html`, `emptytomb.html`) correctly tier it lower and flag it as the genuinely debated
+  point. Loke and popular writers bundle it into the near-universal tier — never follow them. And never
+  state the ~75% figure as field-wide hard data: it is one compiler's count, cited as Habermas's survey
+  with the non-poll / Alter–Slade hedge, never as a settled statistic. (Resurrection mine, 2026-11-10.)
