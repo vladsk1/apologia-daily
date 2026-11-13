@@ -1,3 +1,9 @@
+> **⛔ SUPERSEDED / DETAIL APPENDIX — demoted 2026-11-13.** This is a point-in-time detail appendix,
+> **not** the live backlog. Its open-markers are **unreliable** (hand-maintained; note too that
+> `palace.html` is parked/not-deployed, so its "twins" are moot for the live site). **The single
+> authoritative list is [`docs/content-backlog.md`](content-backlog.md)** — see its `ev-s5` /
+> Science-&-Faith rows. Verify anything below against the live page before acting.
+
 # Science & Faith sweep — logged, not fixed (2026-10-04)
 
 Owner-directed over-charity + live fact-check sweep of the Science & Faith tab (ev-s5).

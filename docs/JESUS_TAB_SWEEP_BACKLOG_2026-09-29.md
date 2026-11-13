@@ -1,3 +1,10 @@
+> **⛔ SUPERSEDED / DETAIL APPENDIX — demoted 2026-11-13.** This is a point-in-time detail appendix,
+> **not** the live backlog. Its open-markers are **unreliable**: a 2026-11-13 live re-verification found
+> ~22 items here (still listed as open) had already shipped. **The single authoritative list is
+> [`docs/content-backlog.md`](content-backlog.md)** — see its **"Jesus-tab essays (21) … 2026-09-29 sweep"**
+> row, whose Status now carries the de-staled open/done breakdown. Verify anything below against the live
+> page before acting.
+
 # Jesus tab essays: deferred items from the 2026-09-29 over-charity + fact-check sweep
 
 Scope of the sweep: the 21 essays on the Evidence Library Jesus tab (ev-s3). Every essay went through four rounds of read-only Explore gates:

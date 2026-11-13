@@ -1,3 +1,8 @@
+> **⛔ SUPERSEDED — demoted 2026-11-13.** This July-2026 audit is **fully superseded** by the Oct-2026
+> per-tab mastery phases: all 67 `ev-m-*` pages have since been swept, gated and stamped. It is kept only
+> as history. **The single authoritative list is [`docs/content-backlog.md`](content-backlog.md).** Do not
+> treat anything below as an open to-do without checking the live page and the current stamp.
+
 # The 63 mastery pages — full audit, 2026-07-28
 
 Every ungated `ev-m-*.html` page assessed by the review fleet: **argument** on all 63,

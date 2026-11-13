@@ -1,3 +1,9 @@
+> **⛔ SUPERSEDED / DETAIL APPENDIX — demoted 2026-11-13.** This is a point-in-time detail appendix,
+> **not** the live backlog. Its open-markers are **unreliable** (most per-essay items shipped in
+> `99f684a8`; several "stale records to update" were since done). **The single authoritative list is
+> [`docs/content-backlog.md`](content-backlog.md)** — see its `ev-s8` / Christian-Revolution rows. Verify
+> anything below against the live page before acting.
+
 # Christian Revolution sweep (ev-s8): logged, not fixed (2026-10-04)
 
 This is an owner-directed sweep of the Christian Revolution tab, checking for over-charity and running a live fact-check. The seven essays were also cross-checked against Glen Scrivener's *The Air We Breathe* (owner request), using the research note docs/book-research/the-air-we-breathe.md.

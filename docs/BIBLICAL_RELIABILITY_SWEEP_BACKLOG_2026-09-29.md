@@ -1,3 +1,9 @@
+> **⛔ SUPERSEDED / DETAIL APPENDIX — demoted 2026-11-13.** This is a point-in-time detail appendix,
+> **not** the live backlog. Its open-markers are **unreliable** (hand-maintained; some logged-open items
+> have since shipped). **The single authoritative list is [`docs/content-backlog.md`](content-backlog.md)**
+> — see its Biblical-Reliability / `ev-s4` rows (incl. BR-RB-10). Verify anything below against the live
+> page before acting.
+
 # Biblical Reliability tab (ev-s4): deferred items from the 2026-09-29 over-charity + fact-check sweep
 
 **Scope:** the 11 essays on the Evidence Library's Biblical Reliability tab:

@@ -1,3 +1,10 @@
+> **⛔ SUPERSEDED / DETAIL APPENDIX — demoted 2026-11-13.** This is a point-in-time detail appendix,
+> **not** the live backlog. Its open-markers are **unreliable**: a 2026-11-13 spot-check found 2 of the 3
+> "stale subtitles" already fixed (only the consciousness one survives) and the Vilenkin/Penzias twins
+> already gone. **The single authoritative list is [`docs/content-backlog.md`](content-backlog.md)** — see
+> its `ev-s1` / God's-Existence rows (incl. S1-TAB-1 and the two 2026-11-13 rows for the consciousness
+> subtitle twin + "fair-minded" Morriston). Verify anything below against the live page before acting.
+
 # God's Existence tab (ev-s1): deferred items from the 2026-10-01 over-charity + fact-check sweep
 
 **Scope (phase 1 = essays, DONE 2026-10-01):** the 12 essays on the God's Existence tab —
