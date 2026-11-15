@@ -1020,7 +1020,7 @@
         btn.classList.remove('ready');
         btn.style.opacity = '0.4';
         btn.style.pointerEvents = 'none';
-        if (hint) hint.textContent = 'Weekly limit reached — reset or upgrade to Pro';
+        if (hint) hint.textContent = 'Weekly limit reached — reset below';
         return;
       }
       if (state.opponent && state.topic) {
@@ -1668,7 +1668,7 @@
       const btn = document.getElementById('start-btn');
       if (!allowed) {
         if (hint) {
-          hint.textContent = 'Weekly limit reached (' + used + '/' + DEBATE_WEEKLY_LIMIT + ') — reset below or upgrade to Pro';
+          hint.textContent = 'Weekly limit reached (' + used + '/' + DEBATE_WEEKLY_LIMIT + ') — reset below';
           hint.style.color = '#c8a951';
         }
         if (btn) {
