@@ -307,3 +307,5 @@ concessions). The three PD `/sources` passages added for the Hebrews contrast (`
 `tertullian-pudicitia-20`) remain as accurate primaries on Hebrews' authorship, but were RETAGGED to Hebrews-only
 (tags "hebrews", "epistle to the hebrews", "canon"; "authorship"/"anonymity"/"gospel origins" removed) so the live AI does
 not retrieve them for Gospel-anonymity questions; no page now cites them.
+
+**GATH-7 shipped 2026-11-15** (answer-page onomastic overclaim; gated). Its neutrality lens found the same overclaim on the sibling answer `do-the-gospel-names-show-eyewitness-testimony` → logged as **GATH-10** (OPEN). Every row this mine logged is now closed except GATH-10.
