@@ -282,3 +282,15 @@ orthodoxy on Fable, neutrality on Opus). The full account is in each file's `con
     added. Suggested wording: "argues the Gospel names are probably original, against a near-consensus he himself
     documents; never as the majority, never as proving authorship".
   - Native MK/ES doctrinal review is still owed, and pastoral sign-off is `_pending_` site-wide.
+
+## Shipped — 2026-11-15 (second commit): the new essay
+At the owner's request, a new deep dive, **`library/gospel-authorship.html`** ("Who Wrote the Gospels? Were They
+Really Anonymous?"), was built from this mine and the GATH-certified wording, with a new **`ev-s4.html` card #12
+(`arg-authorship`)** mirrored to MK and ES and a live-AI brief **`gospel-authorship-names`**. The essay took four
+gate rounds and the card + brief two (read-only lenses, md5-verified; orthodoxy on Fable, neutrality and argument on
+Opus); the full record is in each stamp. Points from this note that the essay now uses: the genre survey (§2), the
+witnesses Gospel by Gospel (§3.2, with Luke's late attestation stated plainly), both silences labelled as arguments
+from silence (§3.3), and Luke's preface as making Luke "least likely to have been anonymous at its origin". Kept out
+on purpose, per ⑤: P66's title, the Hegesippus epitome, the *Acts of Peter and the Twelve*, *Thomas* 13, and Papias
+frags 19/23. Follow-ups are backlog rows **GATH-8** (three inherited `canon.html` defects) and **GATH-9** (MK/ES
+essay mirror; optional mastery page).
