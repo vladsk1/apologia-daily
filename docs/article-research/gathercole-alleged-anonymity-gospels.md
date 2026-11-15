@@ -294,3 +294,16 @@ from silence (§3.3), and Luke's preface as making Luke "least likely to have be
 on purpose, per ⑤: P66's title, the Hegesippus epitome, the *Acts of Peter and the Twelve*, *Thomas* 13, and Papias
 frags 19/23. Follow-ups are backlog rows **GATH-8** (three inherited `canon.html` defects) and **GATH-9** (MK/ES
 essay mirror; optional mastery page).
+
+## Shipped — 2026-11-15 (third commit): GATH-8, GATH-9, and the owner's two rules
+GATH-8 (inherited `canon.html` defects) and GATH-9 (MK/ES essay, mastery page, pocket card) are done; see the backlog rows.
+⚠ **Owner ruling that changes how this note's §3.3 is used:** the **Hebrews comparison** (four proposed authors by the
+early third century; Origen's "God knows") is **no longer used anywhere on the site** — not on cards, briefs, mastery
+pages, pocket cards, answers, or in the essays' main text — because it raises questions about Hebrews the pages do not
+answer. The "no rival tradition of authorship" point stays, always labelled an argument from silence, with the Barnabas
+fence ("uniform names can still be mistaken"). Do not reintroduce the Hebrews contrast from this note without the owner.
+Second owner rule: every section answers its caveats and ends on a positive, earned verdict (not a trailing list of
+concessions). The three PD `/sources` passages added for the Hebrews contrast (`eusebius-he-6-25-14`, `eusebius-he-6-14-2`,
+`tertullian-pudicitia-20`) remain as accurate primaries on Hebrews' authorship, but were RETAGGED to Hebrews-only
+(tags "hebrews", "epistle to the hebrews", "canon"; "authorship"/"anonymity"/"gospel origins" removed) so the live AI does
+not retrieve them for Gospel-anonymity questions; no page now cites them.
