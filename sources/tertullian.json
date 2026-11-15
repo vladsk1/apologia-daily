@@ -138,5 +138,24 @@
     "tags": ["incarnation", "two natures", "one person of christ", "hypostatic union", "christology", "pre-nicene", "early church"],
     "note": "c. AD 213 — a century before Chalcedon, Tertullian already states the two-natures grammar: the divine and human in Christ are not confounded but conjoined in one Person. Filed under the Incarnation & Two Natures bucket. Verified verbatim against source_url (apologia-citations, web, 2026-08-24).",
     "text": "We see plainly the twofold state, which is not confounded, but conjoined in One Person—Jesus, God and Man."
+  },
+  {
+    "id": "tertullian-pudicitia-20",
+    "author": "Tertullian",
+    "work": "On Modesty (De Pudicitia)",
+    "year": 210,
+    "section": "ch. 20",
+    "translation": "S. Thelwall (ANF vol. 4), public domain",
+    "pd": true,
+    "source_url": "https://www.newadvent.org/fathers/0407.htm",
+    "verified": true,
+    "tags": [
+      "hebrews",
+      "authorship",
+      "anonymity",
+      "canon"
+    ],
+    "note": "Tertullian (c. 210) credits the Epistle to the Hebrews to Barnabas, one of the rival attributions of a genuinely nameless text (compare eusebius-he-6-25-14 and eusebius-he-6-14-2). The accepted manuscript of Gathercole (JTS 2018) reads 'Pud. 2.1-5', apparently for 20.1-5; the passage is ch. 20 (checked against source_url 2026-11-15). On Modesty is a Montanist-period work arguing against restoring adulterers after repentance, so use it ONLY for the Barnabas attribution, never for its penitential theology. Added 2026-11-15 from the Gathercole anonymity mine (backlog GATH-5); text copied from source_url. Verified verbatim vs source_url (apologia-citations, web, 2026-11-15).",
+    "text": "For there is extant withal an Epistle to the Hebrews under the name of Barnabas — a man sufficiently accredited by God, as being one whom Paul has stationed next to himself in the uninterrupted observance of abstinence"
   }
 ]

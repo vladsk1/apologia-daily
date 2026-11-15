@@ -12,5 +12,24 @@
     "tags": ["trinity", "holy spirit", "monotheism", "pre-nicene", "early church"],
     "note": "The earliest surviving use of the word 'Trinity' (Greek trias) for the Godhead — c. AD 180, well before the creeds fixed the vocabulary. Key witness for the Trinity intro's 'before the creeds' point. Filed under Trinity (not deity) so it does not inflate the deity-of-Christ pre-Nicaea stat. Verified verbatim against source_url (apologia-citations, web, 2026-08-24).",
     "text": "In like manner also the three days which were before the luminaries, are types of the Trinity, of God, and His Word, and His wisdom."
+  },
+  {
+    "id": "theophilus-autolycus-2-22",
+    "author": "Theophilus of Antioch",
+    "work": "To Autolycus",
+    "year": 180,
+    "section": "Book II, ch. 22",
+    "translation": "Marcus Dods (ANF vol. 2), public domain",
+    "pd": true,
+    "source_url": "https://www.newadvent.org/fathers/02042.htm",
+    "verified": true,
+    "tags": [
+      "gospel origins",
+      "authorship",
+      "gospel of john authorship",
+      "bible reliability"
+    ],
+    "note": "c. AD 180: Theophilus quotes John 1:1 by name ('one of whom, John, says'), an attribution of the Fourth Gospel's prologue to John before or alongside Irenaeus. Use ONLY for the attribution. The surrounding chapter carries Theophilus's pre-Nicene Logos vocabulary (the Word 'residing within the heart of God' and later 'uttered'), which compresses badly and can read as a temporal generation of the Son. Never quote that wider passage as our theology, and never present it as Nicene teaching. This note does NOT reach the live AI (api/ask.js sends only author/work/section/translation/text), so the truncation and the tags are the only runtime fence: never lengthen the excerpt, and never tag it trinity/deity/logos. The excerpt deliberately stops before John 1:1c; it is an attribution witness, not a witness to the verse's wording or to Christ's deity. Added 2026-11-15 from the Gathercole anonymity mine (backlog GATH-5); text copied from source_url. Verified verbatim vs source_url (apologia-citations, web, 2026-11-15).",
+    "text": "And hence the holy writings teach us, and all the spirit-bearing [inspired] men, one of whom, John, says, In the beginning was the Word"
   }
 ]

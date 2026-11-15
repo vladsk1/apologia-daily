@@ -147,5 +147,63 @@
     ],
     "note": "From an anonymous early-third-century work (the 'Little Labyrinth', attributed to Hippolytus of Rome or to Gaius, c. AD 230-240), quoted by Eusebius, refuting the Artemonites' claim that the deity of Christ was a recent corruption of an originally 'mere man' teaching. The writer appeals to the church's hymnody 'from the beginning' as evidence that Christ was praised as God long before Nicaea - load-bearing against the 'Nicaea/Constantine invented Jesus' divinity' claim. A chain of testimony: Eusebius (c. 325) quotes the anonymous writer (c. 230-240) reporting hymnody 'from the beginning'. Store as historical testimony to early Christian worship of Christ, not as proof of the doctrine itself. Verified verbatim vs source_url (web, 2026-10-05).",
     "text": "And how many psalms and hymns, written by the faithful brethren from the beginning, celebrate Christ the Word of God, speaking of him as Divine."
+  },
+  {
+    "id": "eusebius-he-6-25-14",
+    "author": "Eusebius of Caesarea",
+    "work": "Church History",
+    "year": 325,
+    "section": "Bk VI.25.14",
+    "translation": "McGiffert (NPNF ser. 2 vol. 1), public domain",
+    "pd": true,
+    "source_url": "https://www.newadvent.org/fathers/250106.htm",
+    "verified": true,
+    "tags": [
+      "hebrews",
+      "authorship",
+      "anonymity",
+      "canon",
+      "gospel origins"
+    ],
+    "note": "Origen (as quoted by Eusebius) on the Epistle to the Hebrews: its author is unknown, and earlier writers had credited it to Clement of Rome or to Luke. This is the contrast case for the Gospels. A genuinely nameless early Christian text drew several rival attributions (here Clement and Luke; Paul in EH 6.14.2; Barnabas in Tertullian, On Modesty 20), while the early sources show no rival tradition of authorship for the Gospels (on the disputed Cerinthus report see library/eyewitnesses.html n. 20). That is an argument from silence; label it so wherever it is used. Added 2026-11-15 from the Gathercole anonymity mine (backlog GATH-5); text copied from source_url. Verified verbatim vs source_url (apologia-citations, web, 2026-11-15).",
+    "text": "But who wrote the epistle, in truth, God knows. The statement of some who have gone before us is that Clement, bishop of the Romans, wrote the epistle, and of others that Luke, the author of the Gospel and the Acts, wrote it."
+  },
+  {
+    "id": "eusebius-he-6-14-2",
+    "author": "Eusebius of Caesarea",
+    "work": "Church History",
+    "year": 325,
+    "section": "Bk VI.14.2",
+    "translation": "McGiffert (NPNF ser. 2 vol. 1), public domain",
+    "pd": true,
+    "source_url": "https://www.newadvent.org/fathers/250106.htm",
+    "verified": true,
+    "tags": [
+      "hebrews",
+      "authorship",
+      "anonymity",
+      "canon"
+    ],
+    "note": "Clement of Alexandria (c. 200, via Eusebius) credits Hebrews to Paul, with Luke as its translator. It is one of the several rival attributions of the nameless Hebrews; see eusebius-he-6-25-14 for the contrast with the Gospels. Added 2026-11-15 from the Gathercole anonymity mine (backlog GATH-5); text copied from source_url. Verified verbatim vs source_url (apologia-citations, web, 2026-11-15).",
+    "text": "He says that the Epistle to the Hebrews is the work of Paul, and that it was written to the Hebrews in the Hebrew language; but that Luke translated it carefully and published it for the Greeks, and hence the same style of expression is found in this epistle and in the Acts."
+  },
+  {
+    "id": "eusebius-he-5-24-2",
+    "author": "Eusebius of Caesarea",
+    "work": "Church History",
+    "year": 325,
+    "section": "Bk V.24.2",
+    "translation": "McGiffert (NPNF ser. 2 vol. 1), public domain",
+    "pd": true,
+    "source_url": "https://www.newadvent.org/fathers/250105.htm",
+    "verified": true,
+    "tags": [
+      "john",
+      "beloved disciple",
+      "authorship",
+      "gospel origins"
+    ],
+    "note": "Polycrates of Ephesus (190s, letter to Victor of Rome, via Eusebius) identifies a John buried at Ephesus as the one 'who reclined upon the bosom of the Lord', i.e. the Beloved Disciple of John 13:23-25. Bauckham argues this John is NOT the son of Zebedee but Papias's 'John the Elder'. Use it only for the early identification of the Beloved Disciple as a John; it does not settle WHICH John. Added 2026-11-15 from the Gathercole anonymity mine (backlog GATH-5); text copied from source_url. Verified verbatim vs source_url (apologia-citations, web, 2026-11-15).",
+    "text": "Among these are Philip, one of the twelve apostles, who fell asleep in Hierapolis; and his two aged virgin daughters, and another daughter, who lived in the Holy Spirit and now rests at Ephesus; and, moreover, John, who was both a witness and a teacher, who reclined upon the bosom of the Lord, and, being a priest, wore the sacerdotal plate."
   }
 ]
