@@ -423,3 +423,5 @@ owner says go.** A mining ② is always P1.
 
 ## Shipped — 2026-11-16
 KRUG-1, KRUG-2 and KRUG-12 (the three P1 rows) are live after a gate round + confirmation. The gate also caught a Spanish false friend in our own translation («ortodoxos orientales» = the Oriental Orthodox, i.e. the very family whose broader canon KRUG-2 scopes out) and logged its leftovers as **KRUG-17**. Remaining open: KRUG-3…11, -13…17.
+
+KRUG-3 and KRUG-6 (the two P2 rows) shipped 2026-11-16 after a four-lens gate + confirmation. The note's own hazard held: the gate caught our first draft of the live-AI brief waving off the closed-list definition as a word game — exactly the dismissal this note warns against — and the first glossary draft stating the closed-list conclusion in the site's voice. Leftovers logged as **KRUG-18**. Remaining open: KRUG-4, -5, -7…11, -13…18.
