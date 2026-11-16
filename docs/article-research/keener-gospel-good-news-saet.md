@@ -36,8 +36,8 @@ contents was looked at only to choose them):
   `jesus_as_god_nt.html`, `uniqueness.html`, `names.html`, `messianic-prophecy.html`. Each verdict that rests on one
   of these says so.
 
-**Status: MINED — rows awaiting owner go-ahead.** KEEN-1 to KEEN-11 are pinned below and logged in
-`docs/content-backlog.md`. Nothing has shipped. No live content was changed by this mine.
+**Status: MINED; KEEN-1 and KEEN-7 SHIPPED 2026-11-17** (owner go-ahead; see "Shipped" at the end). KEEN-2 to -6 and
+KEEN-8 to -11 remain OPEN in `docs/content-backlog.md`, plus a follow-up KEEN-12. The mine itself changed no live content.
 
 **Why this is a LEAD, not a quotable source.**
 - A modern copyrighted encyclopaedia entry. Its primaries are mostly **Scripture** (heavily cited), a few **ancient
@@ -145,6 +145,38 @@ and lack the Judean and Galilean traits of the four. Most Gnostic "gospels" are 
 **§7 Conclusion.**
 
 ---
+
+## Five-surface cross-check — 2026-11-16 (main read on Claude Opus 5.5; second lenses Sonnet + Fable, read-only — see "Second-lens passes")
+- [x] library/*.html essay(s)  — `consistency`, `eyewitnesses`, `gospel-authorship`, `earlycreed`, `earlydate` read in
+  full before the entry (Step Zero). Section-level checks only on `jesus_claims`, `hist_jesus`,
+  `jesus-messiah-claim`, `titles`, `humanity`, `jesus_as_god_nt`, `uniqueness`, `names`, `messianic-prophecy`. Verdicts:
+  ② `earlydate.html`'s "very purpose" sentence (KEEN-1); ④ the failed-prediction objection is absent (KEEN-7); ③ the
+  bios consensus unsourced on `consistency.html` (KEEN-2); ③ "fictionalization" vs fiction (KEEN-3); ③ "living memory"
+  undefined (KEEN-5); ③ 1 Cor 15:11 missing from `earlycreed.html` (KEEN-11); ④ Socrates comparison (KEEN-4);
+  ④ disciples as students (KEEN-6); ④ Spirit-baptizer (KEEN-9). No MK/ES mirror of `earlydate` exists;
+  `jesus_claims` has both.
+- [x] /answers/*               — searched `answers/_data.json` for biography, bios, living memory, "this generation",
+  Mark 13:30 and "end of the world". Hits: `were-the-gospels-written-by-eyewitnesses`, `when-were-the-gospels-written`
+  and `why-were-some-gospels-left-out-of-the-bible` use "living memory" undefined (KEEN-5); the last relies on
+  chronology alone (KEEN-10); one answer says Alexander's biographies came "more than four centuries" later (fine).
+  No answer addresses the failed-prediction objection (KEEN-7). Entries were grep-scanned, not read in full.
+- [x] ev-s*.html tab card(s)   — `ev-s4.html` cards `arg-consistency`, `arg-eyewitnesses`, `arg-earlydate`,
+  `arg-authorship` and `ev-s3.html` `arg-earlycreed` grep-scanned by the main read and both second lenses: the
+  earlydate card repeats "some four centuries" for Arrian/Plutarch and `ev-s3` says "three to four centuries" for the
+  earliest full narrative (both defensible; harmonise in KEEN-4). No card carries the "very purpose" sentence.
+- [x] ev-m*.html mastery page(s) — `ev-m-earlydate.html` glossary carries the KEEN-1 sentence ("whose purpose is to
+  convey…") and the Alexander figure; `ev-m-consistency.html` glossary asserts the bios genre unsourced (KEEN-2);
+  `ev-m-eyewitnesses.html` and `ev-m-earlycreed.html` use "living memory" undefined (KEEN-5). `ARG_PREMISES`,
+  `cards` and `checks` were grep-scanned (by the lenses), not read in full. Also found the unserved
+  `docs/mastery-ports/earlydate.json` carrying the KEEN-1 sentence.
+- [x] /briefs                  — `bible-contradictions`, `new-testament-date-of-composition`,
+  `gospels-eyewitness-testimony`, `gospel-authorship-names` scanned: none carries the "very purpose" sentence; the
+  dating brief uses "living memory" undefined (KEEN-5); no brief answers the failed-prediction objection (KEEN-7).
+- [x] /sources                 — `sources/justin-martyr.json` checked: it carries *First Apology* 13, 19, 30, 61, 63,
+  66, 67 and *Dialogue* chs. 8, 32, 63, but **not** *Dialogue* 103 or 106 (the "memoirs" passages the entry cites).
+  Not logged as a candidate: our essays cite those loci directly and nothing quotes them. `sources/creeds.json`
+  carries the Nicene "come again" clause (verified, Schaff), used by KEEN-7. Nothing in `/sources` conflicts with
+  the entry.
 
 ## Six-verdict cross-check (2026-11-16)
 
@@ -314,3 +346,29 @@ of a KEEN row that touches those files waits until those rows close. Each row sa
 **Count, measured from this table:** 11 rows: 1 P1, 1 P2, 7 P3, 2 P4. One row (KEEN-6) is blocked on a book. Four
 (KEEN-4, -5, -7, -10) have parts that wait for the KRUG session to finish.
 
+---
+
+## Shipped — 2026-11-17 (owner said "Fix KEEN-1 and KEEN-7")
+
+- **KEEN-1 (P1)** — `library/earlydate.html`, `ev-m-earlydate.html`, `docs/mastery-ports/earlydate.json`. The bios
+  sentence is now bounded to the Gospels' period and attributed to Keener; a Plutarch (*Alexander* 1.1–2) sentence
+  answers the obvious "lives, not histories" rejoinder; footnote 20 separates Momigliano (how the genre developed) from
+  Keener §4.2 (the early-imperial form). "Set out to disprove it" became "began by doubting it", because Burridge's own
+  statement could not be retrieved.
+- **KEEN-7 (P2)** — `library/jesus_claims.html` gained "Wasn't Jesus Wrong About the End?" (about 1,250 words) + note 14
+  + nine bibliography entries; mirrored into `library/mk/` and `library/es/` (AI-translated, pending native gate); and a
+  new live-AI brief `jesus-wrong-about-the-end` (`briefs-index.json` + `lib/briefs-verified.js` rebuilt: 112 gated).
+- **How it went, measured.** Five gate rounds. Round 1 (all four lenses) found 1 citations error claim, 2 argument BREAKs,
+  1 neutrality BREAK and 2 orthodoxy DRIFT-grade notes, all in authored prose. The decisive one: the draft answered "did
+  Jesus fix a date?" when the real objection is "did he promise the end within his generation?". Rounds 2–5 converged
+  (round 5: argument, orthodoxy and neutrality all STAMPABLE/CLEAN on the brief and mirrors). Every lens was a read-only
+  `Explore` agent; all tracked files were md5-hashed before and after each round and never changed.
+- **Two lens claims were wrong and were not applied:** a citations lens said ESV Mark 9:1 reads "that the kingdom of God
+  has come with power" (esv.org: "after it has come with power"); and my own first guess that the trust-number drop
+  from 157 to 149 tests was a Windows artefact (it is not: `origin/main` itself contains 149 `test(` calls, so the
+  published 157 was stale).
+- **Deliberately not used:** C. S. Lewis's well-known reply to Mark 13:30 ("The World's Last Night"), because it
+  concedes that Jesus' human knowledge actually erred.
+- **Not done (KEEN-12):** the `/answers` entry, the `ev-m-jesus_claims.html` memorised layer, and three owner/pastoral
+  items (the Mark 13:32 clarifier's wording, the MK creed line, the ES bibliography lag). Carson's exact EBC readings of
+  Matthew 10:23 and 24:29 were not page-verified.
