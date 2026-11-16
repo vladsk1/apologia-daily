@@ -311,3 +311,5 @@ not retrieve them for Gospel-anonymity questions; no page now cites them.
 **GATH-7 shipped 2026-11-15** (answer-page onomastic overclaim; gated). Its neutrality lens found the same overclaim on the sibling answer `do-the-gospel-names-show-eyewitness-testimony` → logged as **GATH-10** (OPEN). Every row this mine logged is now closed except GATH-10.
 
 **GATH-10 shipped 2026-11-16** (sibling answer page; gated). Its lenses found the same "almost impossible to fake" wording on the live-AI names brief, the active-reading data and the names essay's own intro → **GATH-11** (P2, OPEN).
+
+**GATH-11 shipped 2026-11-16.** Every row this mine produced (GATH-1 to GATH-11) is now closed. The only leftover is two older reel/X-card assets carrying "nearly impossible to fake", left untouched by the owner's don't-rewrite-older-reels rule (wording recorded in the GATH-11 row).
