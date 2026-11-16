@@ -40,9 +40,12 @@ const BROWSERS = [
 const exe = BROWSERS.find((p) => existsSync(p));
 if (!exe) { console.error('No Chrome/Edge found; set CHROME_PATH.'); process.exit(1); }
 
-let PORT, profile, browser;
+// REEL_PORT pins the DevTools port (parallel workers must not collide on a random one);
+// each relaunch moves one port up so a wedged browser's port is never reused.
+let PORT, profile, browser, spawns = 0;
+const BASE_PORT = parseInt(process.env.REEL_PORT || '0', 10) || 0;
 function spawnBrowser(){
-  PORT = 9833 + Math.floor(Math.random() * 400);
+  PORT = BASE_PORT ? BASE_PORT + spawns++ : 9833 + Math.floor(Math.random() * 400);
   profile = mkdtempSync(join(tmpdir(), 'reel-cap-'));
   browser = spawn(exe, ['--headless=new', `--remote-debugging-port=${PORT}`, `--user-data-dir=${profile}`,
     '--no-first-run', '--no-default-browser-check', '--hide-scrollbars', '--force-device-scale-factor=1',
@@ -122,10 +125,15 @@ process.stdout.write(`capturing ${nFrames} frames @ ${FPS}fps → ${outDir}\n`);
 const FRAME_TIMEOUT = 20000, MAX_RETRY = 3, MAX_RESTART = 8;
 const START = Math.max(0, parseInt(process.env.REEL_START || '0', 10) || 0);
 
-let c = await connectAndSetup();
+// REEL_END (exclusive) lets several workers each capture a slice of the same reel in parallel.
+const END = Math.min(nFrames, parseInt(process.env.REEL_END || '0', 10) || nFrames);
+
+let c;
+try { c = await connectAndSetup(); }
+catch (e) { teardown(); throw e; }          // never leave an orphaned headless browser behind
 let restarts = 0;
 try {
-  for (let f = START; f < nFrames; f++) {
+  for (let f = START; f < END; f++) {
     let shot = null, lastErr;
     while (shot === null) {
       for (let attempt = 0; attempt <= MAX_RETRY; attempt++) {
@@ -149,9 +157,9 @@ try {
       }
     }
     writeFileSync(join(outDir, String(f).padStart(6, '0') + '.png'), Buffer.from(shot.data, 'base64'));
-    if (f % 30 === 0 || f === nFrames - 1) process.stdout.write(`  ${f + 1}/${nFrames}\r`);
+    if (f % 30 === 0 || f === END - 1) process.stdout.write(`  ${f + 1}/${nFrames}\r`);
   }
-  process.stdout.write(`\n✓ ${nFrames} frames\n`);
+  process.stdout.write(`\n✓ frames ${START}-${END - 1} of ${nFrames}\n`);
   try { c.close(); } catch { /* ignore */ }
 } finally {
   teardown();
