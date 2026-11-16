@@ -420,3 +420,6 @@ owner says go.** A mining ② is always P1.
 - ⑤ ×6: hazards 1–6.
 - ⑥ ×4: Allert; speech-act; the tree metaphor and stage/date as stand-alone content; Provan.
 - Rows proposed: 16 (11 from the main read, 5 from the second lenses).
+
+## Shipped — 2026-11-16
+KRUG-1, KRUG-2 and KRUG-12 (the three P1 rows) are live after a gate round + confirmation. The gate also caught a Spanish false friend in our own translation («ortodoxos orientales» = the Oriental Orthodox, i.e. the very family whose broader canon KRUG-2 scopes out) and logged its leftovers as **KRUG-17**. Remaining open: KRUG-3…11, -13…17.
