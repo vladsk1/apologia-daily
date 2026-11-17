@@ -492,6 +492,33 @@ test('retired-claims matcher catches a retired string and honours the allow list
     'matcher flagged clean text');
 });
 
+/* KEEN-14 (2026-11-18): the scan was English-only, and two retired "divine Son of Man of
+ * Daniel 7" sentences survived on ev-s3.es.html after the English was fixed. The Spanish
+ * mirrors write accents as HTML entities about half the time, so the matcher decodes them;
+ * this pins both the decoding and the MK/ES nets, using the real retired sentences. */
+test('retired-claims matcher catches retired claims on the MK/ES mirrors, entity-encoded or not', async () => {
+  const { findHits, decodeEntities } = await import('../tools/check-retired-claims.mjs');
+  assert.equal(decodeEntities('adoraci&oacute;n Jes&uacute;s &iquest;No? se&ntilde;or'),
+    'adoración Jesús ¿No? señor');
+  const corpus = {
+    // ev-s3.es.html as it stood before 2026-11-17 — entity-encoded, exactly as served.
+    'es-entities.html': 'el cargo de blasfemia se bas&oacute; en la afirmaci&oacute;n de Jes&uacute;s de ser el divino Hijo del Hombre de Daniel 7.',
+    // ev-s3.mk.html as it stood before 2026-09-26.
+    'mk.html': 'обвинението за хула се засновало на тврдењето на Исус дека е божествениот Син Човечки од Даниел 7.',
+    // The certified replacements must stay silent.
+    'es-ok.html': 'el servicio de todos los pueblos (el arameo pelach de Daniel &mdash; el homenaje que se debe a un soberano, no necesariamente adoraci&oacute;n c&uacute;ltica)',
+    'mk-ok.html': 'Исус го споделува божествениот престол (3:21, 22:1-3), го прима обожавањето на секое создание (5:13)',
+  };
+  const hits = findHits(Object.keys(corpus), (f) => corpus[f]);
+  for (const f of ['es-entities.html', 'mk.html']) {
+    assert.ok(hits.some((h) => h.file === f && h.claim.id === 'daniel7-figure-is-divine'),
+      `retired Daniel 7 claim not caught on ${f}`);
+  }
+  for (const f of ['es-ok.html', 'mk-ok.html']) {
+    assert.ok(!hits.some((h) => h.file === f), `certified mirror text flagged on ${f}`);
+  }
+});
+
 // ── footnote apparatus ────────────────────────────────────────────────────────
 // Pins the two false-positive sources that made the first version of
 // check-footnote-integrity.mjs report 29 of 84 files broken when only 2 were,

@@ -26,7 +26,7 @@
       "id": "islam-lexical-bridge",
       "retired": "2026-07-29",
       "what": "Arguing from the shared English word 'Word': the Qur'an is God's eternal Word, the Qur'an calls Jesus God's Word, therefore Jesus is eternal.",
-      "why": "It equivocates. The Qur'an's term for God's own speech is kalam (kalam nafsi in the Ash'ari resolution); Surah 4:171's term for Jesus is kalima. Sunni theology has never identified them, and a Muslim who knows the terms corrects it in one sentence. library/islam-eternalword.html disclaims this in its own Reply 3.",
+      "why": "It equivocates. The Qur'an's term for God's own speech is kalam (kalam nafsi in the Ash'ari resolution); Surah 4:171's term for Jesus is kalima. Sunni theology has never identified them, and a Muslim who knows the terms corrects it in one sentence. library/islam-eternalword.html disclaims this in its own Reply 3. Widened 2026-11-18 (KEEN-14): Macedonian and Spanish patterns added, because the scan had been English-only and two retired Daniel 7 sentences survived on ev-s3.es.html after the English fix. The matcher now decodes HTML entities first (the ES mirrors spell accents as &aacute; etc.). 0 hits on 1952 served files when added; the old pre-fix ev-s3.es/.mk versions fire as they should.",
       "instead": "Run it structurally: settling the Mihna, mainstream Sunni orthodoxy held God's speech eternal and uncreated — 'neither He nor other than He' — and thereby built the very category it tells Christians is incoherent. Scope it to Ash'ari/Maturidi, not to Islam as such.",
       "patterns": [
         "the Logos structure",
@@ -40,7 +40,13 @@
         "the title carries eternal weight for a book",
         "disagreeing only about whether that Word",
         "(Muslim|Islam|Qur'?an)[^.]{0,90}uncreated,? ?(and )?(eternal )?[Ww]ord[^.]{0,150}(gives?|applies|calls?|grants?|hands?|bestows?)[^.]{0,30}(that|the same |this )?(title|word|name)[^.]{0,25}(to )?(Jesus|him|Christ)",
-        "(already )?(believe|holds?|affirms?|accepts?)[^.]{0,45}uncreated,? ?(and )?(eternal )?[Ww]ord[^.]{0,120}(his own|the same) (book|Qur'?an|scripture)[^.]{0,70}(Jesus|that title|him)"
+        "(already )?(believe|holds?|affirms?|accepts?)[^.]{0,45}uncreated,? ?(and )?(eternal )?[Ww]ord[^.]{0,120}(his own|the same) (book|Qur'?an|scripture)[^.]{0,70}(Jesus|that title|him)",
+        "la estructura del Logos",
+        "llama a Jes[uú]s Kalimat",
+        "el mismo Cor[aá]n (llama|que llama) a Jes[uú]s (la )?Palabra de Dios",
+        "структурата на Логосот",
+        "го нарекува Исус Калимат",
+        "истиот Куран го нарекува Исус Збор[\\u0430-\\u045f]* (Божји|на Бога)"
       ],
       "allow": [],
       "netting": "claim",
@@ -49,12 +55,16 @@
           "so the Muslim already believes in an uncreated Word - and his own book gives that title to Jesus",
           "the Muslim already affirms an eternal, uncreated Word, and the same Qur'an applies that title to Jesus",
           "the Islamic Logos structure maps precisely onto the Christian claim",
-          "and the very parallel the Quran invites is between the eternal Word and Jesus"
+          "and the very parallel the Quran invites is between the eternal Word and Jesus",
+          "y el mismo Corán llama a Jesús la Palabra de Dios",
+          "истиот Куран го нарекува Исус Зборот Божји"
         ],
         "must_not_fire": [
           "settling the Mihna, mainstream Sunni orthodoxy held God's speech eternal and uncreated — 'neither He nor other than He' — and thereby built the very category it tells Christians is incoherent",
           "the two terms are genuinely different: the Qur'an's word for God's own speech is kalam; 4:171's word for Jesus is kalima, and Sunni theology has never identified them",
-          "the Qur'an calls Jesus 'a Word from God' (Surah 4:171), meaning he was brought into being by God's command 'Be'"
+          "the Qur'an calls Jesus 'a Word from God' (Surah 4:171), meaning he was brought into being by God's command 'Be'",
+          "Así que el Corán le da a Jesús un título de Verbo (kalimatuhu) y un título de Espíritu (ruhun minhu) que no le da a ningún otro profeta.",
+          "Така Куранот му дава на Исус титула Збор (kalimatuhu) и титула Дух (ruhun minhu) што не ја дава на ниту еден друг пророк."
         ]
       },
       "rebuild_debt": "DISCHARGED 2026-10-31 — rebuilt from phrase to claim. The two proximity regexes now catch the distinctive MOVE regardless of wording: an Islamic-frame token (Muslim/Islam/Qur'an) + the uncreated/eternal Word + the bridge verb transferring that title to Jesus. Validated 0 false hits on the whole served corpus, fires on the known leak ('the Muslim already believes in an uncreated Word - and his own book gives that title to Jesus', now a must_fire) and its variants, and stays quiet on the STRUCTURAL argument and the lexical DISTINCTION the essay legitimately draws (both must_not_fire). allow stays [] — the net does not fire on library/islam-eternalword.html even though that essay states the bridge in order to reject it, because the refutation keeps the two premises on opposite sides of a full stop. ORIGINAL DEBT, kept for the record: PHRASE-SHAPED ON A CLAIM-SHAPED SURFACE. This claim was retired on a free, indexed, deity/Trinity-tier surface (worldviews.html card 13, library/islam-eternalword.html), which the _readme rule says must be claim-shaped -- so the registry currently breaks its own rule in its first entry. Ten literal strings cover only the wordings someone happened to find; the distinctive MOVE (Qur'an-eternal-Word premise + Jesus-Word-title premise => shared eternity) has no general net. Known leak, verified by reading and NOT yet added as a must_fire because it would fail the suite before the rebuild lands: 'so the Muslim already believes in an uncreated Word - and his own book gives that title to Jesus' trips neither this entry nor quranic-title-compounds ('his own book' and 'that title' supply no Qur'an token, no Jesus token, no predicated title). REBUILD FIRST, then add that sentence as must_fire. Order after it: logos-distinct-from-essence (highest doctrinal stakes -- misses 'in some respect', 'somehow other than the essence', 'not wholly identical with the essence'), then ashari-formula-as-deity-predication ('neither Allah nor other than Allah' and 'not God and not other than God' both slip)."
@@ -143,7 +153,7 @@
       "id": "pelach-only-to-God",
       "retired": "2026-07-28",
       "what": "Claiming Daniel's pelach ('serve') is used only of God, so Daniel 7:14 proves the Son of Man is divine.",
-      "why": "Daniel 3:12 uses it of Nebuchadnezzar's gods. ev-m-titles.html now concedes the verb is 'suggestive rather than decisive'. Widened 2026-08-11: the original five patterns matched none of 'receives worship', 'receives universal worship' or 'the worship of all nations', so the claim survived on daily-mix.html (as the GRADED CORRECT ANSWER), daily-args.json, ev-m-titles.html and pocket-cards.html. The ev-m-titles.html allow entry is now removed, not carried. Widened 2026-11-17 (KEEN-8, Keener SAET mine): Keener's 'the Son of Man receives worship among the nations', citing only '7:13-14', slipped past the 'Daniel 7' pattern because the sentence never names the book; two narrow patterns added, 0 hits corpus-wide at the time of adding.",
+      "why": "Daniel 3:12 uses it of Nebuchadnezzar's gods. ev-m-titles.html now concedes the verb is 'suggestive rather than decisive'. Widened 2026-08-11: the original five patterns matched none of 'receives worship', 'receives universal worship' or 'the worship of all nations', so the claim survived on daily-mix.html (as the GRADED CORRECT ANSWER), daily-args.json, ev-m-titles.html and pocket-cards.html. The ev-m-titles.html allow entry is now removed, not carried. Widened 2026-11-17 (KEEN-8, Keener SAET mine): Keener's 'the Son of Man receives worship among the nations', citing only '7:13-14', slipped past the 'Daniel 7' pattern because the sentence never names the book; two narrow patterns added, 0 hits corpus-wide at the time of adding. Widened 2026-11-18 (KEEN-14): Macedonian and Spanish patterns added, because the scan had been English-only and two retired Daniel 7 sentences survived on ev-s3.es.html after the English fix. The matcher now decodes HTML entities first (the ES mirrors spell accents as &aacute; etc.). 0 hits on 1952 served files when added; the old pre-fix ev-s3.es/.mk versions fire as they should.",
       "instead": "The clouds are the stronger half of the case — cloud-riding is YHWH's own vehicle in the OT. Treat the service-verb as suggestive, not decisive.",
       "patterns": [
         "pelach[^.]{0,60}only to God",
@@ -155,7 +165,19 @@
         "receives universal worship",
         "worship of all (nations|peoples)",
         "(receives|receiving) worship among the nations",
-        "7:1[34][^.]{0,120}(receives|receiving) (universal )?worship"
+        "7:1[34][^.]{0,120}(receives|receiving) (universal )?worship",
+        "pelach[^.]{0,60}(solo|sólo|únicamente|exclusivamente) (a|para|de) Dios",
+        "(recibe|recibiendo|recibir) (la |una )?adoraci[oó]n universal",
+        "Daniel 7[^.]{0,120}(recibe|recibiendo) (la )?adoraci[oó]n",
+        "7:1[34][^.]{0,120}(recibe|recibiendo) (la )?adoraci[oó]n",
+        "adoraci[oó]n de (todos los pueblos|todas las naciones)",
+        "el (servicio|culto) debido a Dios",
+        "pelach[^.]{0,60}само (на|за|кон) Бог",
+        "(прима|примајќи) (универзално|сеопшто) (обожавање|поклонение)",
+        "Даниел 7[^.]{0,120}(прима|примајќи) (го )?(универзално |сеопшто )?(обожавање|поклонение)",
+        "7:1[34][^.]{0,120}(прима|примајќи) (го )?(универзално |сеопшто )?(обожавање|поклонение)",
+        "(обожавање|поклонение)(то)? (од|на) сите народи",
+        "служба(та)? што (му )?се должи на Бога"
       ],
       "allow": [],
       "netting": "phrase",
@@ -168,12 +190,27 @@
           "in Daniel 7 the figure receives universal worship",
           "he receives worship of all nations",
           "Daniel 7:13-14 envisions a son of man who receives worship among the nations",
-          "the son of man of 7:13-14 receives worship from every people"
+          "the son of man of 7:13-14 receives worship from every people",
+          "En Daniel 7:14 el Hijo del Hombre recibe adoración universal.",
+          "el pelach, que Daniel usa solo para Dios",
+          "y la adoración de todas las naciones",
+          "Во Даниел 7:14 Синот Човечки прима обожавање од сите народи.",
+          "Синот Човечки прима сеопшто обожавање.",
+          "pelach, глагол што Даниел го користи само за Бог"
         ],
         "must_not_fire": [
           "The clouds are the stronger half — cloud-riding is YHWH's own vehicle in the Hebrew Bible; treat the service-verb as suggestive, not decisive",
           "pelach is also used of serving Nebuchadnezzar's gods, so it does not by itself settle who receives it",
-          "Daniel 7:13-14 pictures one like a son of man coming with the clouds, the vehicle the Hebrew Bible gives to YHWH"
+          "Daniel 7:13-14 pictures one like a son of man coming with the clouds, the vehicle the Hebrew Bible gives to YHWH",
+          "el servicio de todos los pueblos (el arameo pelach de Daniel — el homenaje que se debe a un soberano, no necesariamente adoración cúltica; la afirmación de deidad descansa en las nubes)",
+          "el arameo pelach de Daniel — un verbo de servicio religioso que Daniel usa tanto de servir a dioses falsos como al verdadero",
+          "dándole el nombre sobre todo nombre, y decretando la adoración universal y la confesión",
+          "му се дава вечна власт и служба од сите народи (арамејското pelach кај Даниел — почитта што се должи на владетел, не нужно култно обожавање)",
+          "Исус го споделува божествениот престол (3:21, 22:1-3), го прима обожавањето на секое создание (5:13)",
+          "го прави она што само Бог го прави, го носи Божјото име и прима обожавање што верните Евреи го чуваа само за Бога",
+          "овој Син ги врши сопствените дела на Отецот и го прима обожавањето што Му се должи само на Бога",
+          "Застапникот го претставува испраќачот; тој не го прима обожавањето на испраќачот",
+          "арамејскиот pelach на Даниел — глагол за религиозна служба што Даниел го користи и за служење на лажни богови и за служење на вистинскиот Бог"
         ]
       }
     },
@@ -303,13 +340,17 @@
       "id": "logos-distinct-from-essence",
       "retired": "2026-07-29",
       "what": "Saying in our own voice that the Logos is 'distinct in some way from the essence' or 'not simply identical to the essence'.",
-      "why": "That is the Arian direction. The orthodoxy gate rated it the nearest thing to a deploy-blocker in its batch.",
+      "why": "That is the Arian direction. The orthodoxy gate rated it the nearest thing to a deploy-blocker in its batch. Widened 2026-11-18 (KEEN-14): Macedonian and Spanish patterns added, because the scan had been English-only and two retired Daniel 7 sentences survived on ev-s3.es.html after the English fix. The matcher now decodes HTML entities first (the ES mirrors spell accents as &aacute; etc.). 0 hits on 1952 served files when added; the old pre-fix ev-s3.es/.mk versions fire as they should.",
       "instead": "One divine essence, undivided — eternally Father, Son and Spirit. Report Ash'ari attribute language as THEIRS, never as a description of the Logos.",
       "patterns": [
         "(distinct|other|separate)[^.]{0,25}(in some (way|sense|respect)|somehow)[^.]{0,25}from the essence",
         "(somehow |in some (way|sense|respect) )(other than|distinct from|separate from) the essence",
         "not (simply |wholly |fully |entirely )?identical (to|with)[^.]{0,20}the essence",
-        "Logos-shaped"
+        "Logos-shaped",
+        "(distint|otr|separad)[oa][^.]{0,25}(de alg[uú]n modo|en cierto (sentido|modo)|de alguna manera)[^.]{0,25}de la esencia",
+        "no (es )?(simplemente |del todo |enteramente )?id[eé]ntic[oa] (a|con)[^.]{0,20}la esencia",
+        "различ[\\u0430-\\u045f]*[^.]{0,25}(на некој начин|во некоја смисла|некако)[^.]{0,25}од суштината",
+        "не (е )?(едноставно |сосема |целосно )?идентич[\\u0430-\\u045f]* (со|на)[^.]{0,20}суштината"
       ],
       "allow": [],
       "netting": "claim",
@@ -320,12 +361,18 @@
           "the Word is distinct in some respect from the essence",
           "the Logos is somehow other than the essence",
           "it is not wholly identical with the essence",
-          "it leaves a Logos-shaped slot in the Godhead"
+          "it leaves a Logos-shaped slot in the Godhead",
+          "el Logos es distinto de algún modo de la esencia",
+          "el Verbo no es simplemente idéntico a la esencia",
+          "Логосот е различен на некој начин од суштината",
+          "Логосот не е едноставно идентичен со суштината"
         ],
         "must_not_fire": [
           "One divine essence, undivided — eternally Father, Son and Spirit",
           "the Ash'ari attribute language is reported as theirs, never as our own description of the Word",
-          "the Son is of one essence with the Father, homoousios"
+          "the Son is of one essence with the Father, homoousios",
+          "Una sola esencia divina, indivisa: eternamente Padre, Hijo y Espíritu.",
+          "Една божествена суштина, неподелена — вечно Отец, Син и Дух."
         ]
       }
     },
@@ -538,11 +585,12 @@
       "id": "quranic-title-compounds",
       "retired": "2026-07-29",
       "what": "Presenting 'Kalimatullah' or 'Ruh Allah' / 'Ruh min Allah' as titles the Qur'an itself applies to Jesus.",
-      "why": "Surah 4:171 has kalimatuhu ('His word') and ruhun minhu ('a spirit from Him'); 3:45 has kalimatin minhu. The compounds are post-Quranic — Ruh Allah is pervasive in hadith, not in the Qur'an, and kalimat Allah at 9:40 is not about Jesus. A Muslim who knows the text corrects this in one line, which is the same failure mode as the NWT/John 1:18 error: a sentence that hands the other side an easy win inside our own argument. ROUND-4 LESSON: the first patterns here were written around the three specific phrasings found on one tier and missed the general form entirely, so CI reported green while worldviews.html's FREE, INDEXED tier still said the Quran calls Jesus 'the Word of God, the Spirit of God' -- contradicting the same card's own deep tier. Patterns must catch the Quran-attribution CONTEXT, not one wording. Do not widen to a bare 'the Word of God': that is the ordinary Christian title for Christ and the net would cry wolf on every page.",
+      "why": "Surah 4:171 has kalimatuhu ('His word') and ruhun minhu ('a spirit from Him'); 3:45 has kalimatin minhu. The compounds are post-Quranic — Ruh Allah is pervasive in hadith, not in the Qur'an, and kalimat Allah at 9:40 is not about Jesus. A Muslim who knows the text corrects this in one line, which is the same failure mode as the NWT/John 1:18 error: a sentence that hands the other side an easy win inside our own argument. ROUND-4 LESSON: the first patterns here were written around the three specific phrasings found on one tier and missed the general form entirely, so CI reported green while worldviews.html's FREE, INDEXED tier still said the Quran calls Jesus 'the Word of God, the Spirit of God' -- contradicting the same card's own deep tier. Patterns must catch the Quran-attribution CONTEXT, not one wording. Do not widen to a bare 'the Word of God': that is the ordinary Christian title for Christ and the net would cry wolf on every page. Widened 2026-11-18 (KEEN-14): Macedonian and Spanish patterns added, because the scan had been English-only and two retired Daniel 7 sentences survived on ev-s3.es.html after the English fix. The matcher now decodes HTML entities first (the ES mirrors spell accents as &aacute; etc.). 0 hits on 1952 served files when added; the old pre-fix ev-s3.es/.mk versions fire as they should.",
       "instead": "Say the Qur'an calls Jesus 'a word from Him' and 'a spirit from Him', and where the traditional title is worth naming, say plainly that Ruh Allah is a title Islamic tradition later drew from the verse rather than Quranic wording.",
       "patterns": [
         "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t)[^.]{0,70})(?:Kalimatull[aāâ]h|Kalimat ?[Aa]ll[aā]h|Ruh ?(?:min )?[Aa]ll[aā]h)(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|no other|is not|does not))",
-        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t)[^.]{0,70})(?:(?:Qur'?an|Quran)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,55}(?:(?:calls?|called|calling|names?|naming|gives?|giving|titles?|describes?|refers? to|identifies|identified|designates?|labels?|speaks? of|honou?rs?|grants?|is|are|was|were|as)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,15}(?:Jesus|Isa|Christ|him)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,10}|(?:Jesus|Isa|Christ|him)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,15}(?:calls?|called|calling|names?|naming|gives?|giving|titles?|describes?|refers? to|identifies|identified|designates?|labels?|speaks? of|honou?rs?|grants?|is|are|was|were|as)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,10})(?:the |a )?(?:Word|Spirit) of (?:God|Allah)|(?:Jesus|Isa|Christ)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,30}(?:whom|which)?(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,4}the (?:Qur'?an|Quran)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,20}(?:calls?|called|calling|names?|naming|gives?|giving|titles?|describes?|refers? to|identifies|identified|designates?|labels?|speaks? of|honou?rs?|grants?|is|are|was|were|as)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,10}(?:the |a )?(?:Word|Spirit) of (?:God|Allah))(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|no other|is not|does not))"
+        "(?<!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t)[^.]{0,70})(?:(?:Qur'?an|Quran)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,55}(?:(?:calls?|called|calling|names?|naming|gives?|giving|titles?|describes?|refers? to|identifies|identified|designates?|labels?|speaks? of|honou?rs?|grants?|is|are|was|were|as)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,15}(?:Jesus|Isa|Christ|him)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,10}|(?:Jesus|Isa|Christ|him)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,15}(?:calls?|called|calling|names?|naming|gives?|giving|titles?|describes?|refers? to|identifies|identified|designates?|labels?|speaks? of|honou?rs?|grants?|is|are|was|were|as)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,10})(?:the |a )?(?:Word|Spirit) of (?:God|Allah)|(?:Jesus|Isa|Christ)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,30}(?:whom|which)?(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,4}the (?:Qur'?an|Quran)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,20}(?:calls?|called|calling|names?|naming|gives?|giving|titles?|describes?|refers? to|identifies|identified|designates?|labels?|speaks? of|honou?rs?|grants?|is|are|was|were|as)(?:(?!(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t))[^.]){0,10}(?:the |a )?(?:Word|Spirit) of (?:God|Allah))(?![^.]{0,70}(?:never|nowhere|not |no |nothing|avoid|wrongly|denies|refuses|rejects|false|do not|don.t|no other|is not|does not))",
+        "(?<!(?:никогаш|нигде|ниту|нема|не )[^.]{0,70})(?:Калимату?л?лах|Калимат ?Алах|Рух ?(?:мин )?Алах)(?![^.]{0,70}(?:никогаш|нигде|ниту|нема|не ))"
       ],
       "allow": [],
       "note": "ALLOW LIST IS EMPTY, and should stay that way. library/islam-preservation.html was carried as a debt for one round, then simply corrected (four words) -- closing a hole costs less than documenting it. Nothing is allow-listed: the guard exempts genuine refutations on merit rather than by filename, which is what keeps the net honest.\nTUNING HISTORY -- this entry was mis-tuned THREE times in one day, each time in a different way, so read before editing. (1) Patterns written around the three phrasings found on one tier: silent while the free indexed tier still ran the compound. (2) Rewritten verb-anchored (calls|names|gives): silent on 'affirms that Jesus is', 'calling Jesus', and a bare flashcard list -- three live survivals on ev-s6.html, flashcards.html and ev-m-trinity_islam.html. (3) Compound-anchored with a forward-only negation guard: fired on our OWN corrective ('Do not say the Quran calls Jesus Kalimatullah'), because the negation precedes the compound. The guard is now BIDIRECTIONAL -- negation up to 60 chars before OR after. Anchor on the compound (it is the retired artefact and cannot appear innocently); never widen to a bare 'the Word of God', which is the ordinary Christian title for Christ; and (4) Guard written with [^.<], which stops at an HTML tag -- so it could not reach the 'never' on the other side of an </em> and fired on our own refutation again. The gap class is now [^.] (sentence-bounded, tag-permeable). Always test both directions AGAINST REAL MARKUP before committing -- a net that flags correct refutations gets ignored, which is how check-stamp-integrity reached 59 unread flags. (5) Pattern 2 was left forward-only and in one word order: it fired on 'the Quran never calls Jesus the Word of God' and was SILENT on 'Jesus, whom the Quran itself calls the Word of God' -- the exact phrasing then found live on library/islam-preservation.html. It now carries BOTH a sentence-level lookbehind and a verb-adjacent one, and handles the relative-clause order. Test set to preserve: it must fire on 'the Quran calls Jesus the Word of God' and on the whom-clause form, and stay silent on never/does not/do-not-say AND on 'the Quran itself is the Word of God', which is a true statement about the BOOK and must never be caught. (6) FOURTH mis-tune, and the last patch: the enumerated verb list could not see describes/refers to/identifies/is-called, had no 'Isa' (the word in card 04's own title), missed 'Word of Allah' entirely, and its negation guard had no 'nowhere' -- so it FIRED on the correct refutation 'The Qur'an nowhere calls Jesus the Word of God'. The verb list is now GONE: the pattern is Qur'an-token + Jesus-token + title adjacency, with TEMPERED gaps that may not themselves contain a negation (which is where 'nowhere' hid -- inside the match, invisible to both outer guards). Test corpus is 16 cases, both directions, and it must keep passing: it fires on describes/refers to/identifies/Isa/Word-of-Allah/is-the-Word forms, and stays silent on never/nowhere/does not/do-not-say/false, on 'the Quran itself is the Word of God' (true of the BOOK), and on 'For Islam the Quran is the Word of God. For Christianity, Jesus is the Word of God' (separate sentences, legitimate contrast). (7) Adjacency alone was still too loose: with no attribution link required it fired on our OWN essay's meta description, 'the parallel it opens to Christ, the eternal Word of God' -- orthodox confession, appositive, not a claim about the Qur'an. The title must now be PREDICATED of Jesus (an attribution verb or 'as' adjacent to the title, in either word order), not merely appositive to him. Corpus is 18 cases and both directions; keep it passing.",
@@ -557,7 +605,8 @@
           "the Quran gives him the Spirit of God",
           "The Quran affirms that Jesus is the Word of God (Kalimatullah)",
           "the Quran identifies Jesus as the Spirit of God",
-          "1. Kalimatullah - Word of God (Surah 3:45, 4:171)"
+          "1. Kalimatullah - Word of God (Surah 3:45, 4:171)",
+          "Куранот го нарекува Исус Калиматулах."
         ],
         "must_not_fire": [
           "The Qur'an nowhere calls Jesus the Word of God.",
@@ -569,7 +618,8 @@
           "For Islam, the Quran is the Word of God. For Christianity, Jesus is the Word of God (John 1:1).",
           "the Quran, which Muslims hold to be the eternal Word of God, denies that Jesus is divine",
           "the parallel it opens to Christ, the eternal Word of God.",
-          "The compound Kalimatullah is never applied to Jesus in the Quran"
+          "The compound Kalimatullah is never applied to Jesus in the Quran",
+          "Куранот никогаш не го нарекува Исус Калиматулах; тој вели „збор од Него“."
         ]
       }
     },
@@ -761,14 +811,23 @@
       "id": "daniel7-figure-is-divine",
       "retired": "2026-08-11",
       "what": "Asserting flatly that Daniel 7's 'one like a son of man' IS a divine figure.",
-      "why": "library/titles.html states the referent is genuinely unsettled - corporate (a symbol for Israel), angelic (Collins: most probably Michael) and individual-heavenly (Boyarin, a contested minority) readings all have serious defenders. The service-verb patterns on pelach-only-to-God do not catch this route, which is why it survived on pocket-cards.html and ev-s3.html.",
+      "why": "library/titles.html states the referent is genuinely unsettled - corporate (a symbol for Israel), angelic (Collins: most probably Michael) and individual-heavenly (Boyarin, a contested minority) readings all have serious defenders. The service-verb patterns on pelach-only-to-God do not catch this route, which is why it survived on pocket-cards.html and ev-s3.html. Widened 2026-11-18 (KEEN-14): Macedonian and Spanish patterns added, because the scan had been English-only and two retired Daniel 7 sentences survived on ev-s3.es.html after the English fix. The matcher now decodes HTML entities first (the ES mirrors spell accents as &aacute; etc.). 0 hits on 1952 served files when added; the old pre-fix ev-s3.es/.mk versions fire as they should.",
       "instead": "Daniel 7's HEAVENLY figure, who comes on the clouds - elsewhere in the Hebrew Bible God's own conveyance. The argument runs through what Jesus DID with the scene, not through Daniel's referent.",
       "patterns": [
         "the divine figure (of|in) Daniel 7",
         "Daniel 7'?s divine figure",
         "Son of Man\\s*[—-]\\s*the divine figure",
         "divine Son of Man",
-        "each title a divine claim"
+        "each title a divine claim",
+        "divin[oa] Hijo del Hombre",
+        "Hijo del Hombre divino",
+        "figura divina (de|en) Daniel 7",
+        "Hijo del Hombre\\s*[—–-]\\s*la figura divina",
+        "cada t[ií]tulo,? una (afirmaci[oó]n|pretensi[oó]n) (de )?divin",
+        "божествени(от)? Син Човечки",
+        "божествена(та)? фигура (од|во|кај|на) Даниел",
+        "Син(от)? Човечки\\s*[—–-]\\s*божествена(та)? фигура",
+        "секоја титула[\\u0430-\\u045f]*[^.]{0,5}божествено (тврдење|барање)"
       ],
       "allow": [],
       "netting": "phrase",
@@ -781,7 +840,12 @@
           "Son of Man — the divine figure who comes on the clouds",
           "his claim to be the divine Son of Man of Daniel 7",
           "at his trial accepts the divine Son of Man identity",
-          "Son of Man from Daniel 7, Kyrios as the divine name YHWH, and I AM from Exodus 3 — understand the Jewish background that makes each title a divine claim."
+          "Son of Man from Daniel 7, Kyrios as the divine name YHWH, and I AM from Exodus 3 — understand the Jewish background that makes each title a divine claim.",
+          "En su juicio, el cargo de blasfemia del sumo sacerdote se basó en la afirmación de Jesús de ser el divino Hijo del Hombre de Daniel 7.",
+          "y en su juicio acepta la identidad del divino Hijo del Hombre.",
+          "Jesús se identifica con la figura divina de Daniel 7.",
+          "обвинението за хула на првосвештеникот се засновало на тврдењето на Исус дека е божествениот Син Човечки од Даниел 7.",
+          "Исус се поистоветува со божествената фигура од Даниел 7."
         ],
         "must_not_fire": [
           "that Daniel 7 never describes a divine figure at all",
@@ -789,7 +853,11 @@
           "Daniel 7's heavenly figure who comes on the clouds",
           "A contested minority case that Daniel 7's Son of Man was already a divine figure in Judaism.",
           "the corporate reading takes the figure as a symbol for faithful Israel",
-          "Focus on the Jewish background of Son of Man (Daniel 7), Kyrios and I AM, and on what Jesus did with each."
+          "Focus on the Jewish background of Son of Man (Daniel 7), Kyrios and I AM, and on what Jesus did with each.",
+          "el «uno como un hijo de hombre» de Daniel 7, que viene sobre las nubes del cielo—una prerrogativa divina",
+          "La idea de una figura divina que muere y resucita, corre la objeción, no era exclusiva del cristianismo",
+          "Изразот „син човечки“ воопшто не мора да биде божествена титула.",
+          "Идејата за божествена фигура што умира и воскреснува, вели приговорот, не била единствена за христијанството."
         ]
       },
       "rebuild_debt": "Needs a negation-guarded CLAIM net. The three patterns are literal adjacencies and miss 'the figure in Daniel 7 is divine', 'Daniel's Son of Man is a divine individual', and 'this figure is standing on God's side of a line' - the last of which was LIVE on ev-s3.html:876, a free indexed deity-tier surface, and was found by apologia-neutrality rather than by this net. A fourth pattern was dropped on 2026-08-11 because it fired on library/titles.html's own statement of the objection it answers. 2026-08-14: the predication form 'Son of Man ... actually a DIVINE claim' surfaced on daily-mix.html:158 (the GRADED quiz) and was fixed by softening the question to 'amount to a divine-status claim on his lips' + resting the answer on cloud-coming; the negation-guarded CLAIM net remains owed (a literal net risks firing on titles.html's hedged 'contested minority case that Daniel 7's Son of Man was already a divine figure', which must_not_fire). 2026-09-24: added literal pattern \"divine Son of Man\" after the four-surface audit found \"the divine Son of Man of Daniel 7\" LIVE and unfenced on ev-s3.html:652 + :693 (free indexed deity tab) — the mechanical net was green over it. Pattern validated: fires on both found strings, does not fire on the must_not_fire hedge. The broader negation-guarded CLAIM net remains owed. 2026-09-26: the added phrase pattern 'each title a divine claim' (from study-plans.html) has no negation guard, so 'does not make each title a divine claim' would fire; 0 hits today, accepted as phrase-netted."

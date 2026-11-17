@@ -122,15 +122,40 @@ if (!existsSync(REGISTRY)) {
 }
 const { claims } = JSON.parse(readFileSync(REGISTRY, 'utf8'));
 
+/* MIRRORS (KEEN-14, 2026-11-18). The Macedonian and Spanish mirrors carry the same claims
+ * as the English, and until this date every pattern here was English, so a retired claim
+ * fixed in English could live on in translation with CI green. That happened: two retired
+ * "divine Son of Man of Daniel 7" sentences survived on ev-s3.es.html after the English was
+ * fixed, and the review lenses found them, not CI. The highest-stakes entries now carry MK
+ * and ES patterns too (each pinned by corpus cases in both directions).
+ *
+ * The Spanish files spell accents as HTML entities ("adoraci&oacute;n") about as often as
+ * raw UTF-8, so text is decoded before matching; otherwise every accented pattern would
+ * miss half the corpus. Cyrillic is raw UTF-8. Two cautions for anyone adding patterns:
+ * \b is ASCII-only in JS regex, so never use it around Cyrillic; and Macedonian letters
+ * ѓ ќ ѕ ј љ њ џ sit outside а-я, so use [а-џ] for "any lower-case letter". */
+const NAMED = { nbsp: ' ', mdash: '—', ndash: '–', lsquo: '‘', rsquo: '’', ldquo: '“',
+  rdquo: '”', bdquo: '„', laquo: '«', raquo: '»', hellip: '…', iquest: '¿', iexcl: '¡', shy: '' };
+const ACCENT = { acute: '́', grave: '̀', tilde: '̃', uml: '̈', circ: '̂', cedil: '̧' };
+export function decodeEntities(s) {
+  return s
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&([A-Za-z])(acute|grave|tilde|uml|circ|cedil);/g, (_, l, k) => (l + ACCENT[k]).normalize('NFC'))
+    .replace(/&([a-z]+);/g, (m, n) => (n in NAMED ? NAMED[n] : m));
+}
+
 export function findHits(files, readFile) {
   const hits = [];
+  const decoded = new Map();
   for (const claim of claims) {
     const allow = new Set(claim.allow || []);
     for (const pattern of claim.patterns) {
       const re = new RegExp(pattern, 'gi');
       for (const rel of files) {
         if (allow.has(rel)) continue;
-        const text = readFile(rel);
+        if (!decoded.has(rel)) decoded.set(rel, decodeEntities(readFile(rel)));
+        const text = decoded.get(rel);
         let m;
         re.lastIndex = 0;
         while ((m = re.exec(text))) {
