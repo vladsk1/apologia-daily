@@ -128,13 +128,41 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 // in text, and escaping them there over-escapes and breaks the drift audit's _norm compare).
 const escAttr = (s) => esc(s).replace(/"/g, '&quot;');
 
+// The go-deeper links for an entry, as { essay, practice, hub } hrefs (each may be null):
+//   related "ev-m-<x>.html" -> practice link, and the essay /library/<x>.html unless `essay` names it
+//                              (needed where the names differ, e.g. ev-m-minimal -> minimalfacts);
+//   related "<page>.html"   -> a hub page (evidence-library.html, worldviews.html): one plain link.
+// A bare slug ("emptytomb") is neither, and used to render two dead links — it now fails the build.
+function deeperLinks(e) {
+  const practice = /^ev-m-[\w-]+\.html$/.test(e.related || '') ? '/' + e.related : null;
+  const essay = e.essay || (practice ? '/library/' + e.related.replace(/^ev-m-/, '') : null);
+  const hub = (!essay && e.related) ? '/' + e.related : null;
+  return { essay, practice, hub };
+}
+{
+  const dead = [];
+  for (const e of data.answers) {
+    const l = deeperLinks(e);
+    for (const h of [l.essay, l.practice, l.hub, e.essay2]) {
+      if (h && !existsSync(join(ROOT, h.replace(/^\//, '').split(/[#?]/)[0]))) dead.push(`${e.slug}: ${h}`);
+    }
+  }
+  if (dead.length) {
+    console.error(`\n⛔ gen-answers: ${dead.length} go-deeper link(s) in answers/_data.json point at a page that does not exist:`);
+    dead.forEach((d) => console.error('   - ' + d));
+    console.error('   Fix "related" (must be "ev-m-<x>.html" or a real page) or add an explicit "essay".\n');
+    process.exit(1);
+  }
+}
+
 function goDeeper(e) {
   let out = '';
-  if (e.essay) {
-    out = `Go deeper: <a href="${e.essay}">${esc(e.relatedLabel || 'Read the full essay')} &mdash; full essay &rarr;</a>`;
-  } else if (e.related) {
-    const essayHref = '/library/' + e.related.replace(/^ev-m-/, '');
-    out = `Go deeper: <a href="${essayHref}">${esc(e.relatedLabel || 'the full essay')} &mdash; full essay &rarr;</a> &middot; <a href="/${e.related}">practice it &rarr;</a>`;
+  const l = deeperLinks(e);
+  if (l.essay) {
+    out = `Go deeper: <a href="${l.essay}">${esc(e.relatedLabel || (e.essay ? 'Read the full essay' : 'the full essay'))} &mdash; full essay &rarr;</a>`;
+    if (l.practice) out += ` &middot; <a href="${l.practice}">practice it &rarr;</a>`;
+  } else if (l.hub) {
+    out = `Go deeper: <a href="${l.hub}">${esc(e.relatedLabel || 'Explore more')} &rarr;</a>`;
   }
   // Optional SECOND go-deeper essay link (e.essay2). Links belong here, not in the
   // esc()'d answer body (raw <a> in "a" would be HTML-escaped into literal text).
