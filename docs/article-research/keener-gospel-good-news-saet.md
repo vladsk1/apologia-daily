@@ -396,3 +396,14 @@ of a KEEN row that touches those files waits until those rows close. Each row sa
   "Burridge began by doubting" (unverifiable) became "concluded from the comparison" on `consistency.html`.
 - **Left open:** KEEN-13 (residue: Mark 8:38; earlydate fn 20's Burridge line; the Carson attribution; ES drift; the
   mastery-page and `ev-s4` follow-through; answer length; pastoral and native items) and KEEN-14 (the guard).
+
+## Shipped — 2026-11-18, KEEN-13 (owner: "Do KEEN-13")
+
+- Done: (a) Mark 8:38 and Matthew 16:28 engaged in the end-times section (EN/MK/ES + brief); (b) Burridge's
+  unverifiable biography removed everywhere it ran; (c) the Carson (EBC 8, 1984) attribution removed as unverifiable,
+  reading kept under France; (d) ES parity (Fredriksen, Allison, "según algunos", the trilemma Legend concession);
+  (e) KEEN-4/5/11 carried to `ev-m-earlydate.html`, the `ev-s4` earlydate card and `ev-m-earlycreed.html`.
+  (f) deliberately not trimmed. (g) split to KEEN-15 (owner/pastoral). Optional polish → KEEN-16.
+- Gate, measured: round 1 all four lenses found 1 BREAK (neutrality: the 8:38 rebuttal answered Mark's wording only and
+  never stated the critic's inference) and 6 WEAK, every one in authored or compressed prose; round 2 all four, 0 BREAK;
+  round 3 a combined confirmation on the last three sentences. Read-only Explore agents, md5-verified each round.
