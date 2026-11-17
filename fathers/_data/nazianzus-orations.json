@@ -1,0 +1,154 @@
+{
+ "slug": "nazianzus-orations",
+ "partSlug": "nazianzus-oration-",
+ "author": "Gregory of Nazianzus",
+ "authorDates": "c. 329–c. 390",
+ "tradition": "East",
+ "work": "The Five Theological Orations",
+ "workShort": "Theological Orations",
+ "year": 380,
+ "partLabel": "Oration",
+ "quoteCheck": {
+  "authorRe": "Gregory|Nazianz",
+  "citeRe": "Oration\\s*(?:27|28|29|30|31)(?:\\s*[.\\s]\\s*\\d{1,2})?|Or\\.\\s*(?:27|28|29|30|31)(?:\\s*[.\\s]\\s*\\d{1,2})?|Theological Orations?",
+  "sourcesWorkRe": "^Oration (27|28|29|30|31)\\b"
+ },
+ "topics": {
+  "27": "Who should speak about God, and in what spirit",
+  "28": "What we can know of God",
+  "29": "The Son",
+  "30": "The Son, continued: the Bible passages raised against his deity, then the meaning of his titles",
+  "31": "The Holy Spirit"
+ },
+ "description": "Gregory of Nazianzus's five Theological Orations (Constantinople, AD 380) on God, the Son and the Holy Spirit, complete, in a public-domain translation (1894), with a short guide.",
+ "translation": {
+  "translators": "Charles Gordon Browne and James Edward Swallow",
+  "edition": "Nicene and Post-Nicene Fathers, second series, vol. 7, ed. Philip Schaff and Henry Wace (New York: Christian Literature Company, 1894)",
+  "base": "CCEL's proofed transcription of the 1894 volume (Rights: Public Domain)",
+  "base_url": "https://www.ccel.org/ccel/schaff/npnf207"
+ },
+ "copyCheck": {
+  "date": "2026-11-18",
+  "method": "The hosted text is CCEL's transcription of the 1894 printing with the editors' footnote markers removed. It was compared word by word, by script, with the OCR of an archive.org scan of the 1894 printing (selectlibraryofn07schauoft): 98.5% of words match directly. The unmatched words were reviewed as a list; every difference involving real words was checked by hand against that scan and a second one (selectlibraryof07scha). Longer differences were listed separately and checked: all were footnotes, page headings or text from a neighbouring section, and none was text missing from the transcription. Punctuation was not compared.",
+  "result": "Four transcription slips in Gregory's text corrected to the printed 1894 text (listed below), each confirmed in both scans. Section 29.18 has no number in the 1894 printing; the standard number is supplied in brackets. Five Bible references corrected (four misprinted in the 1894 edition, one mistyped in the transcription), and stray spaces left where footnote markers were removed have been closed up. The comparison record and the scripts are in docs/audits/fathers-nazianzus-copycheck-2026-11-18.md and tools/fathers/.",
+  "textSha256": "85caf2c51170d1d11239adb86c3c16f750e4e0d270ca769e7d941df4c92a2bb5"
+ },
+ "notes": [
+  {
+   "at": "29.2",
+   "text": "Christian traditions read this passage differently: how the Spirit's procession relates to the Son (the filioque question, debated between East and West)."
+  },
+  {
+   "at": "29.20",
+   "text": "Christian traditions read this passage differently: what baptism does."
+  },
+  {
+   "at": "31.8",
+   "text": "Christian traditions read this passage differently: how the Spirit's procession relates to the Son (the filioque question, debated between East and West)."
+  },
+  {
+   "at": "31.12",
+   "text": "Christian traditions read this passage differently: how far the church's worship and teaching may rest on what Scripture does not state in so many words."
+  },
+  {
+   "at": "31.26",
+   "text": "Christian traditions read this passage differently: how the church's later teaching relates to Scripture (the question of tradition and the development of doctrine)."
+  },
+  {
+   "at": "31.28",
+   "text": "Christian traditions read this passage differently: what baptism does."
+  },
+  {
+   "at": "31.29",
+   "text": "Christian traditions read this passage differently: how the gift of the Spirit relates to baptism."
+  }
+ ],
+ "essayLinks": [
+  {
+   "href": "/library/holy_spirit.html",
+   "title": "The Deity and Personhood of the Holy Spirit",
+   "cites": [
+    "31.26"
+   ],
+   "about": "Oration 31 and the Spirit's deity"
+  },
+  {
+   "href": "/library/relations.html",
+   "title": "How Are the Trinity's Persons Distinct?",
+   "cites": [
+    "29.16",
+    "31.8",
+    "31.9"
+   ],
+   "about": "how the persons are distinguished by their relations of origin"
+  },
+  {
+   "href": "/library/humanity.html",
+   "title": "The Full Humanity of Christ",
+   "cites": [
+    "29.19"
+   ],
+   "about": "\"What He was He continued to be\""
+  },
+  {
+   "href": "/library/nicene-creed.html",
+   "title": "The Nicene Creed, Line by Line",
+   "cites": [
+    "29.19"
+   ],
+   "about": "the Son who \"came down from heaven\" without shedding his deity"
+  },
+  {
+   "href": "/library/phil2.html",
+   "title": "Philippians 2:6–11: The Carmen Christi and Christ's Deity",
+   "cites": [
+    "29.19"
+   ],
+   "about": "the Son who \"emptied himself\" without losing his deity"
+  },
+  {
+   "href": "/library/trinity_jw.html",
+   "title": "Answering Jehovah's Witnesses on the Trinity",
+   "cites": [
+    "30.7"
+   ],
+   "about": "how \"the Father is greater than I\" (John 14:28) has been read"
+  }
+ ],
+ "keyPassages": [
+  "gregory-naz-or29-19",
+  "gregory-naz-or29-20",
+  "gregory-naz-or30-7",
+  "gregory-naz-or31-10",
+  "gregory-naz-or31-14",
+  "gregory-naz-or31-26"
+ ],
+ "guide": [
+  {
+   "h": "Who Gregory was",
+   "html": "<p>Gregory of Nazianzus (c. 329&ndash;c. 390) was a bishop from Cappadocia, in what is now central Turkey. With Basil of Caesarea and Gregory of Nyssa he is one of the three Cappadocian fathers, who in the later fourth century refined the church&rsquo;s vocabulary for the Trinity, distinguishing the one divine <em>ousia</em> (being) from the three <em>hypostaseis</em> (persons) and locating the distinction of the persons precisely in their relations of origin. Christians East and West honour him; in the East he is called simply &ldquo;the Theologian,&rdquo; above all on the strength of these five sermons.</p>"
+  },
+  {
+   "h": "Why he preached them",
+   "html": "<p>Gregory delivered these five orations at Constantinople in 380. He had two sets of opponents. The Eunomians taught that the Son is different from the Father in his very being, because only the Father is unbegotten. The Pneumatomachi, &ldquo;Spirit-fighters,&rdquo; many of whom granted the Son&rsquo;s deity, denied the Spirit&rsquo;s. Gregory describes the range of opinion among Christians of his day: some thought of the Spirit as &ldquo;an Activity,&rdquo; some as &ldquo;a Creature,&rdquo; some as God, and some &ldquo;have been uncertain&rdquo; (<a href=\"/fathers/nazianzus-oration-31.html#s5\">31.5</a>). A year later the Council of Constantinople confessed the Spirit as &ldquo;the Lord and Giver of life&hellip; who with the Father and the Son together is worshiped and glorified&rdquo;&mdash;words more reserved than Gregory&rsquo;s own &ldquo;Is the Spirit God? Most certainly&rdquo; (<a href=\"/fathers/nazianzus-oration-31.html#s10\">31.10</a>).</p>"
+  },
+  {
+   "h": "What is in them",
+   "html": "<ul><li><a href=\"/fathers/nazianzus-oration-27.html\"><b>Oration 27</b></a>: who should speak about God, and in what spirit.</li><li><a href=\"/fathers/nazianzus-oration-28.html\"><b>Oration 28</b></a>: the limits of what we can know of God. &ldquo;It is impossible to express Him, and yet more impossible to conceive Him&rdquo; (<a href=\"/fathers/nazianzus-oration-28.html#s4\">28.4</a>).</li><li><a href=\"/fathers/nazianzus-oration-29.html\"><b>Oration 29</b></a>: the Son. Gregory answers the claim that a begotten Son must be a later or lesser God.</li><li><a href=\"/fathers/nazianzus-oration-30.html\"><b>Oration 30</b></a>: the Son, continued. The Bible passages raised against the Son&rsquo;s deity, taken one by one, then the meaning of the Son&rsquo;s titles.</li><li><a href=\"/fathers/nazianzus-oration-31.html\"><b>Oration 31</b></a>: the Holy Spirit. &ldquo;What then? Is the Spirit God? Most certainly&rdquo; (<a href=\"/fathers/nazianzus-oration-31.html#s10\">31.10</a>).</li></ul>"
+  },
+  {
+   "h": "What to look for",
+   "html": "<p><b>How the persons differ.</b> Gregory fixed the vocabulary: the distinguishing character of the Father is that he is ingenerate, of the Son that he is begotten, of the Spirit that he proceeds&mdash;and these origins, he insisted, name relations, not degrees of divinity (<a href=\"/fathers/nazianzus-oration-29.html#s16\">29.16</a>; <a href=\"/fathers/nazianzus-oration-31.html#s8\">31.8&ndash;9</a>). He refused, though, to explain how the Son is begotten or the Spirit proceeds: if either side tries, he says, &ldquo;we shall both of us be frenzy-stricken for prying into the mystery of God&rdquo; (<a href=\"/fathers/nazianzus-oration-31.html#s8\">31.8</a>).</p><p><b>How Gregory reads &ldquo;greater.&rdquo;</b> On &ldquo;the Father is greater than I&rdquo; (John 14:28), Gregory answers that &ldquo;the Greater refers to origination, while the Equal belongs to the Nature&rdquo; (<a href=\"/fathers/nazianzus-oration-30.html#s7\">30.7</a>). The Father is the unbegotten source from whom the Son is begotten &ldquo;without reference to time&rdquo; (<a href=\"/fathers/nazianzus-oration-29.html#s2\">29.2</a>), and being the source does not make the Father more God than the Son. Gregory grants the other reading too: that the Father is greater than the Son &ldquo;considered as man&rdquo; is, he says, &ldquo;true indeed, but is no great thing&rdquo; (<a href=\"/fathers/nazianzus-oration-30.html#s7\">30.7</a>). Later teachers have used both readings.</p><p><b>God made man.</b> In becoming man the Son did not shed or shrink his deity: &ldquo;What He was He continued to be; what He was not He took to Himself&rdquo; (<a href=\"/fathers/nazianzus-oration-29.html#s19\">29.19</a>). He then sets the two natures side by side, line after line: &ldquo;He was baptized as Man&mdash;but He remitted sins as God&rdquo; (<a href=\"/fathers/nazianzus-oration-29.html#s20\">29.20</a>). Gregory wrote some seventy years before the Council of Chalcedon (451). When he says Christ&rsquo;s humanity &ldquo;became God&rdquo; (<a href=\"/fathers/nazianzus-oration-29.html#s19\">29.19</a>) or speaks of God and man &ldquo;intermingled&rdquo; (<a href=\"/fathers/nazianzus-oration-30.html#s3\">30.3</a>), he means one person who is truly God and truly man, not the humanity changed into the divine nature (he says Christ &ldquo;continues to wear the Body which He assumed,&rdquo; <a href=\"/fathers/nazianzus-oration-30.html#s14\">30.14</a>); the later council chose more guarded words, confessing the two natures &ldquo;inconfusedly, unchangeably.&rdquo;</p><p><b>Why the Spirit was revealed last.</b> Gregory framed the slow, step-by-step revealing of the Spirit&rsquo;s deity as providence rather than doubt: &ldquo;The Old Testament proclaimed the Father openly, and the Son more obscurely. The New manifested the Son, and suggested the Deity of the Spirit. Now the Spirit Himself dwells among us, and supplies us with a clearer demonstration of Himself&rdquo; (<a href=\"/fathers/nazianzus-oration-31.html#s26\">31.26</a>). He then argues the Spirit&rsquo;s deity from Scripture itself, in a long list of the Spirit&rsquo;s titles and works (<a href=\"/fathers/nazianzus-oration-31.html#s29\">31.29&ndash;30</a>).</p>"
+  },
+  {
+   "h": "How to read this edition",
+   "html": "<p>This is the English translation by Charles Gordon Browne and James Edward Swallow, published in 1894 in the <em>Nicene and Post-Nicene Fathers</em> (second series, vol. 7). Its English is old (&ldquo;thou,&rdquo; &ldquo;hath&rdquo;), but it is a public-domain translation, and we print it as it stands.</p><p>The 1894 editors added introductions and footnotes. We have left those out: they are the editors&rsquo; work, not Gregory&rsquo;s. We keep only their Bible references, which you can tap to read. A few point to books such as Sirach and Wisdom, which Catholic and Orthodox Bibles include and most Protestant Bibles do not; the tap-to-read feature does not cover those books. Where we found a reference misprinted or mistyped, we have corrected it, and we left out one we could not identify; the corrections are listed at the foot of this page.</p><p>The section numbers are the standard ones used in citing Gregory, so &ldquo;Oration 29.19&rdquo; means Oration 29, section 19. On the oration pages, tap a section number to link straight to it.</p><p>When Gregory speaks of our being &ldquo;made God,&rdquo; or asks how the Spirit could &ldquo;deify&rdquo; us (<a href=\"/fathers/nazianzus-oration-29.html#s19\">29.19</a>; <a href=\"/fathers/nazianzus-oration-30.html#s14\">30.14</a>; <a href=\"/fathers/nazianzus-oration-31.html#s4\">31.4</a>; <a href=\"/fathers/nazianzus-oration-31.html#s28\">31.28&ndash;29</a>), he is using language common in the early church, often linked with 2 Peter 1:4 (&ldquo;partakers of the divine nature&rdquo;). He means sharing God&rsquo;s life by grace, not becoming God by nature. Christian traditions use this language to different degrees.</p><p>Where Christian traditions read a passage differently, a short note marks it. The note names the question; it does not say which reading is right.</p>"
+  }
+ ],
+ "reviewed": {
+  "argument": "2026-11-18",
+  "orthodoxy": "2026-11-18",
+  "neutrality": "2026-11-18",
+  "by": "2026-11-18 CHURCH FATHERS PILOT (Gregory of Nazianzus, Theological Orations 27-31): our guide, 7 rule-2 notes, the top line, colophon and essay-link text. Gregory's own words are not doctrinally gated (a historic witness, not ours); they are copy-checked instead (docs/audits/fathers-nazianzus-copycheck-2026-11-18.md). Three rounds, every lens a READ-ONLY Explore agent, files md5-verified unchanged after each round, cross-model. R1: orthodoxy (Opus) 0 HERESY, 1 DRIFT (30.7 'greater' unbounded), 5 NOTE; neutrality (Fable) NOT STAMPABLE (4 missing rule-2 notes, unfenced or31-26 live-AI excerpt, deification sentence); argument (Opus) SOUND, 5 WEAK; plus rule-7 passes: error-hunter (Sonnet; found the nicene-creed.html council error, also ported into this guide and fixed here) and improvement-finder (Fable). One merged fix pass. R2: orthodoxy CLEAN; neutrality STAMPABLE after 4 verbatim fixes; argument 4 WEAK. One merged fix pass, reviewer wording verbatim. R3 (changed strings only): orthodoxy CLEAN; neutrality STAMPABLE; argument 0 BREAK, 2 WEAK, both on the copy-check DESCRIPTION only (not doctrine): applied verbatim, plus a review of the 97 long comparison runs (no missing text) and 3 POLISH; those last edits were NOT re-read by a lens. AUTOMATED GATE, not pastoral sign-off: docs/STATEMENT_OF_FAITH.md reviewer _pending_."
+ }
+}

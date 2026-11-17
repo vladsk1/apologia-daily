@@ -30,7 +30,10 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'app', 'www');
 
 // Directories at the repo root that are client-facing and ship whole.
-const INCLUDE_DIRS = new Set(['answers', 'library', 'demo', 'fonts']); // fonts: self-hosted web fonts (audit item 10)
+// fathers: the Church Fathers full works (2026-11-18). sources.html (a root file, so it ships)
+// links into /fathers, so the pages must ship too or those links 404 in the app. Small: ~0.5 MB
+// per hosted work, all public-domain text plus our gated guide.
+const INCLUDE_DIRS = new Set(['answers', 'library', 'demo', 'fonts', 'fathers']); // fonts: self-hosted web fonts (audit item 10)
 
 // Root-level files with these extensions are client assets and ship...
 const CLIENT_EXT = new Set([

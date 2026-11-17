@@ -30,6 +30,117 @@ the other side fairly. Items are grouped by the Evidence Library tab they serve.
    to `verified:true` in `/sources` can reach the live AI, same as today.
 5. Every guide page, summary or introduction we write goes through the normal content pipeline.
 
+## 🔴 Church Fathers library: hosting rules (owner ruling, 2026-11-18)
+
+The owner approved building a section that hosts the Church Fathers' books **in full**, each with a short
+guide, linked Bible references and links to our essays. The best lines from each also go into `/sources`
+for the live AI. These rules bind every book in that section.
+
+**Scope (owner, 2026-11-18): the Church Fathers only, Trinity books first.** The rest of this document
+(the other tabs' books: Anselm, Aquinas, Josephus, Chesterton, the critics, the Qur'an, the Book of Mormon)
+is **NOT approved**. It stays a shortlist and an option for later; do not start it without the owner.
+
+**Where it lives: inside the existing "Church Fathers & Creeds" page (`sources.html`), not a new tab.**
+That page already presents "the early church in its own words, verified" as searchable passages. The full
+works sit beside them as a second view (passages / full works), each book on its own page, and every
+passage gets a "read it in context" link to its exact place in the full text. No new menu item and no
+new Evidence Library tab. They exist to protect **denominational
+neutrality** (see `CLAUDE.md`): the Fathers are the shared inheritance of Catholics, Orthodox and
+Protestants, and the section must stay that way.
+
+**1. Strip the old editors' notes.** The public-domain English translations come from the 19th-century
+Schaff ANF/NPNF series, whose Protestant editors added introductions, prefaces and footnotes. Some take
+sides, at times with remarks against Catholic teaching. **Remove all of them.** Keep only the Father's
+own text, the translation itself (including words the translator supplied in brackets or italics to make
+the sense run), and the book/chapter/section numbers needed for citation. Removing notes must never
+change one word of the Father's text: the copy-check compares the hosted text against the source
+edition. Each book page states in its colophon: *"Translation: [translator], [series and volume, year].
+The editors' introductions and footnotes are omitted."*
+
+**2. Keep the disputed passages, and mark each with a short neutral note.** Hosting a book in full means
+hosting all of it. Where a passage touches a question the Christian traditions answer differently, add a
+short note at that point: *"Christian traditions read this passage differently."* The note may say
+**what** the question is. It must never say which reading is right. Known cases so far:
+- Basil, *On the Holy Spirit* (esp. ch. 27): unwritten church tradition alongside Scripture.
+- Augustine, *On the Trinity*: the Spirit's procession from the Father *and the Son* (the filioque,
+  disputed between East and West).
+- Gregory of Nazianzus, *Oration* 40 (on baptism): what baptism does.
+
+Expect more as books are added: the Eucharist, Mary, Peter and the papacy, prayer for the dead,
+predestination, the end times. These are the disputes the neutrality guardrail names, and the same rule
+covers each. The note's wording is doctrinal content, so it is gated (rule 6) before first use.
+
+**3. Balance East and West.** The section must not tilt toward one tradition's favourites. The Trinity
+set is balanced: **East** — Athanasius, Basil, Gregory of Nazianzus, Gregory of Nyssa; **West** — Hilary,
+Augustine, Novatian. Every later addition is checked against this balance and the tally is kept current
+here. Hosting Augustine without the Cappadocians, for example, would tilt the library West.
+
+**4. Say plainly when a Father is not fully orthodox by later standards.** Writers before Nicaea had not
+yet settled the vocabulary, and some later broke with the church. Their guides say so clearly, so the page
+never reads as if the site endorses every line. **Novatian** is the first case: he later led a schism,
+and parts of his *On the Trinity* sound as if they rank the Son below the Father. His guide carries a
+clear note in this sense: *"A valuable early witness to Christ's deity; some of his wording was later
+corrected at Nicaea."* (draft wording, to be gated). The same applies to any other pre-Nicene writer
+whose wording was later refined (e.g. Origen, Tertullian, Justin).
+
+**5. One line at the top of the section.** The section's landing page opens with: *"These are historic
+witnesses, not Scripture. We present them complete, including passages that Christian traditions read
+differently."* This matches the rule the live AI already follows for the same texts (`api/ask.js`
+tells it these passages "are historic human witnesses, not Scripture"). Hosting a book is
+not endorsing every sentence, and this line says so. The line is gated like any other content.
+
+**6. Every guide gets the full review, including neutrality.** These are Trinity texts, the dual-consensus
+tier, so each guide, each rule-2 note and each rule-4 note passes **argument + orthodoxy + neutrality**,
+run as read-only agents, before it goes live. The neutrality review is where rules 1–5 are checked for
+each book: no editors' notes left, every disputed passage noted without taking a side, the East/West
+balance kept, and no unfenced endorsement of a Father's imprecise wording. The Fathers' own text is not
+doctrinally gated (it is theirs, not ours); it only needs the word-for-word copy-check.
+
+Also standing: **no Trinity diagram anywhere in the section**, including any image inside a hosted book
+(owner rule, 2026-08-29).
+
+**7. Every hosted book is also checked against our site, like a mine.** Hosting a Father's full text is a
+chance to test our own work against him. Two checks run on every book before it is called finished:
+- **(a) The quote-check (a script, automatic).** Every place our site quotes or cites this Father (essays,
+  `ev-s*` cards, `ev-m-*` mastery pages, `/answers`, briefs, `/sources`) is compared against the hosted
+  text: are the words right, and does the section number point to the right place? A mismatch is a
+  backlog row (P1 if the misquote is live). It keeps running in CI afterwards, so a future edit cannot
+  reintroduce a misquote.
+- **(b) The error-and-improvement pass (judgement, like a mine).** Read-only review agents read the
+  Father's text against our pages that use him and return findings in the mine's six verdicts
+  (`CLAUDE.md`): ② **error in ours** — we misdescribe what he argued, or quote him out of context (always
+  P1); ③ **weaker in ours** — he makes our point better than we do, so a stronger line should be quoted;
+  ④ **missing** — he answers an objection our essays leave open; ⑤ **ours is better** — a passage not to
+  lean on (e.g. imprecise pre-Nicene wording); ⑥ **leave alone** — with the reason. Run as two passes, an
+  error-hunter and an improvement-finder, on different models where possible, and never handed each
+  other's conclusions. Findings go to `docs/content-backlog.md`; the best new lines become verified
+  `/sources` passages; the run gets a row in `docs/MINE_SCOREBOARD.md`.
+- One difference from mining a copyrighted book: here the text is public domain, so a strong find can be
+  **quoted directly** (once verified), not just used as a lead.
+
+**Status and tallies (keep current).**
+- **Pilot — Gregory of Nazianzus, *Theological Orations* 27–31: built 2026-11-18.** Pages `fathers/nazianzus-orations.html`
+  + `fathers/nazianzus-oration-27.html` … `-31.html`, generated by `tools/build-fathers.mjs` from `fathers/_data/`.
+  Copy-check and rule-7 record: `docs/audits/fathers-nazianzus-copycheck-2026-11-18.md` (incl. the G-1…G-16 rows
+  for our essays). ⚠ Lesson from the pilot: the base text is **CCEL's transcription of the 1894 printing**, not
+  New Advent, which modernises the English ("hath"→"has", "thou"→"you"); hosting New Advent would have hosted its
+  editor's revision. Use New Advent only to locate passages.
+- **East/West tally (rule 3): East 1 (Gregory of Nazianzus) · West 0.** The next book should be Western
+  (Hilary or Novatian are the shortest).
+- **English only.** The Macedonian/Spanish mirror rule in `CLAUDE.md` covers the Evidence Library (`library/`,
+  `ev-s*`), not `/fathers`; an AI translation of a Father's own words would no longer be his words.
+
+**Trust figure — APPROVED by the owner, 2026-11-18.** The site may state a counted figure such as *"N
+early-church works hosted in full."* This is a new trust claim; the owner approved it for this section
+specifically (it is **not** the general "books & articles studied" counter declined on 2026-09-27, which
+stays declined). Build it with the first published book, not before (a figure of 0 says nothing):
+- Generated by `tools/update-trust-numbers.mjs` from the repo, never hand-typed, and CI-checked with
+  `--check` like the other figures.
+- **Count only finished books**: the full text has passed the word-for-word copy-check and its guide has
+  passed the rule-6 review. A book still in progress does not count (same discipline as counting only
+  gated briefs).
+- Count works, not pages or chapters, and keep the wording exact about what is counted.
+
 **Already in `/sources` (156 verified passages):** creeds and councils; Athanasius *On the
 Incarnation*; Irenaeus; Clement of Rome; Justin Martyr; the Didache; Ignatius; Cyril of
 Alexandria; Eusebius *Church History*; Leo's Tome; Origen *Against Celsus*; the Cappadocians;
@@ -110,6 +221,9 @@ Mostly already in `/sources` as excerpts. Host the full texts:
 | Gregory of Nyssa, *On "Not Three Gods"* | NPNF | HOST |
 | Augustine, *On the Trinity* | NPNF (Haddan) | HOST |
 | Hilary, *On the Trinity* | NPNF | HOST |
+| Novatian, *On the Trinity* | ANF | HOST (guide needs the rule-4 note) |
+| Athanasius, *Against the Arians* (Discourses I–III) | NPNF (Newman/Robertson) | HOST. ⭐ Added 2026-11-18: his main Trinity work; `/sources` has none of it |
+| Athanasius, *Letters to Serapion* (the Spirit's deity) | ⚠ **Check first.** Probably not in the Schaff series; the standard English translation (Shapland, 1951) is still under copyright | Do not host until a public-domain English translation is confirmed |
 | Schaff, *The Creeds of Christendom* (1877) | Original | HOST (confirm creed wordings match `sources/creeds.json`) |
 
 ⚠ No Trinity diagrams anywhere, including in any hosted book's images (owner rule).

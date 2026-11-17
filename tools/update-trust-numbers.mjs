@@ -18,8 +18,9 @@
  * deliberately claims nothing about human/pastoral review, which is a separate
  * (and still open) matter — see docs/STATEMENT_OF_FAITH.md.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { globSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -37,6 +38,25 @@ const HOME_START = '<!-- trust-strip:start -->';
 const HOME_END = '<!-- trust-strip:end -->';
 
 const read = (p) => readFileSync(path.join(ROOT, p), 'utf8');
+
+/* Church Fathers works hosted in full (owner-approved trust figure, 2026-11-18;
+   docs/FREE_LIBRARY_CANDIDATES.md). Count ONLY finished works: the text still matches its
+   word-for-word copy-check (hash, same canonical form as tools/build-fathers.mjs) AND the
+   guide carries all three review dates (argument, orthodoxy, neutrality: dual-consensus
+   tier). A book in progress does not count, so no page can claim a check that has not run. */
+function countFathersWorks() {
+  const dir = path.join(ROOT, 'fathers', '_data');
+  if (!existsSync(dir)) return 0;
+  let n = 0;
+  for (const f of readdirSync(dir).filter((x) => x.endsWith('.json') && !x.endsWith('.text.json'))) {
+    const meta = JSON.parse(readFileSync(path.join(dir, f), 'utf8'));
+    const text = JSON.parse(readFileSync(path.join(dir, f.replace(/\.json$/, '.text.json')), 'utf8'));
+    const hashOk = createHash('sha256').update(JSON.stringify(text.parts)).digest('hex') === (meta.copyCheck || {}).textSha256;
+    const r = meta.reviewed || {};
+    if (hashOk && r.argument && r.orthodoxy && r.neutrality) n++;
+  }
+  return n;
+}
 
 function counts() {
   // Deep-dive essays (exclude the index and any language mirrors' indexes)
@@ -80,7 +100,7 @@ function counts() {
     .filter((f) => !/index\.html$/.test(f)).length;
 
   return { essays, answers, answersReviewed, sourcesTotal, sourcesVerified,
-    briefs: briefRows.length, tests, args };
+    briefs: briefRows.length, tests, args, fathersWorks: countFathersWorks() };
 }
 
 function render(c) {
@@ -92,7 +112,7 @@ function render(c) {
     <li>${c.sourcesVerified === c.sourcesTotal
       ? `<strong>All ${c.sourcesTotal} passages</strong> in our public-domain source library have been checked word-for-word against the original text &mdash; and only checked passages may be quoted. A passage that fails the check is held back or removed rather than published: one was removed in July after the check found its wording spliced together from two different editions.`
       : `<strong>${c.sourcesVerified} of ${c.sourcesTotal} passages</strong> in our public-domain source library have been checked word-for-word against the original text. Only those may be quoted; the rest are held back until they pass.`}</li>
-    <li><strong>${c.briefs} argument briefs</strong> &mdash; short summaries of our house framing that the assistant may draw on &mdash; every one of which cleared both review gates before it could be used.</li>
+${c.fathersWorks ? `    <li><strong>${c.fathersWorks} early-church work${c.fathersWorks === 1 ? '' : 's'} hosted in full</strong> in our <a href="/sources.html#full-works">Church Fathers library</a>, each checked word-for-word against its original printing and introduced by a guide that cleared our doctrinal and neutrality reviews.</li>\n` : ''}    <li><strong>${c.briefs} argument briefs</strong> &mdash; short summaries of our house framing that the assistant may draw on &mdash; every one of which cleared both review gates before it could be used.</li>
     <li><strong>${c.tests} automated checks</strong> run on every change to the site, alongside a separate scan of every published page of prose against a list of known heterodox phrasings. That scan is a coarse net rather than a judge: it fails the build when a new match appears, so a person has to look.</li>
   </ul>
   ${END}`;

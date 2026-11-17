@@ -27,7 +27,13 @@
 > library in 6 tiers), `docs/APOLOGETICS_CERTIFICATE_BENCHMARK.md` (Biola/OCCA/STR/Magis/SES/HCU vs a 3-level
 > certificate built by sequencing certified pages), `docs/FREE_LIBRARY_CANDIDATES.md` (~60 public-domain /
 > open-access works mapped to the ev-s tabs; HOST vs LINK; start with the ~20 primaries our essays cite),
-> and `docs/mockups/` (resurrection Objection Guide + On Guard book page; answer text ported from certified
+> (⭐ **2026-11-18: the owner APPROVED its Church Fathers section, and the PILOT IS LIVE** — Gregory of Nazianzus,
+> *Theological Orations* 27–31, in full at `fathers/`, linked from the "Full works" shelf on `sources.html`; built by
+> `tools/build-fathers.mjs`; record in `docs/audits/fathers-nazianzus-copycheck-2026-11-18.md`. Seven binding rules in
+> that file under *"Church Fathers library: hosting rules"*: strip the Schaff editors' notes; neutral notes on disputed
+> passages; East/West balance; flag pre-Nicene imprecision (e.g. Novatian); a "historic witnesses, not Scripture" line
+> atop the section; argument+orthodoxy+neutrality on every guide; and a quote-check + error-and-improvement pass on every
+> book. Fathers only — the doc's other-tab books are NOT approved.), and `docs/mockups/` (resurrection Objection Guide + On Guard book page; answer text ported from certified
 > essays / the reading club, labels + "DRAFT" strings ungated). Measured: ~58% of essay footnotes cite 1930+
 > work (can't be hosted), ~23% ancient/classic/Scripture only. ⭐ **SHIPPED the same day:**
 > `tools/sync-date-modified.mjs` (JSON-LD `dateModified` was older than the latest review on 109 of 113 stamped

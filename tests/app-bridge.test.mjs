@@ -247,7 +247,9 @@ test('app bundle build excludes server-side and secret-bearing paths', () => {
   const m = src.match(/INCLUDE_DIRS\s*=\s*new Set\(\[([^\]]*)\]\)/);
   assert.ok(m, 'INCLUDE_DIRS allowlist not found');
   const included = m[1].match(/'([^']+)'/g).map(s => s.replace(/'/g, ''));
-  assert.deepEqual(included.sort(), ['answers', 'demo', 'fonts', 'library'],
+  // 'fathers' added 2026-11-18: the Church Fathers full works (public-domain text + generated pages,
+  // no secrets), shipped because sources.html links into it.
+  assert.deepEqual(included.sort(), ['answers', 'demo', 'fathers', 'fonts', 'library'],
     'bundle dir allowlist changed — server dirs (api/, lib/, sources/, briefs/) must never ship');
   // Dotfiles (.env) are skipped by prefix, not by extension.
   assert.match(src, /startsWith\('\.'\)/, 'dotfile exclusion (.env etc.) must remain');

@@ -1,0 +1,55 @@
+/* Church Fathers — Full works (generated pages from tools/build-fathers.mjs). Light reading layout,
+   same palette and fonts as sources.html. */
+:root {
+  --n:#0a1628; --n2:#050d1a; --n3:#1e4278; --g:#c8a951; --g2:#8a6d1f; --w:#fff; --o:#f8f7f4;
+  --m:#3a4a62; --mu:#6b7f98; --b:#d4e0ec;
+  --fd:'Playfair Display',Georgia,serif; --ui:'DM Sans',sans-serif; --bo:'Source Serif 4',Georgia,serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--bo); background: var(--o); color: var(--n); line-height: 1.7; }
+a { color: var(--n3); }
+.fw-main { max-width: 760px; margin: 0 auto; padding: 1.4rem 16px 4rem; }
+.fw-crumbs { font-family: var(--ui); font-size: 0.8rem; color: var(--mu); margin-bottom: 1.4rem; }
+.fw-crumbs a { color: var(--mu); text-decoration: none; }
+.fw-crumbs a:hover { color: var(--n); text-decoration: underline; }
+.fw-head { border-bottom: 1px solid var(--b); padding-bottom: 1.4rem; margin-bottom: 1.8rem; }
+.fw-eyebrow { font-family: var(--ui); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--g2); margin: 0 0 0.6rem; }
+.fw-head h1 { font-family: var(--fd); font-size: clamp(1.7rem, 4.5vw, 2.4rem); line-height: 1.2; margin: 0 0 0.4rem; }
+.fw-sub { font-family: var(--bo); font-style: italic; color: var(--m); margin: 0 0 1rem; font-size: 1.05rem; }
+.fw-topline { font-family: var(--ui); font-size: 0.86rem; color: var(--m); background: #fbf6e6; border: 1px solid #e6d9a8; border-left: 3px solid var(--g); border-radius: 6px; padding: 0.7rem 0.9rem; margin: 0; line-height: 1.55; }
+.fw-topline a { color: var(--g2); font-weight: 600; }
+
+/* text pages */
+.fw-text { font-size: 1.08rem; }
+.fw-sec { position: relative; padding-left: 2.6rem; margin: 0 0 1.4rem; scroll-margin-top: 80px; }
+.fw-sec:target .fw-body { background: #fdf8e8; box-shadow: 0 0 0 6px #fdf8e8; border-radius: 2px; }
+.fw-num { position: absolute; left: 0; top: 0.15rem; width: 2rem; text-align: right; font-family: var(--ui); font-size: 0.78rem; font-weight: 600; color: var(--g2); text-decoration: none; }
+.fw-num:hover { text-decoration: underline; }
+.fw-supplied { font-weight: 400; }
+.fw-body p { margin: 0 0 0.8rem; }
+.fw-ref { font-family: var(--ui); font-size: 0.74em; color: var(--mu); white-space: nowrap; }
+.fw-note { font-family: var(--ui); font-size: 0.84rem; color: var(--m); background: var(--w); border: 1px solid var(--b); border-left: 3px solid var(--n3); border-radius: 6px; padding: 0.6rem 0.8rem; margin: 0.4rem 0 0.8rem; line-height: 1.5; }
+.fw-cited { font-family: var(--ui); font-size: 0.8rem; color: var(--mu); margin: 0 0 0.6rem; }
+.fw-pn { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: var(--ui); font-size: 0.9rem; border-top: 1px solid var(--b); padding-top: 1.2rem; margin-top: 2rem; }
+.fw-pn a { font-weight: 600; text-decoration: none; }
+
+/* book page */
+.fw-guide h2, .fw-keys h2, .fw-contents h2, .fw-essays h2 { font-family: var(--fd); font-size: 1.35rem; margin: 2rem 0 0.6rem; }
+.fw-guide p, .fw-guide li { font-size: 1.04rem; }
+.fw-guide ul { padding-left: 1.2rem; }
+.fw-guide li { margin-bottom: 0.4rem; }
+.fw-keys-note { font-family: var(--ui); font-size: 0.82rem; color: var(--mu); margin: -0.2rem 0 0.8rem; }
+.fw-key { background: var(--w); border: 1px solid var(--b); border-left: 3px solid var(--g); border-radius: 8px; padding: 1rem 1.1rem; margin: 0 0 0.8rem; }
+.fw-key blockquote { margin: 0; font-size: 1.04rem; line-height: 1.65; }
+.fw-key figcaption { font-family: var(--ui); font-size: 0.8rem; color: var(--m); margin-top: 0.5rem; }
+.fw-contents ol { list-style: none; padding: 0; margin: 0; }
+.fw-contents li { border: 1px solid var(--b); background: var(--w); border-radius: 8px; padding: 0.75rem 0.9rem; margin-bottom: 0.6rem; }
+.fw-contents li a { text-decoration: none; display: block; }
+.fw-contents li span { display: block; font-family: var(--ui); font-size: 0.8rem; color: var(--mu); margin-top: 0.2rem; }
+.fw-essays li { margin-bottom: 0.5rem; }
+.fw-colo { font-family: var(--ui); font-size: 0.8rem; color: var(--mu); line-height: 1.6; border-top: 1px solid var(--b); margin-top: 2.4rem; padding-top: 1.2rem; }
+.fw-colo p { margin: 0 0 0.6rem; }
+.fw-corr { margin: 0; padding-left: 1.1rem; }
+.fw-foot { background: var(--n2); color: rgba(255,255,255,0.55); text-align: center; font-family: var(--ui); font-size: 0.85rem; padding: 2rem 16px; }
+.fw-foot a { color: rgba(255,255,255,0.75); }
+.fw-foot-tag { margin-top: 0.5rem; font-size: 0.78rem; color: rgba(255,255,255,0.4); }

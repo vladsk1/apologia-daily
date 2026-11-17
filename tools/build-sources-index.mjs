@@ -36,6 +36,9 @@ for (const file of readdirSync(DIR).filter((f) => f.endsWith('.json'))) {
     // passage's accurate tags would otherwise file it under an earlier-priority bucket
     // (e.g. a Trinity creed tagged "deity of christ"). Preserves all tags; only steers display.
     if (e.bucket) entry.bucket = e.bucket;
+    // Optional link to the passage's place in a hosted full work (/fathers/…#sN), shown on
+    // sources.html as "Read in context". Display-only: NOT passed to the live-AI module below.
+    if (e.context_url) entry.context_url = e.context_url;
     entries.push(entry);
   }
 }
