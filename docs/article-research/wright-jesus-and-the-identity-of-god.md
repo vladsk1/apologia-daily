@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED — rows awaiting owner go-ahead.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-6 to WIG-11 (P4) OPEN; residue WIG-12.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -263,3 +263,16 @@ decides order within a priority. Nothing below has been started. No ② (error i
 
 **Count, measured from this table:** 11 rows: 0 P1, 0 P2, 5 P3, 6 P4. One row (WIG-6) is blocked until a quotation is
 verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
+
+## Shipped — 2026-11-18 (owner: "Do the P3 rows")
+
+- WIG-1 to WIG-5 shipped in `library/jesus_claims.html` (+ MK/ES mirrors) and `library/jesus_as_god_nt.html`, with the
+  `jesus-implicit-claims-synoptics` and `deity-of-christ-nt` briefs updated and `ev-m-jesus_claims.html`'s retired
+  compression replaced. Every fence held (⑤-A parables; Son not the Father; Romans 1:3–4 untouched; WIG-4 as Wright's
+  judgment; the tenants debate including Thomas 65).
+- Gate, measured: round 1, all four lenses, found 4 BREAK and about 12 WEAK, every one in authored prose (the worst:
+  "such a man would have been a marvel, not God", which read as a sentence about Jesus, and a strawman of Ehrman's
+  raised-and-exalted account). Round 2: 0 BREAK. Round 3: a combined confirmation. The fixes that closed the loop were
+  ports from Wright's own article (his line on the church's idiom; his n. 22 on Romans 5), not new authored prose.
+- Not done → WIG-12: the card and memorised layers, the Son-of-God answer, Snodgrass's own view of Thomas, native MK/ES
+  checks.
