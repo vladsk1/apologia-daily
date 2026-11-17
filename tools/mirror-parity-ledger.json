@@ -129,6 +129,16 @@
       "acceptedAt": "2026-11-07",
       "sourceCommit": "3ba74b34",
       "reason": "Spanish mirror deliberately lagged (owner decision 2026-11-07). The 2026-11-07 expert pre-review refinements were synced to English + MACEDONIAN in the same commits (Macedonian is the edition under native review by Dr. Sasho Georgievski); the Spanish mirror sync is a scheduled follow-up pass. Native-Spanish doctrinal review is owed site-wide regardless (docs/STATEMENT_OF_FAITH.md). Clear this entry when the Spanish mirror is synced and gated."
+    },
+    "library/evil.html -> library/mk/evil.html": {
+      "acceptedAt": "2026-11-18",
+      "sourceCommit": "d84f92eb",
+      "reason": "Link-only change, nothing to mirror. Commit d84f92eb changed only the breadcrumb link and the closing button box on the English essay, which pointed at ev-m-evil.html (the practice page for a different essay, evil-evidence). The Macedonian and Spanish essays never carried that link: their closing box is the generic \"keep exploring / back to the library\" block and they have no practice button. No argument text, footnote or claim changed in English, so the translations are not behind on content. Clear this entry at the next real content sync of this pair."
+    },
+    "library/evil.html -> library/es/evil.html": {
+      "acceptedAt": "2026-11-18",
+      "sourceCommit": "d84f92eb",
+      "reason": "Link-only change, nothing to mirror. Commit d84f92eb changed only the breadcrumb link and the closing button box on the English essay, which pointed at ev-m-evil.html (the practice page for a different essay, evil-evidence). The Macedonian and Spanish essays never carried that link: their closing box is the generic \"keep exploring / back to the library\" block and they have no practice button. No argument text, footnote or claim changed in English, so the translations are not behind on content. Clear this entry at the next real content sync of this pair."
     }
   }
 }
