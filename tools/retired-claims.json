@@ -143,7 +143,7 @@
       "id": "pelach-only-to-God",
       "retired": "2026-07-28",
       "what": "Claiming Daniel's pelach ('serve') is used only of God, so Daniel 7:14 proves the Son of Man is divine.",
-      "why": "Daniel 3:12 uses it of Nebuchadnezzar's gods. ev-m-titles.html now concedes the verb is 'suggestive rather than decisive'. Widened 2026-08-11: the original five patterns matched none of 'receives worship', 'receives universal worship' or 'the worship of all nations', so the claim survived on daily-mix.html (as the GRADED CORRECT ANSWER), daily-args.json, ev-m-titles.html and pocket-cards.html. The ev-m-titles.html allow entry is now removed, not carried.",
+      "why": "Daniel 3:12 uses it of Nebuchadnezzar's gods. ev-m-titles.html now concedes the verb is 'suggestive rather than decisive'. Widened 2026-08-11: the original five patterns matched none of 'receives worship', 'receives universal worship' or 'the worship of all nations', so the claim survived on daily-mix.html (as the GRADED CORRECT ANSWER), daily-args.json, ev-m-titles.html and pocket-cards.html. The ev-m-titles.html allow entry is now removed, not carried. Widened 2026-11-17 (KEEN-8, Keener SAET mine): Keener's 'the Son of Man receives worship among the nations', citing only '7:13-14', slipped past the 'Daniel 7' pattern because the sentence never names the book; two narrow patterns added, 0 hits corpus-wide at the time of adding.",
       "instead": "The clouds are the stronger half of the case — cloud-riding is YHWH's own vehicle in the OT. Treat the service-verb as suggestive, not decisive.",
       "patterns": [
         "pelach[^.]{0,60}only to God",
@@ -153,7 +153,9 @@
         "the service due to God",
         "Daniel 7[^.]{0,120}(receives|receiving) (universal )?worship",
         "receives universal worship",
-        "worship of all (nations|peoples)"
+        "worship of all (nations|peoples)",
+        "(receives|receiving) worship among the nations",
+        "7:1[34][^.]{0,120}(receives|receiving) (universal )?worship"
       ],
       "allow": [],
       "netting": "phrase",
@@ -164,11 +166,14 @@
           "the service-word used of God is given to this figure",
           "he is served with the worship due to God",
           "in Daniel 7 the figure receives universal worship",
-          "he receives worship of all nations"
+          "he receives worship of all nations",
+          "Daniel 7:13-14 envisions a son of man who receives worship among the nations",
+          "the son of man of 7:13-14 receives worship from every people"
         ],
         "must_not_fire": [
           "The clouds are the stronger half — cloud-riding is YHWH's own vehicle in the Hebrew Bible; treat the service-verb as suggestive, not decisive",
-          "pelach is also used of serving Nebuchadnezzar's gods, so it does not by itself settle who receives it"
+          "pelach is also used of serving Nebuchadnezzar's gods, so it does not by itself settle who receives it",
+          "Daniel 7:13-14 pictures one like a son of man coming with the clouds, the vehicle the Hebrew Bible gives to YHWH"
         ]
       }
     },

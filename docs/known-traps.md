@@ -36,6 +36,9 @@ wrong · what to say instead.
   but the text does not straightforwardly predicate deity+worship; `titles.html` took five rounds to
   remove it. Recurs in popular deity-of-Christ writing (found in two book-research notes). Grep new
   content for it.
+  Scholarly sources carry it too: Keener, SAET "Gospel, Good News" (2023) §2.2, says the Son of Man "receives
+  worship among the nations" citing only "7:13–14", which the old pattern could not see (it needed "Daniel 7" in the
+  sentence). Two narrow patterns added to `pelach-only-to-God` (KEEN-8, 2026-11-17).
 - **`echad` = "compound unity."** The Shema's *echad* does not lexically prove plurality-in-unity;
   `shema.html` says "honesty requires saying no." Don't run it as a proof.
 - **Colwell's rule → qualitative.** Colwell (1933) is about **definiteness**. The *qualitative*

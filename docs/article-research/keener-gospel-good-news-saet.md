@@ -36,7 +36,7 @@ contents was looked at only to choose them):
   `jesus_as_god_nt.html`, `uniqueness.html`, `names.html`, `messianic-prophecy.html`. Each verdict that rests on one
   of these says so.
 
-**Status: MINED; KEEN-1 and KEEN-7 SHIPPED 2026-11-17** (owner go-ahead; see "Shipped" at the end). KEEN-2 to -6 and
+**Status: MINED; KEEN-1, -2, -4, -5, -7, -8, -9, -10, -11, -12 SHIPPED 2026-11-17; KEEN-3 and KEEN-6 BLOCKED (books)** (owner go-ahead; see "Shipped" at the end). KEEN-2 to -6 and
 KEEN-8 to -11 remain OPEN in `docs/content-backlog.md`, plus a follow-up KEEN-12. The mine itself changed no live content.
 
 **Why this is a LEAD, not a quotable source.**
@@ -372,3 +372,27 @@ of a KEEN row that touches those files waits until those rows close. Each row sa
 - **Not done (KEEN-12):** the `/answers` entry, the `ev-m-jesus_claims.html` memorised layer, and three owner/pastoral
   items (the Mark 13:32 clarifier's wording, the MK creed line, the ES bibliography lag). Carson's exact EBC readings of
   Matthew 10:23 and 24:29 were not page-verified.
+
+## Shipped — 2026-11-17, second batch (owner said "yes fix all these")
+
+- **Done:** KEEN-2 (`consistency.html`, `ev-m-consistency.html`, `eyewitnesses.html`), KEEN-4 and KEEN-5 (`earlydate.html`,
+  essay part), KEEN-8 (guard), KEEN-9 (`titles.html`), KEEN-10 (`canon.html` + the left-out-gospels answer), KEEN-11
+  (`earlycreed.html`), KEEN-12 (a new `/answers` page, the `ev-s3` card Q/A in EN/MK/ES, the `ev-m-jesus_claims.html`
+  accordion + flashcard, ES bibliography parity).
+- **Blocked, honestly:** KEEN-3. The open BMCR review of De Temmerman & Demoen (2016) shows the volume concedes more
+  invention than Keener's summary implies, so the row cannot be written from Keener alone. KEEN-6 still needs
+  *Christobiography*.
+- **How it went, measured.** One batch, three gate rounds plus a final confirmation, all four lenses each round
+  (citations Sonnet; argument and neutrality Opus; orthodoxy Fable), all READ-ONLY `Explore` agents, every tracked file
+  md5-hashed before and after each round and never changed by a lens. Round 1: 3 BREAKs (neutrality: the answer dropped
+  the six-days critic reply and the card narrated the debate as won; argument + neutrality: the left-out-gospels sentence
+  swept in the Gospel of Peter), 1 more argument BREAK ("the Gospels name none of theirs"), 3 orthodoxy DRIFTs (an
+  unfenced "to disclaim knowledge"; the MK verb "згреши", which also means "sinned"), and about 15 WEAKs, **every one in
+  authored or compressed prose**. Round 2: 0 BREAK. Round 3: 0 BREAK, 0 HERESY, 0 DRIFT, all files stampable.
+- **Found on the way, outside the rows:** two retired "divine Son of Man of Daniel 7" sentences live on the Spanish
+  `ev-s3` card (fixed by porting the EN clouds wording). CI could not see them, because the retired-claims net is
+  English-only → KEEN-14 (P2).
+- **Rejected or not used:** C. S. Lewis's reply (again); the T. Judah figure keeps "God alone" off the Mark 1:8 sentence;
+  "Burridge began by doubting" (unverifiable) became "concluded from the comparison" on `consistency.html`.
+- **Left open:** KEEN-13 (residue: Mark 8:38; earlydate fn 20's Burridge line; the Carson attribution; ES drift; the
+  mastery-page and `ev-s4` follow-through; answer length; pastoral and native items) and KEEN-14 (the guard).
