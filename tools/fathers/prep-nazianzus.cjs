@@ -31,6 +31,13 @@ const REF_CORR = [
   { sec: '29.20', from: 'Isaiah 53:23', to: 'Matthew 4:23', why: 'misprinted in the 1894 edition, which gives a verse that does not exist ("He healeth every disease and every infirmity")' },
   { sec: '30.2', from: 'Psalm 14:7', to: 'Psalm 45:7', why: 'a transcription slip; the 1894 edition correctly reads Ps. xlv. 7' },
   { sec: '30.16', from: 'Luke 12:44', to: 'Luke 22:44', why: 'misprinted in the 1894 edition (the Agony and Bloody Sweat)' },
+  { sec: '28.3', from: 'Exodus 4:2', to: 'Exodus 7:1', why: 'misprinted in the 1894 edition ("a god to Pharaoh")' },
+  { sec: '28.5', from: '1 Corinthians 15:19', to: '1 Corinthians 15:14', why: 'misprinted in the 1894 edition ("our preaching is not empty, nor our Faith vain")' },
+  { sec: '28.6', from: 'Psalm 119:21', to: 'Psalm 119:131', why: 'misprinted in the 1894 edition ("opened the mouth of his mind")' },
+  { sec: '28.21', from: 'Romans 11:23', to: 'Romans 11:33', why: 'misprinted in the 1894 edition ("the riches of God")' },
+  { sec: '28.21', from: 'Psalm 36:7', to: 'Psalm 36:6', why: 'the 1894 edition gives the Hebrew verse number; English Bibles number it 36:6 ("the great deep")' },
+  { sec: '30.4', from: '1 Corinthians 15:35', to: '1 Corinthians 15:25', why: 'misprinted in the 1894 edition ("He must reign")' },
+  { sec: '31.12', from: 'John 1:2', to: 'John 1:3', why: 'misprinted in the 1894 edition ("all things are said to have been made by the Son")' },
 ];
 
 function toSegs(p) {

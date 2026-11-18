@@ -30,8 +30,8 @@
  "copyCheck": {
   "date": "2026-11-18",
   "method": "The hosted text is CCEL's transcription of the 1894 printing with the editors' footnote markers removed. It was compared word by word, by script, with the OCR of an archive.org scan of the 1894 printing (selectlibraryofn07schauoft): 98.5% of words match directly. The unmatched words were reviewed as a list; every difference involving real words was checked by hand against that scan and a second one (selectlibraryof07scha). Longer differences were listed separately and checked: all were footnotes, page headings or text from a neighbouring section, and none was text missing from the transcription. Punctuation was not compared.",
-  "result": "Four transcription slips in Gregory's text corrected to the printed 1894 text (listed below), each confirmed in both scans. Section 29.18 has no number in the 1894 printing; the standard number is supplied in brackets. Five Bible references corrected (four misprinted in the 1894 edition, one mistyped in the transcription), and stray spaces left where footnote markers were removed have been closed up. The comparison record and the scripts are in docs/audits/fathers-nazianzus-copycheck-2026-11-18.md and tools/fathers/.",
-  "textSha256": "85caf2c51170d1d11239adb86c3c16f750e4e0d270ca769e7d941df4c92a2bb5"
+  "result": "Four transcription slips in Gregory's text corrected to the printed 1894 text (listed below), each confirmed in both scans. Section 29.18 has no number in the 1894 printing; the standard number is supplied in brackets. Twelve Bible references corrected (ten misprinted in the 1894 edition, one given there by its Hebrew verse number, one mistyped in the transcription; every reference was checked by script against the verse it points to, and the 42 with no shared words by hand), and stray spaces left where footnote markers were removed have been closed up. The comparison record and the scripts are in docs/audits/fathers-nazianzus-copycheck-2026-11-18.md and tools/fathers/.",
+  "textSha256": "b1e93688af8bb17583875bb9fb84e7f36d453df1a9b88ff5d6804b651e0e16e1"
  },
  "notes": [
   {

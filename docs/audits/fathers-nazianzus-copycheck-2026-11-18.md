@@ -60,15 +60,33 @@ reference only** — any commentary attached to a reference was dropped. The inv
 | 30.2 | Psalm 14:7 | Psalm 45:7 | transcription slip; the 1894 printing reads "Ps. xlv. 7" |
 | 30.16 | Luke 12:44 | Luke 22:44 | 1894 misprint (the Agony and Bloody Sweat) |
 
+**G-REF (2026-11-18, later the same day): all 287 references checked against the verse they point to.**
+A script (`tools/fathers/check-refs.cjs`) compared each verse's BSB wording with the ~40 words of
+Gregory's text before the reference. 42 shared no words; each was read by hand against both scans. 35 are correct
+loose allusions or Greek-Old-Testament wording (e.g. Ps 110:3 "With Thee is the Beginning", Isa 21:2 "He that
+rejects it"). Seven more were wrong in the 1894 printing itself and are corrected:
+
+| Section | 1894 | Corrected | Why |
+|---|---|---|---|
+| 28.3 | Exodus 4:2 | Exodus 7:1 | misprint ("a god to Pharaoh") |
+| 28.5 | 1 Corinthians 15:19 | 1 Corinthians 15:14 | misprint ("our preaching is not empty, nor our Faith vain") |
+| 28.6 | Psalm 119:21 | Psalm 119:131 | misprint ("opened the mouth of his mind") |
+| 28.21 | Romans 11:23 | Romans 11:33 | misprint ("the riches of God") |
+| 28.21 | Psalm 36:7 | Psalm 36:6 | Hebrew verse number; English Bibles 36:6 ("the great deep") |
+| 30.4 | 1 Corinthians 15:35 | 1 Corinthians 15:25 | misprint ("He must reign") |
+| 31.12 | John 1:2 | John 1:3 | misprint ("all things … made by the Son") |
+
+Left as printed, uncertain: 27.5 Daniel 3:12, 28.18 Genesis 28:2, 30.9 John 8:54 (the footnote marker may sit on
+a different phrase than the one the editors meant). **Row G-REF: DONE.**
+
 A script also checked every remaining reference exists (chapter and verse within range, against the BSB
-index); none other failed. ⚠ That check cannot catch a reference that exists but points at the wrong verse;
-a full citations pass over all 287 references is a backlog item (row G-REF below).
+index); none other failed. That existence check was later superseded by the full G-REF verse-by-verse check above (row G-REF: done).
 
 ## 5. Scripts and integrity guard
 
 The scripts that did this are committed in `tools/fathers/`: `extract-ccel.cjs` (extract + strip notes),
 `compare-scan.cjs` (word-by-word comparison with a scan's OCR), `prep-nazianzus.cjs` (section 29.18, the
-corrections, whitespace). The CCEL text and the scans are not stored in the repo; their URLs are above.
+corrections, whitespace), `check-refs.cjs` (every Bible reference against its verse). The CCEL text and the scans are not stored in the repo; their URLs are above.
 
 
 The hosted text's SHA-256 is recorded in `fathers/_data/nazianzus-orations.json` → `copyCheck.textSha256`.
@@ -104,7 +122,7 @@ page had not listed (`library/phil2.html`, 29.19); it is now linked.
 | G-15 | ④ | `library/trinity_jw.html`, `library/nt_trinity.html:185` | 1 Cor 15:28 "until"; Heb 5:8 "learned obedience" (⚠ EFS-adjacent: report, don't adjudicate) | 30.4 "Until is not always exclusive"; 30.6 |
 | G-16 | ③ | `sources/cappadocians.json` or31-10 note | "the Cappadocian settlement" (Basil avoided the formula) | **fixed in this pilot** (note only) |
 | G-SRC | — | `sources/cappadocians.json` | ~12 strong new verified-quote candidates surfaced: 30.15 (wall), 29.18 (lofty/lowly rule), 30.13 (reductio), 31.29 (testimonies), 30.10–11 (can/cannot), 31.9 (sonship), 29.16 (name of the Relation), 31.15–16 (unity), 31.33 (images), 31.23–24 (twice five), 30.4 (until), 29.13 (picture of an animal) | add each with the usual gate; each must be safe read alone |
-| G-REF | — | `fathers/_data/nazianzus-orations.text.json` | the 1894 references were only checked for existence | full `apologia-citations` pass on all 287 |
+| G-REF | ✅ DONE 2026-11-18 (§4) | `fathers/_data/nazianzus-orations.text.json` | the 1894 references were only checked for existence | all 287 checked against their verses; 7 more corrected |
 
 **Passages NOT to lean on (verdict ⑤, ours is better):** 30.2 on Proverbs 8:22; 30.12 on John 6:38 /
 Gethsemane (human will, refined at Constantinople III); 30.16's second answer on Mark 13:32; the Baruch
