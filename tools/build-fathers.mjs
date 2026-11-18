@@ -108,14 +108,14 @@ const SCRIPTS = `<script src="/analytics.js" defer></script>
 function colophon(meta, text, { full }) {
   const t = meta.translation;
   let out = `<p><b>Translation:</b> ${esc(t.translators)}, <em>${esc(t.edition)}</em>. Public domain.</p>
-<p>The 1894 editors&rsquo; introductions and footnotes are omitted; their Bible references are kept. Text: ${esc(t.base)}, compared word by word with a scan of the 1894 printing; differences in wording were checked by hand against a second scan.</p>`;
+<p>The ${meta.printYear} editors&rsquo; introductions and footnotes are omitted; their Bible references are kept. Text: ${esc(t.base)}, ${t.compared ? esc(t.compared) : `compared word by word with a scan of the ${meta.printYear} printing; differences in wording were checked by hand against a second scan`}.</p>`;
   if (full) {
     out += `<p><b>Copy-check (${esc(meta.copyCheck.date)}).</b> ${esc(meta.copyCheck.method)} ${esc(meta.copyCheck.result)}</p>
-<p><b>Corrections to the transcription</b> (Gregory&rsquo;s words, restored to the 1894 printing):</p>
-<ul class="fw-corr">${text.corrections.map((c) => `<li>${esc(c.sec)}: the transcription reads &ldquo;${esc(c.from)}&rdquo;; the 1894 printing reads &ldquo;${esc(c.to)}&rdquo;.</li>`).join('')}</ul>`;
+<p><b>Corrections to the transcription</b> (${esc(meta.authorShort)}&rsquo;s words, restored to the ${meta.printYear} printing):</p>
+<ul class="fw-corr">${text.corrections.map((c) => `<li>${esc(c.sec)}: the transcription reads &ldquo;${esc(c.from)}&rdquo;; the ${meta.printYear} printing reads &ldquo;${esc(c.to)}&rdquo;.</li>`).join('')}</ul>`;
     if ((text.refCorrections || []).length) {
       out += `
-<p><b>Corrected Bible references</b> (the editors&rsquo; references, not Gregory&rsquo;s words):</p>
+<p><b>Corrected Bible references</b> (the editors&rsquo; references, not ${esc(meta.authorShort)}&rsquo;s words):</p>
 <ul class="fw-corr">${text.refCorrections.map((c) => `<li>${esc(c.sec)}: ${esc(c.from)} &rarr; ${esc(c.to)} &mdash; ${esc(c.why)}.</li>`).join('')}</ul>`;
     }
   }
@@ -139,7 +139,7 @@ function partPage(meta, text, part, sources) {
   const body = part.sections.map((s) => {
     const key = `${part.n}.${s.n}`;
     const num = s.supplied
-      ? `<a class="fw-num fw-supplied" href="#s${s.n}" title="This section has no number in the 1894 printing; the standard number is supplied.">[${s.n}]</a>`
+      ? `<a class="fw-num fw-supplied" href="#s${s.n}" title="This section has no number in the ${meta.printYear} printing; the standard number is supplied.">[${s.n}]</a>`
       : `<a class="fw-num" href="#s${s.n}" aria-label="Section ${key}">${s.n}</a>`;
     const note = notes[key] ? `\n    <aside class="fw-note"><b>A note on this passage.</b> ${esc(notes[key])}</aside>` : '';
     const cite = cites[key] ? `\n    <p class="fw-cited">Our essays cite this section: ${cites[key].map((l) => `<a href="${l.href}">${esc(l.title)}</a>`).join(' &middot; ')}</p>` : '';
@@ -157,7 +157,7 @@ function partPage(meta, text, part, sources) {
       { '@type': 'ListItem', position: 2, name: meta.work, item: `${SITE}/fathers/${meta.slug}.html` },
       { '@type': 'ListItem', position: 3, name: `${meta.partLabel} ${part.n}` }] },
   ];
-  const desc = `${meta.author}, ${meta.partLabel} ${part.n} (${part.title}${part.subtitle ? ': ' + part.subtitle : ''}), complete, in the 1894 public-domain translation.`;
+  const desc = `${meta.author}, ${meta.partLabel} ${part.n} (${part.title}${part.subtitle ? ': ' + part.subtitle : ''}), complete, in the ${meta.printYear} public-domain translation.`;
   return `${head({ title, desc, url, ld })}
 ${stamp(meta)}
 <body>
@@ -213,7 +213,7 @@ ${NAV}
   <header class="fw-head">
     <p class="fw-eyebrow">Full works &middot; ${esc(meta.author)} (${esc(meta.authorDates)})</p>
     <h1>${esc(meta.work)}</h1>
-    <p class="fw-sub">Constantinople, AD ${meta.year} &middot; complete, in the 1894 public-domain translation</p>
+    <p class="fw-sub">${esc(meta.place)}, AD ${meta.year} &middot; complete, in the ${meta.printYear} public-domain translation</p>
     <p class="fw-topline">${esc(TOP_LINE)}</p>
   </header>
   <section class="fw-guide" aria-label="Guide">
@@ -221,11 +221,11 @@ ${meta.guide.map((g) => `    <h2>${esc(g.h)}</h2>\n    ${g.html}`).join('\n')}
   </section>
   ${keys.length ? `<section class="fw-keys" aria-label="Key passages">
     <h2>Key passages</h2>
-    <p class="fw-keys-note">Each is verified word for word against the 1894 text.</p>
+    <p class="fw-keys-note">Each is verified word for word against the ${meta.printYear} text.</p>
 ${keyHtml}
   </section>` : ''}
   <section class="fw-contents" aria-label="Contents">
-    <h2>Read the orations</h2>
+    <h2>Read the ${meta.partLabel.toLowerCase()}s</h2>
     <ol>
 ${contents}
     </ol>

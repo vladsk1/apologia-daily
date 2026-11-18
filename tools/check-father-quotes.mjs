@@ -81,7 +81,7 @@ for (const f of readdirSync(DATA).filter((x) => x.endsWith('.json') && !x.endsWi
     for (const m of txt.matchAll(citeRe)) {
       const w = txt.slice(Math.max(0, m.index - 700), m.index + 300);
       if (!new RegExp(qc.authorRe, 'i').test(w)) continue;
-      const cited = (m[0].match(/(\d{2})[.\s]*(\d{1,2})?/) || []).slice(1).filter(Boolean).join('.');
+      const cited = (m[0].match(/(\d{1,2})[.\s]*(\d{1,2})?/) || []).slice(1).filter(Boolean).join('.');
       for (const q of w.matchAll(/[“"]([^”"]{20,400})[”"]/g)) {
         const quote = q[1].trim(); if (quote.split(/\s+/).length < 5 || seen.has(quote)) continue;
         seen.add(quote);

@@ -125,8 +125,15 @@ chance to test our own work against him. Two checks run on every book before it 
   for our essays). ⚠ Lesson from the pilot: the base text is **CCEL's transcription of the 1894 printing**, not
   New Advent, which modernises the English ("hath"→"has", "thou"→"you"); hosting New Advent would have hosted its
   editor's revision. Use New Advent only to locate passages.
-- **East/West tally (rule 3): East 1 (Gregory of Nazianzus) · West 0.** The next book should be Western
-  (Hilary or Novatian are the shortest).
+- **Book 2 — Hilary of Poitiers, *On the Trinity* (Books 1–12): built 2026-11-18.** Pages `fathers/hilary-trinity.html`
+  + `fathers/hilary-trinity-book-1.html` … `-12.html`. Record: `docs/audits/fathers-hilary-copycheck-2026-11-18.md`
+  (incl. H-1…H-11 for our essays). ⚠ Lessons: (1) CCEL's npnf209 transcription departs from print far more than
+  npnf207 did — 36 slips (three turned "passible"/"impassible" into "possible"/"impossible") and 27 modernised
+  spellings ("begat"→"begot", "spake"→"spoke"); check every modernisable spelling, not only the comparison's
+  diff list. (2) The volume is **1899** (CCEL says 1898, the preface's date). (3) "Ib." in the editors' notes means the
+  previous *footnote's* book. (4) **12.55's 1899 English reverses Hilary's Latin** on whether the Spirit is "begotten";
+  check the Latin wherever a translation reads oddly on a relation of origin.
+- **East/West tally (rule 3): East 1 (Gregory of Nazianzus) · West 1 (Hilary).** Either side may come next.
 - **English only.** The Macedonian/Spanish mirror rule in `CLAUDE.md` covers the Evidence Library (`library/`,
   `ev-s*`), not `/fathers`; an AI translation of a Father's own words would no longer be his words.
 

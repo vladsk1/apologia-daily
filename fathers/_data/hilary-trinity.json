@@ -1,0 +1,111 @@
+{
+ "slug": "hilary-trinity",
+ "partSlug": "hilary-trinity-book-",
+ "author": "Hilary of Poitiers",
+ "authorShort": "Hilary",
+ "authorDates": "c. 315–c. 367",
+ "tradition": "West",
+ "work": "On the Trinity",
+ "workShort": "On the Trinity",
+ "year": "356–360",
+ "place": "Written in exile in Asia Minor",
+ "printYear": 1899,
+ "partLabel": "Book",
+ "quoteCheck": {
+  "authorRe": "Hilary of Poitiers|Hilary\\b(?!\\s+Putnam)",
+  "citeRe": "On the Trinity\\s*(?:\\d{1,2}(?:\\.\\d{1,2})?)?|De Trinitate\\s*(?:\\d{1,2}(?:\\.\\d{1,2})?)?|Trin\\.\\s*\\d{1,2}\\.\\d{1,2}",
+  "sourcesWorkRe": "^On the Trinity$"
+ },
+ "topics": {
+  "1": "Hilary's search for God, and the plan of the work",
+  "2": "The Father, the Son and the Spirit, from the words of baptism",
+  "3": "\"I in the Father and the Father in Me\"",
+  "4": "The Arians' creed, and the Law and the Prophets on the Son",
+  "5": "One God, without denying the Son's birth",
+  "6": "The Son's true Sonship; Peter's confession",
+  "7": "The Son is true God: against the Arians and Sabellius",
+  "8": "The unity of the Father and the Son",
+  "9": "The sayings raised against the Son's deity",
+  "10": "The Passion",
+  "11": "\"My God and your God\" (John 20:17); the Son's subjection (1 Corinthians 15:28)",
+  "12": "\"The Lord created Me\" (Proverbs 8:22); the Holy Spirit; Hilary's prayer"
+ },
+ "description": "Hilary of Poitiers's On the Trinity (written in exile, about AD 356–360), all twelve books, complete, in a public-domain translation (1899), with a short guide.",
+ "translation": {
+  "translators": "E. W. Watson (Books 1–7), E. N. Bennett (Books 8 and 12) and S. C. Gayford (Books 9–11)",
+  "edition": "Nicene and Post-Nicene Fathers, second series, vol. 9, ed. Philip Schaff and Henry Wace (Oxford and London: Parker; New York: Scribner's, 1899)",
+  "base": "CCEL's proofed transcription of the volume (Rights: Public Domain)",
+  "base_url": "https://www.ccel.org/ccel/schaff/npnf209",
+  "compared": "compared word by word with three scans of the 1899 volume; every difference in wording that two of the scans agreed on was checked by hand"
+ },
+ "copyCheck": {
+  "date": "2026-11-18",
+  "method": "The hosted text is CCEL's transcription of the 1899 volume with the editors' footnote markers removed. It was compared word by word, by script, with the OCR of three archive.org scans of that volume, which are page for page the same: its 1899 printing (cu31924103070110), a 1908 reissue (selectlibraryofn09scha) and a Parker printing (bwb_KS-420-200_9). 97.1%, 99.2% and 98.1% of the transcription's words match those scans directly. Every difference involving real words that two scans agreed on was tested in context in all three scans and read by hand; every occurrence of 26 spellings the transcription is known to modernise ('begot', 'spoke', 'honor' and others) was checked in all three scans. Longer differences were listed separately and checked: the rest were footnotes, page headings or text from a neighbouring section. Punctuation was not compared.",
+  "result": "Thirty-six transcription slips in Hilary's text corrected to the 1899 printing, among them three where the transcription has 'possible' or 'impossible' for the printed 'passible' or 'impassible' (3.3, 10.9, 12.50), and twenty-seven places where it modernised the printed spelling ('begot' for 'begat', 'spoke' for 'spake' and others); each is confirmed in at least two of the three scans. Two misprints in the 1899 printing itself are left as the transcription corrects them (4.41 'these words God', 5.37 'their is no novel element'). Nineteen Bible references corrected: eleven misprinted in the 1899 edition, two wrong as the transcription gives them (the scans' footnotes there are too faint to say whose slip it is), and six given in the Greek or Latin numbering (five psalm numbers, one verse number); every reference was checked by script against the verse it points to, and the 43 it flagged (six to verses that do not exist, 37 where Hilary's text shares no words with the verse) were read by hand. Stray spaces left where footnote markers were removed have been closed up. The comparison record and the scripts are in docs/audits/fathers-hilary-copycheck-2026-11-18.md and tools/fathers/.",
+  "textSha256": "db4f0bdc86e98cf93e2518baf08753348c300e0531dd5dda1533879ed4cdfd52"
+ },
+ "notes": [
+  {
+   "at": "2.29",
+   "text": "Christian traditions read this passage differently: how the Spirit's procession relates to the Son (the filioque question, debated between East and West)."
+  },
+  {
+   "at": "6.36",
+   "text": "Christian traditions read this passage and the next (6.36–37) differently: what Christ's words to Peter (Matthew 16:18–19) mean for the leadership of the church."
+  },
+  {
+   "at": "8.13",
+   "text": "Christian traditions read this passage (8.13–17) differently: how Christ is present in the Lord's Supper."
+  },
+  {
+   "at": "8.20",
+   "text": "Christian traditions read this passage differently: how the Spirit's procession relates to the Son (the filioque question, debated between East and West)."
+  },
+  {
+   "at": "9.9",
+   "text": "Christian traditions read this passage differently: what baptism does."
+  },
+  {
+   "at": "10.23",
+   "text": "Here Hilary's wording departs from what the church later taught. He says that Christ \"felt the force of suffering, but without its pain,\" and that he \"had not a nature which could feel pain,\" and he returns to the idea later in this book (10.35, 10.47). The Council of Chalcedon (451) confessed Christ as truly man, \"in all things like unto us, without sin,\" and the church's teachers since, East and West, have said plainly that he felt the pain of his sufferings in his human nature. Readers have long disagreed over how far Hilary meant to go. Hilary himself holds firmly that Christ's body was real and that he truly suffered for us, against those who said it only seemed to be a body (10.41, 10.47)."
+  },
+  {
+   "at": "12.55",
+   "text": "Read this sentence carefully. As translated here, Hilary says he will not \"refuse to say that the Holy Spirit was begotten.\" The Latin text says the opposite: though he will not call the Spirit begotten, he will never call him created (\"genitum tamen Spiritum sanctum non dicturus sim, dicam umquam creatum\"). The point of the passage is that the Spirit is not a creature, and in the sentence just before, Hilary says the Spirit \"proceeds from Thee and is sent through Him.\" The church's settled language, in the Creed of 381, keeps \"begotten\" for the Son and confesses the Spirit as the one who \"proceedeth from the Father.\""
+  },
+  {
+   "at": "12.56",
+   "text": "Christian traditions read this passage (12.55–57) differently: how the Spirit's procession relates to the Son (the filioque question, debated between East and West)."
+  }
+ ],
+ "essayLinks": [],
+ "keyPassages": [],
+ "guide": [
+  {
+   "h": "Who Hilary was",
+   "html": "<p>Hilary (c. 315&ndash;c. 367) was bishop of Poitiers, in Gaul (now western France). The first pages of this work tell of his search for God: he looked for the meaning of life among the philosophers and found it in the Scriptures (<a href=\"/fathers/hilary-trinity-book-1.html#s1\">1.1&ndash;14</a>). In 356, after a council of bishops at Béziers, the emperor Constantius II sent him into exile in Asia Minor; he had urged the bishops of Gaul to break communion with the bishops who led the Arian side. He returned to Poitiers about 361 and died about 367. Christians East and West honour him.</p>"
+  },
+  {
+   "h": "Why he wrote it",
+   "html": "<p>Hilary wrote these twelve books in exile, between about 356 and 360. His chief opponents were the Arians. As Hilary sums up their teaching, &ldquo;the Lord Jesus Christ, created rather than born, bears the Divine Name by gift and not by right&rdquo; (<a href=\"/fathers/hilary-trinity-book-1.html#s24\">1.24</a>); their own creed, which he quotes, calls the Son begotten but also &ldquo;God&rsquo;s perfect creature&rdquo; (<a href=\"/fathers/hilary-trinity-book-4.html#s12\">4.12&ndash;13</a>), and he answers it through Books 4&ndash;6. He also answers Sabellius, who taught that the Father and the Son are one person: &ldquo;Sabellius overlooked the eternity of the Son&rdquo; (<a href=\"/fathers/hilary-trinity-book-1.html#s26\">1.26</a>). Hilary called the work <em>Concerning the Faith</em>; it has long been known as <em>On the Trinity</em>.</p>"
+  },
+  {
+   "h": "What is in it",
+   "html": "<p>Hilary sets out the plan himself (<a href=\"/fathers/hilary-trinity-book-1.html#s20\">1.20&ndash;36</a>).</p><ul><li><a href=\"/fathers/hilary-trinity-book-1.html\"><b>Book 1</b></a>: Hilary&rsquo;s search for God, and the plan of the work.</li><li><a href=\"/fathers/hilary-trinity-book-2.html\"><b>Book 2</b></a>: &ldquo;the mystery of the Divine birth,&rdquo; from the words of baptism, &ldquo;in the Name of the Father and of the Son and of the Holy Ghost&rdquo; (<a href=\"/fathers/hilary-trinity-book-1.html#s21\">1.21</a>).</li><li><a href=\"/fathers/hilary-trinity-book-3.html\"><b>Book 3</b></a>: &ldquo;I in the Father and the Father in Me&rdquo; (John 14:11).</li><li><a href=\"/fathers/hilary-trinity-book-4.html\"><b>Book 4</b></a>: the Arians&rsquo; creed, and the witness of the Law and the Prophets.</li><li><a href=\"/fathers/hilary-trinity-book-5.html\"><b>Book 5</b></a>: from the Law and the Prophets, &ldquo;there are not two gods, nor one isolated true God&rdquo; (<a href=\"/fathers/hilary-trinity-book-1.html#s24\">1.24</a>).</li><li><a href=\"/fathers/hilary-trinity-book-6.html\"><b>Book 6</b></a>: the Son&rsquo;s true Sonship, proved &ldquo;by the witness of the Father, by Christ&rsquo;s own assertion, by the preaching of Apostles&rdquo; and more (<a href=\"/fathers/hilary-trinity-book-1.html#s25\">1.25</a>), including Peter&rsquo;s confession.</li><li><a href=\"/fathers/hilary-trinity-book-7.html\"><b>Book 7</b></a>: from the Gospels, the Son is true God; against the Arians and Sabellius together.</li><li><a href=\"/fathers/hilary-trinity-book-8.html\"><b>Book 8</b></a>: the unity of God: the Son&rsquo;s birth &ldquo;involves no duality in the Godhead&rdquo; (<a href=\"/fathers/hilary-trinity-book-1.html#s28\">1.28</a>).</li><li><a href=\"/fathers/hilary-trinity-book-9.html\"><b>Book 9</b></a>: the sayings raised against the Son&rsquo;s deity, such as &ldquo;None is good save One, even God&rdquo; and &ldquo;The Father is greater than I.&rdquo;</li><li><a href=\"/fathers/hilary-trinity-book-10.html\"><b>Book 10</b></a>: the Passion: the sorrow in Gethsemane and the cry from the cross.</li><li><a href=\"/fathers/hilary-trinity-book-11.html\"><b>Book 11</b></a>: &ldquo;My God and your God&rdquo; (John 20:17), and the Son&rsquo;s subjection to the Father (1 Corinthians 15:28).</li><li><a href=\"/fathers/hilary-trinity-book-12.html\"><b>Book 12</b></a>: &ldquo;The Lord created Me&rdquo; (Proverbs 8:22); the Holy Spirit; and Hilary&rsquo;s closing prayer.</li></ul>"
+  },
+  {
+   "h": "What to look for",
+   "html": "<p><b>Born, not made.</b> Hilary&rsquo;s central case is that the Son is truly born of the Father, and so is God as the Father is God, not a creature. &ldquo;He therefore, the Unbegotten, before time was begat a Son from Himself; not from any pre-existent matter, for all things are through the Son; not from nothing, for the Son is from the Father&rsquo;s self&rdquo; (<a href=\"/fathers/hilary-trinity-book-3.html#s3\">3.3</a>). This birth is not an event in time: &ldquo;So He was born and yet has always existed&rdquo; (<a href=\"/fathers/hilary-trinity-book-12.html#s31\">12.31</a>).</p><p><b>One in nature, not only in will.</b> The Arians granted that the Father and the Son are one in will. Hilary answers that they are one in nature (<a href=\"/fathers/hilary-trinity-book-8.html#s17\">8.17</a>), and part of his answer rests on what believers receive in the Lord&rsquo;s Supper (<a href=\"/fathers/hilary-trinity-book-8.html#s13\">8.13&ndash;17</a>).</p><p><b>How Hilary reads &ldquo;greater.&rdquo;</b> On &ldquo;The Father is greater than I&rdquo; (John 14:28), Hilary answers that the Father is greater as the one of whom the Son is eternally born (&ldquo;By the birth of the Son the Father is constituted greater&rdquo;), and as the one who gives glory to the manhood the Son took, and that this does not make the Son less: &ldquo;The Father therefore is greater, because He is Father: but the Son, because He is Son, is not less&rdquo; (<a href=\"/fathers/hilary-trinity-book-9.html#s56\">9.56</a>). Being the source does not make the Father more God than the Son. Hilary also ties the saying to the Son&rsquo;s humbling of himself in the Incarnation (<a href=\"/fathers/hilary-trinity-book-9.html#s51\">9.51</a>).</p><p><b>Christ&rsquo;s sufferings.</b> In Book 10 Hilary defends the deity of the Son against arguments drawn from his sorrow and his death. He holds firmly that Christ&rsquo;s body was real and that he suffered (<a href=\"/fathers/hilary-trinity-book-10.html#s41\">10.41</a>, <a href=\"/fathers/hilary-trinity-book-10.html#s47\">10.47</a>). But in the same book, guarding Christ&rsquo;s deity, he says something the church has not followed: that Christ &ldquo;felt the force of suffering, but without its pain&rdquo; (<a href=\"/fathers/hilary-trinity-book-10.html#s23\">10.23</a>). The church confesses that Christ, truly man, felt the pain of his sufferings in his human nature. Readers disagree over how far Hilary meant to go; a note on that passage explains.</p><p><b>The Holy Spirit.</b> Hilary is reserved in how he describes the Spirit, but firm on one point: the Spirit is not a creature. He calls him &ldquo;that Divine Spirit&rdquo; (<a href=\"/fathers/hilary-trinity-book-1.html#s36\">1.36</a>), the power of whose nature &ldquo;subsists eternally&rdquo; (<a href=\"/fathers/hilary-trinity-book-12.html#s55\">12.55</a>). Beyond that he will not go past what Scripture gives him: &ldquo;I will not trespass beyond that which human intellect can know about Thy Holy Spirit, but simply declare that He is Thy Spirit&rdquo; (<a href=\"/fathers/hilary-trinity-book-12.html#s56\">12.56</a>).</p><p><b>A book that ends in prayer.</b> Hilary prays at the start (<a href=\"/fathers/hilary-trinity-book-1.html#s37\">1.37&ndash;38</a>) and closes the work with a long prayer to the Father: &ldquo;Keep, I pray Thee, this my pious faith undefiled&rdquo; (<a href=\"/fathers/hilary-trinity-book-12.html#s57\">12.57</a>).</p>"
+  },
+  {
+   "h": "How to read this edition",
+   "html": "<p>This is the English translation published in 1899 in the <em>Nicene and Post-Nicene Fathers</em> (second series, vol. 9): Books 1&ndash;7 by E. W. Watson, Books 8 and 12 by E. N. Bennett, and Books 9&ndash;11 by S. C. Gayford. Its English is old (&ldquo;thou,&rdquo; &ldquo;hath&rdquo;), but it is a public-domain translation, and we print it as it stands.</p><p>The 1899 editors added introductions and footnotes. We have left those out: they are the editors&rsquo; work, not Hilary&rsquo;s. We keep only their Bible references, which you can tap to read. Hilary&rsquo;s Bible was a Latin one, translated from the Greek Old Testament, so his quotations sometimes read differently from a modern Bible, and it numbered most of the Psalms one lower than English Bibles do; where the editors gave that number (and, once, a Latin verse number) we have changed it to the English one. A few references point to books such as Baruch and Wisdom, which Catholic and Orthodox Bibles include and most Protestant Bibles do not; the tap-to-read feature does not cover those books. Where we found a reference wrong, we have corrected it; the corrections are listed at the foot of this page.</p><p>The section numbers are the standard ones used in citing Hilary, so &ldquo;Book 10.23&rdquo; means Book 10, section 23. On the book pages, tap a section number to link straight to it.</p><p>When Hilary speaks of God &ldquo;drawing us upward to partake of His own Divine nature&rdquo; (<a href=\"/fathers/hilary-trinity-book-1.html#s13\">1.13</a>), he is using language common in the early church, often linked with 2 Peter 1:4 (&ldquo;partakers of the divine nature&rdquo;). He means sharing God&rsquo;s life by grace, not becoming God by nature. Christian traditions use this language to different degrees.</p><p>At the main places where Christian traditions read a passage differently, a short note marks it; the same questions come up elsewhere in the work. The note names the question; it does not say which reading is right. Where Hilary falls short of what later councils taught, a note says so plainly.</p>"
+  }
+ ],
+ "reviewed": {
+  "argument": "2026-11-18",
+  "orthodoxy": "2026-11-18",
+  "neutrality": "2026-11-18",
+  "by": "2026-11-18 CHURCH FATHERS BOOK 2 (Hilary of Poitiers, On the Trinity 1-12, 1899 tr.): our guide, 8 notes (6 rule-2, the rule-4 note at 10.23, the translation note at 12.55), topics, description, colophon and copy-check prose, plus the six /sources texts. Hilary's own words are not doctrinally gated (a historic witness); they are copy-checked instead (docs/audits/fathers-hilary-copycheck-2026-11-18.md). Four rounds, every lens a READ-ONLY Explore agent, all files md5-verified unchanged after each round, cross-model (argument Opus, orthodoxy Opus, neutrality Fable). R1: orthodoxy 0 HERESY, 2 DRIFT (10.23 and 12.55 notes put Hilary's position too softly), 2 PRECISION ('receives all that he is' brushes the aseity trap; the sufferings paragraph never stated the church's position), 3 NOTE; neutrality NOT STAMPABLE, 1 BREAK (no note at 2.29, the clearest 'proceeding, as He does, from Father and Son' line) + 3 WEAK + 3 POLISH; argument NOT SOUND, 5 WEAK (incl. two reference-correction reasons that blamed the 1899 edition wrongly, an overclaiming colophon, a wrong verse for Book 3) + 6 POLISH. All merged, one fix pass; 12.31 /sources passage replaced by 12.32 (the live AI sees only author/work/section/translation/text, and 12.31 never names its subject); every reference misprint was then looked for in the scans' printed footnotes (11 confirmed, 2 too faint, said so). R2: orthodoxy CLEAN (1 PRECISION, 2 NOTE), neutrality STAMPABLE (3 WEAK, 2 POLISH), argument NOT SOUND on public-claim wording only (2 WEAK, 4 POLISH); all applied. R3: orthodoxy CLEAN, neutrality STAMPABLE, argument NOT SOUND on copy-check wording (1 WEAK: 'every spelling' overclaimed a fixed list of 26); applied. Two lenses had recalled that 12.55's Latin runs the other way from the 1899 English; the Latin was then fetched (la.wikisource, a Migne-based text): 'genitum tamen Spiritum sanctum non dicturus sim, dicam umquam creatum', so the English reverses Hilary, and the 12.55 note now says so and quotes the Latin (critical edition CCL 62A not consulted; disclosed in the audit). R4 (confirmation): orthodoxy CLEAN, argument SOUND, neutrality STAMPABLE, each having fetched and checked the Latin itself; neutrality's optional POLISH applied verbatim ('The Latin text says the opposite'). Mechanical floor green: 155 tests, retired-claims (Hilary's hosted text quoting Arian claims and the 12.55 English allowed on record for two claims), orthodoxy tripwires, father quote-check --strict, fathers/sources/essay/trust/sitemap checks. NOT pastoral sign-off."
+ }
+}
