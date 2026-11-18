@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-17 SHIPPED 2026-11-18; residue WIG-18 + WIG-19 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-18 SHIPPED 2026-11-18; WIG-19 in progress; residue WIG-20 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -359,3 +359,13 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
 - (d)/(f) the ES Daniel 9:27 calque, the masar/qibbel order and two Greek glosses. "The great fault line" kept as certified.
 - Gate, measured: two rounds, all four lenses, read-only, md5-verified; tag sequences identical to HEAD.
   Residue → WIG-18; the other Spanish essays → WIG-19.
+
+## Shipped — 2026-11-18 (h) (WIG-18, owner-approved)
+
+- (a) Decided rather than converted: the site's certified essays OWN the Bauckham/Wright reading of 1 Cor 8:6 ("inside
+  the Shema, not beside it"), so it stays; the standard now enforced is that every surface that states it carries the
+  McGrath contest on that same surface (item-level for flashcards, quiz props, share-card premises). About twenty
+  surfaces were hedged; the Spanish ev-s6 card had drifted to the OPPOSITE view («junto a») and is ported back.
+- (b)-(g): "one of the great fault lines"; an Isa 53:9 honest limit at Move 3; the "cloud-riding is God's alone"
+  universal softened to "characteristically" with "elsewhere" kept as the Daniel 7 quarantine; Spanish label fixes.
+- Gate, measured: four rounds, all four lenses, read-only, md5-verified; 0 HERESY throughout. Residue → WIG-20.
