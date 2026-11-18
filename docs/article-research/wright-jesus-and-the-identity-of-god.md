@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 and WIG-14 SHIPPED 2026-11-18; residue WIG-15 OPEN (pelach gloss, ES card parity, and smaller items).** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13, WIG-14 and WIG-15 SHIPPED 2026-11-18; residue WIG-16 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -322,3 +322,18 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
   entity-decoded text (`html.unescape` / `decodeEntities` in `tools/check-retired-claims.mjs`).
 - Gate, measured: round 1 all four lenses, 0 BREAK / 0 HERESY, WEAK on the missed twin and the residues; round 2 all four,
   CLEAN. Read-only, md5-verified. What did not port cleanly (the pelach gloss, ES card parity, and smaller items) → WIG-15.
+
+## Shipped — 2026-11-18 (e) (owner: "Yes, do WIG-15")
+
+- (a) **pelach resolved toward `library/titles.html` everywhere served** ("a verb of religious service but not of service
+  to the true God alone … establishes cultic homage without settling who receives it"): the `jesus_claims` essay and
+  cards (EN/MK/ES), `ev-m-jesus_claims`, and a THIRD superseded gloss the first sweep did not catch — `ot_trinity.html` and
+  `ev-m-ot_trinity.html` ("either religious worship or the service owed to a king"). New CI guard
+  `pelach-merely-royal-homage` in `tools/retired-claims.json`, the sibling of `pelach-only-to-God` (the opposite error).
+- (b) the ES `arg-jesus_claims` card re-translated from the certified EN card (it had been an older, shorter version that
+  kept retired wording); the ES-only "no comparte su trono con criatura alguna" overclaim removed. The gate caught an
+  old ES heading that said Jesus "no tenía autoridad" to forgive — fixed in ES; the EN twin is logged (WIG-16).
+- (c)–(f): ES John 1:18 labelled; Romans 8:29 reply added (all four lenses' recommendation); jesuschar John 10:20; ES
+  RVR1960 quotations verified at biblegateway.com.
+- Gate, measured: batch 1 two rounds, batch 2 three rounds, all four lenses, read-only, md5-verified; 0 BREAK and 0
+  HERESY throughout; one DRIFT (the old ES heading), fixed. Residue → WIG-16.
