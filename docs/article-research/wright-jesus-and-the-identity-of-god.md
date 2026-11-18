@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 SHIPPED 2026-11-18 (owner: "Do WIG-13"); residue WIG-14 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 and WIG-14 SHIPPED 2026-11-18; residue WIG-15 OPEN (pelach gloss, ES card parity, and smaller items).** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -311,3 +311,14 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
 - Gate, measured: round 1 all four lenses, 0 BREAK / 0 HERESY, WEAK/DRIFT on the deity brief and the compressed tiers;
   round 2 all four, orthodoxy CLEAN, one ES-translation WEAK; round 3 combined four-lens confirmation. Read-only,
   md5-verified every round. Residue → WIG-14.
+
+## Shipped — 2026-11-18 (d) (owner: "Yes, do WIG-14")
+
+- The 1 Cor 8:6 hedge now reads "Taken as [Richard] Bauckham and many others take it" on all four EN cards and their MK/ES
+  twins; "manifestly" → "evidently"; every ES Mark 14:62 quotation is verbatim RVR1960 (checked at biblegateway.com); "the
+  only begotten (John 3:16)" → "the unique Son" (from `titles.html`); the Romans 8:15/8:32 sentence is carried to the mastery
+  page and the Son-of-God answer; the card's doubled John 10:20 quotation is gone.
+- ⚠ A grep with accented letters missed an ES twin because the ES files use HTML entities (`mayor&iacute;a`). Sweep MK/ES on
+  entity-decoded text (`html.unescape` / `decodeEntities` in `tools/check-retired-claims.mjs`).
+- Gate, measured: round 1 all four lenses, 0 BREAK / 0 HERESY, WEAK on the missed twin and the residues; round 2 all four,
+  CLEAN. Read-only, md5-verified. What did not port cleanly (the pelach gloss, ES card parity, and smaller items) → WIG-15.
