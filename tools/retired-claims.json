@@ -215,6 +215,39 @@
       }
     },
     {
+      "id": "pelach-merely-royal-homage",
+      "retired": "2026-11-18",
+      "what": "Glossing Daniel's pelach ('serve') as merely 'the homage owed a sovereign', 'not necessarily cultic worship', or 'either religious worship or the service owed to a king'.",
+      "why": "Outside the disputed 7:14 and 7:27, every Biblical Aramaic use of pelach has a deity or the deity's house as its object (Ezra 7:24; Daniel 3:12, 14, 17, 18, 28; 6:16, 20), never a human king; what it does not settle is WHO receives it at 7:14 / 7:27 (Daniel 3:12 uses it of Nebuchadnezzar's gods; at 7:27 its object may be the holy people). The royal-homage gloss over-conceded and contradicted certified library/titles.html (para 'In the Aramaic of Daniel' + fn 3). It survived on library/jesus_claims.html (+MK/ES), three ev-s3 card glosses (EN/MK/ES), ev-m-jesus_claims.html x4, library/ot_trinity.html and ev-m-ot_trinity.html x4 until WIG-15 (a) resolved all of them toward titles.html on 2026-11-18. This is the OPPOSITE error from pelach-only-to-God (which over-claims); both are retired, and the certified middle is the titles gloss. Patterns are anchored on 'pelach' within one sentence so the legitimate 'the service owed a sovereign' (no pelach in the sentence) and 'not necessarily cultic' elsewhere do not fire. 0 hits on the served corpus when added; the pre-fix versions of all six files fire.",
+      "instead": "pelach is a verb of religious service that Daniel uses of serving false gods as well as the true God, so it establishes cultic homage without settling who receives it; the deity claim rests on the throne and the coming on the clouds, not on this word (library/titles.html).",
+      "patterns": [
+        "pelach[^.]{0,120}(homage|service) owed (to )?a (sovereign|king)",
+        "pelach[^.]{0,120}(not necessarily|need not mean) cultic worship",
+        "pelach[^.]{0,120}either (religious )?worship or the service",
+        "pelach[^.]{0,160}homenaje (que se debe|debido) a un soberano",
+        "pelach[^.]{0,160}(no necesariamente|no tiene por qué significar) adoraci[oó]n c[uú]ltica",
+        "pelach[^.]{0,160}почит(та)? што (му )?се должи на владетел",
+        "pelach[^.]{0,160}не (нужно|мора да значи) култно"
+      ],
+      "allow": [],
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "and pelach, the peoples’ service, need not mean cultic worship rather than the homage owed a sovereign.",
+          "(Daniel's Aramaic pelach — the homage owed a sovereign, not necessarily cultic worship; the deity claim rests on the throne)",
+          "yet the Aramaic verb here (pelach) can denote either religious worship or the service owed to a king, and which sense is intended is genuinely debated.",
+          "y pelach, el servicio de los pueblos, no tiene por qué significar adoración cúltica en lugar del homenaje debido a un soberano.",
+          "(арамејското pelach кај Даниел — почитта што се должи на владетел, не нужно култно обожавање;"
+        ],
+        "must_not_fire": [
+          "and pelach, the word for the peoples’ service, is a verb of religious service but not of service to the true God alone: the same book uses it of serving Nebuchadnezzar’s gods (Daniel 3:12, 14, 18), and at 7:27 its object is, on one natural reading, the holy people rather than God himself, so the word establishes cultic homage without by itself establishing who receives it.",
+          "(Daniel's Aramaic pelach — a verb of religious service that Daniel uses of serving false gods as well as the true God, so it establishes cultic homage without settling who receives it; the deity claim rests on the throne and the coming-on-the-clouds, not on this word)",
+          "and receives pelach — in Daniel a verb of religious service. It is suggestive rather than decisive: the same verb covers service to Nebuchadnezzar's gods (3:12), and at 7:27 its object may be the holy people.",
+          "A viceroy may be seated beside a king, and by the king's grant may even share his rule."
+        ]
+      }
+    },
+    {
       "id": "son-of-man-never-disputed",
       "retired": "2026-07-29",
       "what": "Claiming critics never argue the church invented the Son of Man sayings.",

@@ -505,8 +505,10 @@ test('retired-claims matcher catches retired claims on the MK/ES mirrors, entity
     'es-entities.html': 'el cargo de blasfemia se bas&oacute; en la afirmaci&oacute;n de Jes&uacute;s de ser el divino Hijo del Hombre de Daniel 7.',
     // ev-s3.mk.html as it stood before 2026-09-26.
     'mk.html': 'обвинението за хула се засновало на тврдењето на Исус дека е божествениот Син Човечки од Даниел 7.',
-    // The certified replacements must stay silent.
-    'es-ok.html': 'el servicio de todos los pueblos (el arameo pelach de Daniel &mdash; el homenaje que se debe a un soberano, no necesariamente adoraci&oacute;n c&uacute;ltica)',
+    // The certified replacements must stay silent. (es-ok updated 2026-11-18, WIG-15 (a): the earlier
+    // 'el homenaje que se debe a un soberano' gloss was itself retired as pelach-merely-royal-homage;
+    // this is the certified titles.html gloss that replaced it on ev-s3.es.html.)
+    'es-ok.html': 'el servicio de todos los pueblos (el arameo pelach de Daniel &mdash; un verbo de servicio religioso que Daniel usa tanto de servir a dioses falsos como al Dios verdadero, as&iacute; que establece homenaje c&uacute;ltico sin zanjar qui&eacute;n lo recibe)',
     'mk-ok.html': 'Исус го споделува божествениот престол (3:21, 22:1-3), го прима обожавањето на секое создание (5:13)',
   };
   const hits = findHits(Object.keys(corpus), (f) => corpus[f]);
