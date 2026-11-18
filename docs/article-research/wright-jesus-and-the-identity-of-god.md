@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13, WIG-14 and WIG-15 SHIPPED 2026-11-18; residue WIG-16 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-16 SHIPPED 2026-11-18; residue WIG-17 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -337,3 +337,14 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
   RVR1960 quotations verified at biblegateway.com.
 - Gate, measured: batch 1 two rounds, batch 2 three rounds, all four lenses, read-only, md5-verified; 0 BREAK and 0
   HERESY throughout; one DRIFT (the old ES heading), fixed. Residue → WIG-16.
+
+## Shipped — 2026-11-18 (f) (WIG-16, owner-approved)
+
+- (a) the `arg-jesus_claims` §1 heading no longer says Jesus "had no standing" to forgive — EN, MK and ES now all read
+  "forgave sins that were not committed against him".
+- (b)/(c)/(f) a whole-file RVR1960 pass on `ev-s3.es.html`: every Scripture quotation is RVR1960 verbatim, LBLA-labelled
+  where the argument hangs on the wording, or unquoted. The gate found two EN hedges the Spanish had lost (McGrath on
+  1 Cor 8:6; the Daniel 9:27 eschatology fence) and both are ported.
+- (d)/(f) the ES essay's Matthew 12 follows the neuter Greek; its Mark 2:7 is RVR. (e) two of four declined polish items taken.
+- Gate, measured: three rounds, all four lenses, read-only, md5-verified. Round 2 caught a tooling defect of mine (the
+  replacement matcher stripped inline tags, breaking a clarifier box) — the file was rebuilt tag-safe. Residue → WIG-17.
