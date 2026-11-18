@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-6 to WIG-11 (P4) OPEN; residue WIG-12.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; residue WIG-13 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -276,3 +276,23 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
   ports from Wright's own article (his line on the church's idiom; his n. 22 on Romans 5), not new authored prose.
 - Not done → WIG-12: the card and memorised layers, the Son-of-God answer, Snodgrass's own view of Thomas, native MK/ES
   checks.
+
+## Shipped — 2026-11-18 (b) (owner: "Do the P4 WIG rows")
+
+- **WIG-7** `library/jesus_as_god_nt.html`: the Jewish categories named (Word, Wisdom, Glory, Spirit, Torah), Dunn's
+  personification reading stated with its point and answered (same subject creates and acts in history; Wisdom never the
+  subject of a human life; "the question is live"). Fences held: ⑤-G (no plurality within God), never Proverbs 8:22 of
+  Christ, and Sirach 24:8–9's created Wisdom fenced in the body and fn 19.
+- **WIG-8** `library/paul-divinity.html` FAQ (+ JSON-LD) and the Nicaea answer: the imperial-cult charge answered, the
+  overlap granted and the inference refused; Wright's Caesar line attributed; "saviour" kept off Philippians 2.
+- **WIG-9** `library/jesuschar.html`: the culture-relative objection stated and answered; Mark 3:21 faced as the critic's
+  evidence (fn 6).
+- **WIG-10** `library/nt_trinity.html`: checked; one phrase ("devotion offered to him as to God") rescoped to the datum.
+- **WIG-11** `library/titles.html`: 4Q174 verified and added as the firmer royal-"son" instance.
+- **WIG-12(a)**: WIG-1/2/3/5 carried to the `ev-s3` card (EN/MK/ES), `ev-m-jesus_claims.html`, `ev-m-jesus_as_god_nt.html`
+  and the Son-of-God answer. **WIG-12(b) BLOCKED**: Snodgrass, *NTS* 21.1 (1974): 142–144 is paywalled; his view of Thomas
+  65 stays unverified and unclaimed. (c) owner work; (d) optional, not done. **WIG-6** untouched (blocked on Neusner).
+- Gate, measured: round 1 all four lenses found 1 BREAK (argument: the reply to Dunn answered a view he does not hold)
+  and about 16 WEAK/DRIFT, every one in authored or compressed prose; round 2 all four: orthodoxy + citations CLEAN,
+  argument + neutrality 1 WEAK each; round 3 a combined four-lens confirmation, all STAMPABLE. Read-only Explore agents,
+  md5-verified every round. Residue → WIG-13.
