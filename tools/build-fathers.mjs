@@ -112,7 +112,9 @@ function colophon(meta, text, { full }) {
   if (full) {
     out += `<p><b>Copy-check (${esc(meta.copyCheck.date)}).</b> ${esc(meta.copyCheck.method)} ${esc(meta.copyCheck.result)}</p>
 <p><b>Corrections to the transcription</b> (${esc(meta.authorShort)}&rsquo;s words, restored to the ${meta.printYear} printing):</p>
-<ul class="fw-corr">${text.corrections.map((c) => `<li>${esc(c.sec)}: the transcription reads &ldquo;${esc(c.from)}&rdquo;; the ${meta.printYear} printing reads &ldquo;${esc(c.to)}&rdquo;.</li>`).join('')}</ul>`;
+<ul class="fw-corr">${text.corrections.map((c) => c.misprint
+  ? `<li>${esc(c.sec)}: the ${meta.printYear} printing itself misprints &ldquo;${esc(c.from)}&rdquo;, and the transcription follows it; corrected to &ldquo;${esc(c.to)}&rdquo;.</li>`
+  : `<li>${esc(c.sec)}: the transcription reads &ldquo;${esc(c.from)}&rdquo;; the ${meta.printYear} printing reads &ldquo;${esc(c.to)}&rdquo;.</li>`).join('')}</ul>`;
     if ((text.refCorrections || []).length) {
       out += `
 <p><b>Corrected Bible references</b> (the editors&rsquo; references, not ${esc(meta.authorShort)}&rsquo;s words):</p>

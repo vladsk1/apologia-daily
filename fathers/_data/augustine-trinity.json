@@ -1,0 +1,161 @@
+{
+ "slug": "augustine-trinity",
+ "partSlug": "augustine-trinity-book-",
+ "author": "Augustine of Hippo",
+ "authorShort": "Augustine",
+ "authorDates": "354–430",
+ "tradition": "West",
+ "work": "On the Trinity",
+ "workShort": "On the Trinity",
+ "year": "c. 400–420 or later",
+ "place": "Written at Hippo, in North Africa",
+ "printYear": 1887,
+ "partLabel": "Book",
+ "quoteCheck": {
+  "authorRe": "Augustine of Hippo|Augustine\\b|Augustin\\b",
+  "citeRe": "On the (?:Holy )?Trinity\\s*(?:\\d{1,2}(?:\\.\\d{1,2}){0,2})?|De Trinitate\\s*(?:\\d{1,2}(?:\\.\\d{1,2}){0,2})?",
+  "sourcesWorkRe": "^On the (Holy )?Trinity$"
+ },
+ "topics": {
+  "1": "One God, Father, Son and Holy Spirit, equal; the texts that call the Son less",
+  "2": "A second rule for the texts about the Son; the sending of the Son and the Spirit; who appeared in the Old Testament",
+  "3": "The appearances of God in the Old Testament, made through created things and angels",
+  "4": "Why the Son was sent: Christ the one Mediator; being sent does not make him less",
+  "5": "What is said of God by substance and what by relation; “unbegotten” and “person”",
+  "6": "Christ “the power of God, and the wisdom of God”: the equality and simplicity of God",
+  "7": "The question of Book 6 answered; “essence” and “person” in Greek and in Latin",
+  "8": "Truth, the good and love: the search turns to the mind",
+  "9": "The mind, its knowledge of itself and its love: an image of the Trinity",
+  "10": "Memory, understanding and will",
+  "11": "Traces of a trinity in the outward senses: the thing seen, the sight, the will",
+  "12": "Knowledge and wisdom; how man is made in the image of God",
+  "13": "Faith; the Word made flesh; how Christ overcame the devil",
+  "14": "Wisdom: the image of God renewed as the mind remembers, understands and loves God",
+  "15": "A summary of the work; how far the image falls short; the Word and the Holy Spirit; the closing prayer"
+ },
+ "description": "Augustine of Hippo’s On the Trinity (begun about AD 400 and finished some twenty years later), all fifteen books, complete, in a public-domain translation (1887), with a short guide.",
+ "translation": {
+  "translators": "Arthur West Haddan, revised and annotated by William G. T. Shedd",
+  "edition": "Nicene and Post-Nicene Fathers, first series, vol. 3, ed. Philip Schaff (Buffalo: The Christian Literature Company, 1887)",
+  "base": "CCEL’s proofed transcription of the volume (Rights: Public Domain)",
+  "base_url": "https://www.ccel.org/ccel/schaff/npnf103",
+  "compared": "compared word by word with three scans of the 1887 volume; every difference in wording that two of the scans agreed on was checked by hand"
+ },
+ "copyCheck": {
+  "date": "2026-11-18",
+  "method": "The hosted text is CCEL’s transcription of the 1887 volume with the editors’ chapter headings and footnote markers removed. CCEL prints the volume chapter by chapter, and a chapter often begins in the middle of a section, so the chapters were joined into books and the text is divided by the numbered sections only. It was compared word by word, by script, with the OCR of three archive.org scans of the 1887 volume (selectlibraryofn03auguuoft, aselectlibrary03unknuoft and 11517981bsb); because the scans run the editors’ long footnotes into the text, each run of sixty words was located in the scan separately. 99.4%, 96.2% and 98.8% of the transcription’s words match those scans directly. Every difference involving real words that two scans agreed on (132 of them), and every short run of words that two scans print and the transcription lacks, or the reverse, was tested in context in all three scans and read by hand; every occurrence of the spellings a transcription may modernise (‘spake’, ‘shew’, ‘begat’ and others) was checked in all three scans. Longer differences were checked and found to be footnotes, page headings or text from a neighbouring passage. Punctuation was not compared. The translators’ words in square brackets, which render or fill out the sense (‘[completely]’), are kept.",
+  "result": "Twenty-eight corrections in Augustine’s text, each confirmed in at least two of the three scans: fifteen words the transcription changed (among them ‘coeternal’ for ‘eternal’, 3.27; ‘uttered’ for ‘altered’, 7.7; ‘unknown’ for ‘known’, 3.20; and ‘Him’ for ‘them’, 5.17); two words it dropped (3.6, and 4.12, where it lost the ‘I’ of ‘He might have said, I and they are, not one thing’); the opening words of three books, printed in capitals and run together or miscapitalised by the transcription; seven older spellings that the 1887 printing has and the transcription modernised (‘shalt’, ‘begat’, ‘an other’); and one misprint in the 1887 printing itself (‘comdemnation’, 4.4), corrected. Two other misprints in the 1887 printing are left as the transcription corrects them (13.11 ‘they do no will’, 15.21 ‘choses’). Section numbering fixed in three places: in Book 1 the printing sets the number 23 in the middle of a paragraph; in Book 2 it prints 26 twice; in Book 4 the transcription runs the number 22 into the text. Thirteen Bible references corrected: six misprinted in the 1887 edition (two of them printed in each other’s place), five given by the Latin numbering of the Psalm verses, and two wrong as the transcription gives them; every reference was checked by script against the verse it points to, the 63 that shared no words with their verse were read by hand, and the 43 that point to books outside the Protestant Old Testament were not checked this way. Stray spaces left where footnote markers were removed have been closed up. The comparison record and the scripts are in docs/audits/fathers-augustine-copycheck-2026-11-18.md and tools/fathers/.",
+  "textSha256": "c316c73d2c98d46c7d466bc7e65b5db44352d61993cc5bc4bc2a307f19a537e9"
+ },
+ "notes": [
+  {
+   "at": "2.28",
+   "text": "Christian traditions read the words of Matthew 16:18 quoted here differently: what “this rock” is, on which Christ builds his church. They also differ on how to take what Augustine says here and at 2.30 of the Catholic Church and of those outside it."
+  },
+  {
+   "at": "3.10",
+   "text": "Christian traditions read this passage and two later ones (3.19, 3.21) differently: what the bread and cup of the Eucharist, or Lord’s Supper, are, how Christ is present in the Supper, and in what sense they are offered."
+  },
+  {
+   "at": "3.21",
+   "text": "See the note at 3.10."
+  },
+  {
+   "at": "4.10",
+   "text": "Christian traditions read this passage and the one before it (4.9–10) differently: what authority the church’s tradition has alongside Scripture."
+  },
+  {
+   "at": "4.29",
+   "text": "Christian traditions read this passage differently: how the Holy Spirit’s procession relates to the Son (the filioque question, debated between East and West). The same question comes up at 5.14–15 and in Book 15 (15.29, 15.45–48)."
+  },
+  {
+   "at": "5.15",
+   "text": "Christian traditions read this passage and the one before it (5.14–15) differently: how the Holy Spirit’s procession relates to the Son (the filioque question, debated between East and West). Here Augustine says that the Father and the Son are “a Beginning of the Holy Spirit, not two Beginnings”; he returns to it in Book 15 (15.29, 15.45–48)."
+  },
+  {
+   "at": "13.16",
+   "text": "Christian traditions read this passage and those after it (13.16–23) differently: how Christ’s death saves, and in what sense the devil had a hold over sinners that Christ broke “by righteousness, not by power.” The early church used several pictures for this, and traditions weigh them differently."
+  },
+  {
+   "at": "13.19",
+   "text": "Christian traditions read this passage and the next (13.19–20) differently: what it means that God foreknew, predestined and chose those who are saved, and whether any of them can finally be lost."
+  },
+  {
+   "at": "13.21",
+   "text": "Christian traditions read this passage, with 13.16 and 13.23, differently: what is passed on to us from Adam’s sin, and how. The words Augustine quotes from Romans 5:12 (here and at 4.15), “in whom all have sinned,” follow the Latin Bible of his day; the Greek is usually translated “because all sinned.” Traditions differ on how much turns on that phrase."
+  },
+  {
+   "at": "14.21",
+   "text": "Christian traditions read this passage differently: whether, and in what sense, a believer’s good works can be called “merit” before God. Augustine adds that “its merit, too, is His grace.”"
+  },
+  {
+   "at": "14.23",
+   "text": "Christian traditions read this passage differently: what baptism does."
+  },
+  {
+   "at": "15.29",
+   "text": "Christian traditions read this passage differently: how the Holy Spirit’s procession relates to the Son (the filioque question, debated between East and West). Augustine says the Spirit proceeds from the Father “principally,” and from the Son also, because the Father, in begetting the Son, gave him this; he returns to it at 15.45–48."
+  },
+  {
+   "at": "15.46",
+   "text": "Christian traditions read this passage differently: the laying on of hands and the anointing of the baptized, whether these are a rite distinct from baptism, and what is given in baptism."
+  }
+ ],
+ "essayLinks": [
+  {
+   "href": "/library/relations.html",
+   "title": "What Distinguishes the Persons? The Inner Grammar of the Trinity",
+   "cites": [
+    "5.6"
+   ],
+   "about": "the persons named by relation, not by substance"
+  },
+  {
+   "href": "/library/analogies.html",
+   "title": "Why Every Trinity Analogy Fails, and What to Say Instead",
+   "cites": [
+    "8.14",
+    "9.2",
+    "15.43"
+   ],
+   "about": "Augustine’s images of the Trinity in the mind, and their limits"
+  }
+ ],
+ "keyPassages": [
+  "augustine-trin-1-4-7",
+  "augustine-trin-1-14",
+  "augustine-trin-5-6",
+  "augustine-trin-5-10",
+  "augustine-trin-15-43",
+  "augustine-trin-15-51"
+ ],
+ "guide": [
+  {
+   "h": "Who Augustine was",
+   "html": "<p>Augustine (354&ndash;430) was born at Thagaste in Roman North Africa, in what is now Algeria. After years as a teacher of rhetoric and a long search through other philosophies, he was baptized by Ambrose at Milan in 387, and from about 395 until his death he was bishop of Hippo Regius, on the North African coast. More of his writings survive than of any other Latin Christian writer of the early church, and for the Latin-speaking churches of the West his books on God, grace and the church became a common inheritance. Catholics and Protestants alike draw on him, though they read him differently and neither follows him at every point. The Orthodox Church also honours him, while disagreeing with parts of his teaching, among them his account of how the Holy Spirit proceeds and of what is passed on from Adam&rsquo;s sin.</p>"
+  },
+  {
+   "h": "Why he wrote it",
+   "html": "<p>Augustine worked on this book for twenty years or more, from about 400 to about 420 or later. When he sent the finished work to Aurelius, bishop of Carthage, he wrote that he had begun these books &ldquo;as a very young man&rdquo; (he was then in his forties) and published them in his old age, and that some of them had been taken and copied before he had finished and revised them (Letter 174; the 1887 editors print it in their introduction, which is not reproduced here). He says at the start that he writes &ldquo;to guard against the sophistries of those who disdain to begin with faith, and are deceived by a crude and perverse love of reason&rdquo; (<a href=\"/fathers/augustine-trinity-book-1.html#s1\">1.1</a>). He first sets out the faith he means to defend: that Father, Son and Holy Spirit are &ldquo;of one and the same substance in an indivisible equality; and therefore that they are not three Gods, but one God&rdquo; (<a href=\"/fathers/augustine-trinity-book-1.html#s7\">1.7</a>). Then he answers those who said the Son is less than the Father, because Scripture says he was sent and that he said &ldquo;My Father is greater than I&rdquo; (<a href=\"/fathers/augustine-trinity-book-1.html#s14\">1.14</a>; on being sent, Books 2 and 4). And he asks for patient readers: in no other subject, he says, &ldquo;is error more dangerous, or inquiry more laborious, or the discovery of truth more profitable&rdquo; (<a href=\"/fathers/augustine-trinity-book-1.html#s5\">1.5</a>).</p>"
+  },
+  {
+   "h": "What is in it",
+   "html": "<p>The fifteen books fall into two halves.</p><ul><li><a href=\"/fathers/augustine-trinity-book-1.html\"><b>Books 1&ndash;4</b></a>: what Scripture teaches. The Father, the Son and the Holy Spirit are one God and equal; the texts that call the Son less speak of him in the form of a servant; the sending of the Son and the Spirit; the appearances of God in the Old Testament (<a href=\"/fathers/augustine-trinity-book-2.html\"><b>2</b></a>&ndash;<a href=\"/fathers/augustine-trinity-book-3.html\"><b>3</b></a>); and why the Son was sent, to be the one Mediator (<a href=\"/fathers/augustine-trinity-book-4.html\"><b>4</b></a>).</li><li><a href=\"/fathers/augustine-trinity-book-5.html\"><b>Books 5&ndash;7</b></a>: how to speak of God. What is said of God by substance and what by relation (<a href=\"/fathers/augustine-trinity-book-5.html\"><b>5</b></a>); Christ &ldquo;the power of God, and the wisdom of God&rdquo; (<a href=\"/fathers/augustine-trinity-book-6.html\"><b>6</b></a>&ndash;<a href=\"/fathers/augustine-trinity-book-7.html\"><b>7</b></a>); and the words &ldquo;essence&rdquo; and &ldquo;person,&rdquo; in Greek and in Latin (<a href=\"/fathers/augustine-trinity-book-7.html\"><b>7</b></a>).</li><li><a href=\"/fathers/augustine-trinity-book-8.html\"><b>Books 8&ndash;14</b></a>: looking for an image of the Trinity in the human mind, which was made in God&rsquo;s image: love (<a href=\"/fathers/augustine-trinity-book-8.html\"><b>8</b></a>); the mind, its knowledge and its love (<a href=\"/fathers/augustine-trinity-book-9.html\"><b>9</b></a>); memory, understanding and will (<a href=\"/fathers/augustine-trinity-book-10.html\"><b>10</b></a>); traces in the senses (<a href=\"/fathers/augustine-trinity-book-11.html\"><b>11</b></a>); knowledge and wisdom (<a href=\"/fathers/augustine-trinity-book-12.html\"><b>12</b></a>&ndash;<a href=\"/fathers/augustine-trinity-book-13.html\"><b>13</b></a>, where Augustine also writes of faith and of Christ&rsquo;s death and resurrection); and the image renewed when the mind remembers, understands and loves God (<a href=\"/fathers/augustine-trinity-book-14.html\"><b>14</b></a>).</li><li><a href=\"/fathers/augustine-trinity-book-15.html\"><b>Book 15</b></a>: a summary of the whole work; how far the image falls short of God; the Word and the Holy Spirit; and a closing prayer.</li></ul>"
+  },
+  {
+   "h": "What to look for",
+   "html": "<p><b>One God, three persons, equal.</b> Augustine holds both together throughout: the three are one God, and yet &ldquo;He who is the Father is not the Son&rdquo;, and the Holy Spirit is &ldquo;neither the Father nor the Son, but only the Spirit of the Father and of the Son, Himself also co-equal with the Father and the Son&rdquo; (<a href=\"/fathers/augustine-trinity-book-1.html#s7\">1.7</a>). The three also act together: it was not the Trinity but &ldquo;only the Son&rdquo; who was born of the Virgin Mary, crucified and raised, yet the Father, the Son and the Holy Spirit, &ldquo;as they are indivisible, so work indivisibly&rdquo;. &ldquo;This is also my faith, since it is the Catholic faith&rdquo;, he adds (<a href=\"/fathers/augustine-trinity-book-1.html#s7\">1.7</a>). &ldquo;Catholic&rdquo; (from the Greek for &ldquo;universal&rdquo;) was in his day the common name for the church spread through the world and its faith, as against heresies and schisms; Christian traditions differ on how the churches of today are related to it.</p><p><b>A rule for reading Scripture about the Son.</b> When Scripture calls the Son less than the Father, it speaks of him as man. &ldquo;He did not so take the form of a servant as that He should lose the form of God, in which He was equal to the Father&rdquo;; he is &ldquo;in the form of God equal to the Father, in the form of a servant the Mediator between God and men, the man Christ Jesus&rdquo; (<a href=\"/fathers/augustine-trinity-book-1.html#s14\">1.14</a>; Philippians 2:6&ndash;7). He adds a second rule (<a href=\"/fathers/augustine-trinity-book-2.html#s2\">2.2</a>&ndash;<a href=\"/fathers/augustine-trinity-book-2.html#s3\">2.3</a>). Some texts, such as &ldquo;The Son can do nothing of Himself, but what He seeth the Father do&rdquo; (John 5:19), do not call the Son less at all; they show him &ldquo;neither as less nor as equal, but only to intimate that He is of the Father&rdquo;. They are read by the rule &ldquo;by which we understand that the Son is not indeed less than, but equal to the Father, but yet that He is from Him, God of God, Light of light&rdquo;, so that in them &ldquo;not His inequality but His birth is declared&rdquo;. Being sent does not make the Son less either: &ldquo;the Son is not therefore less because He is sent by the Father&rdquo; (<a href=\"/fathers/augustine-trinity-book-4.html#s32\">4.32</a>). He was made less only in so far as he was sent by being &ldquo;made of a woman&rdquo;, that is, in the form of a servant (<a href=\"/fathers/augustine-trinity-book-4.html#s26\">4.26</a>); and &ldquo;so to be sent, in respect to the Son, means to be known to be from the Father&rdquo; (<a href=\"/fathers/augustine-trinity-book-4.html#s29\">4.29</a>).</p><p><b>Relation, not substance.</b> &ldquo;Father&rdquo; and &ldquo;Son&rdquo; name how the persons stand to each other, not two different natures: &ldquo;although to be the Father and to be the Son is different, yet their substance is not different; because they are so called, not according to substance, but according to relation&rdquo; (<a href=\"/fathers/augustine-trinity-book-5.html#s6\">5.6</a>).</p><p><b>The poverty of words.</b> The three are truly three: in trying to put the faith into words, he says, human weakness &ldquo;could not say that there were not three somewhats (tria quædam), for it was because Sabellius said this that he fell into heresy&rdquo; (<a href=\"/fathers/augustine-trinity-book-7.html#s9\">7.9</a>). But asked what the three are, &ldquo;human language labors altogether under great poverty of speech. The answer, however, is given, three &ldquo;persons,&rdquo; not that it might be [completely] spoken, but that it might not be left [wholly] unspoken&rdquo; (<a href=\"/fathers/augustine-trinity-book-5.html#s10\">5.10</a>). Greek writers said one essence (<em>ousia</em>) and three <em>hypostaseis</em>, which in Latin would be &ldquo;three substances&rdquo;; Latin writers, for whom &ldquo;essence&rdquo; and &ldquo;substance&rdquo; meant the same thing, said one essence or substance and three persons. Augustine treats both as ways of answering the question &ldquo;three what?&rdquo;, neither of which says it fully; it is the words that fall short, not the faith that the three are distinct and are one God (<a href=\"/fathers/augustine-trinity-book-7.html#s7\">7.7</a>&ndash;<a href=\"/fathers/augustine-trinity-book-7.html#s11\">7.11</a>).</p><p><b>Images in the mind, and their limits.</b> In the second half Augustine looks in the human mind for an image of the Trinity: &ldquo;he that loves, and that which is loved, and love&rdquo; (<a href=\"/fathers/augustine-trinity-book-8.html#s14\">8.14</a>); the mind, its knowledge and its love (Book 9); memory, understanding and will, which &ldquo;are not three lives, but one life; nor three minds, but one mind&rdquo; (<a href=\"/fathers/augustine-trinity-book-10.html#s18\">10.18</a>). He insists that these are only images, and unequal ones. A man is one person; God is three persons: &ldquo;while this image of the Trinity is one person, but the Highest Trinity itself is three persons, yet that Trinity of three persons is more indivisible than this of one&rdquo; (<a href=\"/fathers/augustine-trinity-book-15.html#s43\">15.43</a>). The images are meant to help the reader think, not to prove what Scripture teaches. Of his attempt to use the image to show why the Holy Spirit is not a Son, he says &ldquo;I felt that I had attained to endeavor rather than accomplishment&rdquo;, for &ldquo;three things belonging to one person cannot suit those Three Persons&rdquo; (<a href=\"/fathers/augustine-trinity-book-15.html#s45\">15.45</a>).</p><p><b>The closing prayer.</b> The book ends in prayer: &ldquo;O Lord our God, we believe in Thee, the Father and the Son and the Holy Spirit. For the Truth would not say, Go, baptize all nations in the name of the Father and of the Son and of the Holy Spirit, unless Thou wast a Trinity&rdquo;; and &ldquo;O Lord the one God, God the Trinity, whatever I have said in these books that is of Thine, may they acknowledge who are Thine; if anything of my own, may it be pardoned both by Thee and by those who are Thine&rdquo; (<a href=\"/fathers/augustine-trinity-book-15.html#s51\">15.51</a>).</p>"
+  },
+  {
+   "h": "How to read this edition",
+   "html": "<p>This is the English translation by Arthur West Haddan, revised and annotated by William G. T. Shedd, published in 1887 in the <em>Nicene and Post-Nicene Fathers</em> (first series, vol. 3). Its English is old (&ldquo;thou,&rdquo; &ldquo;hath&rdquo;), but it is a public-domain translation, and we print it as it stands. Words in square brackets, such as &ldquo;[completely]&rdquo;, are the translators&rsquo;, added to make the sense plain.</p><p>The 1887 editors added an introduction, chapter headings and footnotes. We have left those out: they are not Augustine&rsquo;s words. We keep only their Bible references, which you can tap to read. Augustine read the Bible in Latin, so his quotations sometimes read differently from a modern Bible, and the Latin Bible numbers many of the Psalms, and some of their verses, differently from English Bibles; where the editors gave a Latin number we have changed it to the English one. A few references point to books such as Wisdom and Sirach, which Catholic and Orthodox Bibles include and most Protestant Bibles do not. Augustine quotes them as Scripture; Christian traditions differ on whether they belong to the Old Testament. The tap-to-read feature does not cover those books. Where we found a reference wrong, we have corrected it; the corrections are listed at the foot of this page.</p><p>The sections are numbered through each book, as the 1887 edition numbers them, so &ldquo;5.10&rdquo; means Book 5, section 10. Scholars often add the editors&rsquo; chapter number as well (&ldquo;5.9.10&rdquo;). On the book pages, tap a section number to link straight to it.</p><p>When Augustine writes that Christ, &ldquo;by being made partaker of our mortality, He made us partakers of His divinity&rdquo; (<a href=\"/fathers/augustine-trinity-book-4.html#s4\">4.4</a>), he is using language common in the early church, often linked with 2 Peter 1:4 (&ldquo;partakers of the divine nature&rdquo;). He means sharing God&rsquo;s life by grace, not becoming God by nature; as he says just before, &ldquo;by nature we are not God&rdquo;. Christian traditions use this language to different degrees.</p><p>Augustine says some things we do not share. One concerns women. He does hold that women are made in God&rsquo;s image: Genesis 1:27, he says, &ldquo;does not separate the woman from the image of God&rdquo; (<a href=\"/fathers/augustine-trinity-book-12.html#s10\">12.10</a>), and the image is in the mind, which &ldquo;not men only, but also women have&rdquo; (<a href=\"/fathers/augustine-trinity-book-12.html#s12\">12.12</a>). But reading 1 Corinthians 11:7, he also says that when a woman &ldquo;is referred separately to her quality of help-meet, which regards the woman herself alone, then she is not the image of God&rdquo; (<a href=\"/fathers/augustine-trinity-book-12.html#s10\">12.10</a>), taking the woman, in her bodily covering, as a figure for the part of the reason that is turned to temporal things (<a href=\"/fathers/augustine-trinity-book-12.html#s12\">12.12</a>&ndash;<a href=\"/fathers/augustine-trinity-book-12.html#s13\">12.13</a>). We do not share the statement that a woman, considered apart from the man, is not the image of God. Scripture says that God created man in his own image, &ldquo;male and female&rdquo; (Genesis 1:27), and Christian traditions hold that women and men alike bear that image; what Paul&rsquo;s words in 1 Corinthians 11 mean is a separate question, on which Christians differ.</p><p>He also speaks harshly of the Jews: he says they &ldquo;will be punished in that judgment for persisting in their wickedness&rdquo; (<a href=\"/fathers/augustine-trinity-book-1.html#s28\">1.28</a>). That is the polemical language of his time. We print it because it is part of the text; we do not speak that way, and we do not hold the Jewish people guilty, as a people, for the death of Christ.</p><p>At the main places where Christian traditions read a passage differently, a short note marks it; the same questions come up elsewhere in the book. The note names the question; it does not say which reading is right.</p>"
+  }
+ ],
+ "reviewed": {
+  "argument": "2026-11-18",
+  "orthodoxy": "2026-11-18",
+  "neutrality": "2026-11-18",
+  "citations": "2026-11-18",
+  "by": "2026-11-18 CHURCH FATHERS BOOK 4 (Augustine of Hippo, On the Trinity 1-15, 1887 tr. Haddan rev. Shedd): our guide (5 sections), 13 notes (all rule-2: tradition 4.10; the Eucharist 3.10 + pointer 3.21; filioque 4.29, 5.15, 15.29; the rock and the Catholic Church 2.28; atonement 13.16; predestination 13.19; Adam's sin and Romans 5:12 13.21; merit 14.21; baptism 14.23; laying on of hands and anointing 15.46), 15 topics, description, colophon and copy-check prose, and the 6 On the Trinity passages in sources/augustine.json (1.7 moved from Wikisource to the hosted 1887 text; 1.14, 5.6, 5.10, 15.43, 15.51 new). Gated by READ-ONLY agents, the reviewed files md5-verified unchanged after every round: citations (Sonnet, web), argument (Opus), orthodoxy (Opus), neutrality (Fable). R1: citations STAMPABLE (3 WEAK: end date, Orthodox sentence; publisher checked against the scans and kept); orthodoxy NOT CLEAN on 1 CONCERN (\"three substances\" in our voice) + NOTEs; argument NOT STAMPABLE (1 BREAK: the women/image paragraph implied Augustine denied that women bear God's image, which 12.10 and 12.12 contradict) + 4 WEAK; neutrality NOT STAMPABLE (missing rule-2 notes at 4.10, 5.15, 13.19, 14.21; Eucharist note moved to 3.10; 13.21 and Orthodox lines tilted). One merged fix pass; a reviewer's own suggested wording (the Son \"neither less nor equal\" at 2.2) was checked against the text, found wrong for 2.2, and not used. R2: orthodoxy CLEAN, neutrality STAMPABLE; argument NOT STAMPABLE because the /sources fixes had not reached the file (a script bug: existing entries were not replaced) and the second-rule sentence misstated 2.3; orthodoxy and neutrality flagged the same /sources gap. R3 (script fixed; all six entries re-read as on disk): argument STAMPABLE (1 WEAK, 7.9 subject), orthodoxy CLEAN + neutrality STAMPABLE (one combined Fable pass). R4: the five round-3 edits read by one combined orthodoxy + neutrality + argument pass (Fable). 0 HERESY throughout. Every quotation of Augustine in the guide and notes, and every /sources text, machine-checked against the hosted text at its section. AUTOMATED GATE, not pastoral sign-off."
+ }
+}

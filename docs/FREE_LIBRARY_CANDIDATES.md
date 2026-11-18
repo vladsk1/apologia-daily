@@ -142,7 +142,16 @@ chance to test our own work against him. Two checks run on every book before it 
   them, and `tests/fathers.test.mjs` catches them. (4) Greek printed in Greek type is spelled in Latin letters by the
   transcription; scan B's OCR reads Greek. (5) The site's essays had attributed to Basil a premise he never states
   ("God alone is worshipped") on six surfaces (row B-1).
-- **East/West tally (rule 3): East 2 (Gregory of Nazianzus, Basil) · West 1 (Hilary).** The next book should be Western (Augustine or Novatian).
+- **Book 4 — Augustine of Hippo, *On the Trinity* (Books 1–15): built 2026-11-18.** Pages `fathers/augustine-trinity.html`
+  + `fathers/augustine-trinity-book-1.html` … `-15.html`. Record: `docs/audits/fathers-augustine-copycheck-2026-11-18.md`.
+  ⚠ Lessons: (1) CCEL prints this volume **chapter by chapter, and a chapter often begins mid-section**; some books
+  open with an unnumbered preface (= section 1). `tools/fathers/merge-chapters.cjs` joins the chapter blocks into books.
+  (2) The printing itself has numbering slips ("—23." mid-paragraph in Book 1; "26" printed twice in Book 2), so
+  check every book for gaps. (3) `check-dropped-words.cjs` searched whole scans per candidate and never finished on a
+  book this size; it now indexes each scan once (15 seconds). It found two dropped words, one the "I" of 4.12.
+  (4) Drop capitals at the start of books run words together ("Theknowledge"). (5) Augustine’s letter to Aurelius
+  (Letter 174), which he asked to head the work, is printed in the 1887 editors’ introduction and is not hosted.
+- **East/West tally (rule 3): East 2 (Gregory of Nazianzus, Basil) · West 2 (Hilary, Augustine).** Either side may come next.
 - **English only.** The Macedonian/Spanish mirror rule in `CLAUDE.md` covers the Evidence Library (`library/`,
   `ev-s*`), not `/fathers`; an AI translation of a Father's own words would no longer be his words.
 
