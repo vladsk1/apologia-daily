@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; residue WIG-13 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 SHIPPED 2026-11-18 (owner: "Do WIG-13"); residue WIG-14 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -296,3 +296,18 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
   and about 16 WEAK/DRIFT, every one in authored or compressed prose; round 2 all four: orthodoxy + citations CLEAN,
   argument + neutrality 1 WEAK each; round 3 a combined four-lens confirmation, all STAMPABLE. Read-only Explore agents,
   md5-verified every round. Residue → WIG-13.
+
+## Shipped — 2026-11-18 (c) (owner: "Do WIG-13")
+
+- (a) ES `arg-jesus_claims` card: the Daniel 7 "comparte el trono de Dios" drift fixed on four surfaces (Daniel's figure
+  approaches and receives but is never seated; the seat comes from Psalm 110), the trial-historicity caveat and the
+  Bauckham/McGrath 1 Cor 8:6 contest ported. ES/MK sweep: no other Daniel-figure-enthroned sentence.
+- (b) WIG-9 carried to the `arg-jesuschar` card (EN/MK/ES) and `ev-m-jesuschar.html`; (c) 4Q174 carried to `ev-m-titles.html`,
+  the `arg-titles` card (EN/MK/ES) and `jesus-messiah-claim.html`; (d) the declined polish done — and the gate found the
+  "words and actions" wording itself overreached (it read as Wright conceding the entry and the Temple action), so it now
+  reads "the accompanying words and actions … gain their force from the journey to Jerusalem"; (e) Romans 8:15 vs 8:32
+  adopted (all four lenses ACCEPT); (f) `trinity-invented-nicaea` and `deity-of-christ-nt` briefs updated (Dunn's grant
+  scoped to Wisdom and Word, never the Spirit); (g) the /answers scholar-naming convention followed.
+- Gate, measured: round 1 all four lenses, 0 BREAK / 0 HERESY, WEAK/DRIFT on the deity brief and the compressed tiers;
+  round 2 all four, orthodoxy CLEAN, one ES-translation WEAK; round 3 combined four-lens confirmation. Read-only,
+  md5-verified every round. Residue → WIG-14.
