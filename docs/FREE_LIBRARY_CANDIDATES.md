@@ -133,7 +133,16 @@ chance to test our own work against him. Two checks run on every book before it 
   diff list. (2) The volume is **1899** (CCEL says 1898, the preface's date). (3) "Ib." in the editors' notes means the
   previous *footnote's* book. (4) **12.55's 1899 English reverses Hilary's Latin** on whether the Spirit is "begotten";
   check the Latin wherever a translation reads oddly on a relation of origin.
-- **East/West tally (rule 3): East 1 (Gregory of Nazianzus) · West 1 (Hilary).** Either side may come next.
+- **Book 3 — Basil of Caesarea, *On the Holy Spirit* (chapters 1–30): built 2026-11-18.** Pages `fathers/basil-spirit.html`
+  + `fathers/basil-spirit-chapter-1.html` … `-30.html`. Record: `docs/audits/fathers-basil-copycheck-2026-11-18.md`
+  (incl. B-1…B-7 for our essays). ⚠ Lessons: (1) this volume's long footnotes run into the scans' text, so the
+  section-level comparer lost its place; `tools/fathers/compare-scan-chunked.cjs` re-locates every 60 words. (2) Look
+  for **dropped** words, not only changed ones (`check-dropped-words.cjs`): the transcription had lost seven, one a "not"
+  that reversed the sense (14.32). (3) The translator printed notes **inside the text** ("[by, A.V.]"); rule 1 omits
+  them, and `tests/fathers.test.mjs` catches them. (4) Greek printed in Greek type is spelled in Latin letters by the
+  transcription; scan B's OCR reads Greek. (5) The site's essays had attributed to Basil a premise he never states
+  ("God alone is worshipped") on six surfaces (row B-1).
+- **East/West tally (rule 3): East 2 (Gregory of Nazianzus, Basil) · West 1 (Hilary).** The next book should be Western (Augustine or Novatian).
 - **English only.** The Macedonian/Spanish mirror rule in `CLAUDE.md` covers the Evidence Library (`library/`,
   `ev-s*`), not `/fathers`; an AI translation of a Father's own words would no longer be his words.
 

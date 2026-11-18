@@ -1,0 +1,151 @@
+{
+ "slug": "basil-spirit",
+ "partSlug": "basil-spirit-chapter-",
+ "author": "Basil of Caesarea",
+ "authorShort": "Basil",
+ "authorDates": "c. 330–379",
+ "tradition": "East",
+ "work": "On the Holy Spirit",
+ "workShort": "On the Holy Spirit",
+ "year": "c. 375",
+ "place": "Written for Amphilochius, bishop of Iconium",
+ "printYear": 1895,
+ "partLabel": "Chapter",
+ "quoteCheck": {
+  "authorRe": "Basil of Caesarea|Basil\\b",
+  "citeRe": "On the Holy Spirit\\s*(?:\\d{1,2}(?:\\.\\d{1,2})?)?|De Spiritu Sancto\\s*(?:\\d{1,2}(?:\\.\\d{1,2})?)?",
+  "sourcesWorkRe": "^On the Holy Spirit$"
+ },
+ "topics": {
+  "1": "Why small words matter, and the two forms of the doxology",
+  "2": "The opponents’ rule: “of whom,” “through whom,” “in whom”",
+  "3": "Where the rule came from: the philosophers’ terms for causes",
+  "4": "Scripture does not keep that rule",
+  "5": "The same words are used of the Father, the Son and the Spirit",
+  "6": "The Son is not “after” the Father: one glory",
+  "7": "“With him” and “through him” both belong to the Church",
+  "8": "“Through him”: the Son’s gifts to us, and one will with the Father",
+  "9": "What Scripture and the Fathers’ tradition teach about the Spirit",
+  "10": "The Spirit ranked with the Father and the Son in baptism",
+  "11": "To deny the Spirit is to break the baptismal confession",
+  "12": "Baptized “into Christ”: why all three names are kept",
+  "13": "Why the angels named with the Father and the Son are not ranked with them",
+  "14": "“Baptized unto Moses”: types and their fulfilment",
+  "15": "Baptized “into water”: water and the Spirit in baptism",
+  "16": "The Spirit inseparable from the Father and the Son in every work",
+  "17": "“Numbered under”: the opponents’ word examined",
+  "18": "Three persons, and one God",
+  "19": "Why the Spirit is glorified: His names and His works",
+  "20": "Neither slave nor master? The Spirit shares in royalty",
+  "21": "Scripture calls the Spirit Lord",
+  "22": "The Spirit, like the Father and the Son, is beyond the world’s knowing",
+  "23": "To glorify is to tell what the Spirit does",
+  "24": "Creatures are glorified; why not the Spirit?",
+  "25": "“In,” “with” and “and”",
+  "26": "The senses of “in,” all fitting the Spirit",
+  "27": "Where “with” comes from: unwritten tradition",
+  "28": "Believers are “with” Christ; why not the Spirit?",
+  "29": "Earlier writers who used “with”",
+  "30": "The state of the churches, and why Basil wrote"
+ },
+ "description": "Basil of Caesarea’s On the Holy Spirit (written about AD 375), all thirty chapters, complete, in a public-domain translation (1895), with a short guide.",
+ "translation": {
+  "translators": "Blomfield Jackson",
+  "edition": "Nicene and Post-Nicene Fathers, second series, vol. 8, ed. Philip Schaff and Henry Wace (Oxford and London: Parker and Company; New York: The Christian Literature Company, 1895)",
+  "base": "CCEL’s proofed transcription of the volume (Rights: Public Domain)",
+  "base_url": "https://www.ccel.org/ccel/schaff/npnf208",
+  "compared": "compared word by word with three scans of the 1895 volume; every difference in wording that two of the scans agreed on was checked by hand"
+ },
+ "copyCheck": {
+  "date": "2026-11-18",
+  "method": "The hosted text is CCEL’s transcription of the 1895 volume with the editors’ footnote markers removed. It was compared word by word, by script, with the OCR of three archive.org scans of the 1895 volume (selectlibraryofn08scha, cu31924103070102 and selectlibraryofn08schauoft); because the scans run the editors’ long footnotes into the text, each run of sixty words was located in the scan separately. 95.8%, 96.2% and 93.6% of the transcription’s words match those scans directly. Every difference involving real words that two scans agreed on, and every word that two scans print and the transcription lacks, was tested in context in all three scans and read by hand; every occurrence of the spellings the transcription is known to modernise (‘show’, ‘spoke’, ‘naught’ and others) was checked in all three scans, and none had been changed. Longer differences were checked and found to be footnotes, page headings or text from a neighbouring passage. Punctuation was not compared, except that missing opening quotation marks were restored. Under rule 1 the translator’s ten notes inside the text, in square or round brackets, that compare his wording with the King James Version or the Greek Old Testament (‘[by, A.V.]’, ‘[lxx., known]’) are omitted; his brackets that render a word (‘[the Father’s]’, ‘[or in]’) are kept.",
+  "result": "Sixteen transcription slips in Basil’s text corrected to the 1895 printing, among them seven words the transcription dropped (one is a ‘not’ that reverses the sense, 14.32: ‘they did not bear about in the body the dying of Jesus’) and ‘thence’, ‘stretches’ and ‘limitation’ for the printed ‘there’, ‘attaches’ and ‘imitation’; ‘sub-numeration’ printed ‘subnumeration’ as the 1895 text has it; eleven Greek words, printed in Greek in 1895 and spelled in Latin letters by the transcription, restored; six missing opening quotation marks restored; and a stray mark removed where the printing has a footnote number. Each word correction is confirmed in at least two of the three scans. Two misprints in the 1895 printing itself are left as the transcription corrects them (11.27 ‘trangressors’, 16.39 ‘partriarchs’). Eighteen Bible references corrected: nine misprinted in the 1895 edition, two slips in the transcription, two wrong as the transcription gives them (the scans’ footnotes there could not be read), and five given in the Greek or Prayer Book numbering; every reference was checked by script against the verse it points to, and the 37 it flagged were read by hand. Stray spaces left where footnote markers were removed have been closed up. The comparison record and the scripts are in docs/audits/fathers-basil-copycheck-2026-11-18.md and tools/fathers/.",
+  "textSha256": "fe0f57a5bb32eecdce74f3afda3beabc421f84d6ebb2db6b84130687a931927e"
+ },
+ "notes": [
+  {
+   "at": "10.25",
+   "text": "Christian traditions read this passage and the next (10.25–26) differently on two questions: what authority unwritten church tradition has alongside Scripture, and what baptism does."
+  },
+  {
+   "at": "12.28",
+   "text": "Christian traditions read this passage differently: what baptism does, and who should be baptized."
+  },
+  {
+   "at": "15.35",
+   "text": "Christian traditions read this passage and the next (15.35–36) differently: what baptism does and how it is given."
+  },
+  {
+   "at": "18.45",
+   "text": "Christian traditions read this passage and the next two (18.45–47) differently on two questions. One is how the Spirit’s procession relates to the Son (the filioque question, debated between East and West). The other concerns the line “the honour paid to the image passes on to the prototype.” Basil draws it from the example of a king’s image to explain the one glory of the Father and the Son. Later writers, among them John of Damascus, cited it for honouring icons; traditions differ on whether that use is right."
+  },
+  {
+   "at": "20.51",
+   "text": "Here Basil takes the slavery of his world for granted. He denies that anyone is a slave by nature and says that master and servant are equal in rank, “all fellow slaves” of the Creator. Yet he also calls it a benefit for a man who lacks understanding to become “the chattel of another,” and reads Noah’s words about Canaan (Genesis 9:25) that way. Christians have since rejected that judgement, and we do not share it."
+  },
+  {
+   "at": "27.66",
+   "text": "Christian traditions read this passage and the next (27.66–67) differently: what authority unwritten church tradition has alongside Scripture, and the practices Basil names here, such as the sign of the cross, the prayer at the Eucharist, and the blessing of the water of baptism and the oil."
+  },
+  {
+   "at": "29.71",
+   "text": "Christian traditions read this passage differently: what authority unwritten church tradition has alongside Scripture."
+  }
+ ],
+ "essayLinks": [
+  {
+   "href": "/library/holy_spirit.html",
+   "title": "The Deity and Personhood of the Holy Spirit",
+   "cites": [
+    "1.3",
+    "10.24",
+    "12.28"
+   ],
+   "about": "Basil’s case for the Spirit’s deity, from worship and baptism"
+  },
+  {
+   "href": "/library/nicene-creed.html",
+   "title": "The Nicene Creed, Phrase by Phrase",
+   "cites": [
+    "10.24"
+   ],
+   "about": "the Spirit-fighters, and how the creed of 381 answered them"
+  }
+ ],
+ "keyPassages": [
+  "basil-holyspirit-9",
+  "basil-holyspirit-12",
+  "basil-holyspirit-18",
+  "basil-holyspirit-13-30",
+  "basil-holyspirit-18-45"
+ ],
+ "guide": [
+  {
+   "h": "Who Basil was",
+   "html": "<p>Basil (c. 330&ndash;379) was bishop of Caesarea in Cappadocia, in what is now central Turkey, from 370 until his death. With his friend Gregory of Nazianzus and his younger brother Gregory of Nyssa he is one of the three &ldquo;Cappadocian Fathers,&rdquo; who clarified the distinction between the one <em>ousia</em> (essence) and the three <em>hypostaseis</em> (persons). Outside Caesarea he founded a great house of care for the poor and the sick. Christians East and West honour him.</p>"
+  },
+  {
+   "h": "Why he wrote it",
+   "html": "<p>Basil wrote this book about 375 for his friend Amphilochius, bishop of Iconium (<a href=\"/fathers/basil-spirit-chapter-1.html#s1\">1.1</a>). The question began in church. Praying with the people, Basil had given glory to God the Father in two forms, &ldquo;with the Son together with the Holy Ghost&rdquo; and &ldquo;through the Son in the Holy Ghost,&rdquo; and some who were present attacked him &ldquo;on the ground that I was introducing novel and at the same time mutually contradictory terms&rdquo; (<a href=\"/fathers/basil-spirit-chapter-1.html#s3\">1.3</a>). Basil traces his critics&rsquo; rule about these small words to &ldquo;an old sophism, invented by Aetius,&rdquo; who held that &ldquo;things expressed in unlike terms are naturally unlike&rdquo; (<a href=\"/fathers/basil-spirit-chapter-2.html#s4\">2.4</a>). They held that the Son is &ldquo;not together with the Father, but after the Father,&rdquo; and that the Spirit is ranked &ldquo;under the Son and the Father&rdquo; (<a href=\"/fathers/basil-spirit-chapter-6.html#s13\">6.13</a>); we have their views only as he reports them. From chapter 9 on he mainly answers those who denied the Spirit&rsquo;s place, whom he names the Pneumatomachi (the word means &ldquo;Spirit-fighters&rdquo;) (<a href=\"/fathers/basil-spirit-chapter-11.html#s27\">11.27</a>, <a href=\"/fathers/basil-spirit-chapter-21.html#s52\">21.52</a>). His answer is that the Spirit is rightly glorified &ldquo;with&rdquo; the Father and the Son, because the Lord himself joined the Spirit with them in the words of baptism; and to the objection that Scripture nowhere uses &ldquo;with the Spirit&rdquo; in a doxology (<a href=\"/fathers/basil-spirit-chapter-25.html#s58\">25.58</a>), he answers that &ldquo;with&rdquo; says no more than the &ldquo;and&rdquo; of the Lord&rsquo;s own words in baptism (<a href=\"/fathers/basil-spirit-chapter-25.html#s59\">25.59</a>, <a href=\"/fathers/basil-spirit-chapter-27.html#s68\">27.68</a>), and that it has come down in the church&rsquo;s unwritten tradition and in the earlier writers who used it (chapters 27&ndash;29).</p>"
+  },
+  {
+   "h": "What is in it",
+   "html": "<ul><li><a href=\"/fathers/basil-spirit-chapter-1.html\"><b>Chapters 1&ndash;8</b></a>: the small words &ldquo;of whom,&rdquo; &ldquo;through whom&rdquo; and &ldquo;in whom,&rdquo; and the Son, who is not &ldquo;after&rdquo; the Father but glorified &ldquo;with&rdquo; him.</li><li><a href=\"/fathers/basil-spirit-chapter-9.html\"><b>Chapters 9&ndash;15</b></a>: what Scripture and the Fathers teach about the Spirit; the Spirit named with the Father and the Son in baptism (Matthew 28:19); and three objections, from the angels (<a href=\"/fathers/basil-spirit-chapter-13.html\"><b>13</b></a>), from &ldquo;baptized unto Moses&rdquo; (<a href=\"/fathers/basil-spirit-chapter-14.html\"><b>14</b></a>) and from baptized &ldquo;into water&rdquo; (<a href=\"/fathers/basil-spirit-chapter-15.html\"><b>15</b></a>).</li><li><a href=\"/fathers/basil-spirit-chapter-16.html\"><b>Chapters 16&ndash;24</b></a>: the Spirit inseparable from the Father and the Son in every work; the opponents&rsquo; word &ldquo;numbered under&rdquo; (<a href=\"/fathers/basil-spirit-chapter-17.html\"><b>17&ndash;18</b></a>); the Spirit&rsquo;s names and works; the Spirit called Lord (<a href=\"/fathers/basil-spirit-chapter-21.html\"><b>21</b></a>).</li><li><a href=\"/fathers/basil-spirit-chapter-25.html\"><b>Chapters 25&ndash;29</b></a>: &ldquo;in&rdquo; and &ldquo;with&rdquo;; unwritten tradition (<a href=\"/fathers/basil-spirit-chapter-27.html\"><b>27</b></a>); the earlier writers who said &ldquo;with&rdquo; (<a href=\"/fathers/basil-spirit-chapter-29.html\"><b>29</b></a>).</li><li><a href=\"/fathers/basil-spirit-chapter-30.html\"><b>Chapter 30</b></a>: the storm in the churches, and why Basil spoke.</li></ul>"
+  },
+  {
+   "h": "What to look for",
+   "html": "<p><b>The argument from worship.</b> Basil argues from Scripture throughout, and above all from the Lord&rsquo;s command to baptize (Matthew 28:19) as the Church lives it out in baptism, confession of faith and doxology. The Lord commanded baptism &ldquo;in the name &lsquo;of the Father and of the Son and of the Holy Ghost&rsquo;&rdquo; (<a href=\"/fathers/basil-spirit-chapter-10.html#s24\">10.24</a>), and &ldquo;as we believe in the Father and the Son and the Holy Ghost, so are we also baptized in the name of the Father and of the Son and of the Holy Ghost&rdquo; (<a href=\"/fathers/basil-spirit-chapter-12.html#s28\">12.28</a>). So, he says, &ldquo;the Spirit is ranked together with God, not on account of the emergency of the moment, but on account of the natural fellowship; is not dragged in by us, but invited by the Lord&rdquo; (<a href=\"/fathers/basil-spirit-chapter-13.html#s30\">13.30</a>).</p><p><b>The Spirit is not a creature.</b> &ldquo;He existed; He pre-existed; He co-existed with the Father and the Son before the ages&rdquo; (<a href=\"/fathers/basil-spirit-chapter-19.html#s49\">19.49</a>). Basil asks who could be so contentious &ldquo;as to sever the Spirit from the Godhead and rank Him with the creature&rdquo; (<a href=\"/fathers/basil-spirit-chapter-24.html#s56\">24.56</a>), and he calls the Spirit &ldquo;in His nature divine&rdquo; (<a href=\"/fathers/basil-spirit-chapter-23.html#s54\">23.54</a>) and Lord (<a href=\"/fathers/basil-spirit-chapter-21.html#s52\">21.52</a>).</p><p><b>Three persons, one God.</b> &ldquo;Worshipping as we do God of God, we both confess the distinction of the Persons, and at the same time abide by the Monarchy&rdquo;; &ldquo;we speak of a king, and of the king&rsquo;s image, and not of two kings,&rdquo; for &ldquo;what in the one case the image is by reason of imitation, that in the other case the Son is by nature&rdquo;; and the Holy Spirit is &ldquo;conjoined as He is to the one Father through the one Son, and through Himself completing the adorable and blessed Trinity&rdquo; (<a href=\"/fathers/basil-spirit-chapter-18.html#s45\">18.45</a>). The way to know God runs &ldquo;from One Spirit through the One Son to the One Father, and conversely the natural Goodness and the inherent Holiness and the royal Dignity extend from the Father through the Only-begotten to the Spirit&rdquo; (<a href=\"/fathers/basil-spirit-chapter-18.html#s47\">18.47</a>).</p><p><b>Basil&rsquo;s reserve.</b> Nowhere in this book does Basil use the bare formula &ldquo;the Spirit is God.&rdquo; His friend Gregory of Nazianzus, who did say it outright (<a href=\"/fathers/nazianzus-oration-31.html#s10\">Oration 31.10</a>), defended Basil&rsquo;s reserve in speaking of the Spirit as prudence in a dangerous time (Gregory, Letter 58; Oration 43.68&ndash;69). Basil argues instead from what the Spirit shares with the Father and the Son: the same title, the same honour, and works only God does (<a href=\"/fathers/basil-spirit-chapter-22.html#s53\">22.53</a>&ndash;<a href=\"/fathers/basil-spirit-chapter-24.html#s56\">24.56</a>). The reserve was in the wording, not the belief: he calls the Spirit &ldquo;in His nature divine&rdquo; (<a href=\"/fathers/basil-spirit-chapter-23.html#s54\">23.54</a>) and asks who could &ldquo;sever the Spirit from the Godhead&rdquo; (<a href=\"/fathers/basil-spirit-chapter-24.html#s56\">24.56</a>). The creed of 381 speaks the same way, confessing the Spirit as &ldquo;the Lord and Giver of life, &hellip; who with the Father and the Son together is worshiped and glorified.&rdquo;</p><p><b>&ldquo;With&rdquo; and &ldquo;in.&rdquo;</b> Basil does not reject the other form of prayer, &ldquo;through the Son in the Holy Ghost&rdquo;; he used both (<a href=\"/fathers/basil-spirit-chapter-1.html#s3\">1.3</a>), and &ldquo;as we find both expressions in use among the faithful, we use both&rdquo; (<a href=\"/fathers/basil-spirit-chapter-25.html#s59\">25.59</a>). &ldquo;In&rdquo; the Spirit confesses the grace at work in us; &ldquo;with&rdquo; the Spirit confesses his place beside the Father and the Son: &ldquo;Thus we ascribe glory to God both &lsquo;in&rsquo; the Spirit, and &lsquo;with&rsquo; the Spirit&rdquo; (<a href=\"/fathers/basil-spirit-chapter-27.html#s68\">27.68</a>).</p>"
+  },
+  {
+   "h": "How to read this edition",
+   "html": "<p>This is the English translation by Blomfield Jackson, published in 1895 in the <em>Nicene and Post-Nicene Fathers</em> (second series, vol. 8). Its English is old (&ldquo;thou,&rdquo; &ldquo;hath&rdquo;), but it is a public-domain translation, and we print it as it stands. Words in square brackets, such as &ldquo;[or in]&rdquo;, are the translator&rsquo;s, and so are his glosses in round brackets that give the Greek, as in chapter 5 and at <a href=\"/fathers/basil-spirit-chapter-27.html#s66\">27.66</a>; a few Greek words that the 1895 edition prints in Greek are printed in Greek here too. In places (for example <a href=\"/fathers/basil-spirit-chapter-9.html#s22\">9.22</a>) the translator writes &ldquo;It&rdquo; of the Holy Spirit, following the grammar of the Greek word for Spirit; elsewhere he writes &ldquo;He,&rdquo; and Basil&rsquo;s whole argument is that the Spirit is not a thing but Lord.</p><p>The 1895 editors added introductions, chapter headings and footnotes, and the translator added notes inside the text comparing his wording with the King James Version or the Greek Old Testament. We have left those out: they are not Basil&rsquo;s words. We keep only their Bible references, which you can tap to read. Basil read the Old Testament in Greek, so his quotations sometimes read differently from a modern Bible, and the Greek Bible numbers most of the Psalms one lower than English Bibles do; where the editors gave a Greek or Prayer Book number we have changed it to the English one. A few references point to books such as Baruch, Judith and Wisdom, which Catholic and Orthodox Bibles include and most Protestant Bibles do not; the tap-to-read feature does not cover those books. Where we found a reference wrong, we have corrected it; the corrections are listed at the foot of this page.</p><p>The sections are numbered from 1 to 79 through the whole book, as is standard in citing Basil, so &ldquo;27.66&rdquo; means chapter 27, section 66. On the chapter pages, tap a section number to link straight to it.</p><p>When Basil speaks of &ldquo;the being made like to God, and, highest of all, the being made God&rdquo; (<a href=\"/fathers/basil-spirit-chapter-9.html#s23\">9.23</a>), he is using language common in the early church, often linked with 2 Peter 1:4 (&ldquo;partakers of the divine nature&rdquo;). He means sharing God&rsquo;s life by grace, not becoming God by nature. Christian traditions use this language to different degrees.</p><p>When Basil warns against imagining &ldquo;that the Lord is without beginning&rdquo; (<a href=\"/fathers/basil-spirit-chapter-8.html#s19\">8.19</a>), the Greek word (<em>anarchos</em>) here means having no source, not having always existed: Basil is denying that the Son is from no one, not that he is eternal. The Son is eternally from the Father, and in the next section Basil calls him &ldquo;eternally perfect&rdquo; (<a href=\"/fathers/basil-spirit-chapter-8.html#s20\">8.20</a>). Gregory of Nazianzus put it this way: the Son and the Spirit are &ldquo;from Him, though not after Him. For that which is unoriginate is eternal, but that which is eternal is not necessarily unoriginate, so long as it may be referred to the Father as its origin&rdquo; (<a href=\"/fathers/nazianzus-oration-29.html#s3\">Oration 29.3</a>).</p><p>Basil sometimes speaks harshly of the Jews. He calls those who stoned Stephen &ldquo;the killers of the Christ&rdquo; (<a href=\"/fathers/basil-spirit-chapter-10.html#s25\">10.25</a>), speaks of &ldquo;the ingratitude of the Jews&rdquo; (<a href=\"/fathers/basil-spirit-chapter-24.html#s57\">24.57</a>), and uses &ldquo;Judaism&rdquo; as a name for the error of confusing the persons (<a href=\"/fathers/basil-spirit-chapter-30.html#s77\">30.77</a>). That is the polemical language of his time. We print it because it is part of the text; we do not share it, and it is not how we speak of Jewish people.</p><p>At the main places where Christian traditions read a passage differently, a short note marks it; the same questions come up elsewhere in the book. The note names the question; it does not say which reading is right.</p>"
+  }
+ ],
+ "reviewed": {
+  "argument": "2026-11-18",
+  "orthodoxy": "2026-11-18",
+  "neutrality": "2026-11-18",
+  "citations": "2026-11-18",
+  "by": "2026-11-18 CHURCH FATHERS BOOK 3 (Basil of Caesarea, On the Holy Spirit 1-30, 1895 tr.): our guide (5 sections), 8 notes (7 rule-2 notes on tradition, baptism, the filioque and icons; 1 on slavery at 20.51), 30 topics, description, colophon and copy-check prose, and the 8 Basil passages in sources/cappadocians.json (3 corrected from a New Advent copy to the 1895 printing, 5 new). Gated by READ-ONLY agents, the reviewed files md5-verified unchanged after every round: citations (Sonnet, web), argument (Opus), orthodoxy (Opus), neutrality (Fable). R1: citations 0 wrong; orthodoxy CLEAN with NOTEs (8.19 \"without beginning\" reads as Arian without a gloss; reserve paragraph; 9.22 and 18.45 sources texts); argument 1 BREAK (11.27 sources text did not name its subject) + 6 WEAK (incl. the guide calling \"through ... in\" the \"older\" form of prayer, conceding the opponents' case); neutrality 9 WEAK (opponents grouped; motive for the reserve stated as fact; worship set over Scripture; notes missing at 10.25 and 12.28; icons note; filioque and It/He cautions; Jews paragraph; slavery note). One merged fix pass using the lenses' wording. R2: citations all verified (Letter 58 and Oration 43.68-69; John of Damascus; Oration 29.3 exact); orthodoxy CLEAN, 2 NOTEs; argument 3 WEAK; neutrality 2 WEAK (8.19 wording; the 21.52 clause, where Basil expounds Paul's own veil image). Second fix pass. R3 (narrow): orthodoxy CLEAN, neutrality STAMPABLE, argument STAMPABLE. 0 HERESY throughout. Declared authored strings: the 8.19 gloss (built on the orthodoxy lens's draft, quoting our hosted Gregory, Oration 29.3) and the Letter 58 citation. Rule 7: quote-check passes; error-hunter (Sonnet) found 2 claims on our pages the book does not support and 5 weaker than the book (B-1...B-7, docs/audits/fathers-basil-copycheck-2026-11-18.md), logged not built. AUTOMATED GATE, not pastoral sign-off."
+ }
+}
