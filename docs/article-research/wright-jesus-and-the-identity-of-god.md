@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-16 SHIPPED 2026-11-18; residue WIG-17 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-17 SHIPPED 2026-11-18; residue WIG-18 + WIG-19 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -348,3 +348,14 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
 - (d)/(f) the ES essay's Matthew 12 follows the neuter Greek; its Mark 2:7 is RVR. (e) two of four declined polish items taken.
 - Gate, measured: three rounds, all four lenses, read-only, md5-verified. Round 2 caught a tooling defect of mine (the
   replacement matcher stripped inline tags, breaking a clarifier box) — the file was rebuilt tag-safe. Residue → WIG-17.
+
+## Shipped — 2026-11-18 (g) (WIG-17, owner-approved)
+
+- (a) `library/es/jesus_claims.html`: every Scripture quotation is RVR1960 verbatim or under the essay's own accurate
+  footnote label. The earlier "~46" estimate was overstated: most were scholar quotes or labelled-ESV verses; 9 real fixes.
+- (b)/(c) Rev 1:8 and the 1 Cor 8:6 Shema clause brought to the same neutral wording in EN, MK and ES; the contested
+  "within the divine identity" step now sits only after the McGrath hedge.
+- (e) the Isa 53:9 pair no longer borrows 53:12's "numbered" (EN, MK, ES, `ev-m-isaiah53`).
+- (d)/(f) the ES Daniel 9:27 calque, the masar/qibbel order and two Greek glosses. "The great fault line" kept as certified.
+- Gate, measured: two rounds, all four lenses, read-only, md5-verified; tag sequences identical to HEAD.
+  Residue → WIG-18; the other Spanish essays → WIG-19.
