@@ -187,17 +187,32 @@ string-matched each quotation to the hosted text; re-check when used.
 
 | Row | Verdict | Essay (after the sentence named) | Hilary | Why |
 |---|---|---|---|---|
-| H-1 | ③ | `library/relations.html` ("the persons are distinguished by order, never by rank") | 9.56 "The Father therefore is greater, because He is Father: but the Son, because He is Son, is not less." | the essay's rule, stated c. 360 of John 14:28; strongest fit |
-| H-2 | ④ | `library/eternal_generation.html`, "How the Doctrine Developed" (after Athanasius on "no 'when'") | 12.32 "whatever period of time is denied to the Son, to make His sonship non-eternal, just so much the Father lacks of having been always a Father" | no Western, pre-381 witness in the essay; now a `/sources` passage |
-| H-3 | ④ | same paragraph (optional) | 3.3 "Thus He is the Only-begotten, perfect, eternal Son of the unbegotten, perfect, eternal Father." | plain "begotten, not made" |
-| H-4 | ③ | `library/trinity_jw.html` (after "the Father in unveiled glory greater than the Son veiled in flesh") | 9.54 "The Giver is greater: but the Receiver is not less, for to Him it is given to be one with the Giver." | ⚠ Hilary's main reading is origin, not the essay's incarnation reading; add that the fathers gave both |
-| H-5 | ④ | `library/holy_spirit.html` (after "…then a creature is doing the work of God in salvation.") | 12.56 "shall I count the nature of the Spirit among created things, and limit Him by fixing the time of His origin?" | Spirit not a creature, before Basil and 381; avoids the "through Him" wording |
-| H-6 | ③ | `library/nicene-creed.html`, "emptied himself" paragraph | 10.22 "Thus it was just as true, that He received the form of a slave, as that He remained in the form of God." | supports "nothing set aside"; never pair with 9.51 |
-| H-7 | ③ | `library/humanity.html` (after "Two full natures, one person…") | 9.15 "the only true faith lies in the confession of Jesus Christ as Word and flesh, that is, God and Man" | two natures, 91 years before Chalcedon |
-| H-8 | ④ | `library/nicene-creed.html`, homoousios section | 3.3 "not as a piece of Himself cut or torn off or stretched out, for God is passionless and bodiless" | answers "begetting means dividing"; first confirm the essay states that objection |
-| H-9 | ③ | `library/modalism.html` ("ancient response" paragraph) | 7.7 "against Sabellius, her assertion that the Son exists; against Arius, that He is God by nature" | both errors in one sentence; medium value |
+| H-1 | ③ — ✅ SHIPPED 2026-11-18 (with a lead-in giving both of Hilary's reasons and "not greater in nature") | `library/relations.html` ("the persons are distinguished by order, never by rank") | 9.56 "The Father therefore is greater, because He is Father: but the Son, because He is Son, is not less." | the essay's rule, stated c. 360 of John 14:28; strongest fit |
+| H-2 | ④ — ✅ SHIPPED 2026-11-18 ("Among Latin writers…") | `library/eternal_generation.html`, "How the Doctrine Developed" (after Athanasius on "no 'when'") | 12.32 "whatever period of time is denied to the Son, to make His sonship non-eternal, just so much the Father lacks of having been always a Father" | no Western, pre-381 witness in the essay; now a `/sources` passage |
+| H-3 | ④ — closed without change: a second Hilary quote in the H-2 paragraph adds nothing | same paragraph (optional) | 3.3 "Thus He is the Only-begotten, perfect, eternal Son of the unbegotten, perfect, eternal Father." | plain "begotten, not made" |
+| H-4 | ③ — closed without change: 9.54 is on the not-to-lean-on list, and the paragraph already gives the origin reading from Athanasius and Gregory | `library/trinity_jw.html` (after "the Father in unveiled glory greater than the Son veiled in flesh") | 9.54 "The Giver is greater: but the Receiver is not less, for to Him it is given to be one with the Giver." | ⚠ Hilary's main reading is origin, not the essay's incarnation reading; add that the fathers gave both |
+| H-5 | ④ — ✅ SHIPPED 2026-11-18 ("Even before that controversy came to a head…") | `library/holy_spirit.html` (after "…then a creature is doing the work of God in salvation.") | 12.56 "shall I count the nature of the Spirit among created things, and limit Him by fixing the time of His origin?" | Spirit not a creature, before Basil and 381; avoids the "through Him" wording |
+| H-6 | ③ — ✅ SHIPPED 2026-11-18, with a different 10.22 sentence ("one and the same Person, not by loss of the Godhead…") placed after Gregory, not after "the Greek names no thing", which Hilary's 10.21 and 9.51 contradict | `library/nicene-creed.html`, "emptied himself" paragraph | 10.22 "Thus it was just as true, that He received the form of a slave, as that He remained in the form of God." | supports "nothing set aside"; never pair with 9.51 |
+| H-7 | ③ — closed without change: Hilary's account of Christ's suffering (10.23) falls short on this essay's own subject | `library/humanity.html` (after "Two full natures, one person…") | 9.15 "the only true faith lies in the confession of Jesus Christ as Word and flesh, that is, God and Man" | two natures, 91 years before Chalcedon |
+| H-8 | ④ — closed without change: the essay never states the "begetting means dividing" objection, and adding it would be authoring | `library/nicene-creed.html`, homoousios section | 3.3 "not as a piece of Himself cut or torn off or stretched out, for God is passionless and bodiless" | answers "begetting means dividing"; first confirm the essay states that objection |
+| H-9 | ③ — ✅ SHIPPED 2026-11-18, the full three-member sentence (Photinus included, so no cut) | `library/modalism.html` ("ancient response" paragraph) | 7.7 "against Sabellius, her assertion that the Son exists; against Arius, that He is God by nature" | both errors in one sentence; medium value |
 | H-10 | — | `library/early_church_trinity.html` | 2.1 | **not recommended**: that paragraph is "pre-Nicene" and Hilary is post-325 |
 | H-11 | — | `library/nt_trinity.html` (1 Cor 15:28) | 11.41 | **not recommended**: the sentence continues "…now altogether God"; a cut would hide it |
+
+**Rows found while gating H-1…H-9 (pre-existing, not introduced by these edits; logged, not built — rule 9):**
+
+| Row | Page | Finding |
+|---|---|---|
+| H-12 | `library/trinity_jw.html` (John 14:28 clarifier) vs `library/relations.html` | the clarifier is headed "Greater in rank, not in nature"; relations.html says the persons are "distinguished by order, never by rank". Both orthodox in intent, but the word "rank" is used in opposite senses on two pages, and H-1 now sits on that join (argument + neutrality) |
+| H-13 | `library/relations.html` (John 5:26 clarifier) | "What is granted is self-existence itself, given wholly" is close to the "aseity 'granted'" entry in `docs/known-traps.md`; check it against that entry (orthodoxy, out-of-scope note) |
+| H-14 | `library/holy_spirit.html` | the essay goes from Hilary to the Cappadocians and never names Athanasius's *Letters to Serapion*, the first direct Eastern reply to the Spirit-deniers in the same years (neutrality; dating from memory, verify) |
+
+**Gate on H-1, H-2, H-5, H-6, H-9 (2026-11-18):** argument (Opus), orthodoxy (Opus), neutrality (Fable), READ-ONLY
+Explore agents, the five files md5-verified unchanged after every round. Round 1: orthodoxy 4 CLEAN + 1 NOTE (H-1
+"greater" after "never by rank"); argument 3 STAMPABLE + 2 WEAK (H-1, H-6); neutrality 1 STAMPABLE + 4 WEAK. One merged
+fix pass, reviewers' wording used. Round 2: orthodoxy 5 CLEAN; argument 4 + 1 WEAK (H-1 voice); neutrality 4 + 1 WEAK
+(H-6 placement). Round 3: see the essays' stamps. All quotes machine-matched to the hosted text
+(`tools/check-father-quotes.mjs`).
 
 **Passages NOT to lean on (verdict ⑤):** 10.9–10.48 on Christ's pain (noted at 10.23); 11.40–42 ("obtain the
 nature of God… God only", "no trace of the nature of His earthly body may remain"); 9.51 and 9.54 on the form of
