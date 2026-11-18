@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-18 SHIPPED 2026-11-18; WIG-19 in progress; residue WIG-20 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-19 SHIPPED 2026-11-18; residue WIG-20 + WIG-21 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -369,3 +369,12 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
 - (b)-(g): "one of the great fault lines"; an Isa 53:9 honest limit at Move 3; the "cloud-riding is God's alone"
   universal softened to "characteristically" with "elsewhere" kept as the Daniel 7 quarantine; Spanish label fixes.
 - Gate, measured: four rounds, all four lenses, read-only, md5-verified; 0 HERESY throughout. Residue → WIG-20.
+
+## Shipped — 2026-11-18 (i) (WIG-19, owner-approved)
+
+- Whole-file Scripture pass on the ten remaining `library/es/*` essays. Every quote is now RVR1960 verbatim, accurately
+  labelled, or unquoted. Seven essays changed (one commit each); manuscript, kalam and finetuning needed nothing.
+- Two EN-drift ports were made where the ES had lost an English fence: paulconv's "wounds probed", and hist_jesus's
+  Marian-neutral kinship wording.
+- Gate, measured: two rounds plus one single-essay confirmation, all applicable lenses, read-only, md5-verified;
+  0 HERESY, 0 BREAK. Residue → WIG-21.
