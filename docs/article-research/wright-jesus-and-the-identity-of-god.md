@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-19 SHIPPED 2026-11-18; residue WIG-20 + WIG-21 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-19 SHIPPED 2026-11-18; WIG-21 SHIPPED 2026-11-19; residue WIG-20 + WIG-22 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -378,3 +378,12 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
   Marian-neutral kinship wording.
 - Gate, measured: two rounds plus one single-essay confirmation, all applicable lenses, read-only, md5-verified;
   0 HERESY, 0 BREAK. Residue → WIG-21.
+
+## Shipped — 2026-11-19 (j) (WIG-21, owner-approved)
+
+- (a) hist_jesus MK: the Marian-neutral kinship wording ported from the certified EN; ES Carrier paraphrase
+  'hermano de sangre' made neutral. A corpus grep found no other instance of the retired wording.
+- (b) paulconv: 'a second, more public visit' sat beside Gal 2:2's own 'privately'; fixed in EN, ev-m-paul, ES, MK.
+- (c) evil: Job sits in the ashes (2:8), the friends sit with him (2:13); EN, ES, MK and the problem-of-evil brief.
+- Gate, measured: two rounds, all four lenses, read-only, md5-verified; 0 HERESY, 0 BREAK, 0 WEAK. Residue → WIG-22
+  (the certified cards' 'own brother' / shared-upbringing lines).
