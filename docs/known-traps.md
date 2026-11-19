@@ -27,6 +27,11 @@ wrong · what to say instead.
   is underived" and never make it a dependence in being. (Live NOTE on `ev-s6`/`eternal_generation`.)
 - **Chalcedon gap.** Deity-of-Christ content that affirms full deity but never affirms full
   **humanity** leaves a functionally monophysite Christ. Affirm both (one person, two natures).
+- **"Failures" among Christ's human traits (mirror drift).** The MK/ES `ev-s2` mirrors said James knew Jesus's
+  ordinary human "habits, **failures** and limitations" («неуспеси», «los fracasos»), where the EN says only "habits
+  and limitations". "Failures" predicated of Jesus in our own voice brushes Hebrews 4:15 (sinlessness). Live until
+  WIG-22 (2026-11-19). Say "human habits and limitations" / "human ordinariness" (Luke 2:52; John 4:6), never
+  "failures", "faults" or "weaknesses". **Check every MK/ES mirror sentence about Christ's humanity against the EN.**
 
 ## Doctrine — retired claims (orthodox-but-withdrawn, or overreach)
 
@@ -56,6 +61,15 @@ wrong · what to say instead.
   him. Don't say he authored it.
 - **"7 manuscripts for Plato."** A discredited apologetics figure; don't use the manuscript-count
   comparison in that form.
+
+- **James 'Jesus's own brother' / 'raised in the same house' (Marian adjudication).** "Biological kinship", "James was
+  Jesus's brother" (flat verdict), "Jesus's own brother", "raised in the same small house, at the same table", "from
+  childhood", "lived with him thirty years", "a lifetime of family memories" all settle the perpetual-virginity
+  question (Helvidian vs Epiphanian vs Hieronymian) — a dispute the denominational-neutrality guardrail names. Retired
+  on `hist_jesus` 2026-10-17 and swept site-wide in WIG-21/WIG-22 (2026-11-18/19). Say **"the Lord's brother"
+  (Galatians 1:19)**, "a real family relationship", "a flesh-and-blood kinsman", "one of Jesus's own family",
+  "known him up close for years". "Brother" itself is the NT title and is fine; the hostile-witness force (an
+  unbelieving member of Jesus's family who led the Jerusalem church) survives under all three readings — keep it.
 
 ## Rival-worldview — false common ground & tilts
 
