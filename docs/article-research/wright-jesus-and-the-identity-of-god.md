@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-19 SHIPPED 2026-11-18; WIG-21 SHIPPED 2026-11-19; residue WIG-20 + WIG-22 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-19 SHIPPED 2026-11-18; WIG-20 + WIG-21 SHIPPED 2026-11-19; residue WIG-22 + WIG-23 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -387,3 +387,13 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
 - (c) evil: Job sits in the ashes (2:8), the friends sit with him (2:13); EN, ES, MK and the problem-of-evil brief.
 - Gate, measured: two rounds, all four lenses, read-only, md5-verified; 0 HERESY, 0 BREAK, 0 WEAK. Residue → WIG-22
   (the certified cards' 'own brother' / shared-upbringing lines).
+
+## Shipped — 2026-11-19 (k) (WIG-20, owner-approved)
+
+- (a) The titles 'to no one but God' family softened to 'characteristically' as one change (titles.html, ev-m-titles, the ev-s3
+  arg-titles card EN/MK/ES, two reading-club pages). The citations lens judged the old scoped absolute accurate
+  (Emerton); the softening keeps every surface consistent with WIG-18.
+- (b)(d)(h) The 1 Cor 8:6 'inside the Shema' reading hedged on the graded quiz, the pocket card, brief 21, ev-m-shema and
+  ev-m-proto. (f) Macedonian fixes. (g) Isa 53:9 'key words … not in textual doubt' (1QIsa-a), also on ev-m-isaiah53.
+- Not done: palace.html (not a clean port; parked) and objections.json (Windows build bug) → WIG-23.
+- Gate, measured: two rounds, all four lenses, read-only, md5-verified; 0 HERESY, 0 BREAK. Residue → WIG-23.
