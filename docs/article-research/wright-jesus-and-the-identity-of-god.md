@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-19 SHIPPED 2026-11-18; WIG-20 to WIG-22 + WIG-24 SHIPPED 2026-11-19; residue WIG-23 + WIG-25 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-19 SHIPPED 2026-11-18; WIG-20 to WIG-22 + WIG-24 + WIG-25 SHIPPED 2026-11-19; residue WIG-23 + WIG-26 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -414,3 +414,9 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
   cite; remaining flat unbelief lines hedged 'by strong inference'; ES John 7:5 quotations made RVR1960 verbatim; the card
   script aligned with its daily-args twin.
 - Gate, measured: two rounds, all four lenses, read-only, md5-verified; 0 HERESY, 0 BREAK. Residue → WIG-25.
+
+## Shipped — 2026-11-19 (n) (WIG-25, owner-approved, one item declined)
+
+- Acts 21:18 added to James's headship cite (EN/MK/ES); MK relative-pronoun grammar; one EN apostrophe.
+- DECLINED by the owner: the unhedged 'sceptic' labels for James (not a tilt; John 7:5's group unbelief stands).
+- Gate, measured: one round, all four lenses, read-only, md5-verified; all CLEAN. Residue → WIG-26 (optional polish).
