@@ -35,7 +35,7 @@ confirm it was the right piece):
   `nt_trinity.html`, `john11.html`, `eternal_generation.html`, `humanity.html`. Each verdict that rests on one of these
   says so.
 
-**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-19 SHIPPED 2026-11-18; WIG-20 to WIG-22 SHIPPED 2026-11-19; residue WIG-23 + WIG-24 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
+**Status: MINED; WIG-1 to WIG-5 SHIPPED 2026-11-18 (owner: "Do the P3 rows"); WIG-7 to WIG-11 + WIG-12(a) SHIPPED 2026-11-18 (owner: "Do the P4 WIG rows"); WIG-6 BLOCKED (Neusner); WIG-12(b) BLOCKED (Snodgrass paywalled), (c) owner work; WIG-13 to WIG-19 SHIPPED 2026-11-18; WIG-20 to WIG-22 + WIG-24 SHIPPED 2026-11-19; residue WIG-23 + WIG-25 OPEN.** WIG-1 to WIG-11 are pinned below and logged in
 `docs/content-backlog.md`. No live content was changed. One verdict-⑤ hazard was routed into the scholar-label ledger
 in the same commit (the Wright row now carries the deity-of-Christ fences).
 
@@ -406,3 +406,11 @@ verified. WIG-1 carries the mine's highest-risk fence (⑤-A).
 - Mirror finds: MK/ES ev-s2 called Jesus's human traits "failures" (sinlessness); ES ev-s3 had drifted to "shared meals".
   Both fixed and added to `docs/known-traps.md`.
 - Gate, measured: three rounds, all four lenses, read-only, md5-verified; 0 HERESY, 0 BREAK. Residue → WIG-24.
+
+## Shipped — 2026-11-19 (m) (WIG-24, owner-approved)
+
+- The WIG-22 polish residue: 'flesh-and-blood brother' -> 'kinsman' across the hist_jesus/earlycreed family and ev-s3 (EN/MK/ES)
+  plus the two mastery-port sources; Carrier 'rather than a member of Jesus's family'; Gal 1:19 dropped from the headship
+  cite; remaining flat unbelief lines hedged 'by strong inference'; ES John 7:5 quotations made RVR1960 verbatim; the card
+  script aligned with its daily-args twin.
+- Gate, measured: two rounds, all four lenses, read-only, md5-verified; 0 HERESY, 0 BREAK. Residue → WIG-25.
