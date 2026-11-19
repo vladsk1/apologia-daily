@@ -79,7 +79,10 @@
         "neither (God|Allah)[^.]{0,8}(nor|and not)[^.]{0,20}(other than |anything other than )?(God|Allah)",
         "not (God|Allah),?[^.]{0,8}(nor|and not)[^.]{0,20}(other than |anything other than )?(God|Allah)"
       ],
-      "allow": ["fathers/hilary-trinity-book-7.html","fathers/_data/hilary-trinity.text.json"],
+      "allow": [
+        "fathers/hilary-trinity-book-7.html",
+        "fathers/_data/hilary-trinity.text.json"
+      ],
       "netting": "claim",
       "corpus": {
         "must_fire": [
@@ -1096,7 +1099,14 @@
         "\\bSon\\b(?:(?!\\bSpirit\\b)[^.]){0,20}\\bproceeds\\b",
         "\\bSpirit\\b(?:(?!\\bSon\\b)[^.]){0,20}\\b(begotten|generated)\\b"
       ],
-      "allow": ["fathers/hilary-trinity-book-12.html","fathers/_data/hilary-trinity.text.json","fathers/_data/hilary-trinity.json", "fathers/augustine-trinity-book-5.html", "fathers/augustine-trinity-book-15.html", "fathers/_data/augustine-trinity.text.json"],
+      "allow": [
+        "fathers/hilary-trinity-book-12.html",
+        "fathers/_data/hilary-trinity.text.json",
+        "fathers/_data/hilary-trinity.json",
+        "fathers/augustine-trinity-book-5.html",
+        "fathers/augustine-trinity-book-15.html",
+        "fathers/_data/augustine-trinity.text.json"
+      ],
       "netting": "claim",
       "corpus": {
         "must_fire": [
@@ -1172,6 +1182,43 @@
         ]
       },
       "note": "ALLOW LIST holds ONLY surfaces that QUOTE the slogan ('the Dead Sea Scrolls prove the Bible never changed') in order to call it 'false as stated': the two dedicated DSS pages, plus the gated argument brief (briefs/_data.json and its generated briefs-index.json) whose own text retires the slogan the same way — all four are refutations, not the overclaim. Patterns are anchored on the ABSOLUTE-PROOF overclaim: a Dead-Sea-Scrolls/Qumran token + a prove/show/demonstrate verb + an identity/unchanged/perfect-preservation claim, with tempered gaps. Dry-run 2026-11-09 across all live HTML + JSON fired on exactly these refuting surfaces and nowhere else. If it ever fires on a NEW legitimately-refuting surface, prefer tightening or a sentence-bounded negation guard over widening the allow list (per the quranic-title-compounds tuning lessons above). Never widen to a bare 'Dead Sea Scrolls' + 'preservation', which the honest essays use correctly."
+    },
+    {
+      "id": "sender-greater-than-sent",
+      "netting": "claim",
+      "retired": "2026-11-19",
+      "what": "Reading \"the Father is greater than I\" (John 14:28) as \"the sender is greater than the sent\".",
+      "why": "Augustine, On the Trinity 4.27, says the Son is sent \"Not because the one is greater, the other less; but because the one is Father, the other Son\", and 15.5: \"He who is sent is not therefore less than He who sends\". Our JW and Trinity pages now quote him, so the clause made the site contradict its own witness; and since the sending reflects the eternal order of origin, \"sender greater than sent\" can be heard as a greater-and-lesser of rank or being (eternal subordination), which the Fathers who read \"greater\" of origin expressly deny. Removed from 9 surfaces on 2026-11-19 (docs/audits/fathers-augustine-copycheck-2026-11-18.md, row A-11).",
+      "instead": "Lead with the form-of-a-servant reading: \"greater\" is position, not kind, \"the Father in unveiled glory is greater than the Son veiled in flesh\"; Augustine 1.14, the Son \"is equal to God the Father in nature, but less in 'fashion'\", that is, \"in the form of a servant which He took\". If sending is raised, quote 4.27: being sent does not make the Son less. This entry does NOT retire the second patristic reading (Athanasius, Against the Arians 1.58; Gregory of Nazianzus, Oration 30.7: \"greater\" of the Father as unbegotten source); it may be reported, always with the house rule that a relation of origin is never an inequality.",
+      "patterns": [
+        "\\bsender\\b(?![^.<\"]{0,30}?\\b(not|no|never)\\b)[^.<\"]{0,30}?\\bthan the (one )?sent\\b",
+        "\\b(one|he) who sends is (greater|more)[^.<\"]{0,20}than (the one|he) (who is |that is )?sent\\b",
+        "(ис)?праќачот е поголем од (ис)?пратениот",
+        "el que env(í|&iacute;)a es mayor que el enviado"
+      ],
+      "allow": [
+        "fathers/hilary-trinity-book-3.html",
+        "fathers/_data/hilary-trinity.text.json",
+        "fathers/augustine-trinity-book-2.html",
+        "fathers/_data/augustine-trinity.text.json"
+      ],
+      "corpus": {
+        "must_fire": [
+          "the word is one of position, not of kind: the sender is greater than the sent, the Father in unveiled glory",
+          "'Greater' is position — the sender than the sent, the Father in glory than the Son in flesh",
+          "the one who sends is greater than the one who is sent",
+          "испраќачот е поголем од испратениот",
+          "el que env&iacute;a es mayor que el enviado"
+        ],
+        "must_not_fire": [
+          "He who is sent is not therefore less than He who sends",
+          "Not because the one is greater, the other less; but because the one is Father, the other Son",
+          "nor is a messenger greater than the one who sent him",
+          "the agent bears the authority of the sender",
+          "the Father in unveiled glory is greater than the Son veiled in flesh",
+          "the sender is not greater than the sent"
+        ]
+      }
     }
   ]
 }
