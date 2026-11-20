@@ -126,24 +126,23 @@ words from this work; the quotations the script finds near citations of it are S
 when he was not" (1.13), correctly attributed.
 
 ### 7(b) Error-hunter (Sonnet) and improvement-finder (Fable), read-only, never handed each other's conclusions
-Every Athanasius quotation below was re-checked by script against the hosted text (all exact). **None of these rows is
-built**; each would re-open its page's review. ② = error in ours (P1), ③ = weaker in ours, ④ = missing.
+Every Athanasius quotation below was re-checked by script against the hosted text (all exact). **All thirteen closed 2026-11-20, see 7(d)**; each re-opened its page's review. ② = error in ours (P1), ③ = weaker in ours, ④ = missing.
 
 | Row | Verdict | Our page | Finding | Athanasius |
 |---|---|---|---|---|
-| AT-1 | ② P1 | `library/islam-jesusmuslim.html` ~174 (body) and ~201 (footnote) | Says Athanasius read John 14:28 of the Son's "humble station in the incarnation… esp. Book III". In this work he reads it by generation: "greater … not indeed in greatness, nor in time, but because of His generation from the Father Himself" (1.58). Book III gives the incarnate reading for *other* texts (3.26–50: John 17:5, "Glorify Thy Son", Mark 13:32); 14:28 appears there only in a list (3.7). | 1.58; 3.7; 3.38; 3.42–50 |
-| AT-2 | ③ | `library/eternal_generation.html` fn 5 | Dates the work "c. 339–343" as settled; the date is disputed (the 1892 editor: 356–360; the hosted guide says so). Cites only "esp. Book I"; the radiance argument is at 1.12–14 and again 2.32–33. | 1.12, 1.14, 2.32 |
-| AT-3 | ③ | `library/trinity_mormons.html` fn 9; `objections.json`; `briefs/_data.json` (deification by grace) | Cite only *On the Incarnation* 54. The Discourses state the line more sharply: "we too become sons, not as He in nature and truth, but according to the grace of Him that calleth … called gods, not as the True God or His Word". | 3.19; 1.39; 2.70 |
-| AT-4 | ③ | `library/trinity_jw.html` ~187; `ev-m-trinity_jw.html` ~520 (Mark 13:32) | Give the reading to "the orthodox tradition" and Gregory only; Athanasius argues it at length: "so with men as man He knows not" (3.46); "not the Word's deficiency, but of that human nature whose property it is to be ignorant" (3.43). | 3.42–50 |
-| AT-5 | ④ | `library/trinity_jw.html` (Proverbs 8:22); ev-s6 JW card | Answers by *qanah* and genre only; a Witness who insists Wisdom is Christ gets no reply. Athanasius's fallback from the same poem: "creature and offspring are not the same … 'But before all the hills He begat me'" (2.60, Prov 8:25). ⑤ Do **not** adopt his main answer (that "created" means the incarnation, 2.51). Keep our *qanah*/genre points, which are better. | 2.44, 2.60 |
-| AT-6 | ③ | `library/john11.html` fn 14; `ev-s3.html` ~1217, ~1272 | "A creature cannot be the agent through whom all things were made" is cited "esp. Book II" only; pinpoint 2.5 ("by what word then and by what wisdom was He made Himself?") and 2.21 ("none of things which are brought to be is an efficient cause"). | 1.19, 2.5, 2.21, 2.24 |
-| AT-7 | ③ | `ev-s6.html` ~2253, ~2307; `daily-args.json` ~816 (God "once not a Father") | Gives the change-in-God argument with Malachi 3:6 as if his; his own words: "nor is the character of Father adventitious to God, lest He seem alterable" (1.28); and his stronger immutability argument is about the Son: "the Image of the unalterable God must be unchangeable" (1.36). | 1.28, 1.35–36 |
-| AT-8 | ③ | `library/trinity_jw.html` (worship); `library/jesus_as_god_nt.html` ("relative homage") | He names the principle: "for creature does not worship creature, but servant Lord, and creature God" (2.23), and answers the "homage to a superior" reading in the same section; adds Peter and Cornelius (Acts 10:26). ⑤ Not the Manoah line (a loose paraphrase of Judges 13:16). | 2.23 |
-| AT-9 | ④ | `library/trinity_jw.html`, `library/jesus_as_god_nt.html`, `library/proto-trinitarian.html` (Phil 2:9) | The retort "if he was exalted and given the name, he was not God before" is unanswered on the page. "The exaltation is of the manhood" (1.41); "so, as man, is He said to take what, as God, He ever had" (1.42). ⑤ Not 1.43's "flesh which was enslaved to sin"; frame as one person. | 1.37–45 |
-| AT-10 | ④ | `library/trinity_jw.html` (Michael section) | Hebrews 1:4 ("having become so much better than the angels") is the Witness counter-text in the chapter we use, never mentioned. "So when become man, He became by so much better in His ministry" (1.62); "become" follows the purging of sins (1.55). ⑤ Not his lexical claim that "better" marks a difference of nature. | 1.53–64 |
-| AT-11 | ④ | `library/eternal_generation.html` ("A Reply—and What It Can Carry") | The will-or-necessity dilemma is untouched: "what is according to nature transcends and precedes counselling" (3.62); "as the Father is always good by nature, so He is always generative by nature" (3.66). Our "freely-willed generation" in the Craig summary sits against 3.66. ⑤ He does not answer Craig's aseity objection; our Calvin/autotheos paragraph is more careful. | 3.59–67 |
-| AT-12 | ③ | `library/modalism.html` (John 10:30); `library/relations.html` (Rule Two) | modalism.html says "one in unity, power, and purpose… how the church has always read it" with no witness ("purpose" is also the Witness gloss); 3.4 rules out Sabellius by name and says "the nature is one". relations.html's earliest named source for mutual indwelling is John of Damascus; 3.3 gives the fourth-century ground ("it follows that the Son is in the Father and the Father in the Son"). ⑤ He never uses the word *perichoresis*. | 3.3–4 |
-| AT-13 | ④ | `library/humanity.html` ("Why it matters") | A both-natures line to sit beside Gregory's "not assumed, not healed": "for in neither case had it been of profit to us men, whether the Word were not true and naturally Son of God, or the flesh not true which He assumed" (2.70; trim before "Mary Ever-Virgin" and "Ario-maniacs"). | 2.70 |
+| AT-1 ✅ 2026-11-20 | ② P1 | `library/islam-jesusmuslim.html` ~174 (body) and ~201 (footnote) | Says Athanasius read John 14:28 of the Son's "humble station in the incarnation… esp. Book III". In this work he reads it by generation: "greater … not indeed in greatness, nor in time, but because of His generation from the Father Himself" (1.58). Book III gives the incarnate reading for *other* texts (3.26–50: John 17:5, "Glorify Thy Son", Mark 13:32); 14:28 appears there only in a list (3.7). | 1.58; 3.7; 3.38; 3.42–50 |
+| AT-2 ✅ 2026-11-20 | ③ | `library/eternal_generation.html` fn 5 | Dates the work "c. 339–343" as settled; the date is disputed (the 1892 editor: 356–360; the hosted guide says so). Cites only "esp. Book I"; the radiance argument is at 1.12–14 and again 2.32–33. | 1.12, 1.14, 2.32 |
+| AT-3 ✅ 2026-11-20 | ③ | `library/trinity_mormons.html` fn 9; `objections.json`; `briefs/_data.json` (deification by grace) | Cite only *On the Incarnation* 54. The Discourses state the line more sharply: "we too become sons, not as He in nature and truth, but according to the grace of Him that calleth … called gods, not as the True God or His Word". | 3.19; 1.39; 2.70 |
+| AT-4 ✅ 2026-11-20 | ③ | `library/trinity_jw.html` ~187; `ev-m-trinity_jw.html` ~520 (Mark 13:32) | Give the reading to "the orthodox tradition" and Gregory only; Athanasius argues it at length: "so with men as man He knows not" (3.46); "not the Word's deficiency, but of that human nature whose property it is to be ignorant" (3.43). | 3.42–50 |
+| AT-5 ✅ 2026-11-20 | ④ | `library/trinity_jw.html` (Proverbs 8:22); ev-s6 JW card | Answers by *qanah* and genre only; a Witness who insists Wisdom is Christ gets no reply. Athanasius's fallback from the same poem: "creature and offspring are not the same … 'But before all the hills He begat me'" (2.60, Prov 8:25). ⑤ Do **not** adopt his main answer (that "created" means the incarnation, 2.51). Keep our *qanah*/genre points, which are better. | 2.44, 2.60 |
+| AT-6 ✅ 2026-11-20 | ③ | `library/john11.html` fn 14; `ev-s3.html` ~1217, ~1272 | "A creature cannot be the agent through whom all things were made" is cited "esp. Book II" only; pinpoint 2.5 ("by what word then and by what wisdom was He made Himself?") and 2.21 ("none of things which are brought to be is an efficient cause"). | 1.19, 2.5, 2.21, 2.24 |
+| AT-7 ✅ 2026-11-20 | ③ | `ev-s6.html` ~2253, ~2307; `daily-args.json` ~816 (God "once not a Father") | Gives the change-in-God argument with Malachi 3:6 as if his; his own words: "nor is the character of Father adventitious to God, lest He seem alterable" (1.28); and his stronger immutability argument is about the Son: "the Image of the unalterable God must be unchangeable" (1.36). | 1.28, 1.35–36 |
+| AT-8 ✅ 2026-11-20 | ③ | `library/trinity_jw.html` (worship); `library/jesus_as_god_nt.html` ("relative homage") | He names the principle: "for creature does not worship creature, but servant Lord, and creature God" (2.23), and answers the "homage to a superior" reading in the same section; adds Peter and Cornelius (Acts 10:26). ⑤ Not the Manoah line (a loose paraphrase of Judges 13:16). | 2.23 |
+| AT-9 ✅ 2026-11-20 | ④ | `library/trinity_jw.html`, `library/jesus_as_god_nt.html`, `library/proto-trinitarian.html` (Phil 2:9) | The retort "if he was exalted and given the name, he was not God before" is unanswered on the page. "The exaltation is of the manhood" (1.41); "so, as man, is He said to take what, as God, He ever had" (1.42). ⑤ Not 1.43's "flesh which was enslaved to sin"; frame as one person. | 1.37–45 |
+| AT-10 ✅ 2026-11-20 | ④ | `library/trinity_jw.html` (Michael section) | Hebrews 1:4 ("having become so much better than the angels") is the Witness counter-text in the chapter we use, never mentioned. "So when become man, He became by so much better in His ministry" (1.62); "become" follows the purging of sins (1.55). ⑤ Not his lexical claim that "better" marks a difference of nature. | 1.53–64 |
+| AT-11 ✅ 2026-11-20 | ④ | `library/eternal_generation.html` ("A Reply—and What It Can Carry") | The will-or-necessity dilemma is untouched: "what is according to nature transcends and precedes counselling" (3.62); "as the Father is always good by nature, so He is always generative by nature" (3.66). Our "freely-willed generation" in the Craig summary sits against 3.66. ⑤ He does not answer Craig's aseity objection; our Calvin/autotheos paragraph is more careful. | 3.59–67 |
+| AT-12 ✅ 2026-11-20 | ③ | `library/modalism.html` (John 10:30); `library/relations.html` (Rule Two) | modalism.html says "one in unity, power, and purpose… how the church has always read it" with no witness ("purpose" is also the Witness gloss); 3.4 rules out Sabellius by name and says "the nature is one". relations.html's earliest named source for mutual indwelling is John of Damascus; 3.3 gives the fourth-century ground ("it follows that the Son is in the Father and the Father in the Son"). ⑤ He never uses the word *perichoresis*. | 3.3–4 |
+| AT-13 ✅ 2026-11-20 | ④ | `library/humanity.html` ("Why it matters") | A both-natures line to sit beside Gregory's "not assumed, not healed": "for in neither case had it been of profit to us men, whether the Word were not true and naturally Son of God, or the flesh not true which He assumed" (2.70; trim before "Mary Ever-Virgin" and "Ario-maniacs"). | 2.70 |
 
 **Checked and correct:** `trinity_jw.html` and `ev-m-trinity_jw.html` on 1.58; `eternal_generation.html` and its `ev-m`
 page on the radiance / "no 'when'" argument; `ev-s6.html` on "once not a Father, once without his Word"; "not from our
@@ -185,3 +184,46 @@ every reviewed file md5-verified unchanged after each round.
   at Nicaea, five exiles) are standard but were not source-checked from a session; the Chalcedon and Athanasian-Creed
   claims were checked against `sources/creeds.json`, the 1892 editor's dating and Discourse IV wording against CCEL by the
   neutrality lens.
+
+### 7(d) Rows AT-1..AT-13 closed (2026-11-20)
+Each fix quotes the hosted 1892 text with an inline link to the section, and was machine-checked at that section
+(`tools/check-father-quotes.mjs`). Only `ev-s6` has a mirror touched by these rows (`ev-s6.mk.html`, AI-translated;
+`ev-s6.es.html` has no equivalent line); no edited essay has an MK/ES mirror.
+
+- **AT-1** (`islam-jesusmuslim.html` fn 14): the incarnate reading of John 14:28 is now "the one Augustine gives" (*On the
+  Trinity* 1.14); Athanasius's generation reading quoted from 1.58 in full ("nay, in saying 'greater' He again shews that
+  He is proper to His essence"), his incarnate reading pointed to Mark 13:32 (3.42–50), and the certified fence from
+  `trinity_jw.html` ported ("a relation of origin is never an inequality"). The body sentence (~174) was left: it credits
+  Athanasius with *homoousios* only. Bibliography now links the hosted book.
+- **AT-2** (`eternal_generation.html` fn 5): "c. 339–343" → the date is disputed (the 1892 editor: 356–360; others
+  earlier); pinpoints 1.12–14 and 2.32–33; links to the hosted book.
+- **AT-3** (`trinity_mormons.html` fn 9): 3.19 added ("called gods, not as the True God or His Word").
+  `objections.json` and `briefs/_data.json` **closed without change**: accurate as they stand (*On the Incarnation* 54,
+  correctly attributed), and compressed.
+- **AT-4** (`trinity_jw.html`, `ev-m-trinity_jw.html`): 3.43 added before Gregory's 380 answer on Mark 13:32.
+- **AT-5** (`trinity_jw.html`): the "even granting Wisdom is the Son" reply: "brought forth" before the hills (8:25), "the
+  language of birth, not of making", with 2.60 "creature and offspring are not the same". His own reading of "created"
+  as the incarnation (2.51) was deliberately not adopted. The `ev-s6` card **closed without change**: its Proverbs 8
+  material is the Old Testament card's positive use of Wisdom, not a reply to the Witness reading.
+- **AT-6** (`john11.html` fn 14): pinpoints 2.5 and 2.21 with their words. `ev-s3.html` **closed without change**: a
+  compressed list item whose claim is accurate; the essay carries the citation.
+- **AT-7** (`ev-s6.html` + `ev-s6.mk.html`, "Line 4"): Malachi 3:6, presented as Athanasius's point, replaced by his own
+  words, "He is ever Father, nor is the character of Father adventitious to God, lest He seem alterable" (1.28).
+  `ev-s6.html` ~2253 and `daily-args.json` **closed without change**: accurate (error-hunter, "checked and correct").
+- **AT-8** (`trinity_jw.html`): 2.23 "creature does not worship creature, but servant Lord, and creature God".
+  `jesus_as_god_nt.html` **closed without change**: its altar argument already makes the point, more fully.
+- **AT-9** (`trinity_jw.html`): the Witness appeal to Philippians 2:9 answered with 1.41–42 ("as man, is He said to take
+  what, as God, He ever had"). `jesus_as_god_nt.html` and `proto-trinitarian.html` **closed without change**: they use
+  2:9–11 only as positive evidence.
+- **AT-10** (`trinity_jw.html`): Hebrews 1:4 "having become" read with 1:3 and 1.62.
+- **AT-11** (`eternal_generation.html`): by will or by nature, 3.62 and 3.66 (both halves: "not 'from will'" yet "not
+  without His pleasure or against His purpose"). "Freely-willed" in the Craig summary **left**: it states Craig's premise.
+- **AT-12** (`modalism.html`, `relations.html`): 3.4 on John 10:30 (Sabellius named as Athanasius's own note, not as a
+  label for readers); 3.3 for coinherence, with "the idea is older than the word". "One in unity, power, and purpose" and
+  "always read it" on `modalism.html` are pre-existing wording, **logged, not changed** (rule 9; the new sentence no longer
+  presents Athanasius as endorsing "purpose").
+- **AT-13** (`humanity.html`): 2.70, "true Son and true flesh".
+- **Review:** R1 argument (Opus) 10/11 STAMPABLE, 1 BREAK (relations.html: the insertion made "he describes" in the next
+  sentence, John of Damascus, read as Athanasius); orthodoxy (Opus) CLEAN, 0 HERESY, 5 NOTE (the same slip, and fences on
+  1.58, 1.62, 1.28 and Proverbs 8); neutrality (Fable) 1 BREAK (same) + 5 WEAK. One merged fix pass. R2: one combined
+  pass (Fable) on the changed sentences.
