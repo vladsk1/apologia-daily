@@ -117,6 +117,15 @@ wrong · what to say instead.
   never list him among the illegal-period witnesses (Pliny c.112, Lucian c.165, Cornelius 251). The
   vivid "impious Galilaeans" line is from the *Letter to Arsacius*, which Van Nuffelen argues is a
   **forgery** — ground him in the undisputed *Fragment of a Letter to a Priest*.
+- **Judas the Galilean — Josephus does NOT record his death or the scattering of his followers.** That
+  detail is Gamaliel's, in **Acts 5:37**. Josephus describes Judas's census revolt and "fourth philosophy"
+  (*Ant.* 18.4–10, 23) and later mentions him only through his sons, crucified c. AD 46–48 (*Ant.* 20.102);
+  his line runs on to Menahem (*War* 2.433) and Masada (*War* 7.253). Our certified `earlydate.html` says this
+  correctly; `postres.html` and `ev-m-disciplesbelief.html` credited the death-and-scattering to Josephus
+  (backlog BAR-2). **Say instead:** "Acts has Gamaliel recall that he perished and his followers scattered;
+  Josephus records the revolt, and the fate of his sons" — and keep the failed-messiah point to what holds:
+  **no follower proclaimed the dead leader raised.** Never "their movements did not survive them" (false for
+  Judas). (Barnett mine, 2026-11-21.)
 
 ## Gospel authorship & historicity — hazards to not drift INTO (verdict-5 guards)
 
@@ -142,3 +151,13 @@ trap is proving them from the wrong source or hardening the hedge into a fact.)
   point. Loke and popular writers bundle it into the near-universal tier — never follow them. And never
   state the ~75% figure as field-wide hard data: it is one compiler's count, cited as Habermas's survey
   with the non-poll / Alter–Slade hedge, never as a settled statistic. (Resurrection mine, 2026-11-10.)
+- **The "James ossuary" — don't cite it as genuine.** Popular and some 2000s scholarly books (e.g. Barnett,
+  *Birth of Christianity*, 2005) say the "James, son of Joseph, brother of Jesus" ossuary "may be genuine".
+  The authenticity of the "brother of Jesus" phrase remains disputed; the 2012 Jerusalem acquittal of the
+  owner on forgery charges was **not** an authentication. No served page mentions it — keep it that way, or
+  name it only as disputed. (Barnett mine, 2026-11-21.)
+- **Luke as Paul's companion / Acts as an "equal primary source" — don't harden the hedge.** Whether the
+  "we" passages mean the author was present is debated (Robbins vs Hemer), and the name Luke rests on later
+  testimony; `gospel-authorship.html` says so. Some defenders (Barnett 2005) call the alternatives
+  "far-fetched" and make Acts an *equal* primary source with Paul's letters for Paul — never import that
+  register. (Barnett mine, 2026-11-21.)
