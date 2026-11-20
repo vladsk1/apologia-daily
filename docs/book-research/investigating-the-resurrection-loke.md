@@ -27,6 +27,8 @@
 > - **This is an ACADEMIC monograph**, so popular-level overstatement should be rare — but Loke argues a
 >   thesis, so treat any unanimity claim ("no scholar denies…") as a lead to soften, per rule 7.
 
+> **READING CLUB BUILT 2026-11-20:** `reading-club-investigating-the-resurrection.html` — nine sessions, one per chapter, published with Dr Loke's permission (email 26 Oct 2026). Chs 4–9 were re-read line by line for it by two independent readers per chapter; the club page REPORTS the book (attributed), so the hazards below (historical certainty, the guard as linchpin, empty tomb as consensus, the 99.4% figure, Marian apparitions, the Islamic escape hypothesis) are handled there by attribution, an "our note", or omission — they are still NOT to be adopted in our own voice elsewhere.
+
 ## ✅ LEDGER — rows EXECUTED 2026-10-04 (read this before the cross-map below, which is now history)
 
 See `docs/content-backlog.md` for the full account of each row.

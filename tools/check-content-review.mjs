@@ -75,6 +75,10 @@ const CONTENT_PATTERNS = [
                                            // InterVarsity Press: 13 session summaries, retention
                                            // lines and an 8-card capstone on the deity-of-Christ
                                            // dual-consensus tier. English only (IVP condition 3).
+  /^reading-club-investigating-the-resurrection.html$/, // author-permitted reading-club study (Andrew Loke,
+                                           // Investigating the Resurrection of Jesus Christ): 9 session
+                                           // summaries, 9 retention lines and a 12-card capstone on the
+                                           // resurrection dual-consensus tier, under a living author's name.
   /^our-sources\.html$/,                   // public source list: critic labels + notes on NAMED people,
                                            // an update log and the talks list (added 2026-09-24).
   /^pocket-cards\.html$/,                  // 70 share-card arguments (gated 2026-08-11, dual-consensus);

@@ -1,5 +1,7 @@
 # Reading Club draft — *Investigating the Resurrection of Jesus Christ* (Andrew Loke)
 
+> **SUPERSEDED 2026-11-20.** The full nine-session club is built at `reading-club-investigating-the-resurrection.html` (gated by all four lenses; see its content-review stamp). Dr Loke replied on 26 Oct 2026 after seeing the chs 1-3 preview: he had not had time to read everything carefully, but what he had read looked good and we should proceed. Public wording is therefore "published with his permission", never "approved by". The text below is the original three-session sketch, kept as history.
+
 **Status: DRAFT for Dr. Loke's approval (2026-10-05). NOTHING is live.** Dr. Loke approved us
 building a club for this book by email on 2026-10-05 (reply from andrewloke777@gmail.com). Per our
 offer, he approves every session summary and discussion question before anything is published, and he
