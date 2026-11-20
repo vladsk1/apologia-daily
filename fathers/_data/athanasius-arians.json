@@ -1,0 +1,126 @@
+{
+ "slug": "athanasius-arians",
+ "partSlug": "athanasius-arians-discourse-",
+ "author": "Athanasius of Alexandria",
+ "authorShort": "Athanasius",
+ "authorDates": "c. 296–373",
+ "tradition": "East",
+ "work": "Against the Arians",
+ "workShort": "Against the Arians",
+ "year": "date disputed (the 1892 editor: 356–360)",
+ "place": "Written by the bishop of Alexandria, in Egypt",
+ "printYear": 1892,
+ "partLabel": "Discourse",
+ "quoteCheck": {
+  "authorRe": "Athanasius",
+  "citeRe": "(?:Orations?|Discourses?|Orationes) (?:Against|against|contra) (?:the )?Arian(?:s|os)\\s*(?:[IV]+\\b|\\d)?(?:[.,\\s§]*\\d{1,2})?|Against the Arians\\s*\\d(?:\\.\\d{1,2})?|Contra Arianos\\s*\\d?(?:\\.\\d{1,2})?",
+  "sourcesWorkRe": "^(Four )?(Discourses?|Orations?) Against the Arians$|^Against the Arians$"
+ },
+ "topics": {
+  "1": "Arius’s Thalia; the Son eternal, not a creature; “unoriginate”; the Son unchangeable; Philippians 2:9–10, Psalm 45:7–8 and Hebrews 1:4",
+  "2": "Hebrews 3:2 and Acts 2:36; why the Son is not a creature; Proverbs 8:22, “The Lord created me,” and the verses after it",
+  "3": "The Son in the Father and the Father in the Son; “one God”; the texts on the Son made man (Mark 13:32, his growth, his fear); whether the Son is begotten by the Father’s will"
+ },
+ "description": "Athanasius of Alexandria’s three Discourses Against the Arians, complete, in a public-domain translation (1892), with a short guide.",
+ "translation": {
+  "translators": "John Henry Newman, revised by Archibald Robertson",
+  "edition": "Nicene and Post-Nicene Fathers, second series, vol. 4, ed. Philip Schaff and Henry Wace (New York: The Christian Literature Company, 1892)",
+  "base": "CCEL’s proofed transcription of the volume (Rights: Public Domain)",
+  "base_url": "https://www.ccel.org/ccel/schaff/npnf204",
+  "compared": "compared word by word with four scans of the 1892 volume; every difference in wording that two of the scans agreed on was checked by hand, and the opening quotation marks the transcription had lost were restored from the scans"
+ },
+ "copyCheck": {
+  "date": "2026-11-20",
+  "method": "The hosted text is CCEL’s transcription of the 1892 volume with the editors’ introduction, Newman’s chapter headings and the footnote markers removed. CCEL prints the work chapter by chapter, and a chapter often begins in the middle of a section, so the chapters were joined into the three Discourses and the text is divided by the numbered sections only. It was compared word by word, by script, with the OCR of four archive.org scans of the 1892 volume (niceneandpostnic04unknuoft, selectlibraryofn04schauoft, selectlibraryofn04scha and cu31924096463454; a fifth, selectlibraryofn0004henr, was used for the quotation marks); because the scans run the editors’ long footnotes into the text, each run of sixty words was located in the scan separately. 97.3%, 96.3%, 96.6% and 96.4% of the transcription’s words match those scans directly; a test of every run of six words found no unconfirmed run of more than eight words, except at footnote numbers, page breaks and the letter æ. Every difference involving real words that two scans agreed on (929), and every short run of words that the scans print and the transcription lacks, or the reverse, was tested in context in the scans and read by hand; every occurrence of the spellings a transcription may modernise (‘shew’, ‘spake’, ‘begat’ and others) was checked in three scans. The transcription had lost the opening single quotation mark of almost every quotation (it kept the closing one). 1,913 were restored: each was placed where two scans print it, or, where the OCR was unreadable, read by hand in the scans; marks that turned out to be footnote numbers read by the OCR as quotation marks were left out. Other punctuation was not compared. The translator’s words in square brackets (‘[not]’) are kept.",
+  "result": "Seventeen corrections in Athanasius’s text, each confirmed in at least two scans: eight words the transcription changed (among them it reads ‘recurs’ where the printing has ‘incurs’, 2.36; ‘tenor’ for ‘terror’, 3.57; ‘man’ for ‘many’, 2.27; ‘This it My Son’ for ‘This is My Son’, 2.32; and ‘spirit’ for the printing’s ‘spirt’, 1.30); one word it dropped (1.19, ‘through whom are all things’); and eight older spellings that the 1892 printing has and the transcription modernised (‘shew’, ‘shewn’, ‘shews’, ‘stupified’). One misprint in the 1892 printing itself is left as the transcription corrects it (1.38, ‘deifed’). The translator’s secondary numbering, (3.) to (12.), printed inside Discourse I §§55–62, is omitted. Eleven Bible references corrected: four given by the Greek and Hebrew numbering of the Psalm verses and one by the Greek psalm number, one to a Psalm that does not exist (168), one to the verse numbering of a line found only in some Bibles, and four simply wrong (one, 3.17, already wrong in the 1892 footnote); every reference was checked by script against the verse it points to, and the 54 that shared no words with their verse were read by hand; the 8 that point to Baruch, Wisdom and Sirach were not checked this way. Stray spaces left where footnote markers were removed have been closed up. The comparison record and the scripts are in docs/audits/fathers-athanasius-copycheck-2026-11-20.md and tools/fathers/.",
+  "textSha256": "b54db283ab192e44bd1015ed8b6c1b74ff01f1b41366cefa5e7b9975232a0e0f"
+ },
+ "notes": [
+  {
+   "at": "2.42",
+   "text": "Christian traditions read this passage and those around it (2.41–43) differently: whether baptism given by those outside the church, or by those whose faith in the Trinity is false, is a true baptism, and what baptism does."
+  },
+  {
+   "at": "2.70",
+   "text": "Christian traditions read the title used here, “Mary Ever-Virgin,” differently: whether Mary remained a virgin after the birth of Jesus."
+  },
+  {
+   "at": "2.76",
+   "text": "Christian traditions read this passage and the one before it (2.75–76) differently: what it means that God chose us and predestined us in Christ before the world was made."
+  },
+  {
+   "at": "3.5",
+   "text": "Athanasius uses the illustration for the Son, the Father’s Image: “he who worships and honours the Son, in the Son worships and honours the Father” (3.6). Christian traditions differ on the honour given to images of Christ and the saints, and on whether this illustration also bears on it."
+  },
+  {
+   "at": "3.12",
+   "text": "Christian traditions read this passage, and 2.23 and 3.32, differently: whether what Athanasius says here about prayer, worship and the angels bears on asking the angels and the saints to pray for us."
+  },
+  {
+   "at": "3.24",
+   "text": "Christian traditions read this passage (and 1.47–50 and 3.44) differently: whether the Spirit’s receiving from the Son speaks only of his being sent to us, or also of his eternal procession (the filioque question, debated between East and West)."
+  },
+  {
+   "at": "3.25",
+   "text": "Christian traditions read this passage differently: whether one who has truly received the Spirit can finally fall away."
+  },
+  {
+   "at": "3.29",
+   "text": "Athanasius calls Mary “Bearer of God” (in Greek, Theotokos; also at 3.14 and 3.33): the one she bore is God the Son made man. The Council of Ephesus (431) later confirmed the title. Christian traditions differ on how freely they use it, and on Mary’s wider place."
+  }
+ ],
+ "essayLinks": [
+  {
+   "href": "/library/eternal_generation.html",
+   "title": "The Eternal Generation of the Son",
+   "cites": [
+    "1.12",
+    "1.14"
+   ],
+   "about": "the Son always with the Father, as the radiance with the light"
+  },
+  {
+   "href": "/library/trinity_jw.html",
+   "title": "Answering Jehovah's Witnesses on the Trinity",
+   "cites": [
+    "1.58"
+   ],
+   "about": "“My Father is greater than I” (John 14:28)"
+  }
+ ],
+ "keyPassages": [
+  "athanasius-arians-1-9",
+  "athanasius-against-arians-1-58",
+  "athanasius-arians-2-70",
+  "athanasius-arians-3-4",
+  "athanasius-arians-3-30"
+ ],
+ "guide": [
+  {
+   "h": "Who Athanasius was",
+   "html": "<p>Athanasius (c. 296&ndash;373) was bishop of Alexandria, in Egypt, from 328 until his death. As a young deacon he was at the Council of Nicaea in 325 with his bishop, Alexander, when the council confessed the Son &ldquo;of one substance&rdquo; with the Father. For nearly fifty years he defended that faith against Arius and his followers, and he was driven from his city five times. His short book <em>On the Incarnation</em> is also in our <a href=\"/sources.html\">Sources</a>. Catholic, Orthodox and Protestant Christians all honour him as a defender of the faith that the Son is fully God. The &ldquo;Athanasian Creed&rdquo; is named after him, but it was written later, in the Latin West.</p>"
+  },
+  {
+   "h": "Why he wrote it",
+   "html": "<p>Arius, a priest of Alexandria, taught that the Son of God is a creature: that &ldquo;God was not always a Father&rdquo;, that &ldquo;the Son was not always&rdquo;, and that he was made &ldquo;out of nothing&rdquo;. Athanasius quotes these sayings from Arius&rsquo;s poem, the <em>Thalia</em> (<a href=\"/fathers/athanasius-arians-discourse-1.html#s5\">1.5</a>, <a href=\"/fathers/athanasius-arians-discourse-1.html#s9\">1.9</a>). He writes, he says, &ldquo;to unrip &lsquo;the folds of its breast-plate,&rsquo; and to shew the ill savour of its folly&rdquo;, so that those it has deceived &ldquo;may repent&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-1.html#s1\">1.1</a>). Then he answers, one by one, the Bible texts the Arians used.</p><p>When the Discourses were written is not settled. The 1892 editor placed them during Athanasius&rsquo;s third exile, between 356 and 360, while noting that there is no conclusive evidence and that they seem to have been issued at intervals; later scholars have argued for earlier dates. The 1892 volume also prints a fourth Discourse. Its editor notes that, unlike the first three, it is not quoted in antiquity as part of the work, and that its place beside them is uncertain. We host the three Discourses only.</p>"
+  },
+  {
+   "h": "What is in it",
+   "html": "<ul><li><a href=\"/fathers/athanasius-arians-discourse-1.html\"><b>Discourse I</b></a>: Arius&rsquo;s <em>Thalia</em> and why the question matters (1&ndash;10); the Son is eternal, a true Son and not a creature (11&ndash;29); the word &ldquo;unoriginate&rdquo; (30&ndash;34); the Son does not change (35&ndash;36); and the first of the texts the Arians used: &ldquo;God hath highly exalted Him&rdquo; (Philippians 2:9), &ldquo;Wherefore God, even Thy God, hath anointed Thee&rdquo; (Psalm 45:7) and &ldquo;being made so much better than the Angels&rdquo; (Hebrews 1:4) (37&ndash;64).</li><li><a href=\"/fathers/athanasius-arians-discourse-2.html\"><b>Discourse II</b></a>: &ldquo;faithful to Him that made Him&rdquo; (Hebrews 3:2) and &ldquo;He hath made Him Lord and Christ&rdquo; (Acts 2:36) (1&ndash;18); why the Son is not a creature (19&ndash;43); and &ldquo;The Lord created me a beginning of His ways&rdquo; (Proverbs 8:22) and the verses after it (44&ndash;82).</li><li><a href=\"/fathers/athanasius-arians-discourse-3.html\"><b>Discourse III</b></a>: &ldquo;I in the Father and the Father in Me&rdquo; and the other texts from John on the Son and the Father (1&ndash;25); the texts that speak of the Son made man, among them his not knowing the day (Mark 13:32), his growing in wisdom (Luke 2:52) and his fear before his death (26&ndash;58); and whether the Son was begotten by the Father&rsquo;s will (59&ndash;67).</li></ul>"
+  },
+  {
+   "h": "What to look for",
+   "html": "<p><b>True Son, true God.</b> Athanasius sets out the faith in a few lines: the Son is &ldquo;not a creature or work, but an offspring proper to the Father&rsquo;s essence. Wherefore He is very God, existing one in essence with the very Father&rdquo;; &ldquo;He ever was and is and never was not. For the Father being everlasting, His Word and His Wisdom must be everlasting&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-1.html#s9\">1.9</a>).</p><p><b>Father and Son: two, but &ldquo;the nature is one&rdquo;.</b> Father and Son are not one person under two names, and not one thing in two parts: &ldquo;They are two, because the Father is Father and is not also Son, and the Son is Son and not also Father; but the nature is one&rdquo;, and &ldquo;all that is the Father&rsquo;s, is the Son&rsquo;s&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-3.html#s4\">3.4</a>). He returns often to an image from Scripture, which calls the Son &ldquo;the radiance of His glory&rdquo; (Hebrews 1:3): the light and its radiance. A light is never without its radiance: &ldquo;when did man see light without the brightness of its radiance&rdquo;? (<a href=\"/fathers/athanasius-arians-discourse-1.html#s12\">1.12</a>). So the Son always was. And the radiance is not a lesser light: &ldquo;the radiance also is light, not second to the sun, nor a different light&rdquo;, and &ldquo;no one would say that they are two lights, but sun and radiance two, yet one the light&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-3.html#s4\">3.4</a>). Like every comparison drawn from created things, it helps the reader think; it is not a picture of God. The one God is Father, Son and Holy Spirit: we are baptized &ldquo;into the Name of Father, Son, and Holy Ghost&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-1.html#s34\">1.34</a>), and &ldquo;there is an eternal and one Godhead in a Triad, and there is one Glory of the Holy Triad&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-1.html#s18\">1.18</a>).</p><p><b>A rule for reading Scripture about the Son.</b> Scripture, he says, &ldquo;contains a double account of the Saviour; that He was ever God, and is the Son, being the Father&rsquo;s Word and Radiance and Wisdom; and that afterwards for us He took flesh of a Virgin, Mary Bearer of God, and was made man&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-3.html#s29\">3.29</a>). The texts that speak of the Son as made, as anointed, or as not knowing the day are read by the second half of that rule. Of Mark 13:32 he writes that the Son said it &ldquo;as man by reason of the flesh. For this as before is not the Word&rsquo;s deficiency, but of that human nature whose property it is to be ignorant&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-3.html#s43\">3.43</a>).</p><p><b>Fully God and fully man.</b> Only one who is God can join us to God, and only true flesh could save ours: &ldquo;as we had not been delivered from sin and the curse, unless it had been by nature human flesh, which the Word put on &hellip; so also the man had not been deified, unless the Word who became flesh had been by nature from the Father and true and proper to Him&rdquo; (on &ldquo;deified&rdquo;, see &ldquo;How to read this edition&rdquo; below; <a href=\"/fathers/athanasius-arians-discourse-2.html#s70\">2.70</a>). The Word did not visit a man, as he came to the prophets: &ldquo;He became man, and did not come into man&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-3.html#s30\">3.30</a>).</p><p><b>&ldquo;Greater.&rdquo;</b> On &ldquo;My Father is greater than I&rdquo; (John 14:28), he notes that the Son says &ldquo;greater&rdquo;, not &ldquo;better&rdquo;, &ldquo;not indeed in greatness, nor in time, but because of His generation from the Father Himself&rdquo;; and in saying &ldquo;greater&rdquo; the Son &ldquo;again shews that He is proper to His essence&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-1.html#s58\">1.58</a>). The Father is the source from whom the Son is eternally begotten: a relation of origin, never a difference of greatness, of time or of essence.</p>"
+  },
+  {
+   "h": "How to read this edition",
+   "html": "<p>This is John Henry Newman&rsquo;s English translation, revised by Archibald Robertson, published in 1892 in the <em>Nicene and Post-Nicene Fathers</em> (second series, vol. 4). Its English is old (&ldquo;thou,&rdquo; &ldquo;hath,&rdquo; &ldquo;shew&rdquo;), but it is a public-domain translation, and we print it as it stands. Words in square brackets are the translator&rsquo;s.</p><p>The 1892 volume prints an introduction, chapter headings and long footnotes, by Newman and the 1892 editors. We have left those out: they are not Athanasius&rsquo;s words. We keep only their Bible references, which you can tap to read. Athanasius read the Old Testament in Greek, so his quotations sometimes read differently from a modern Bible; where the editors gave the Greek or Hebrew numbering of a Psalm, we have changed it to the English one. A few references point to Baruch, Wisdom and Sirach, which Catholic and Orthodox Bibles include and most Protestant Bibles do not. Athanasius quotes from them (&ldquo;in the book of Wisdom it is written&rdquo;, <a href=\"/fathers/athanasius-arians-discourse-2.html#s45\">2.45</a>); Christian traditions differ on whether they belong to the Old Testament. The tap-to-read feature does not cover those books. Where we found a reference wrong, we have corrected it; the corrections are listed at the foot of this page.</p><p>The sections are numbered through each Discourse, as the 1892 edition numbers them, so &ldquo;2.22&rdquo; means Discourse II, section 22. On the Discourse pages, tap a section number to link straight to it.</p><p>When Athanasius says that the Word became man &ldquo;to deify us&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-1.html#s39\">1.39</a>), he is using language common in the early church, often linked with 2 Peter 1:4 (&ldquo;partakers of the divine nature&rdquo;). He means sharing God&rsquo;s life by grace, not becoming God by nature: the Son &ldquo;alone is very God from the very God&rdquo;, while we are &ldquo;made sons through Him by adoption and grace&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-1.html#s39\">1.39</a>, <a href=\"/fathers/athanasius-arians-discourse-3.html#s19\">3.19</a>). Christian traditions use this language to different degrees.</p><p>When he says that Christ did not know the day &ldquo;as man&rdquo; (&ldquo;that human nature whose property it is to be ignorant&rdquo;, <a href=\"/fathers/athanasius-arians-discourse-3.html#s43\">3.43</a>), or that he wept and was troubled, or that his &ldquo;flesh&rdquo; feared, he means Christ&rsquo;s human nature; he explains that it is &ldquo;the custom of Scripture to call man by the name of &lsquo;flesh&rsquo;&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-3.html#s30\">3.30</a>). The Council of Chalcedon (451) later said in so many words that Christ&rsquo;s humanity is complete: it confessed him &ldquo;truly God and truly man, of a reasonable soul and body&rdquo;, one and the same Christ.</p><p>Athanasius writes as a controversialist of his time. He calls his opponents &ldquo;Ario-maniacs&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-1.html#s4\">1.4</a>) and says the heresy &ldquo;affects to array herself in Scripture language, like her father the devil&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-1.html#s1\">1.1</a>). He also speaks harshly of the Jews: he uses &ldquo;Judaic&rdquo; as a term of abuse for the Arians, and reads the fall of Jerusalem as a penalty: &ldquo;The Jews then have the penal award of their denial&rdquo; (<a href=\"/fathers/athanasius-arians-discourse-2.html#s42\">2.42</a>). We print these words because they are part of the text. We do not speak that way of Jewish people or of those we disagree with, and we do not hold the Jewish people guilty, as a people, for the death of Christ.</p><p>At the main places where Christian traditions read a passage differently, a short note marks it; the same questions come up elsewhere in the book. The note names the question; it does not say which reading is right.</p>"
+  }
+ ],
+ "reviewed": {
+  "argument": "2026-11-20",
+  "orthodoxy": "2026-11-20",
+  "neutrality": "2026-11-20",
+  "by": "2026-11-20 CHURCH FATHERS BOOK 5 (Athanasius of Alexandria, Discourses Against the Arians I-III, 1892 tr. Newman rev. Robertson): our guide (5 sections), 8 rule-2 notes (baptism 2.42, \"Ever-Virgin\" 2.70, predestination 2.76, images 3.5, the angels and saints 3.12, the Spirit and the Son 3.24, falling from grace 3.25, \"Bearer of God\" 3.29), the copy-check text and 5 /sources passages. Gated by READ-ONLY Explore lenses, reviewed files md5-verified unchanged after every round. R1: argument (Opus) 1 BREAK (unstripped \"(7)\" marker the copy-check said was removed) + 7 WEAK; orthodoxy (Opus) CLEAN, 0 HERESY, 8 NOTE; neutrality (Fable) 1 BREAK (canon sentence \"quotes them as Scripture\") + 7 WEAK (three missing notes; 3.12 note took a side; Discourse IV authorship doubt put in the 1892 editor's mouth; \"Four Discourses\" and an undisclosed date on /sources). One merged fix pass. R2: neutrality STAMPABLE; orthodoxy+argument (Opus) 1 DRIFT (\"Like every image of God … not a picture of God\", with Image a title of the Son) + 2 WEAK (a Triad sentence implying 1.18 names the Spirit; headings/notes credited to the 1892 editors rather than Newman), fixed. R3 (Fable, all three lenses on the changed sentences): CLEAN/STAMPABLE/STAMPABLE, one POLISH on the 3.5 note, fixed with its 3.6 quotation; R4 the same pass confirmed that note. 0 HERESY throughout. Declined on record: notes at 3.33 and 2.9; Festal Letter 39 in the canon sentence; \"most later scholars date them around 340\" (unverified). Citations lens (web) not run; biography facts standard but not source-checked. Record: docs/audits/fathers-athanasius-copycheck-2026-11-20.md. AUTOMATED GATE, not pastoral sign-off."
+ }
+}

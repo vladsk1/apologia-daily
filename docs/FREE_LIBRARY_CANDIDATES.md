@@ -151,7 +151,17 @@ chance to test our own work against him. Two checks run on every book before it 
   book this size; it now indexes each scan once (15 seconds). It found two dropped words, one the "I" of 4.12.
   (4) Drop capitals at the start of books run words together ("Theknowledge"). (5) Augustine’s letter to Aurelius
   (Letter 174), which he asked to head the work, is printed in the 1887 editors’ introduction and is not hosted.
-- **East/West tally (rule 3): East 2 (Gregory of Nazianzus, Basil) · West 2 (Hilary, Augustine).** Either side may come next.
+- **Book 5 — Athanasius of Alexandria, *Against the Arians* (Discourses I–III): built 2026-11-20.** Pages `fathers/athanasius-arians.html`
+  + `fathers/athanasius-arians-discourse-1.html` … `-3.html`. Record: `docs/audits/fathers-athanasius-copycheck-2026-11-20.md`.
+  ⚠ Lessons: (1) **CCEL's npnf204 transcription lost the opening single quotation mark of almost every quotation** (Newman
+  uses single marks); 1,913 were restored from the scans (`tools/fathers/athanasius-quotes.json`). Check any volume that
+  quotes with single marks for this. (2) **Superscript footnote numbers OCR as "s", "‘" or "'"**: "X → Xs" word candidates
+  and quote marks right after a footnote marker are usually noise — test for a marker at that point in the transcription.
+  (3) Chapters begin mid-section, marked "N (continued)." in print; the translator's "(3.)…(12.)" numbering in 1.55–62 is
+  omitted. (4) Discourse IV is printed in the volume but not hosted (its editor notes it is not quoted in antiquity as part of the work; the guide says so).
+  (5) The existing 1.58 `/sources` passage came from New Advent and had "shows" for the printed "shews".
+- **East/West tally (rule 3): East 3 (Gregory of Nazianzus, Basil, Athanasius) · West 2 (Hilary, Augustine).** West next
+  (Novatian is the remaining Western Trinity candidate; Augustine's *Confessions* would go with the conversion stories).
 - **English only.** The Macedonian/Spanish mirror rule in `CLAUDE.md` covers the Evidence Library (`library/`,
   `ev-s*`), not `/fathers`; an AI translation of a Father's own words would no longer be his words.
 
@@ -247,7 +257,7 @@ Mostly already in `/sources` as excerpts. Host the full texts:
 | Augustine, *On the Trinity* | NPNF (Haddan) | HOST |
 | Hilary, *On the Trinity* | NPNF | HOST |
 | Novatian, *On the Trinity* | ANF | HOST (guide needs the rule-4 note) |
-| Athanasius, *Against the Arians* (Discourses I–III) | NPNF (Newman/Robertson) | HOST. ⭐ Added 2026-11-18: his main Trinity work; `/sources` has none of it |
+| Athanasius, *Against the Arians* (Discourses I–III) | NPNF (Newman/Robertson) | ✅ HOSTED 2026-11-20 (book 5) |
 | Athanasius, *Letters to Serapion* (the Spirit's deity) | ⚠ **Check first.** Probably not in the Schaff series; the standard English translation (Shapland, 1951) is still under copyright | Do not host until a public-domain English translation is confirmed |
 | Schaff, *The Creeds of Christendom* (1877) | Original | HOST (confirm creed wordings match `sources/creeds.json`) |
 
