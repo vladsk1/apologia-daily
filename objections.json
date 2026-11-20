@@ -1,15 +1,15 @@
 {
   "generated": "tools/build-objections.mjs",
   "note": "Harvested VERBATIM (reply side) from certified ev-m-*.html mastery pages. Do not hand-edit; re-run the build.",
-  "count": 322,
+  "count": 328,
   "categories": {
     "Biblical Reliability": 38,
-    "General": 64,
+    "General": 68,
     "God's Existence": 48,
-    "Jesus": 65,
+    "Jesus": 66,
     "Old Testament & Jesus": 3,
     "Science & Faith": 26,
-    "The Resurrection": 26,
+    "The Resurrection": 27,
     "The Trinity": 52
   },
   "objections": [
@@ -354,6 +354,42 @@
       "front": "Why is the popular statistical case for prophecy retired?",
       "back": "Assigning a numerical probability to “born in Bethlehem” requires guesses dressed as data, and the multiplication assumes the events are independent when they plainly are not. Its pseudo-precision gives critics an easy target and substitutes arithmetic for argument; the real case — convergence, not arithmetic — does not need it, and is stronger without it.",
       "source": "ev-m-prophecy.html"
+    },
+    {
+      "id": "authorship-luke-is-named-late-why-is-it-still-on-gathercole",
+      "arg": "authorship",
+      "argName": "authorship",
+      "category": "General",
+      "front": "Luke is named late. Why is it still, on Gathercole’s argument, the Gospel least likely to have been anonymous at its origin?",
+      "back": "No surviving writer names Luke as the author of the third Gospel before Irenaeus and the Muratorian Fragment, late in the second century. But the preface shows that the work was not composed as a faceless community product: its author speaks in his own voice, to a named reader, about his own method. If, as the formal address suggests, Theophilus was a real person, then a book written in the first person and dedicated to him was a book whose author was known to at least one reader from the day it was delivered. None of this shows that the author’s name was Luke; the name still rests on the later testimony. Luke is named late, but his is the Gospel least likely ever to have been authorless to its first reader.",
+      "source": "ev-m-authorship.html"
+    },
+    {
+      "id": "authorship-what-is-the-strongest-objection-and-what-does-th",
+      "arg": "authorship",
+      "argName": "authorship",
+      "category": "General",
+      "front": "What is the strongest objection — and what does the reply claim against it?",
+      "back": "The names may have been fixed once, when the four were first gathered together, which would explain the uniformity without making them original. The evidence cannot rule it out, but it has costs: on Papias’s own report, at least one of the names—Mark’s—was already being passed on by the Elder before Papias wrote. None of this refutes the hypothesis; it makes it more expensive than it first appears.",
+      "source": "ev-m-authorship.html"
+    },
+    {
+      "id": "authorship-why-is-an-unsigned-ancient-book-not-an-authorles",
+      "arg": "authorship",
+      "argName": "authorship",
+      "category": "General",
+      "front": "Why is an unsigned ancient book not an authorless one — and where does the comparison stop?",
+      "back": "Most ancient biographies and many ancient histories did not name their authors in the text either, because an author’s name normally travelled with the title on the copy rather than inside the prose. Plutarch’s authorship is also secured in other ways—by his many other writings, and by personal asides in the Lives about his own family and town—so for the Gospels the external testimony carries more of the weight. But the comparison shows that an unsigned ancient book was not, for that reason, an authorless one.",
+      "source": "ev-m-authorship.html"
+    },
+    {
+      "id": "authorship-why-is-papias-s-report-about-matthew-weaker-than",
+      "arg": "authorship",
+      "argName": "authorship",
+      "category": "General",
+      "front": "Why is Papias’s report about Matthew weaker than his report about Mark?",
+      "back": "What Papias meant by Matthew’s “oracles” in “the Hebrew language” is disputed—our Matthew is in Greek—so his report about Matthew is less secure than his report about Mark, and the Mark–Peter link does not depend on it.",
+      "source": "ev-m-authorship.html"
     },
     {
       "id": "christ-before-bethlehem-a-critic-grants-that-christ-preexisted-but-calls",
@@ -1571,6 +1607,15 @@
       "source": "ev-m-jesus_claims.html"
     },
     {
+      "id": "jesuschar-his-own-family-thought-he-was-out-of-his-mind-ma",
+      "arg": "jesuschar",
+      "argName": "The Character of Jesus",
+      "category": "Jesus",
+      "front": "“His own family thought he was out of his mind” (Mark 3:21) — isn’t that evidence for the lunatic horn?",
+      "back": "Not enough to establish it. It cuts both ways, and the critic is entitled to it; as N. T. Wright notes, the early church is unlikely to have invented the charge. But, Wright argues, the retort that anyone who thinks he is God must be mad draws its force from an assumption of our own culture; the question is how a first-century Jew heard such claims. The scribes charged possession by Beelzebul (Mark 3:22), a charge about the power at work in him; in John the cry “He has a demon, and is insane” (10:20) stands in the same chapter as stones taken up for blasphemy (10:33); and in Mark’s account the charge that condemned him was blasphemy (14:64), and a blasphemy charge holds a man answerable for what he says. On the whole his opponents judged him a sane man making a claim they refused. So it does not establish the lunatic horn: the family’s verdict is a verdict, not a diagnosis.",
+      "source": "ev-m-jesuschar.html"
+    },
+    {
       "id": "jesuschar-the-argument-is-circular-the-same-gospels-supply",
       "arg": "jesuschar",
       "argName": "The Character of Jesus",
@@ -1693,7 +1738,7 @@
       "argName": "The Criterion of Multiple Attestation",
       "category": "Jesus",
       "front": "Early and widespread is not the same as true.",
-      "back": "Granted — attestation counts the witnesses; it does not interrogate them. But the legend objection meets its limit where the broad outline is secured: the streams are independent and reach back within a generation, while people who knew Jesus still led the movement, and they preserve what no legend-maker would invent, Jesus' submission to John's baptism of repentance, and a shameful cross.",
+      "back": "Granted — attestation counts the witnesses; it does not interrogate them. But the legend objection meets its limit where the broad outline is secured: the streams are independent and reach back within a generation, while people who knew Jesus still led the movement, and they preserve what a legend would have scrubbed — Jesus' submission to John's baptism of repentance, and a shameful cross.",
       "source": "ev-m-multiatt.html"
     },
     {
@@ -2210,6 +2255,15 @@
       "source": "ev-m-privileged.html"
     },
     {
+      "id": "appearances-just-combine-the-theories-hallucination-for-the-",
+      "arg": "appearances",
+      "argName": "The Resurrection Appearances",
+      "category": "The Resurrection",
+      "front": "“Just combine the theories — hallucination for the sightings, dissonance for the refusal to let go, legend and memory-drift for the rest” — reply?",
+      "back": "A stack only helps if each member succeeds where it is deployed — but hallucination still founders on the group settings whether or not legend is piled beside it, and grief-and-guilt still cannot reach the persecutor and the sceptic whatever is added around them. Piling up theories that each fail against the data they are assigned does not turn failure into success. It also costs more, not less: a conjunction is no more likely than its least likely part, and the licence to reach for a fresh mechanism at every awkward detail puts the picture beyond refutation. And the belief’s origin is fixed early, in the 1 Corinthians 15:3–7 creed — within a few years of the cross, too early for retelling to do the work the theory needs. The combination does not rescue the naturalistic case; it exposes how much that case must assume.",
+      "source": "ev-m-appearances.html"
+    },
+    {
       "id": "appearances-parsimony-one-psychological-cause-for-everyone-r",
       "arg": "appearances",
       "argName": "The Resurrection Appearances",
@@ -2323,7 +2377,7 @@
       "argName": "The Minimal Facts Argument",
       "category": "The Resurrection",
       "front": "Sincere belief proves nothing.",
-      "back": "Sincere people believe false things. But the experiences include Paul, a hostile persecutor, and James, a former sceptic, with no grief to project — and no naturalistic mechanism yet proposed covers the whole set without straining badly somewhere.",
+      "back": "Sincere people believe false things. But the experiences include Paul, a hostile persecutor, and James, a former sceptic, with no prior devotion or expectation to project — and no naturalistic mechanism yet proposed covers the whole set without straining badly somewhere.",
       "source": "ev-m-minimal.html"
     },
     {

@@ -12,8 +12,10 @@
  *         node tools/build-objections.mjs --check  (CI: fails if out of date)
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = new URL('..', import.meta.url).pathname;
+// fileURLToPath, not URL.pathname: .pathname gives '/C:/...%20...' on Windows, which breaks every read.
+const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const CHECK = process.argv.includes('--check');
 
 /* id -> {n:name, c:category} from coach.js ARGS, plus a fallback for ev-m ids not in ARGS. */
@@ -135,7 +137,7 @@ const outPath = ROOT + 'objections.json';
 
 if (CHECK) {
   let cur = '';
-  try { cur = readFileSync(outPath, 'utf8'); } catch { /* missing */ }
+  try { cur = readFileSync(outPath, 'utf8').replace(/\r\n/g, '\n'); } catch { /* missing */ } // CRLF checkouts are not 'out of date'
   if (cur !== json) {
     console.error('✗ objections.json is out of date. Run: node tools/build-objections.mjs');
     process.exit(1);
