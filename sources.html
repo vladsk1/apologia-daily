@@ -12,7 +12,7 @@
     "@type": "CollectionPage",
     "name": "Church Fathers & Creeds",
     "headline": "The words of the early church, verified",
-    "description": "A searchable library of the creeds and the Church Fathers in their public-domain translations — from Clement of Rome (AD 96) through Chalcedon (451) — every passage verified word-for-word against its source. The primary texts behind the case that the deity of Christ and the Trinity were confessed long before the Council of Nicaea.",
+    "description": "A searchable library of the creeds and the Church Fathers in their public-domain translations — starting with Clement of Rome (around AD 96) — every passage verified word-for-word against its source. The primary texts behind the case that the deity of Christ and the Trinity were confessed long before the Council of Nicaea.",
     "url": "https://apologiadaily.com/sources",
     "inLanguage": "en",
     "about": [
@@ -84,7 +84,7 @@
     .psg-yr { color: var(--mu); }
     .psg-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 0.7rem; flex-wrap: wrap; }
     .psg-tr { font-family: var(--bo); font-style: italic; font-size: 0.8rem; color: var(--mu); }
-    .psg-actions { display: flex; gap: 8px; align-items: center; }
+    .psg-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .psg-btn { font-family: var(--ui); font-size: 0.75rem; color: var(--m); background: var(--o); border: 1px solid var(--b); border-radius: 6px; padding: 5px 11px; cursor: pointer; text-decoration: none; transition: all 0.15s; white-space: nowrap; }
     .psg-btn:hover { border-color: var(--g); color: var(--n); }
     .psg-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.8rem; }
@@ -201,7 +201,7 @@
     <div class="hero-inner">
       <p class="eyebrow">Church Fathers &amp; Creeds</p>
       <h1>The words of the <em>early church</em></h1>
-      <p class="hero-sub">The creeds and the Church Fathers, in their original public-domain translations — every passage verified word-for-word against its source, so you can quote the real thing. When Ignatius calls Jesus &ldquo;our God&rdquo; in AD 107, that is the actual text.</p>
+      <p class="hero-sub">The creeds and the Church Fathers, in their original public-domain translations — every passage verified word-for-word against its source, so you can quote the real thing. When Ignatius calls Jesus &ldquo;our God&rdquo; around AD 107, that is the actual text.</p>
       <p class="hero-stats" id="hero-stats"></p>
     </div>
   </div>
@@ -550,7 +550,7 @@
       if (hs) {
         hs.innerHTML = '<b>' + INDEX.length + '</b> passages<span class="dot">&middot;</span>' +
           '<b>' + voices + '</b> voices<span class="dot">&middot;</span>' +
-          'from <b>AD ' + (minY || '') + '</b> to Chalcedon';
+          'starting around <b>AD ' + (minY || '') + '</b>';
       }
       buildChips();
       injectItemList();
