@@ -1,7 +1,9 @@
 # Paul Barnett, *The Birth of Christianity: The First Twenty Years* (After Jesus, vol. 1) — research note
 
-**Status: MINED 2026-11-21 — reading done in the chapters listed below; six-verdict cross-check RUN; both
-standard read-only passes RUN. Docs only: no live content was changed.**
+**Status: MINED IN FULL 2026-11-21 — the whole body of the book (Preface, chs. 1–15, Appendices A–C) and all of its
+endnotes read cover to cover, in two passes the same day (pass 2 = chs. 11–14 + their notes, at the owner's request);
+six-verdict cross-check RUN on both passes; both standard read-only passes RUN on both. Docs only: no live content was
+changed.**
 
 > **What this note is.** An our-own-words map of an **owned** copyrighted book: its argument, its leads, and the
 > primary sources it points to. **It is not quotable text.** Every citation below is an **unverified lead** until it
@@ -26,14 +28,14 @@ standard read-only passes RUN. Docs only: no live content was changed.**
 |---|---|---|
 | Copyright page, Contents, Preface, Abbreviations | front matter (Preface p. ix) | ✅ read |
 | Ch. 1 Introduction → Ch. 10 Into the Land of Israel (AD 34–39) | pp. 1–108 | ✅ **read cover to cover** |
-| Ch. 11 Between Jesus and Gospel Text; Ch. 12 A Collection Called "Q"; Ch. 13 Mark; Ch. 14 John | pp. ~108–180 | ❌ **NOT read** (only ch. 11's opening page passed on screen) |
+| Ch. 11 Between Jesus and Gospel Text; Ch. 12 A Collection Called "Q"; Ch. 13 Mark; Ch. 14 John | pp. ~108–181 | ✅ **read cover to cover in pass 2** (captured contiguously from p. 111 / loc 1181 to the start of ch. 15 at loc ~1897; ch. 11's first page, p. ~108–110, was on the landing screen) |
 | Ch. 15 Final Reflection: What Cannot Be Denied | pp. 180–~185 | ✅ read cover to cover |
 | Appendix A History and Geography in Acts | pp. ~185–~197 | ✅ read cover to cover |
 | Appendix B Dating Galatians | pp. ~197–~203 | ✅ read cover to cover |
 | Appendix C Reflections on Crossan's *Birth of Christianity* | pp. ~203–~206 | ✅ read cover to cover |
 | Bibliography | p. 215 onward | ⚠ first page only |
-| Indexes | to p. 230 | ❌ not read (passed on screen) |
-| Endnotes (after p. 230; Kindle locations ~2425–2742) | — | ✅ read for the Preface, chs. 1–10, ch. 15 and Apps A–C; ❌ the ch. 11–14 notes passed on screen and were **not mined** |
+| Indexes | to p. 230 | ❌ not read (passed on screen; finding aids, not argument) |
+| Endnotes (after p. 230; Kindle locations ~2425–2742) | — | ✅ **all read** — Preface, chs. 1–10, ch. 15 and Apps A–C in pass 1; chs. 11–14 in pass 2 (from the same full capture) |
 
 Appendix boundaries are approximate (±1 page): one Kindle screen shows three columns, and the footer gives one page
 number per screen.
@@ -43,7 +45,10 @@ number per screen.
 `library/earlycreed.html` · `library/earlydate.html` · `library/paulconv.html` · `library/riseofchurch.html` ·
 `library/paul-divinity.html` · `library/jesus_as_god_nt.html` · `library/hist_jesus.html` · `library/sceptics.html`
 — all **read in full before mining**. Added during the run, and **also read in full** (2026-11-21), once it was clear
-Appendix A is about Acts and Luke: `library/archaeology.html` and `library/gospel-authorship.html`.
+Appendix A is about Acts and Luke: `library/archaeology.html` and `library/gospel-authorship.html`. **Pass 2 (chs. 11–14),
+read in full before those chapters were read:** `library/eyewitnesses.html` and `library/multiatt.html` (oral and
+written transmission, Bauckham/Bailey/Dunn, Q and John as independent streams). `earlydate.html`, `gospel-authorship.html`
+and `hist_jesus.html` (already read in full in pass 1) also pair with chs. 11–14.
 
 ## Thesis and spine (our words)
 
@@ -183,6 +188,102 @@ sequence of events, so neither is derived from the other (Momigliano's rule: ori
   - He leans on a "Q Gospel" plus Thomas, Peter and the Didache.
   - The ethical echoes of Jesus in Paul, James and 1 Peter mark early catechesis, not a "real" Galilean Jesus.
 
+### Pass 2 — chapters 11–14 (read 2026-11-21; Gospel origins)
+
+- **Ch. 11 Between Jesus and Gospel Text (pp. ~108–125).**
+  - Mark is no later than c. 70, so about 40 years from Jesus; that interval is "not a blank space".
+  - **Language:** the Gospels keep Aramaic words (*talitha cumi*, *ephphatha*, *abba*, *Eloi*). But Galilee was ringed
+    by Greek cities, so Palestine was multilingual: Jesus taught mainly in Aramaic, sometimes Greek (Porter). The
+    written tradition was in Greek early. Mark and John carry Aramaisms but are not translations. *Maran tha* is the
+    only surviving echo of Aramaic-speaking worship.
+  - **Transmission:** teacher-to-disciple memorisation (Riesner: much of Jesus' teaching is in poetic form); notes on
+    waxed tablets are possible (Millard; Lieberman; Gerhardsson allows private notes); oral and written side by side
+    (Qumran parallel).
+  - ⭐ **Against Kenneth Bailey's village-storytelling model**, which Dunn follows (n. 27):
+    - Bailey observed post-Islamic Arabic villages.
+    - The earliest transmission was urban (Jerusalem), synagogue-based, liturgical and text-based.
+    - Barnett reads Luke 1:1–4 as eyewitnesses handing over *written* narratives, against Dunn's oral preference.
+    - His summary: "controlled *didactic* orality", not communal "by many for many".
+  - **The tradition vocabulary:** 1 Cor 11:2, 23; 15:1–3; 1 Thess 4:1; Rom 6:17; 16:17; Acts 2:42; Heb 3:1; 4:14;
+    10:23; 2 John 9–10; Jude 3.
+  - ⭐ **Echoes of Jesus' sayings in Paul's datable letters:**
+    - 1 Thess (c. 50): 4:15–5:7 against Matt 24:31, 42–43; 25:5–7; Luke 21:34–36.
+    - 1 Cor (c. 54): **7:10–11, "not I but the Lord", against Mark 10:9–12**; **9:14 against Luke 10:7 / Matt 10:10**;
+      11:23–25 against Luke 22:19–20; 13:2 against Mark 11:23.
+    - Rom 12–14 (c. 57): 12:14 against Luke 6:28 / Matt 5:44; 13:7 against Mark 12:17; 13:8 against Mark 12:31; 14:13
+      against Mark 9:42; 14:14, 20 against Mark 7:15, 19.
+    - Barnett leans on D. C. Allison, *NTS* 28 (1982): the echoes cluster in Rom 12–14, 1 Thess 4–5 and 1 Cor.
+    - ⚠ Barnett's conclusion that written Greek collections existed by c. 50 ("their existence is certain") is an
+      overclaim.
+  - **Letter of James:** 20 Jesus-tradition links (7 near-citations, 13 echoes), mostly M and Q. James never
+    attributes them to Jesus. Barnett dates the letter 41 to the late 40s and favours traditional authorship (Davids).
+    ⚠ He states the 2002 ossuary "identifies him as 'brother of Yeshua'" as fact.
+  - **1 Peter:** verba Christi (2:12; 2:19–20; 3:9; 3:14; 4:14) against the Sermon material; the Silvanus amanuensis.
+  - **The earliest tradition is not only ethics.** The 1 Thess eschatology, the Supper and 1 Cor 15 / Rom 1:3–4 show a
+    teacher, an apocalyptic prophet and a messianic deliverer.
+  - **Against "corruption":** several *independent* windows (Paul, James, Peter) and a "guided" process.
+- **Ch. 12 A Collection Called "Q" (pp. ~127–136).**
+  - The Jesus Seminar's Q: no passion, no appearances, so a reformist sage.
+  - The case for Q: about 235 verses with shared wording and order. The alternatives are Farrer/Goodacre and
+    Griesbach. Barnett: "beyond proof" but "quite strong".
+  - ⭐ **Against Kloppenborg's strata (Q1 wisdom → Q2 judgement → Q3 narrative):**
+    - Second Temple texts mix the genres (Meadors).
+    - The tools are subjective (Ingolfsland).
+    - A quoted critic says Q "is a source that we don't have", so claiming to know what was *not* in it "goes beyond
+      what we can know" (n. 13: Ehrman, *Apocalyptic Prophet*, 133 — verify).
+    - Wright says the layers cannot be discerned.
+  - ⭐ **Christology in Q** (Meadors, *JBL* 118, 1999):
+    - Luke 7:22 / Matt 11:4–6: Isaiah 61 and 35, conflated as in 4Q521.
+    - The Coming One; "finger of God" (Luke 11:20); "I say to you".
+    - The banquet and the thrones (Luke 22:28–30).
+    - "The Son" / "my Father" (Luke 10:21–22).
+    - Son of Man. ⚠ Barnett calls it "unquestionably messianic".
+    - Death presupposed: the cross saying (Luke 14:27); the lament.
+    - Resurrection hinted: "the dead are raised"; the sign of Jonah.
+    - ⚠ He reads the parable of the pounds as the Messiah's departure and return.
+  - Q is a catechetical "proto-Gospel". ⚠ "Q may be the earliest document of Christianity … an exalted christology."
+- **Ch. 13 Primary Gospel 1: Mark (pp. ~137–150).**
+  - Mark is "primary": no known underlying text.
+  - ⭐ **Acts 10:36–43 maps onto Mark's structure:** fulfilment, John's baptism and the Spirit (Mark 1:1–15); Galilee
+    and the healings (1:14–8:30); Jerusalem, the death and the resurrection (8:31–16:8). This is C. H. Dodd's thesis
+    (*Apostolic Preaching*, 1936), with Guelich. Acts 10:39–43 ↔ 1 Cor 15:3–5 again.
+  - **Pre-Markan "blocks"** (1:21–34; 2:1–3:6; 4:1–34; 4:35–5:43; 9:42–50; 13; 14:1–16:8). The passion narrative's
+    silence on Caiaphas's name may be early (he was deposed in 37). The Rom 13–14 echoes of Mark 12:17, 9:42 and 7:19
+    put this teaching in circulation by the 50s.
+  - ⚠ **Mark 13 "written soon after 40"** (the Caligula crisis). Against a post-70 reading Barnett argues:
+    - Josephus has the desecration *after* the destruction (*War* 6.260, 316).
+    - The Judeans fled before the final assault.
+    - A Roman Mark would not have known the details.
+  - **Papias** "now held" to write 20–30 years before c. 130 (Gundry). The Presbyter is "most likely" the other John;
+    his tone is defensive; Peter taught in "anecdotes".
+  - **Peter in Mark:** first named and last named; his failures are kept.
+  - **Date and place** "not possible precisely to determine": Rome; mid-to-late 60s (Hengel; Donahue).
+- **Ch. 14 Primary Gospel 2: John (pp. ~162–181).**
+  - Barnett **concedes the pendulum has swung back toward John's dependence** on the Synoptics since the mid-1980s.
+  - Four "radical" assertions:
+    1. ⭐ **John is literarily independent.**
+       - The global sequence differs.
+       - Shared incidents diverge in storyline and wording: Temple, the 5,000, the anointing, the entry, the denial,
+         the trial.
+       - Verbal overlaps occur in *different* stories (John 5:8 / Mark 2:9) or are a single vivid detail (the
+         "warming" of John 18:25 / Mark 14:54).
+       - Barrett concedes John did not "use" Mark as Matthew did.
+       - "That Mark and John report certain incidents, yet so differently, is broad evidence of their underlying
+         factuality."
+       - Luke–John contacts; ⚠ Matson: Luke depended on John (a minority view).
+    2. ⚠ **John fixed in Palestine before 66.**
+       - Against the Birkath ha-Minim reading of John 9:22 (Kimelman, Katz, Reinhartz).
+       - John 21:19 may sit in a later epilogue.
+       - The "Prophet" expectation fits the AD 30–70 sign-prophets. ⚠ Barnett says "but not afterward" (contestable).
+       - The trial fits the pre-66 governor–high-priest partnership (Dodd).
+       - Topography (Bethany beyond Jordan, Aenon, Bethzatha with five porches, Ephraim) and customs (4:9; 7:22; 2:6).
+       - He concedes "no scientific means" to date John.
+    3. **John's setting is the mission to Jews in the land:** Judea rejects, Samaria acclaims, Galilee welcomes (Acts
+       9:31–32).
+    4. **Written for Jews "while there was still hope":** "the Jews" means the Jerusalem authorities; "salvation is
+       from the Jews" (4:22). ⚠ "Unlike Luke-Acts, where no positive future for Israel is entertained" (contested).
+  - John is a "seamless robe" to source criticism; Brown's five stages are unconfirmable.
+
 ## Strongest primaries and modern sources the book routes to (all UNVERIFIED leads)
 
 **Primaries:**
@@ -225,8 +326,23 @@ sequence of events, so neither is derived from the other (Momigliano's rule: ori
   - The Jerusalem-visit date slip "AD 35-36" survives on `ev-s3.html`, `library/paul-divinity.html` fn and `briefs/_data.json`, against the certified 36-38. `ev-s2.html` has a third set and the creed-reception overclaim → **BAR-1**.
   - `library/postres.html` L183 and `ev-m-disciplesbelief.html` L348/L408 credit Judas the Galilean's death and the scattering of his followers to Josephus (it is Acts 5:37) → **BAR-2**.
   - No retired claim found.
-- Backlog rows logged (verdicts 3/4): BAR-3, BAR-4, BAR-5, BAR-6, BAR-7, BAR-8, BAR-9 (plus the two ② rows BAR-1 and BAR-2) in `docs/content-backlog.md`.
-- "Is the source better than our essay anywhere?" — yes, narrowly. Its chronological anchors (Aretas; inclusive reckoning), its use of 1 Thessalonians as a window (4:14; 1:1, 1:10), Tacitus's "checked, then broke out again", and Acts 1:14 on the brothers. Everywhere else ours is better hedged (see the section below).
+- **Pass 2 (chs. 11–14), same six surfaces:**
+  - Essays read in full: eyewitnesses, multiatt (+ earlydate, gospel-authorship, hist_jesus from pass 1).
+    Grep-checked: appearances, consistency, jesus_claims, jewishness, archaeology, respred.
+  - /answers: the contradictions answer ("John writes largely independently", → BAR-10); the
+    when-were-the-gospels-written answer (L797, → BAR-15).
+  - ev-s: ev-s2 L587/L639/L710 (→ BAR-10); ev-s3 L99 (→ BAR-11); ev-s3/ev-s4 date drift and Bethesda (→ BAR-15,
+    BAR-18).
+  - ev-m: ev-m-appearances, -sceptics, -hist_jesus, -consistency, -emptytomb (→ BAR-10); ev-m-eyewitnesses
+    (→ BAR-13); ev-m-multiatt (hedged, clean); ev-m-archaeology (→ BAR-18).
+  - /briefs: grepped for Q, John's independence, Bailey, Mark 13 and Papias; no finding.
+  - /sources: no relevant Gospel-origins PD passage (Papias is already quoted on-site from Eusebius).
+  - Pass-2 mandatory fixes (②):
+    - John's independence is stated as majority view or fact on 7 surfaces, against our own hedge and
+      `known-traps.md` → **BAR-10**.
+    - The baptism "attested across Mark, Q, John" on `ev-s3.html` L99 → **BAR-11**.
+- Backlog rows logged (verdicts 3/4): BAR-3, BAR-4, BAR-5, BAR-6, BAR-7, BAR-8, BAR-9 (plus the two ② rows BAR-1 and BAR-2) in `docs/content-backlog.md`. Pass 2: BAR-12 to BAR-18 (plus the ② rows BAR-10 and BAR-11).
+- "Is the source better than our essay anywhere?" — yes, narrowly. Its chronological anchors (Aretas; inclusive reckoning), its use of 1 Thessalonians as a window (4:14; 1:1, 1:10), Tacitus's "checked, then broke out again", and Acts 1:14 on the brothers. Pass 2 adds four more: Paul's explicit appeals to Jesus' sayings (1 Cor 7:10–12; 9:14), a hedge on Bailey, the Q alternatives, and the Acts 10 / Mark outline. Everywhere else ours is better hedged (see the sections below).
 
 Surfaces: `library/*` essays · `/answers/*` · `ev-s*` cards · `ev-m-*` mastery pages · `/briefs` · `/sources`.
 
@@ -266,7 +382,7 @@ Surfaces: `library/*` essays · `/answers/*` · `ev-s*` cards · `ev-m-*` master
 | 32 | Gospel of Peter "third century" (App. C) | ⑤ hazard | Usually dated to the 2nd century; `gospel-authorship.html` says second-century. Don't import. |
 | 33 | Davidide / Hegesippus argument | ⑥ non-recommendation | `sceptics.html` rightly calls the Hegesippus material later and partly legendary. Building an argument on it would weaken us. |
 | 34 | Aramaisms in Acts; Selwyn's 1 Peter parallels | ⑥ non-recommendation | Contested (Torrey, Wilcox); low value for us. |
-| 35 | Mark 13:14 and the Caligula crisis (39–40) | ⑥ non-recommendation | A real scholarly suggestion (Theissen), but it bears on Mark's dating, which ch. 13 (not read) handles. Not mined; don't use from this note. |
+| 35 | Mark 13:14 and the Caligula crisis (39–40) | ⑥ non-recommendation → see #46 | A real scholarly suggestion (Theissen). Ch. 13, read in pass 2, builds a "Mark 13 written soon after 40" case on it; verdict ⑤ at #46. |
 | 36 | Crossan's method (no Acts; "Q Gospel"; Thomas, Peter) | ① corroboration (partial) | `minimalfacts.html`, `burial.html` and others already engage Crossan on the points we use. Barnett's "never cites Acts" is polemical and unverified: don't import. |
 
 **Mastery-page and memorised layer:** `ev-m-disciplesbelief.html` (BAR-2), plus the `ev-m-*` twins of any essay a row
@@ -291,6 +407,42 @@ early Galatians and the crucifixion date, the 2005 book is more confident than t
 the Galilean, the ossuary) less current. **Dominant finding: corroboration, plus a handful of narrow upgrades.** The
 mine's most valuable output is not from the book at all: **two internal errors in our own surfaces** (BAR-1, BAR-2),
 surfaced because the book made us check the chronology and the failed-messiah list.
+
+### Pass 2 verdicts — chapters 11–14 (run 2026-11-21; numbering continues from the table above)
+
+| # | Lead (our words) | Verdict | Where / why |
+|---|---|---|---|
+| 37 | John's independence of the Synoptics (ch. 14) — and Barnett's own concession that the field has swung back toward dependence | **② error in ours (hedge broken)** | Our own `docs/known-traps.md` (Carson mine) forbids stating it as settled, and `multiatt.html` correctly says "though this is itself debated". But: `ev-s2.html` L639 "most scholars judge John's Gospel not to depend on Mark, Matthew, or Luke"; `library/appearances.html` L142 + `ev-m-appearances.html` L445 "John, whose resurrection narratives most scholars judge independent of the Synoptics"; `ev-s2.html` L587/L639/L710 "independent of one another"; `ev-m-sceptics.html` L441 "in Mark and John independently — two of the strongest attestation positions"; `ev-m-hist_jesus.html` L575 "Paul, Mark, Q, John — independently attesting"; `library/consistency.html` L187 + `ev-m-consistency.html` L1096 "John, writing independently"; `answers/_data.json` (contradictions answer) "John writes largely independently". **→ BAR-10 (P1)** |
+| 38 | The baptism by John as multiply attested | **② error in ours** | `ev-s3.html` L99: "consistent attestation of this event across multiple independent sources (Mark, Q, John)". John never narrates the baptism (1:29–34 is the Baptist's testimony), and a Q baptism scene is disputed. The essay says it correctly ("Jesus' link to John the Baptist is attested in Mark, Q, and John", `multiatt.html`). The card overstates its own essay. **→ BAR-11 (P1)** |
+| 39 | Paul's explicit appeals to Jesus' sayings (1 Cor 7:10 vs 7:12 "I, not the Lord"; 9:14; 11:23–25) and the Rom 12–14 / 1 Thess 4–5 echoes (Allison 1982) | **③ weaker in ours** | Zero hits site-wide for 1 Cor 7:10, 9:14, Rom 12:14, 1 Thess 4:15 or Allison's article. `hist_jesus.html`'s answer to "Paul says little about the earthly Jesus" concedes "few of the sayings" and lists only biographical facts. Paul *distinguishing* a command of the Lord from his own judgment is the concrete answer (and it heads off "the Lord = a revelation"). `earlydate.html`'s closing objection ("you rescued the creed, not the Gospels") can add that the sayings tradition is also attested in the 50s. Both passes converged. **→ BAR-12 (P2)** |
+| 40 | Kenneth Bailey's "informal controlled" model (ch. 11 n. 27 critique) | **③ weaker in ours** | `eyewitnesses.html` (and `ev-m-eyewitnesses.html` glossary/drills) present Bailey's "decades of observing village oral tradition" as a credential, with **no** note that the model is contested: Weeden's critique (*JSHJ* 7, 2009 — verify) and Barnett's point that the first transmission was urban and synagogue-based. Our argument does not rest on Bailey (it rests on living witnesses and durable memory), so a half-clause hedge is enough. ⚠ Do **not** import Barnett's reading of Luke 1:1–4 as *written* hand-overs: our "delivered" is correct (*paredosan* does not specify writing). **→ BAR-13 (P3)** |
+| 41 | Q counted as an independent stream; Farrer/Goodacre | **③ weaker in ours** | `multiatt.html` and the `ev-s3.html` multiple-attestation cards count Q as a stream (Mark, Q, M, L) without saying that on the Farrer hypothesis (Goodacre) Q disappears and "Mark + Q" collapses. `jesus_claims.html` and `ev-m-multiatt.html` already hedge it. Add one clause, plus concrete grounds for John's divergence (the shared incidents that diverge) with "debated" kept. **→ BAR-14 (P3)** |
+| 42 | Gospel dates and "no gospel describes AD 70" | **③ weaker in ours (drift)** | Mark is "around AD 70" (`earlydate.html`, `ev-s4.html`, `respred.html`) vs "c. 65-70" (`ev-s2.html`, `answers/_data.json`) vs "c. 60-70" (`ev-s3.html` L232); `consistency.html` fn (L222) says "Licona, following the critical majority, dates Mark to c. 50–70", which **contradicts our own statement of the majority** (verify against Licona 2019 — if Licona does not say that, it is a ②). `answers/_data.json` L797 says "none of the gospels describes the destruction of the Jerusalem temple in AD 70 as a past event — a strange omission", while `earlydate.html` and `jewishness.html` concede Matt 22:7 and Luke 21:20 are read by many as hindsight. **→ BAR-15 (P3)** |
+| 43 | Kloppenborg's Q strata / "Q has no passion, so the real Jesus was a sage" | **④ missing** | No surface states or answers this common sceptical move. Answer from the book's leads, hedged: Q is hypothetical (and disputed); strata are reconstructions; even the reconstructed Q has the Son–Father saying (Luke 10:21–22, already on `jesus_claims.html`), the Coming One (Luke 7:22), the cross saying (Luke 14:27). Verify the "source we don't have" quotation (Ehrman 1999, 133) before use. **→ BAR-16 (P4)** |
+| 44 | Acts 10:36–43 as a Mark-shaped outline of Peter's preaching (Dodd 1936; Guelich) | **④ missing** | Dodd is cited only for other points. A hedged sentence in `eyewitnesses.html` or `earlydate.html` (Luke's summary; consistency, not proof). Pairs with BAR-7(b). **→ BAR-17 (P4)** |
+| 45 | Bethesda "five porticoes" | **③ weaker in ours (unsourced)** | `archaeology.html` L167, `ev-m-archaeology.html` L487 "a feature many scholars once dismissed as symbolic invention"; `ev-s4.html` L265 "critics called an invented detail" — no named critic. Either cite one or soften to "once read as symbolic". (Barnett only lists Bethzatha as Johannine topography.) **→ BAR-18 (P4)** |
+| 46 | Mark 13 dated "soon after 40" (Caligula); Barnett's Josephus sequence argument (desecration after destruction) | **⑤ hazard — ours is better** | A minority position. The sequence argument does not discriminate: post-70 readers usually tie 13:14 to the Zealots' defilement of the Temple in 67–68 (*War* 4), which precedes the destruction. `earlydate.html`'s reply (no fire, siege or Titus; Sanders "probably pre-70"; Dodd on 587 BC; Jesus son of Ananias; core case independent of Mark's date) is stronger and properly hedged. Do not import. |
+| 47 | Written Greek sayings collections "certain" by c. 50 | ⑤ hazard | An overclaim (Barnett himself writes "most probably" elsewhere). |
+| 48 | "Q may be the earliest document of Christianity" with an "exalted christology"; Son of Man "unquestionably messianic"; the parable of the pounds as presupposing Jesus' death and return | ⑤ hazard | All overclaims or contested readings. They sit badly with our Q hedges and our Son-of-Man fences. (The pounds reading does not collide with the WIG returning-master fence, since we already read those parables of Jesus' own return; but it proves nothing about *Q*.) |
+| 49 | John fixed in Palestine before AD 66; sign-prophets "but not afterward" | ⑤ hazard | A minority view, and the "not afterward" claim is shaky (Josephus reports a later sign-prophet, Jonathan the weaver at Cyrene, *War* 7.437–450 — verify). Our "John c. 90–95" consensus statement with the debate noted is right. The Birkath ha-Minim critique is already carried on `jewishness.html`. |
+| 50 | Luke used John (Matson); "Luke-Acts entertains no positive future for Israel" | ⑤ hazard | Minority / contested. Do not import. |
+| 51 | Papias "now held" 20–30 years before 130 | ⑤ hazard (ours better) | Our "most current proposals run from about AD 95 to about 140" contains this and is better hedged. Do not narrow. |
+| 52 | James ossuary "identifies him as 'brother of Yeshua'" (ch. 11, stated as fact — stronger than ch. 10's "may be genuine") | ⑤ hazard | Zero site mentions. The existing `known-traps.md` entry is extended to cover this wording. |
+| 53 | Letter of James and 1 Peter as early windows on the sayings tradition (20 links; Davids; Gundry) | ⑥ non-recommendation | Both letters' authorship and dates are disputed, so using them would need heavy fences for little gain over Paul (BAR-12), whose letters are undisputed and datable. |
+| 54 | Jesus' languages; Aramaisms; *maran tha* | ① corroboration | `jesus-is-yahweh.html`, `titles.html` and others already use *maran tha*; Casey's Aramaic approach is carried with its critique. No row. |
+| 55 | Pre-Markan blocks; Caiaphas's name absent from Mark's passion | ⑥ non-recommendation | A real argument (Theissen) but technical and contested; no surface needs it. |
+| 56 | "Not only a moral teacher": the earliest tradition is eschatological and messianic too | ① corroboration | `jesus_claims.html`, `jesuschar.html` and `hist_jesus.html` already make the messianic / apocalyptic case. |
+| 57 | Son of Man drift on our side (error-hunter E6) | ① checked, no finding | `jesus_claims.html` "comes on the clouds—a divine prerogative" is the certified cloud-coming premise (the rebuild recorded in CLAUDE.md), not the retired "divine figure of Daniel 7". `ev-s3.html` L1561–1564 and `ev-m-titles.html` meta were gated in the 2026-10 Jesus-tab sweep. No row. |
+
+**Is the source better than our essays anywhere in chs. 11–14?** Yes, in one clear place and three small ones.
+1. **Paul's own appeals to Jesus' sayings** (BAR-12): a concrete, undisputed answer to the mythicist "Paul knew nothing of Jesus", which our essays leave on the weaker genre argument alone.
+2. **A hedge on Bailey** (BAR-13).
+3. **Naming the Q alternatives** (BAR-14).
+4. **The Acts 10 / Mark outline** (BAR-17).
+
+Everywhere else (John's date, Mark 13, Q's christology, Papias, the ossuary) the 2005 book is the less careful one.
+
+**The pass's real yield is again internal.** It found two errors in our own surfaces (BAR-10, BAR-11), where a hub card or mastery page states a contested point flatter than its own certified essay.
 
 ## Passes run (the per-mine standard)
 
@@ -326,24 +478,48 @@ surfaced because the book made us check the chronology and the failed-messiah li
   - Claudius edict, AD 49: Slingerland disputes it; Barnett notes this. We only say "c. 49" where used; no row.
   - Gallio: current.
   - The Testimonium wording: an existing INDEX do-not-use.
+- **Pass 2 passes (chs. 11–14), run on the new leads only.**
+  - Error-hunter (Fable) and argument-upgrade (Sonnet), both read-only `Explore`, run in parallel and not given the
+    classifications.
+  - Repo state checked with `git status` before and after: the only modified file was this note, edited by the main
+    session.
+  - Both passes converged on Paul's sayings (BAR-12) and on John's independence.
+  - The error-hunter found BAR-10, BAR-11, BAR-15 and BAR-18.
+  - The argument-upgrade pass judged our Mark 13 reply and our Papias range better than the book's.
+  - **Checked by direct read before logging:** ev-s2 L639, appearances L142, ev-m-appearances L445, ev-m-sceptics
+    L441, ev-m-hist_jesus L575, consistency L187/L222, ev-s3 L99/L232, answers L797, and the archaeology Bethesda
+    line.
+  - **Not logged:** the error-hunter's Son-of-Man drift (#57: it is the certified cloud-coming premise, gated 2026-10).
+  - **Triangulation:** the Carson note (2026-11-09) already warned against proving John's independence. Barnett, an
+    independence advocate, himself concedes the field has moved the other way, so two sources agree the point is
+    open.
+  - **Objection register:**
+    - "Paul knew nothing of Jesus' teaching": answered only weakly (BAR-12).
+    - "Q shows a non-messianic sage": not answered anywhere (BAR-16).
+    - "The Gospels are post-70 *ex eventu*": answered (earlydate).
+  - **Currency scan:** Papias's date, the Q debate (Goodacre since 2002) and the post-1980s swing on John's dependence
+    are all reflected in our hedges. The James ossuary came up again (trap extended).
 - **Retired-claim grep:** the retired Daniel 7 claims (`daniel7-figure-is-divine`, `pelach-only-to-God`) do not appear
   in this note, and the mined chapters do not discuss Daniel 7.
 
 ## Hazards routed to a guard (same commit)
 
-`docs/known-traps.md`, three entries:
-1. James ossuary, "may be genuine" (2005).
+`docs/known-traps.md`: three entries in pass 1, two extensions in pass 2.
+1. James ossuary, "may be genuine" (2005). Extended in pass 2 to ch. 11's wording, that the ossuary "identifies" James.
 2. Judas the Galilean, "Josephus records his death and the scattering": it is Acts 5:37.
 3. Luke the companion / Acts an "equal primary source": don't harden the hedge.
+4. (pass 2) John's independence: the existing Carson-mine entry is extended. Never write "most scholars judge John independent"; Barnett, an advocate of independence, concedes the field swung back toward dependence after the mid-1980s.
 
 ## Rows this mine logged — awaiting go-ahead
 
-Verdict-② first. Full text in `docs/content-backlog.md` (rows **BAR-1…BAR-9**).
+Verdict-② first. Full text in `docs/content-backlog.md` (rows **BAR-1…BAR-18**; BAR-10…18 from pass 2).
 
 | Row | Pri | Verdict | Change | Reader impact |
 |---|---|---|---|---|
 | **BAR-1** | **P1** | ② | Harmonise the Jerusalem-visit chronology on 4 surfaces by **porting** `earlycreed.html`'s certified wording (conversion c. AD 33–35; visit c. AD 36–38; received at conversion *or* confirmed in the fortnight; Gallio "dates Gallio and thereby anchors Paul"). Targets: `ev-s3.html` ~L1974; `paul-divinity.html` fn L191; `briefs/_data.json` ~L1886; `ev-s2.html` L455 (also drop "received this creed from the eyewitnesses… 36-39 AD"). MK/ES mirrors in the same commit. | **live AI** (brief) + 2 hub cards + public essay |
 | **BAR-2** | **P1** | ② | Correct the Judas the Galilean attribution: Josephus does not record his death or the scattering of his followers (Acts 5:37 does). **Verify Whiston first** (*Ant.* 18.4–10, 23; 20.102; *War* 2.118, 2.433; 7.253). Targets: `postres.html` L183 (+ fn L224); `ev-m-disciplesbelief.html` L348, L408. | public essay + mastery memorised layer |
+| **BAR-10** | **P1** | ② | (pass 2) Re-hedge John's independence on 7 surfaces by porting `multiatt.html`'s certified clause ("many scholars treat John as drawing on traditions substantially independent of the Synoptics, though this is itself debated"). Targets: `ev-s2.html` L587/L639/L710; `library/appearances.html` L142 + `ev-m-appearances.html` L445; `ev-m-sceptics.html` L441; `ev-m-hist_jesus.html` L575; `library/consistency.html` L187 + `ev-m-consistency.html` L1096; `ev-m-emptytomb.html` L423; the contradictions answer in `answers/_data.json`. MK/ES mirrors in the same commit. | 2 hub cards + public essays + memorised mastery layer + public answer |
+| **BAR-11** | **P1** | ② | (pass 2) `ev-s3.html` L99: John does not narrate the baptism, and a Q baptism scene is disputed. Port `multiatt.html`'s "Jesus' link to John the Baptist is attested in Mark, Q, and John"; keep the embarrassment point. MK/ES mirrors. | hub card |
 | BAR-3 | P3 | ④ | Add 1 Thess 4:14 to `earlycreed.html`'s list of early confessions (L43), with a verified scholarly cite for its pre-formed status. | public essay |
 | BAR-4 | P3 | ③ | `paul-divinity.html`: cite 1 Thess 1:1 and 1:10 (the earliest letter, c. AD 50) alongside 3:11. | public essay |
 | BAR-5 | P3 | ③ | `sceptics.html`: Acts 1:14 as Luke's bracket on the brothers' change (flagged as Luke; does not name James; Marian-neutral). | public essay |
@@ -351,5 +527,12 @@ Verdict-② first. Full text in `docs/content-backlog.md` (rows **BAR-1…BAR-9*
 | BAR-7 | P4 | ③/④ | `earlycreed.html`: (a) the Aretas IV (d. AD 40) upper bound, hedged; inclusive reckoning of "after three years"; (b) one hedged sentence on the Acts 10:39–43 parallel (Luke's summary: consistency, not proof). | public essay |
 | BAR-8 | P4 | ④ | `paulconv.html`: (a) state and answer the Gal 1:18–22 / Acts 9:26–29 first-visit tension (skeptic red-team); (b) optional: Arabia as preaching among Nabateans, labelled a reading (Murphy-O'Connor's caution). | public essay |
 | BAR-9 | P3 | ③ | `answers/_data.json` L567 (minimal-facts answer): "a hostile scholar like John Dominic Crossan" → "a sceptical scholar". Candidate `docs/scholar-labels.md` row when fixed. | public answer page |
+| BAR-12 | P2 | ③ | (pass 2) `hist_jesus.html` (+ `ev-m-hist_jesus.html`): answer "Paul says little about Jesus" with Paul's own distinction between a command of the Lord and his own judgment (1 Cor 7:10–11 vs 7:12), and with 9:14. Present the Rom 12–14 and 1 Thess 4–5 echoes as probable and unattributed (Allison 1982, verify). Retire "few of the sayings" as too weak. Optional: one hedged sentence in `earlydate.html`'s closing reply, that the sayings tradition is also attested in the 50s. Never Barnett's "certain written collections". | public essay (anti-mythicist) |
+| BAR-13 | P3 | ③ | (pass 2) `eyewitnesses.html` (+ `ev-m-eyewitnesses.html` glossary/drills): note that Bailey's model is contested (Weeden 2009, verify; the model rests on modern village observation). Keep "delivered"; don't import the written-hand-over reading. | public essay |
+| BAR-14 | P3 | ③ | (pass 2) `multiatt.html` + `ev-s3.html` attestation cards: name the Farrer/Goodacre alternative wherever Q is counted as a stream. Give concrete grounds for John's divergence (shared incidents told differently), keeping "debated". | public essay + hub card |
+| BAR-15 | P3 | ③ | (pass 2) Gospel-date consistency. Mark is "around 70", "65-70" and "60-70" on different surfaces. Verify `consistency.html` fn's "Licona, following the critical majority, dates Mark to c. 50–70" (a ② if Licona does not say so). Hedge `answers/_data.json` L797's "none of the gospels describes … AD 70 … a strange omission" against Matt 22:7 / Luke 21:20, as `earlydate.html` already does. | public answers + essays + cards |
+| BAR-16 | P4 | ④ | (pass 2) Answer the "Q shows a non-messianic sage" objection (Kloppenborg's strata): Q is hypothetical and disputed; the strata are reconstructions; even the reconstructed Q has Luke 10:21–22, 7:22 and 14:27. Target `jesus_claims.html` or `multiatt.html`. Verify the quoted "a source that we don't have" (Ehrman 1999, 133). | public essay |
+| BAR-17 | P4 | ④ | (pass 2) One hedged sentence in `eyewitnesses.html` or `earlydate.html` on Acts 10:36–43 as a Mark-shaped outline of Peter's preaching (Dodd 1936; Guelich): it is Luke's summary, so consistency, not proof. Pairs with BAR-7(b). | public essay |
+| BAR-18 | P4 | ③ | (pass 2) Bethesda's "five porticoes": name a critic, or soften "many scholars once dismissed as symbolic invention" (`archaeology.html` L167, `ev-m-archaeology.html` L487) and "critics called an invented detail" (`ev-s4.html` L265). | public essay + card |
 
 **STOP: no further mining until the owner gives the go-ahead and these rows are cleared** (`node tools/backlog-open.mjs`).

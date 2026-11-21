@@ -140,6 +140,11 @@ trap is proving them from the wrong source or hardening the hedge into a fact.)
   After Dodd, What?") is a cautious convert to the *opposite* view** — he grants John likely knew Mark.
   Never cite Dodd or Carson as *settling* John's independence, and never upgrade the hedged discussion
   into an asserted fact. (Carson mine, 2026-11-09.)
+  The phrase **"most scholars judge John independent of the Synoptics" is itself the hardened form** and appeared
+  on 7 surfaces in 2026-11 (backlog BAR-10). Even Barnett (2005), an advocate of John's independence, concedes the
+  field swung back toward John's knowing the Synoptics after the mid-1980s. Say instead: "many scholars treat John
+  as drawing on traditions substantially independent of the Synoptics, though this is itself debated" (the certified
+  `multiatt.html` wording). (Barnett mine, pass 2, 2026-11-21.)
 - **Johannine authorship — don't assert John son of Zebedee *wrote* John.** Apostolic authorship by
   the son of Zebedee is a minority position; `eyewitnesses.html` and the Gospels-reliability material
   stay on the broader "early, within-living-memory, eyewitness-rooted tradition" case. Don't narrow it
@@ -156,6 +161,8 @@ trap is proving them from the wrong source or hardening the hedge into a fact.)
   The authenticity of the "brother of Jesus" phrase remains disputed; the 2012 Jerusalem acquittal of the
   owner on forgery charges was **not** an authentication. No served page mentions it — keep it that way, or
   name it only as disputed. (Barnett mine, 2026-11-21.)
+  ⚠ Barnett's ch. 11 goes further and says outright that the ossuary "identifies him as 'brother of
+  Yeshua'"; that wording is the same trap. (Barnett mine, pass 2, 2026-11-21.)
 - **Luke as Paul's companion / Acts as an "equal primary source" — don't harden the hedge.** Whether the
   "we" passages mean the author was present is debated (Robbins vs Hemer), and the name Luke rests on later
   testimony; `gospel-authorship.html` says so. Some defenders (Barnett 2005) call the alternatives
