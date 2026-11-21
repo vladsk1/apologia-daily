@@ -1225,6 +1225,35 @@
           "the sender is not greater than the sent"
         ]
       }
+    },
+    {
+      "id": "no-group-hallucination-cases",
+      "retired": "2026-11-22",
+      "what": "Stating flatly that there are no (well-)documented cases of group / shared / collective hallucinations, or that collective hallucinations do not happen, as a settled clinical fact.",
+      "why": "docs/known-traps.md (Allison): Dale Allison documents reported collective visionary experiences and judges the evidence equivocal; the certified library/appearances.html:176 verdict is 'without documented precedent, and bearing a heavy burden the theory has not discharged', scoped to the kind of collective hallucination the vision hypothesis needs (many people independently converging on the same seen-and-heard figure). The flat form was live as daily-args.json `appearances` p3/evidence until 2026-11-22 (BAR-26, Barnett mine).",
+      "instead": "Port library/earlycreed.html:184 / ev-s3.html:1976: 'hallucinations are, as a rule, private and individual, and a collective hallucination of the kind the vision hypothesis needs here — many people independently converging on the same seen-and-heard risen Jesus — has no established clinical basis'; or library/appearances.html:176's bounded verdict, 'without documented precedent, and bearing a heavy burden the theory has not discharged'.",
+      "patterns": [
+        "no (well-)?documented cases of (shared |group |collective |mass )+hallucinations?",
+        "(group|collective|shared|mass) hallucinations? (do not|don't|never) (happen|occur|exist)",
+        "hallucinations?[^.]{0,80}(do not|don't|never) occur in groups",
+        "no (well-)?documented (clinical )?cases? of (a )?(mass|group|collective|shared)[^.]{0,20}hallucinat"
+      ],
+      "allow": [],
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "Hallucinations are private experiences — there are no well-documented cases of shared group hallucinations — and Paul was not grieving.",
+          "There are no documented cases of collective hallucinations.",
+          "Group hallucinations do not happen.",
+          "Clinical hallucinations are private experiences — so far as clinical psychology has documented, they do not occur in groups.",
+          "There is no documented case of mass simultaneous hallucination with consistent content."
+        ],
+        "must_not_fire": [
+          "a collective hallucination of the kind the vision hypothesis needs here — many people independently converging on the same seen-and-heard risen Jesus — has no established clinical basis",
+          "The honest verdict is not that a group hallucination is impossible, but that it is without documented precedent.",
+          "Group hallucination of a shared, conversational, embodied figure fits no documented case."
+        ]
+      }
     }
   ]
 }
