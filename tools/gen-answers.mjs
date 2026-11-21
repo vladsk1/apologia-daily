@@ -64,6 +64,7 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { CANON } from './sync-nav.mjs';   // single source of truth for the nav menu
+import { patchAnswerPage } from './answer-patch.mjs';   // surgical --sync (BAR-25: never drop hand-authored sections)
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ANSWERS = join(ROOT, 'answers');
@@ -331,9 +332,27 @@ for (const e of data.answers) {
 }
 
 if (SYNC) {
-  for (const { e } of drifted) writeFileSync(join(ANSWERS, e.slug + '.html'), page(e), 'utf8');
-  console.log(drifted.length ? `--sync: regenerated ${drifted.length} drifted page(s):` : '--sync: no drifted pages.');
-  drifted.forEach(({ e, fields }) => console.log(`   - ${e.slug}  [${fields.join(', ')}]`));
+  // Patch ONLY the generated regions in place (tools/answer-patch.mjs) — a wholesale page(e)
+  // rewrite used to delete hand-authored sections (BAR-25). Refuse, loudly, rather than guess.
+  const refused = [];
+  const synced = [];
+  for (const { e, fields } of drifted) {
+    const fp = join(ANSWERS, e.slug + '.html');
+    const html = readFileSync(fp, 'utf8');
+    const r = patchAnswerPage(html, { q: e.q, body: renderBody(e), metaAttr: escAttr(e.meta), ldText: String(e.a).replace(/\n\n/g, '  ') });
+    if (!r.ok) { refused.push([e.slug, r.reason]); continue; }
+    const left = driftFields(e, r.html);
+    if (left.length) { refused.push([e.slug, `still drifted after patch: ${left.join(', ')}`]); continue; }
+    writeFileSync(fp, r.html, 'utf8');
+    synced.push({ e, fields });
+  }
+  console.log(synced.length ? `--sync: patched ${synced.length} drifted page(s) in place (hand-authored content preserved):` : '--sync: no pages patched.');
+  synced.forEach(({ e, fields }) => console.log(`   - ${e.slug}  [${fields.join(', ')}]`));
+  if (refused.length) {
+    console.error(`\n⛔ --sync REFUSED ${refused.length} page(s) — their generated regions could not be patched safely, so nothing was written. Edit the served HTML by hand to match _data.json, then re-run --check:`);
+    refused.forEach(([slug, why]) => console.error(`   - ${slug}: ${why}`));
+    process.exitCode = 1;
+  }
 }
 
 // ── REVIEW GATE (enforced) + additive creation ──
@@ -384,7 +403,7 @@ if (drifted.length && !SYNC) {
   console.error('');
 }
 
-if (!created.length) { console.log('No new pages — every _data.json entry already has a page.'); process.exit(0); }
+if (!created.length) { console.log('No new pages — every _data.json entry already has a page.'); process.exit(process.exitCode || 0); }   // keep a --sync refusal's exit 1
 console.log(`Created ${created.length} new page(s):`);
 created.forEach((e) => console.log('  answers/' + e.slug + '.html  [' + e.category + ']'));
 
