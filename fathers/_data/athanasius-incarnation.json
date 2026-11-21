@@ -15,7 +15,8 @@
  "quoteCheck": {
   "authorRe": "Athanasius",
   "citeRe": "On the Incarnation(?: of the Word)?(?:\\s*\\(De Incarnatione\\))?[,\\s]*(?:§\\s*)?(?:\\d{1,2}(?:\\.\\d{1,2})?)?|De Incarnatione[,\\s]*(?:§\\s*)?(?:\\d{1,2}(?:\\.\\d{1,2})?)?",
-  "sourcesWorkRe": "^On the Incarnation of the Word"
+  "sourcesWorkRe": "^On the Incarnation of the Word",
+  "watchRe": "(?:became|become|was made|been made) (?:man|human)[^”\"’]{0,25}(?:might|may|would) (?:be made|become) (?:god|divine)"
  },
  "topics": {},
  "description": "Athanasius of Alexandria’s On the Incarnation of the Word, complete, in a public-domain translation (1892), with a short guide.",

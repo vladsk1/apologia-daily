@@ -103,34 +103,34 @@ INC-1 below). ⚠ **Tool gap:** the script only looks at quotations near a citat
 same misquote on `ev-m-trinity_mormons.html`, the mastery port or `pocket-cards`. The error-hunter found those by reading.
 
 ### 6(b) Error-hunter (Opus) and improvement-finder (Sonnet), read-only, never handed each other's conclusions
-**None of these is built** (except INC-5, a note fixed with the book). Every Athanasius quotation below was re-checked
+**All closed 2026-11-22, see §8** (INC-5 was fixed with the book). Every Athanasius quotation below was re-checked
 by script against the hosted text. ② = error in ours, ③ = weaker in ours, ④ = missing. No row exists in the MK/ES
 mirrors (there is no MK/ES `trinity_mormons` page or pocket-cards file, and the MK/ES theosis card names no Father).
 
 | Row | Verdict | Our page | Finding | Athanasius |
 |---|---|---|---|---|
-| INC-1 | ② P1 | `library/trinity_mormons.html` :170 (steelman) and :224 (fn 9); same quote on `ev-m-trinity_mormons.html` :491 and :1104, `docs/mastery-ports/trinity_mormons.json`, `pocket-cards.json` (+ the rendered `pocket-cards.html`) | Quotes Athanasius as saying the Word "became man that we might be made god", cites "§54 … (or 'divine')" and a 2011 translation in the bibliography. The words are not the 1892 text and no translation is named at the quote. Re-quote 54.3 exactly and link it; drop "(or 'divine')". | 54.3 "For He was made man that we might be made God" |
-| INC-2 | ② P1 | `ev-m-trinity_mormons.html` :526 | "Athanasius — in the very treatise — insists … we become 'partakers of the divine nature' by grace, glorified creatures forever, never … creators of worlds". The treatise never quotes 2 Peter 1:4 and never uses "divine nature"; the rest is our own wording put in his mouth. Keep 2 Peter 1:4 as Scripture's; give him his own words. | 4.6 "man is by nature mortal, inasmuch as he is made out of what is not"; 5.1 "destined, by the grace following from partaking of the Word, to have escaped their natural state" |
-| INC-3 | ③ | `library/trinity_mormons.html` :184 and fn 9 ("insists relentlessly … the uncreated Creator"; "insists throughout"); shorter copies on `ev-m-trinity_mormons.html` :493, :1020, :1104, the mastery port, `objections.json` | Overstated and uncited: the line is in the text at specific places, not "relentlessly"; "uncreated" does not occur. Pinpoint it. ⭐ **4.6 reads Psalm 82:6 itself** ("I have said ye are gods … but ye die like men") of man made for incorruption by grace, which bears directly on this essay's Psalm 82 argument. Check it sits with the essay's own reading of Psalm 82 before using it. | 4.6; 5.1; 17.1 "distinct in being from the universe"; 43.6 |
-| INC-4 | ② low | `ev-m-trinity_mormons.html` :521 (objection heading) | The objector's paraphrase in quotation marks: "Athanasius said God became man that man might become god". Quote 54.3, or drop the marks. | 54.3 |
+| INC-1 ✅ 2026-11-22 | ② P1 | `library/trinity_mormons.html` :170 (steelman) and :224 (fn 9); same quote on `ev-m-trinity_mormons.html` :491 and :1104, `docs/mastery-ports/trinity_mormons.json`, `pocket-cards.json` (+ the rendered `pocket-cards.html`) | Quotes Athanasius as saying the Word "became man that we might be made god", cites "§54 … (or 'divine')" and a 2011 translation in the bibliography. The words are not the 1892 text and no translation is named at the quote. Re-quote 54.3 exactly and link it; drop "(or 'divine')". | 54.3 "For He was made man that we might be made God" |
+| INC-2 ✅ 2026-11-22 | ② P1 | `ev-m-trinity_mormons.html` :526 | "Athanasius — in the very treatise — insists … we become 'partakers of the divine nature' by grace, glorified creatures forever, never … creators of worlds". The treatise never quotes 2 Peter 1:4 and never uses "divine nature"; the rest is our own wording put in his mouth. Keep 2 Peter 1:4 as Scripture's; give him his own words. | 4.6 "man is by nature mortal, inasmuch as he is made out of what is not"; 5.1 "destined, by the grace following from partaking of the Word, to have escaped their natural state" |
+| INC-3 ✅ 2026-11-22 | ③ | `library/trinity_mormons.html` :184 and fn 9 ("insists relentlessly … the uncreated Creator"; "insists throughout"); shorter copies on `ev-m-trinity_mormons.html` :493, :1020, :1104, the mastery port, `objections.json` | Overstated and uncited: the line is in the text at specific places, not "relentlessly"; "uncreated" does not occur. Pinpoint it. ⭐ **4.6 reads Psalm 82:6 itself** ("I have said ye are gods … but ye die like men") of man made for incorruption by grace, which bears directly on this essay's Psalm 82 argument. Check it sits with the essay's own reading of Psalm 82 before using it. | 4.6; 5.1; 17.1 "distinct in being from the universe"; 43.6 |
+| INC-4 ✅ 2026-11-22 | ② low | `ev-m-trinity_mormons.html` :521 (objection heading) | The objector's paraphrase in quotation marks: "Athanasius said God became man that man might become god". Quote 54.3, or drop the marks. | 54.3 |
 | INC-5 ✅ 2026-11-22 | ② | `sources/athanasius-on-the-incarnation.json`, note on inc-4 | Said "corruption gaining mastery 'as king'"; it is death. **Fixed with the book** (note only; the passage text was right). | 4.4 "death had the mastery over them as king" |
-| INC-6 | ④ | `library/trinity_mormons.html` :230 (bibliography); `our-sources.json` (generated) | Cites the 2011 translation only. Once INC-1 quotes 1892, cite Robertson (NPNF2 4, 1892), link the hosted text, rebuild `our-sources.json`. | — |
-| INC-7 | ④ | `ev-m-trinity_mormons.html` :592 (reading list) | Entry has no link. Link `/fathers/athanasius-incarnation-text.html#s54`. | 54.3; 4.6; 5.1 |
-| INC-8 | ② P2 (owner call) | `library/virginbirth.html`, closing paragraph | Says the early church "did not think the virginal conception proved Jesus' divinity". Athanasius is a fourth-century counter-example: the virgin birth is "no small proof of His Godhead" (18.5). Narrow the sentence; do not quote 18.5 in support of the essay's argument, which it contradicts. | 18.5; 35.7 |
-| INC-9 | ③ | `library/nicene-creed.html`, "Came down from heaven" paragraph | Rests on Augustine; Athanasius said it first. Quote 17.1 (and 17.5). ⚠ Not 17.4 ("wielding") or "instrument", which read Apollinarian out of context. | 17.1; 17.5 |
-| INC-10 | ③ | `library/humanity.html`, the docetism paragraph (beside Ignatius) | "to shew Him to have a body in truth, and not in seeming" is exactly the essay's point. Quote from "the actual body" on only. | 18.1; 8.3 |
-| INC-11 | ③ | `library/humanity.html`, "Second, a real death" | Why a mortal body was needed. ⚠ Pair "impossible for the Word to suffer death" with 20.2 and 18.1, or it reads as the Son not dying. | 9.1; 20.2 |
-| INC-12 | ③ | `library/god-crucified.html`, the Cyril "his own body" paragraph | The "his own body" grammar is already in Athanasius a century before Cyril. ⚠ Not 54.3 "impassible" alone. | 18.1; 20.2 |
-| INC-13 | ③ | `library/god-crucified.html`, the 1 Corinthians 1:25 paragraph (also `crucified-messiah.html`) | He answers "why not an honourable death?" by refusing "fitting" as a merely human measure. Quote as his answer, not his proof. | 21.3–4; 24.4 |
-| INC-14 | ③ | `library/crucified-messiah.html`, the Galatians 3:13 / Deuteronomy 21:23 paragraph | The same two verses, and why only the cross fits. ⚠ Stop at 25.2; not the debt language of 9.2/20.2 (the essay declines to adjudicate atonement models). | 25.2 |
-| INC-15 | ③ | `library/minimalfacts.html` (the swoon paragraph) or `library/burial.html` ("First, it certifies the death") | He already meets "He had not died at all" with a public, witnessed death and the third day. ⚠ Frame as the church reasoning from a public death, not as independent evidence. | 26.2; 23.1 |
-| INC-16 | ④ | `library/worship-of-jesus.html`, the Pliny / graffito paragraph | The fourth-century continuation of "mocked as crucified, worshipped as God". ⚠ c. 318 or later: a coda only, never part of the early-date case. | 53.2; 46.4 |
-| INC-17 | ③ | `library/persecution.html`, "Notice what the hostile sources concede" | Descriptive clauses only; he argues from the martyrs to the truth of the resurrection (27.1), which the essay deliberately does not. | 27.2; 28.4 |
-| INC-18 | ③ | `library/evil.html`, the "God did not remain a spectator" paragraph | "What was God in His goodness to do?" and his answer. ⚠ His frame is death and corruption, not suffering; keep to the solidarity paragraph. | 6.7; 8.2 |
-| INC-19 | ③ | `library/humanity.html`, the "grows, tires, hungers" paragraph (or the opening) | 21.7 on hunger, or 43.1–2 ("came not to make a display, but to heal and teach"). ⚠ "the Lord that wore it" and "instrument" (43.4) read as Christ in a costume; prefer 43.1–2. | 21.7; 43.1–2 |
-| INC-20 | ④ (separate gated change) | `api/ask.js`, the `/sources` instruction block | The 54.3 passage reaches the live AI with no fence (notes are not sent), and the block has no "by grace, not by nature" safeguard to match its Trinity one. Add a one-line theosis safeguard, ported from `trinity_mormons`'s certified box ("Deified by grace, not gods by nature"). `api/ask.js` is a gated file. (Orthodoxy lens, round 1.) | 54.3 |
-| INC-21 | ③ (display only) | `sources/athanasius-on-the-incarnation.json`, note on inc-7 | "nor satisfy God's just claim": the text says repentance would "fail to guard the just claim of God" (7.3); "satisfy" is a later Western gloss. Notes are not sent to the AI. (Neutrality lens, round 1.) | 7.3 |
-| INC-22 | tool | `tools/check-father-quotes.mjs` | Misses quotations of a Father that sit away from a citation of the work (INC-1 on four surfaces). Consider a second pass that searches every served page for each hosted work's best-known lines. | — |
+| INC-6 ✅ 2026-11-22 | ④ | `library/trinity_mormons.html` :230 (bibliography); `our-sources.json` (generated) | Cites the 2011 translation only. Once INC-1 quotes 1892, cite Robertson (NPNF2 4, 1892), link the hosted text, rebuild `our-sources.json`. | — |
+| INC-7 ✅ 2026-11-22 | ④ | `ev-m-trinity_mormons.html` :592 (reading list) | Entry has no link. Link `/fathers/athanasius-incarnation-text.html#s54`. | 54.3; 4.6; 5.1 |
+| INC-8 ✅ 2026-11-22 | ② P2 (owner call) | `library/virginbirth.html`, closing paragraph | Says the early church "did not think the virginal conception proved Jesus' divinity". Athanasius is a fourth-century counter-example: the virgin birth is "no small proof of His Godhead" (18.5). Narrow the sentence; do not quote 18.5 in support of the essay's argument, which it contradicts. | 18.5; 35.7 |
+| INC-9 ✅ 2026-11-22 | ③ | `library/nicene-creed.html`, "Came down from heaven" paragraph | Rests on Augustine; Athanasius said it first. Quote 17.1 (and 17.5). ⚠ Not 17.4 ("wielding") or "instrument", which read Apollinarian out of context. | 17.1; 17.5 |
+| INC-10 ✅ 2026-11-22 | ③ | `library/humanity.html`, the docetism paragraph (beside Ignatius) | "to shew Him to have a body in truth, and not in seeming" is exactly the essay's point. Quote from "the actual body" on only. | 18.1; 8.3 |
+| INC-11 ⏹ closed 2026-11-22 | ③ | `library/humanity.html`, "Second, a real death" | Why a mortal body was needed. ⚠ Pair "impossible for the Word to suffer death" with 20.2 and 18.1, or it reads as the Son not dying. | 9.1; 20.2 |
+| INC-12 ✅ 2026-11-22 | ③ | `library/god-crucified.html`, the Cyril "his own body" paragraph | The "his own body" grammar is already in Athanasius a century before Cyril. ⚠ Not 54.3 "impassible" alone. | 18.1; 20.2 |
+| INC-13 ✅ 2026-11-22 | ③ | `library/god-crucified.html`, the 1 Corinthians 1:25 paragraph (also `crucified-messiah.html`) | He answers "why not an honourable death?" by refusing "fitting" as a merely human measure. Quote as his answer, not his proof. | 21.3–4; 24.4 |
+| INC-14 ✅ 2026-11-22 | ③ | `library/crucified-messiah.html`, the Galatians 3:13 / Deuteronomy 21:23 paragraph | The same two verses, and why only the cross fits. ⚠ Stop at 25.2; not the debt language of 9.2/20.2 (the essay declines to adjudicate atonement models). | 25.2 |
+| INC-15 ✅ 2026-11-22 | ③ | `library/minimalfacts.html` (the swoon paragraph) or `library/burial.html` ("First, it certifies the death") | He already meets "He had not died at all" with a public, witnessed death and the third day. ⚠ Frame as the church reasoning from a public death, not as independent evidence. | 26.2; 23.1 |
+| INC-16 ✅ 2026-11-22 | ④ | `library/worship-of-jesus.html`, the Pliny / graffito paragraph | The fourth-century continuation of "mocked as crucified, worshipped as God". ⚠ c. 318 or later: a coda only, never part of the early-date case. | 53.2; 46.4 |
+| INC-17 ⏹ closed 2026-11-22 | ③ | `library/persecution.html`, "Notice what the hostile sources concede" | Descriptive clauses only; he argues from the martyrs to the truth of the resurrection (27.1), which the essay deliberately does not. | 27.2; 28.4 |
+| INC-18 ⏹ closed 2026-11-22 | ③ | `library/evil.html`, the "God did not remain a spectator" paragraph | "What was God in His goodness to do?" and his answer. ⚠ His frame is death and corruption, not suffering; keep to the solidarity paragraph. | 6.7; 8.2 |
+| INC-19 ⏹ closed 2026-11-22 | ③ | `library/humanity.html`, the "grows, tires, hungers" paragraph (or the opening) | 21.7 on hunger, or 43.1–2 ("came not to make a display, but to heal and teach"). ⚠ "the Lord that wore it" and "instrument" (43.4) read as Christ in a costume; prefer 43.1–2. | 21.7; 43.1–2 |
+| INC-20 ✅ 2026-11-22 | ④ (separate gated change) | `api/ask.js`, the `/sources` instruction block | The 54.3 passage reaches the live AI with no fence (notes are not sent), and the block has no "by grace, not by nature" safeguard to match its Trinity one. Add a one-line theosis safeguard, ported from `trinity_mormons`'s certified box ("Deified by grace, not gods by nature"). `api/ask.js` is a gated file. (Orthodoxy lens, round 1.) | 54.3 |
+| INC-21 ✅ 2026-11-22 | ③ (display only) | `sources/athanasius-on-the-incarnation.json`, note on inc-7 | "nor satisfy God's just claim": the text says repentance would "fail to guard the just claim of God" (7.3); "satisfy" is a later Western gloss. Notes are not sent to the AI. (Neutrality lens, round 1.) | 7.3 |
+| INC-22 ✅ 2026-11-22 | tool | `tools/check-father-quotes.mjs` | Misses quotations of a Father that sit away from a citation of the work (INC-1 on four surfaces). Consider a second pass that searches every served page for each hosted work's best-known lines. | — |
 
 ## 7. Review gate (rule 6)
 
@@ -150,3 +150,35 @@ md5-verified unchanged after every round. 0 HERESY in every round. The full reco
 - **Not run:** the citations lens (web). The later dating (335–337, Kannengiesser) rests on the neutrality lens's web
   search; Robertson's "before 319" is from the 1892 volume itself. Biography facts are ported from the certified book-5
   guide. Pastoral sign-off is still owed, as site-wide.
+
+## 8. The rows, closed (2026-11-22, owner: "fix the rows")
+
+**Built (17):** INC-1–4, 6, 7 (the `trinity_mormons` family: 54.3 quoted as printed on every surface; fn 9 cites Robertson
+1892 with a gloss on the capital "God"; the reply now quotes 54.3, 4.6 and *Against the Arians* 3.19 instead of the uncited
+"insists relentlessly on the absolute divide"; 2 Peter 1:4 kept as Scripture's; bibliography and reading list point to the
+hosted text); INC-8 (the claim "the early church did not think the virginal conception proved Jesus' divinity" removed from
+`library/virginbirth.html` **and from every surface that carried it**: `ev-s3.html` + its MK/ES mirrors, `ev-m-virginbirth.html`,
+and the live-AI brief `virgin-birth-isaiah-7-14` — round 1 found it surviving on those after the essay alone was fixed);
+INC-9, 10, 12–16 (one ported quotation each in `nicene-creed`, `humanity`, `god-crucified` ×2, `crucified-messiah`,
+`burial`, `worship-of-jesus`); INC-20 (`api/ask.js` THEOSIS SAFEGUARD); INC-21 (`/sources` note); INC-22
+(`tools/check-father-quotes.mjs` now also checks a work's watched lines anywhere on the site — `quoteCheck.watchRe`; it
+would have caught INC-1 on all four surfaces).
+
+**Closed without change (4), reasons confirmed by all three lenses:** INC-11 (the "real death" paragraph already quotes
+Athanasius 2.70; 9.1 brings "impossible for the Word to suffer death" and the debt language of 9.2); INC-17 (the paragraph is
+built on hostile witnesses; 27.1 argues from the martyrs to the truth of the resurrection, which the essay refuses); INC-18
+(his frame is death and corruption; set beside Moltmann, his "impassible" (54.3) would open a passibility dispute; would need
+MK/ES mirrors); INC-19 (21.7 "the Lord that wore it" collides with the essay's "not God in a costume"; 43.1–2 opens on "some
+nobler instrument" and runs into 43.4 "instrument", and says nothing about growing, tiring or hungering; he is now quoted twice
+on the page).
+
+**Gate:** R1 argument (Opus) STAMPABLE with 3 WEAK; orthodoxy (Opus) CLEAN, 0 HERESY; neutrality (Fable) 1 BREAK (the
+virgin-birth claim alive on sibling surfaces) + 3 WEAK. One merged fix pass in the lenses' wording. R2 (Fable, all three):
+STAMPABLE / CLEAN / STAMPABLE. Three optional POLISH declined (burial "reasoned the same way" → "made the kindred point"; name
+*On the Incarnation* at the first bare "(54.3)" on the mastery page's prose and model answer).
+
+**New row from the gate (pre-existing text, not built):**
+
+| Row | Verdict | Our page | Finding |
+|---|---|---|---|
+| INC-23 | ③ (orthodoxy NOTE, both rounds) | `ev-m-trinity_mormons.html` :526 (accordion reply) | "and GOD NEVER WAS A MAN who progressed": clipped at the capitals it reads against the incarnation. Suggested: "and GOD THE FATHER NEVER WAS A MAN who progressed to deity", matching the essay. Compressed surface: re-gate argument + orthodoxy + neutrality. |

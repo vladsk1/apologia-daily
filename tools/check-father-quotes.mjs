@@ -91,6 +91,18 @@ for (const f of readdirSync(DATA).filter((x) => x.endsWith('.json') && !x.endsWi
         console.log(`  ${at ? '✓ MATCH ' + at : '? NOT FOUND'}  ${file}  “${quote.slice(0, 90)}${quote.length > 90 ? '…' : ''}”${flag}`);
       }
     }
+    // 3. a work's best-known lines, quoted anywhere (quoteCheck.watchRe), even far from a citation of the work:
+    //    the quotation around each match must be the hosted wording (INC-22, 2026-11-22: "became man that we might be
+    //    made god" sat on four surfaces the citation window could not see).
+    if (qc.watchRe) for (const m of txt.matchAll(new RegExp(qc.watchRe, 'gi'))) {
+      const open = Math.max(txt.lastIndexOf('“', m.index), txt.lastIndexOf('"', m.index), txt.lastIndexOf('‘', m.index));
+      const close = txt.slice(m.index).search(/[”"’]/);
+      if (open < 0 || close < 0 || m.index - open > 300) continue;
+      const quote = txt.slice(open + 1, m.index + close).trim();
+      if (seen.has(quote)) continue; seen.add(quote);
+      const at = whereIs(quote);
+      console.log(`  ${at ? '✓ MATCH ' + at : '? NOT FOUND'}  ${file}  “${quote.slice(0, 90)}${quote.length > 90 ? '…' : ''}” (watched line)`);
+    }
   }
 }
 if (STRICT && fail) { console.error(`\n✗ ${fail} /sources passage(s) do not match the hosted text.`); process.exit(1); }
