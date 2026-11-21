@@ -177,8 +177,8 @@ virgin-birth claim alive on sibling surfaces) + 3 WEAK. One merged fix pass in t
 STAMPABLE / CLEAN / STAMPABLE. Three optional POLISH declined (burial "reasoned the same way" → "made the kindred point"; name
 *On the Incarnation* at the first bare "(54.3)" on the mastery page's prose and model answer).
 
-**New row from the gate (pre-existing text, not built):**
+**New row from the gate (pre-existing text; built 2026-11-22, owner go-ahead, gated by all three lenses):**
 
 | Row | Verdict | Our page | Finding |
 |---|---|---|---|
-| INC-23 | ③ (orthodoxy NOTE, both rounds) | `ev-m-trinity_mormons.html` :526 (accordion reply) | "and GOD NEVER WAS A MAN who progressed": clipped at the capitals it reads against the incarnation. Suggested: "and GOD THE FATHER NEVER WAS A MAN who progressed to deity", matching the essay. Compressed surface: re-gate argument + orthodoxy + neutrality. |
+| INC-23 ✅ 2026-11-22 | ③ (orthodoxy NOTE, both rounds) | `ev-m-trinity_mormons.html` :526 (accordion reply) | "and GOD NEVER WAS A MAN who progressed": clipped at the capitals it reads against the incarnation. Suggested: "and GOD THE FATHER NEVER WAS A MAN who progressed to deity", matching the essay. Compressed surface: re-gate argument + orthodoxy + neutrality. |
