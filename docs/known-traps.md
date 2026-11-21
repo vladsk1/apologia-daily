@@ -96,8 +96,10 @@ wrong · what to say instead.
 - **Allison on collective hallucinations — don't enlist him on our side.** Dale Allison argues
   apparition/collective experiences are *more* common than apologists allow and judges the evidence
   **equivocal** — never compress this into "even Allison grants the evidence for collective
-  hallucinations is thin." He personally grants the disciples saw a bodily-appearing Jesus but leaves
-  the *cause* open: never "Allison affirms the resurrection," never "Allison is a flat sceptic." This
+  hallucinations is thin." He personally believes Jesus rose, but as a historian judges the evidence alone unable to
+  compel either verdict, and leaves the cause historically open: never "Allison affirms the resurrection"
+  as a historical verdict, never "even Allison believes Jesus rose" as evidence, never "Allison is a flat
+  sceptic." This
   **shipped live in the `resurrection-group-appearances` brief** (feeding `/api/ask`) and was fixed
   2026-11-10 (RES-A1). Check `docs/scholar-labels.md` before compressing him.
 
