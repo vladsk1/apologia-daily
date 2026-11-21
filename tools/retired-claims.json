@@ -1254,6 +1254,48 @@
           "Group hallucination of a shared, conversational, embodied figure fits no documented case."
         ]
       }
+    },
+    {
+      "id": "ludemann-atheist-label",
+      "retired": "2026-11-22",
+      "what": "Calling Gerd Lüdemann flatly an 'atheist' (\"the atheist scholar Gerd Lüdemann\", \"Lüdemann is an atheist\", \"atheists like Gerd Lüdemann\").",
+      "why": "docs/scholar-labels.md: Lüdemann rejected the label (1998 epd interview: 'I am not an atheist, and I find atheism shallow… but I am no longer a Christian'). Live on ~40 surfaces (essays, mastery pages, quizzes, answers, live-AI briefs, MK/ES) until the 2026-11-22 sweep (BAR-35, Barnett mine); same class as the Penrose row.",
+      "instead": "'the non-believing New Testament scholar Gerd Lüdemann' or 'the New Testament scholar who left Christianity' (docs/scholar-labels.md); 'a non-believer who explains the experiences as visions'.",
+      "patterns": [
+        "\\batheists?\\b[^.<\"\\n]{0,70}L(ü|u|&uuml;|ue)demann",
+        "L(ü|u|&uuml;|ue)demann[^.<\"\\n]{0,30}\\b(is )?an (avowed )?atheist\\b",
+        "L(ü|u|&uuml;|ue)demann</b><span>atheist",
+        "L(ü|u|&uuml;|ue)demann[^.\\n]{0,60}\\batheists alike\\b",
+        "(Лидеман|Лудеман)[^.<\\n]{0,30}атеист",
+        "атеист[^.<\\n]{0,40}(Лидеман|Лудеман)"
+      ],
+      "allow": [
+        "tools/reel/specs/early-creed-instagram.json",
+        "tools/reel/specs/explainer-earlycreed.json",
+        "tools/reel/specs/how-soon-did-people-say-jesus-rose.json"
+      ],
+      "netting": "phrase",
+      "corpus": {
+        "must_fire": [
+          "the atheist scholar Gerd Lüdemann dates its elements",
+          "even atheists like Gerd Lüdemann, grant",
+          "L&uuml;demann is an atheist who explains the experiences",
+          "Gerd Lüdemann, an atheist New Testament scholar, wrote",
+          "why the atheist who presses hardest on the cause of the appearances, Gerd Lüdemann, still dates",
+          "Gerd L&uuml;demann, an avowed atheist, grants",
+          "<b>Gerd Lüdemann</b><span>atheist scholar</span>",
+          "Jeremias, Conzelmann, Wright, Lüdemann, and Ehrman — believers and atheists alike — agree",
+          "Герд Лудеман, атеистички новозаветен научник,"
+        ],
+        "must_not_fire": [
+          "the non-believing New Testament scholar Gerd Lüdemann judged",
+          "Lüdemann is a non-believer who explains the experiences",
+          "the atheist Richard Dawkins, and the historian Bart Ehrman.",
+          "Gerd Lüdemann, the non-believing New Testament scholar who explains the appearances as visions, still dates",
+          "Jeremias, Conzelmann, Wright, Lüdemann, and Ehrman — believers and non-believers alike — agree"
+        ]
+      },
+      "allow_reason": "OWNER DECISION 2026-11-22: \"dont need to fix reels\" - the three already-produced reel specs keep the old label and stay allow-listed; not owed work."
     }
   ]
 }
