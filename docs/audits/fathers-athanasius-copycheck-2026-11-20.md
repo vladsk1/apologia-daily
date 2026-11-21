@@ -220,7 +220,7 @@ Each fix quotes the hosted 1892 text with an inline link to the section, and was
   without His pleasure or against His purpose"). "Freely-willed" in the Craig summary **left**: it states Craig's premise.
 - **AT-12** (`modalism.html`, `relations.html`): 3.4 on John 10:30 (Sabellius named as Athanasius's own note, not as a
   label for readers); 3.3 for coinherence, with "the idea is older than the word". "One in unity, power, and purpose" and
-  "always read it" on `modalism.html` are pre-existing wording, **logged, not changed** (rule 9; the new sentence no longer
+  "always read it" on `modalism.html` were pre-existing wording, logged, then **changed 2026-11-21 on the owner's go-ahead** ("one in being and power, not merely in purpose"; "how the Nicene church read it"; also the two card copies in `ev-s6` EN/MK/ES) (rule 9; the new sentence no longer
   presents Athanasius as endorsing "purpose").
 - **AT-13** (`humanity.html`): 2.70, "true Son and true flesh".
 - **Review:** R1 argument (Opus) 10/11 STAMPABLE, 1 BREAK (relations.html: the insertion made "he describes" in the next
