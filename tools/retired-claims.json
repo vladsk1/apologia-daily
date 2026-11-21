@@ -906,21 +906,27 @@
       "instead": "Port library/appearances.html:144: 'Mark, the earliest Gospel, points forward to appearances in Galilee (Mark 16:7) even though its undisputed text breaks off at the empty tomb … Mark's own narrator promises the Galilee meetings he simply does not stay to narrate. Absence of narration is not absence of tradition.' Mark may be counted among the streams on the essay's own terms, fenced this way.",
       "patterns": [
         "Mark,? Luke,? and John (each )?(provides?|gives?|offers?) independent attestation of the (resurrection )?appearances",
-        "(?<!longer ending of )Mark('s Gospel)? (narrates|records|describes) (the )?(resurrection )?appearances"
+        "(?<!longer ending of )Mark('s Gospel)? (narrates|records|describes) (the )?(resurrection )?appearances",
+        "independent (streams|traditions)[^.]{0,6}Paul, Mark, Luke,? (and )?John",
+        "Paul, Mark, Luke,? (and )?John[^.]{0,30}(describe|converge on|narrate)[^.]{0,30}(bodily|encounters|appearances)"
       ],
       "allow": [],
       "netting": "phrase",
       "corpus": {
         "must_fire": [
           "Focus on the independence of the sources — Paul, Mark, Luke, and John each provide independent attestation of the appearances.",
-          "Mark records the resurrection appearances in Galilee."
+          "Mark records the resurrection appearances in Galilee.",
+          "Four independent streams — Paul, Mark, Luke, John — describe bodily, interactive encounters.",
+          "Four independent traditions — Paul, Mark, Luke, John — converge on bodily encounters: Jesus eats fish."
         ],
         "must_not_fire": [
           "Mark, the earliest Gospel, points forward to appearances in Galilee (Mark 16:7) even though its undisputed text breaks off at the empty tomb.",
           "Mark's own narrator promises the Galilee meetings he simply does not stay to narrate.",
           "Mark attests the appearance tradition through the promise of Mark 16:7.",
           "The longer ending of Mark narrates appearances, but it is widely judged a later addition.",
-          "Focus on the independence of the sources — and on how the essay handles Mark."
+          "Focus on the independence of the sources — and on how the essay handles Mark.",
+          "The surviving sources attribute the Gospels to Matthew, Mark, Luke, and John, with no rival tradition of authorship.",
+          "Paul's creed names the witnesses; the Gospel traditions add the scenery of bodily, interactive encounters."
         ]
       }
     },
