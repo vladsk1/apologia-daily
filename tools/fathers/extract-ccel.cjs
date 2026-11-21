@@ -29,6 +29,10 @@ const BOOK = {
   '2 macc': '2 Maccabees', 'jerem': 'Jeremiah', 'ecc': 'Ecclesiastes', 'ephes': 'Ephesians', 'mat': 'Matthew', 'galat': 'Galatians', 'tob': 'Tobit', 'tobit': 'Tobit', 'judith': 'Judith', 'sus': 'Susanna', 'esd': 'Esdras',
   '1 esd': '1 Esdras', '2 esd': '2 Esdras', 'apoc': 'Revelation', 'isai': 'Isaiah', 'isaiah': 'Isaiah',
 };
+// A config may add book abbreviations ("bookAliases": {"luc": "Luke"}) and let a note open with "See " ("seePrefix": true),
+// as On the Incarnation needs (2026-11-22). Both are off unless a config asks, so earlier extractions are unchanged.
+if (CFG && CFG.bookAliases) Object.assign(BOOK, CFG.bookAliases);
+const SEE = !!(CFG && CFG.seePrefix);
 function roman(r) { const v = { i: 1, v: 5, x: 10, l: 50, c: 100 }; r = r.toLowerCase(); let t = 0;
   for (let i = 0; i < r.length; i++) { const a = v[r[i]], b = v[r[i + 1]] || 0; if (!a) return NaN; t += a < b ? -a : a; } return t; }
 
@@ -43,7 +47,9 @@ function parseRefs(note, prevBook) {
   const pieces = note.trim().replace(/\.$/, '')
     .split(/\s*;\s*|,\s*(?:and\s+)?(?=(?:cf\.\s*)?(?:S\.\s*)?(?:[123]\s)?[A-Z][a-z]+\.\s+[ivxlc]+\.)/);
   for (let i = 0; i < pieces.length; i++) {
-    let p = pieces[i].replace(/^and\s+/i, '').replace(/^cf\.\s+/i, '').replace(/^(S\.|St\.)\s+/i, '').trim();
+    let p = pieces[i].replace(/^and\s+/i, '');
+    if (SEE && i === 0) p = p.replace(/^see\s+/i, '');
+    p = p.replace(/^cf\.\s+/i, '').replace(/^(S\.|St\.)\s+/i, '').trim();
     // a range across chapters ("xvi. 28-xvii. 2") is kept as a reference to its first verse
     if (VERSE_LISTS) p = p.replace(/([ivxlc]+)\.\s*(\d+)\s*[-–]\s*[ivxlc]+\.\s*\d+/, (_, c, v) => `${c}. ${v}`);
     const m = p.match(one); if (!m) break;

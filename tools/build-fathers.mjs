@@ -74,8 +74,14 @@ function loadSources() {
   return byId;
 }
 
-const partFile = (meta, n) => `${meta.partSlug}${n}.html`;
-const secHref = (meta, at) => { const [p, s] = String(at).split('.'); return `/fathers/${partFile(meta, p)}#s${s}`; };
+// A work with no books or orations (On the Incarnation: 57 numbered sections) sets "single": true. Its text is one page,
+// fathers/<partSlug>.html, and its sections are cited by number alone ("54"), not "part.section".
+export const partFile = (meta, n) => (meta.single ? `${meta.partSlug}.html` : `${meta.partSlug}${n}.html`);
+export const secKey = (meta, p, s) => (meta.single ? `${s}` : `${p}.${s}`);
+const secHref = (meta, at) => {
+  if (meta.single) return `/fathers/${partFile(meta)}#s${at}`;
+  const [p, s] = String(at).split('.'); return `/fathers/${partFile(meta, p)}#s${s}`;
+};
 
 function head({ title, desc, url, ld }) {
   return `<!DOCTYPE html>
@@ -137,9 +143,10 @@ function partPage(meta, text, part, sources) {
   for (const l of meta.essayLinks || []) for (const c of l.cites || []) (cites[c] = cites[c] || []).push(l);
   const ctx = {};
   for (const id of meta.keyPassages || []) { const e = sources[id]; if (e && e.context_url) ctx[e.context_url.split('#')[1]] = true; }
-  const title = `${meta.author}, ${meta.partLabel} ${part.n}: ${part.title}`;
+  const label = meta.single ? 'Full text' : `${meta.partLabel} ${part.n}`;
+  const title = meta.single ? `${meta.author}, ${part.title}: full text` : `${meta.author}, ${label}: ${part.title}`;
   const body = part.sections.map((s) => {
-    const key = `${part.n}.${s.n}`;
+    const key = secKey(meta, part.n, s.n);
     const num = s.supplied
       ? `<a class="fw-num fw-supplied" href="#s${s.n}" title="This section has no number in the ${meta.printYear} printing; the standard number is supplied.">[${s.n}]</a>`
       : `<a class="fw-num" href="#s${s.n}" aria-label="Section ${key}">${s.n}</a>`;
@@ -151,21 +158,23 @@ function partPage(meta, text, part, sources) {
   </section>`;
   }).join('\n');
   const ld = [
-    { '@context': 'https://schema.org', '@type': 'Chapter', name: `${meta.partLabel} ${part.n}: ${part.title}`, url, inLanguage: 'en',
+    { '@context': 'https://schema.org', '@type': 'Chapter', name: meta.single ? part.title : `${label}: ${part.title}`, url, inLanguage: 'en',
       author: { '@type': 'Person', name: meta.author },
       isPartOf: { '@type': 'Book', name: meta.work, url: `${SITE}/fathers/${meta.slug}.html` } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Church Fathers & Creeds', item: `${SITE}/sources.html` },
       { '@type': 'ListItem', position: 2, name: meta.work, item: `${SITE}/fathers/${meta.slug}.html` },
-      { '@type': 'ListItem', position: 3, name: `${meta.partLabel} ${part.n}` }] },
+      { '@type': 'ListItem', position: 3, name: label }] },
   ];
-  const desc = `${meta.author}, ${meta.partLabel} ${part.n} (${part.title}${part.subtitle ? ': ' + part.subtitle : ''}), complete, in the ${meta.printYear} public-domain translation.`;
+  const desc = meta.single
+    ? `${meta.author}, ${part.title}, the full text (${part.sections.length} sections), in the ${meta.printYear} public-domain translation.`
+    : `${meta.author}, ${label} (${part.title}${part.subtitle ? ': ' + part.subtitle : ''}), complete, in the ${meta.printYear} public-domain translation.`;
   return `${head({ title, desc, url, ld })}
 ${stamp(meta)}
 <body>
 ${NAV}
 <main class="fw-main">
-  <nav class="fw-crumbs"><a href="/sources.html#full-works">Church Fathers &amp; Creeds</a> &rsaquo; <a href="/fathers/${meta.slug}.html">${esc(meta.workShort)}</a> &rsaquo; <span>${meta.partLabel} ${part.n}</span></nav>
+  <nav class="fw-crumbs"><a href="/sources.html#full-works">Church Fathers &amp; Creeds</a> &rsaquo; <a href="/fathers/${meta.slug}.html">${esc(meta.workShort)}</a> &rsaquo; <span>${label}</span></nav>
   <header class="fw-head">
     <p class="fw-eyebrow">${esc(meta.author)} &middot; ${esc(meta.workShort)} &middot; AD ${meta.year}</p>
     <h1>${esc(part.title)}</h1>
@@ -196,7 +205,9 @@ function bookPage(meta, text, sources) {
       <blockquote>${esc(e.text)}</blockquote>
       <figcaption>${esc(e.section)} &middot; <a href="${escAttr(e.context_url || '#')}">Read it in context &rarr;</a></figcaption>
     </figure>`).join('\n');
-  const contents = text.parts.map((p) => `    <li><a href="/fathers/${partFile(meta, p.n)}"><b>${meta.partLabel} ${p.n}</b> &middot; ${esc(p.title)}${p.subtitle ? ': ' + esc(p.subtitle) : ''}</a><span>${esc(meta.topics[p.n] || '')} &middot; ${p.sections.length} sections</span></li>`).join('\n');
+  const contents = meta.single
+    ? text.parts.map((p) => `    <li><a href="/fathers/${partFile(meta, p.n)}"><b>Full text</b> &middot; ${esc(p.title)}</a><span>${p.sections.length} sections, on one page</span></li>`).join('\n')
+    : text.parts.map((p) => `    <li><a href="/fathers/${partFile(meta, p.n)}"><b>${meta.partLabel} ${p.n}</b> &middot; ${esc(p.title)}${p.subtitle ? ': ' + esc(p.subtitle) : ''}</a><span>${esc(meta.topics[p.n] || '')} &middot; ${p.sections.length} sections</span></li>`).join('\n');
   const essays = (meta.essayLinks || []).map((l) => `    <li><a href="${l.href}">${esc(l.title)}</a> &mdash; ${esc(l.about)} (${l.cites.map((c) => `<a href="${secHref(meta, c)}">${c}</a>`).join(', ')})</li>`).join('\n');
   const ld = [
     { '@context': 'https://schema.org', '@type': 'Book', name: meta.work, url, inLanguage: 'en',
@@ -227,13 +238,13 @@ ${meta.guide.map((g) => `    <h2>${esc(g.h)}</h2>\n    ${g.html}`).join('\n')}
 ${keyHtml}
   </section>` : ''}
   <section class="fw-contents" aria-label="Contents">
-    <h2>Read the ${meta.partLabel.toLowerCase()}s</h2>
+    <h2>${meta.single ? 'Read the work' : `Read the ${meta.partLabel.toLowerCase()}s`}</h2>
     <ol>
 ${contents}
     </ol>
   </section>
   ${essays ? `<section class="fw-essays" aria-label="Where our essays use this work">
-    <h2>Where our essays use these orations</h2>
+    <h2>Where our essays use this work</h2>
     <ul>
 ${essays}
     </ul>
@@ -251,7 +262,7 @@ function shelfBlock(books) {
   const cards = books.map(({ meta, text }) => `      <a class="fw-card" href="/fathers/${meta.slug}.html">
         <span class="fw-card-au">${esc(meta.author)} &middot; ${esc(meta.tradition)}</span>
         <span class="fw-card-t">${esc(meta.work)}</span>
-        <span class="fw-card-d">AD ${meta.year} &middot; ${text.parts.length} ${meta.partLabel.toLowerCase()}s, complete &middot; with a short guide</span>
+        <span class="fw-card-d">AD ${meta.year} &middot; ${meta.single ? `${text.parts[0].sections.length} sections` : `${text.parts.length} ${meta.partLabel.toLowerCase()}s`}, complete &middot; with a short guide</span>
       </a>`).join('\n');
   return `<!-- fathers-shelf:start (generated by tools/build-fathers.mjs — do not edit by hand) -->
     <section class="fw-shelf" id="full-works" aria-label="Full works">
@@ -280,7 +291,8 @@ for (const f of readdirSync(DATA).filter((x) => x.endsWith('.json') && !x.endsWi
     console.error(`✗ ${meta.slug}: the text no longer matches its copy-check (hash ${h.slice(0, 12)}… ≠ ${String(meta.copyCheck.textSha256).slice(0, 12)}…).\n  Re-run the copy-check, then: node tools/build-fathers.mjs --stamp-hash ${meta.slug}`);
     process.exit(1);
   }
-  const secs = new Set(text.parts.flatMap((p) => p.sections.map((s) => `${p.n}.${s.n}`)));
+  if (meta.single && text.parts.length !== 1) { console.error(`✗ ${meta.slug}: "single" needs exactly one part`); process.exit(1); }
+  const secs = new Set(text.parts.flatMap((p) => p.sections.map((s) => secKey(meta, p.n, s.n))));
   for (const n of meta.notes || []) if (!secs.has(n.at)) { console.error(`✗ ${meta.slug}: note points at missing section ${n.at}`); process.exit(1); }
   for (const l of meta.essayLinks || []) {
     if (!existsSync(path.join(ROOT, l.href.replace(/^\//, '')))) { console.error(`✗ ${meta.slug}: essay link ${l.href} does not exist`); process.exit(1); }

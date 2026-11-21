@@ -51,7 +51,7 @@ test('no 1894 editors’ footnote markers or note text remain in the hosted text
 test('every page and the sources.html shelf carry the top line; pages state the notes are omitted (rule 5)', () => {
   assert.ok(readFileSync(path.join(ROOT, 'sources.html'), 'utf8').includes(TOP), 'sources.html shelf is missing the top line');
   for (const { meta, text } of books) {
-    const pages = [`${meta.slug}.html`, ...text.parts.map((p) => `${meta.partSlug}${p.n}.html`)];
+    const pages = [`${meta.slug}.html`, ...text.parts.map((p) => (meta.single ? `${meta.partSlug}.html` : `${meta.partSlug}${p.n}.html`))];
     for (const p of pages) {
       const html = readFileSync(path.join(ROOT, 'fathers', p), 'utf8');
       assert.ok(html.includes(TOP), `fathers/${p} is missing the top line`);

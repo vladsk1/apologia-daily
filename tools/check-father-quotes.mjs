@@ -49,7 +49,7 @@ for (const f of readdirSync(DATA).filter((x) => x.endsWith('.json') && !x.endsWi
   const qc = meta.quoteCheck; if (!qc) { console.log(`- ${meta.slug}: no quoteCheck config, skipped`); continue; }
   const secs = [];
   for (const p of text.parts) for (const s of p.sections)
-    secs.push({ at: `${p.n}.${s.n}`, n: norm(s.paras.map((pp) => pp.filter((x) => typeof x === 'string').join(' ')).join(' ')) });
+    secs.push({ at: meta.single ? `${s.n}` : `${p.n}.${s.n}`, n: norm(s.paras.map((pp) => pp.filter((x) => typeof x === 'string').join(' ')).join(' ')) });
   const all = secs.map((s) => s.n).join(' ');
   const whereIs = (q) => {
     const pieces = q.split(/…|\.\.\./).map(norm).filter((x) => x.split(' ').length >= 3);
@@ -86,7 +86,8 @@ for (const f of readdirSync(DATA).filter((x) => x.endsWith('.json') && !x.endsWi
         const quote = q[1].trim(); if (quote.split(/\s+/).length < 5 || seen.has(quote)) continue;
         seen.add(quote);
         const at = whereIs(quote);
-        const flag = at && cited.includes('.') && at !== cited ? `  ⚠ cited as ${cited}` : '';
+        const want = meta.single ? cited.split('.')[0] : cited; // a single-part work is cited by section (54, or 54.3)
+        const flag = at && (meta.single ? cited : cited.includes('.')) && at !== want ? `  ⚠ cited as ${cited}` : '';
         console.log(`  ${at ? '✓ MATCH ' + at : '? NOT FOUND'}  ${file}  “${quote.slice(0, 90)}${quote.length > 90 ? '…' : ''}”${flag}`);
       }
     }

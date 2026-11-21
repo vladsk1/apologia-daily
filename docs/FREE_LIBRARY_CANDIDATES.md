@@ -160,8 +160,18 @@ chance to test our own work against him. Two checks run on every book before it 
   (3) Chapters begin mid-section, marked "N (continued)." in print; the translator's "(3.)…(12.)" numbering in 1.55–62 is
   omitted. (4) Discourse IV is printed in the volume but not hosted (its editor notes it is not quoted in antiquity as part of the work; the guide says so).
   (5) The existing 1.58 `/sources` passage came from New Advent and had "shows" for the printed "shews".
-- **East/West tally (rule 3): East 3 (Gregory of Nazianzus, Basil, Athanasius) · West 2 (Hilary, Augustine).** West next
-  (Novatian is the remaining Western Trinity candidate; Augustine's *Confessions* would go with the conversion stories).
+- **Book 6 — Athanasius of Alexandria, *On the Incarnation of the Word*: built 2026-11-22.** The first non-Trinity book, chosen by
+  the owner from a list of non-Trinity candidates. Pages `fathers/athanasius-incarnation.html` (guide) + `fathers/athanasius-incarnation-text.html`
+  (all 57 sections on one page: the work has no books or chapters, so `tools/build-fathers.mjs` now takes `"single": true` and cites
+  sections by number alone, "54"). Record: `docs/audits/fathers-incarnation-copycheck-2026-11-22.md`. ⚠ Lessons: (1) **this volume's
+  footnotes write Luke, John and Mark as "Luc.", "Joh.", "Marc."** and open some with "See"; the extractor now takes `bookAliases` and
+  `seePrefix` per config (8 references recovered). (2) Robertson's summary heading over each section is dropped, **except §5, which has
+  none** (its first paragraph is the text). (3) The 1892 subdivision numbers ("54.3") are kept as printed, slips included. (4) **An
+  existing `/sources` passage (inc-47) had silently spliced 47.1 into 47.2** with no ellipsis, though "verified verbatim" in July; the
+  whole-text check caught it. (5) Unlike the Arians, the quotation marks were intact (Robertson uses double marks).
+- **East/West tally (rule 3): East 4 (Gregory of Nazianzus, Basil, Athanasius ×2) · West 2 (Hilary, Augustine).** The next
+  two books should be Western (Augustine's *Confessions* goes with the conversion stories; Novatian is the remaining Western Trinity
+  candidate).
 - **English only.** The Macedonian/Spanish mirror rule in `CLAUDE.md` covers the Evidence Library (`library/`,
   `ev-s*`), not `/fathers`; an AI translation of a Father's own words would no longer be his words.
 
