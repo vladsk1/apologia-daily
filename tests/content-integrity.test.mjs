@@ -521,6 +521,27 @@ test('retired-claims matcher catches retired claims on the MK/ES mirrors, entity
   }
 });
 
+/* BAR-43 (2026-11-22): the no-group-hallucination guard was English-only, while the same flat claim
+ * ("they do not occur in groups") had been live on ev-s2.mk/es and ev-s3.es until Batch D. Pins the MK/ES
+ * nets with the real retired sentences (ES entity-encoded, as served) and the certified replacements. */
+test('retired-claims matcher catches the flat no-group-hallucination claim on MK/ES mirrors', async () => {
+  const { findHits } = await import('../tools/check-retired-claims.mjs');
+  const corpus = {
+    'mk.html': 'Клиничките халуцинации се приватни доживувања — колку што клиничката психологија има документирано, тие не се случуваат во групи.',
+    'es-entities.html': 'las alucinaciones cl&iacute;nicas son experiencias privadas que no pueden ser compartidas simult&aacute;neamente por cientos de personas.',
+    'mk-ok.html': 'халуцинациите се, по правило, приватни и индивидуални, а колективна халуцинација од видот што хипотезата за визии ѝ е потребна тука нема утврдена клиничка основа.',
+    'es-ok.html': 'Contra el primer camino: hay experiencias extáticas compartidas documentadas, pero en ellas las personas no ven numéricamente el mismo objeto; no tiene base cl&iacute;nica establecida.',
+  };
+  const hits = findHits(Object.keys(corpus), (f) => corpus[f]);
+  for (const f of ['mk.html', 'es-entities.html']) {
+    assert.ok(hits.some((h) => h.file === f && h.claim.id === 'no-group-hallucination-cases'),
+      `retired no-group-hallucination claim not caught on ${f}`);
+  }
+  for (const f of ['mk-ok.html', 'es-ok.html']) {
+    assert.ok(!hits.some((h) => h.file === f), `certified mirror text flagged on ${f}`);
+  }
+});
+
 // ── footnote apparatus ────────────────────────────────────────────────────────
 // Pins the two false-positive sources that made the first version of
 // check-footnote-integrity.mjs report 29 of 84 files broken when only 2 were,
