@@ -2011,19 +2011,151 @@
     function switchWV(id, btn) {
       document.querySelectorAll('.wv-tab').forEach(t => t.classList.remove('active'));
       document.querySelectorAll('.wv-section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.argument-card.open').forEach(c => c.classList.remove('open'));
       btn.classList.add('active');
       document.getElementById('wv-' + id).classList.add('active');
       window.scrollTo({ top: 200, behavior: 'smooth' });
+      syncCardBar();
     }
+
+    /* ── Card layout, matched to the Evidence Library hub (evidence-library.html) ──
+       Same three behaviours, same class names for the pinned bar (.ocb) so
+       library/tab-nav.js can hang its "Sections" button on it:
+         1. a side menu of this tab's arguments + the open argument's sections
+            (library/tab-nav.js, configured by window.TAB_NAV below);
+         2. a pinned title bar with a Close button while an open card's own
+            header is off screen;
+         3. the reader stays with the card they opened or closed (keepInView).
+       Display plumbing only: it adds no wording to any argument. */
+    window.TAB_NAV = {
+      sec: '.main .wv-section.active', secAny: '.main .wv-section', secClass: 'wv-section',
+      card: '.argument-card', cardClass: 'argument-card', openClass: 'open',
+      title: '.argument-title', num: '.argument-num',
+      header: '.argument-header', buttonRow: '.argument-meta', chevron: '.argument-chevron',
+      body: '.argument-body', toggle: 'toggleArg',
+      heads: '.argument-premise-label, .wv-obj-title, .wv-pro-badge, .wv-pro-section-label',
+      subClass: 'wv-pro-section-label'
+    };
+
+    /* Cards ship without ids; the side menu and the pinned bar need one each. */
+    (function () {
+      document.querySelectorAll('.wv-section').forEach(function (sec) {
+        sec.querySelectorAll('.argument-card').forEach(function (c, i) {
+          if (!c.id) c.id = sec.id + '-' + (i + 1 < 10 ? '0' : '') + (i + 1);
+          var h = c.querySelector('.argument-header');
+          if (!h || c.classList.contains('locked')) return;
+          h.setAttribute('role', 'button');
+          h.setAttribute('tabindex', '0');
+          h.setAttribute('aria-expanded', 'false');
+          h.addEventListener('keydown', function (e) {
+            if (e.target !== h) return;
+            if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); toggleArg(c); }
+          });
+        });
+      });
+    })();
+
+    /* A click that completes a text selection inside the card is not a toggle. */
+    function selectingInside(card) {
+      var sel = window.getSelection && window.getSelection();
+      if (!sel || sel.isCollapsed || !String(sel).trim()) return false;
+      try {
+        for (var i = 0; i < sel.rangeCount; i++) {
+          if (card.contains(sel.getRangeAt(i).commonAncestorContainer)) return true;
+        }
+      } catch (e) {}
+      return false;
+    }
+
+    /* Height of the fixed chrome: the site nav plus the sticky worldview tab row. */
+    function chromeTop() {
+      var tabs = document.querySelector('.worldview-nav');
+      return 64 + (tabs ? tabs.getBoundingClientRect().height : 0);
+    }
+
+    /* Keep the reader with the card they acted on: closing a long card removes
+       thousands of pixels of page, which would otherwise leave them far below it. */
+    function keepInView(card, fn) {
+      var before = card.getBoundingClientRect().top;
+      var wasOpen = card.classList.contains('open');
+      fn();
+      var delta = card.getBoundingClientRect().top - before;
+      if (delta) window.scrollTo(0, Math.max(0, window.scrollY + delta));
+      if (wasOpen) {
+        var floor = chromeTop() + 12;
+        var top = card.getBoundingClientRect().top;
+        if (top < floor) window.scrollTo(0, Math.max(0, window.scrollY + top - floor));
+      }
+    }
+
+    function openWvCard() { return document.querySelector('.wv-section.active .argument-card.open'); }
+
+    /* Pinned-bar styles, identical to the hub's. State class is ocb-on, not "on":
+       library/orthonote.js injects .on{position:relative} for its clarifier boxes. */
+    (function () {
+      var st = document.createElement('style'); st.id = 'wv-ocb-css';
+      st.textContent =
+        '.ocb{position:fixed;left:0;right:0;top:64px;z-index:95;display:none;align-items:center;gap:.9rem;padding:.62rem 2rem;background:#0a1628;border-bottom:1px solid rgba(200,169,81,.35);box-shadow:0 6px 18px rgba(5,13,26,.3);}' +
+        '.ocb.ocb-on{display:flex;}' +
+        '.ocb-n{font-family:var(--font-display);font-weight:700;font-size:.95rem;color:#c8a951;flex:0 0 auto;}' +
+        '.ocb-t{font-family:var(--font-display);font-weight:700;font-size:.92rem;color:#fff;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}' +
+        '.ocb-x{flex:0 0 auto;font-family:var(--font-ui);font-size:.76rem;font-weight:500;cursor:pointer;color:#0a1628;background:#c8a951;border:0;border-radius:3px;padding:7px 15px;}' +
+        '.ocb-x:hover{background:#d4b96a;}' +
+        '.argument-header:focus-visible{outline:2px solid #c8a951;outline-offset:-2px;}' +
+        '@media(max-width:768px){.ocb{padding:.55rem 1rem;gap:.6rem;}.ocb-t{font-size:.82rem;}.ocb-x{padding:6px 12px;font-size:.72rem;}}';
+      document.head.appendChild(st);
+    })();
+
+    var _ocb = null;
+    function cardBar() {
+      if (_ocb) return _ocb;
+      _ocb = document.createElement('div');
+      _ocb.className = 'ocb';
+      _ocb.innerHTML = '<span class="ocb-n"></span><span class="ocb-t"></span>' +
+                       '<button class="ocb-x" type="button">&#10005; Close</button>';
+      _ocb.querySelector('.ocb-x').addEventListener('click', function (e) {
+        e.stopPropagation();
+        var card = openWvCard();
+        if (card) keepInView(card, function () { card.classList.remove('open'); });
+        syncCardBar();
+      });
+      document.body.appendChild(_ocb);
+      return _ocb;
+    }
+
+    function syncCardBar() {
+      var hs = document.querySelectorAll('.argument-header[aria-expanded]');
+      for (var j = 0; j < hs.length; j++) hs[j].setAttribute('aria-expanded', hs[j].parentElement.classList.contains('open') ? 'true' : 'false');
+      var bar = cardBar();
+      var card = openWvCard();
+      if (!card) { bar.classList.remove('ocb-on'); return; }
+      var head = card.querySelector('.argument-header');
+      var top = chromeTop();
+      /* only while the real header has scrolled away and the card is still on screen */
+      if (head.getBoundingClientRect().bottom < top && card.getBoundingClientRect().bottom > top) {
+        var n = card.querySelector('.argument-num'), t = card.querySelector('.argument-title');
+        bar.querySelector('.ocb-n').textContent = n ? n.textContent.trim() : '';
+        bar.querySelector('.ocb-t').textContent = t ? t.textContent.trim() : '';
+        bar.classList.add('ocb-on');
+      } else {
+        bar.classList.remove('ocb-on');
+      }
+    }
+    addEventListener('scroll', syncCardBar, { passive: true });
+    addEventListener('resize', syncCardBar);
 
     function toggleArg(card) {
       if (card.classList.contains('locked')) {
         window.location.href = 'index.html#pricing';
         return;
       }
-      const wasOpen = card.classList.contains('open');
-      document.querySelectorAll('.argument-card.open').forEach(c => c.classList.remove('open'));
-      if (!wasOpen) card.classList.add('open');
+      if (selectingInside(card)) return;
+      keepInView(card, function () {
+        const wasOpen = card.classList.contains('open');
+        document.querySelectorAll('.argument-card.open').forEach(c => c.classList.remove('open'));
+        if (!wasOpen) card.classList.add('open');
+      });
+      syncCardBar();
     }
 
     const observer = new IntersectionObserver(entries => {
@@ -2077,6 +2209,7 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2/dist/umd/supabase.js" integrity="sha384-yifgV8iFWyp5cgu+V1G1rtlEHpEErPlL5fTrkUELIsWq0CIVDON2WP/NlXVJT3vO" crossorigin="anonymous"></script>
   <script src="/ad-nav.js" defer></script>
+  <script src="/library/tab-nav.js?v=20261122" defer></script>
   <script src="/analytics.js" defer></script>
 <div id="float-tutor" style="position:fixed;bottom:50%;right:0;transform:translateY(50%);z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem;">
   <div id="float-panel" style="display:none;background:#0a1628;border:1px solid rgba(200,169,81,0.3);border-radius:8px 0 0 8px;width:min(320px,calc(100vw - 60px));box-shadow:-8px 0 32px rgba(0,0,0,0.4);">

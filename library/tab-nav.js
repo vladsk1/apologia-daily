@@ -17,7 +17,11 @@
 
    Hooks: none required. It watches the hub for tab switches, fragment loads and
    card open/close (MutationObserver), and uses the hub's own tog() and
-   chromeTop() when present. Usage: <script src="/library/tab-nav.js" defer>. */
+   chromeTop() when present. Usage: <script src="/library/tab-nav.js" defer>.
+
+   Other pages with the same card pattern (worldviews.html) reuse this file by
+   setting window.TAB_NAV = { ...selectors } BEFORE it loads; every key is
+   optional and defaults to the hub's class names, so the hub needs no config. */
 (function () {
   if (window.__tabNav) return; window.__tabNav = true;
 
@@ -34,7 +38,23 @@
     es: { tab: 'En esta pestaña', sec: 'Secciones', mastery: 'Domina este argumento', essay: 'Lee el ensayo completo', tutor: 'Pregunta al tutor de IA sobre este argumento' }
   }[LANG];
 
-  var HEAD_SEL = '.apl, .obt, .prob, .psl';
+  var CFG = window.TAB_NAV || {};
+  function cfg(k, d) { return CFG[k] != null ? CFG[k] : d; }
+  var SEC_SEL = cfg('sec', '.main .sec.go'),        // the open tab
+      SEC_ANY = cfg('secAny', '.main .sec'),        // any tab (presence check)
+      SEC_CLS = cfg('secClass', 'sec'),
+      CARD_SEL = cfg('card', '.card[id]'),
+      CARD_CLS = cfg('cardClass', 'card'),
+      OPEN_CLS = cfg('openClass', 'op'),
+      TITLE_SEL = cfg('title', '.ct'),
+      NUM_SEL = cfg('num', '.cnum'),
+      HEADER_SEL = cfg('header', '.ch'),
+      BTNROW_SEL = cfg('buttonRow', '.ch .cm'),
+      CHEV_SEL = cfg('chevron', '.chev'),
+      BODY_SEL = cfg('body', '.cb'),
+      SUB_CLS = cfg('subClass', 'psl'),             // headings shown indented
+      TOG_FN = cfg('toggle', 'tog'),
+      HEAD_SEL = cfg('heads', '.apl, .obt, .prob, .psl');
   var side, lastSig = '', lastActive = null;
 
   function $(s, r) { return (r || document).querySelector(s); }
@@ -42,13 +62,13 @@
   function txt(el) { return (el && el.textContent || '').replace(/\s+/g, ' ').trim(); }
   function top() { return (typeof window.chromeTop === 'function' ? window.chromeTop() : 120) + 12; }
 
-  function curSec() { return $('.main .sec.go'); }
-  function cards(sec) { return sec ? $$('.card[id]', sec).filter(function (c) { return $('.ct', c); }) : []; }
-  function openCard(sec) { return sec ? $('.card.op', sec) : null; }
+  function curSec() { return $(SEC_SEL); }
+  function cards(sec) { return sec ? $$(CARD_SEL, sec).filter(function (c) { return c.id && $(TITLE_SEL, c); }) : []; }
+  function openCard(sec) { return sec ? $(CARD_SEL.split(',')[0].replace(/\[id\]$/, '') + '.' + OPEN_CLS, sec) : null; }
 
   function heads(card) {
     if (!card) return [];
-    var cb = $('.cb', card); if (!cb) return [];
+    var cb = $(BODY_SEL, card); if (!cb) return [];
     return $$(HEAD_SEL, cb).filter(function (h) {
       if (h.closest('details:not([open])')) return false;          // skip collapsed drill-downs
       if (h.offsetParent === null) return false;                    // skip hidden (paywalled etc.)
@@ -88,10 +108,10 @@
   }
 
   function goCard(card) {
-    if (!card.classList.contains('op')) {
-      if (typeof window.tog === 'function') window.tog(card); else card.classList.add('op');
+    if (!card.classList.contains(OPEN_CLS)) {
+      if (typeof window[TOG_FN] === 'function') window[TOG_FN](card); else card.classList.add(OPEN_CLS);
     }
-    var h = $('.ch', card) || card;
+    var h = $(HEADER_SEL, card) || card;
     setTimeout(function () { scrollToEl(h); }, 30);
   }
 
@@ -101,7 +121,7 @@
     heads(c).forEach(function (h, i) {
       if (!h.id) h.id = c.id + '-s' + i;
       var sl = document.createElement('li');
-      if (h.classList.contains('psl')) sl.className = 'tn-psl';
+      if (h.classList.contains(SUB_CLS)) sl.className = 'tn-psl';
       var sa = document.createElement('a'); sa.href = '#' + h.id; sa.dataset.id = h.id;
       sa.textContent = h.__tnLabel || txt(h);
       sa.addEventListener('click', function (e) {
@@ -120,9 +140,9 @@
     cards(sec).forEach(function (c) {
       var li = document.createElement('li'); li.className = 'tn-card' + (c === open ? ' is-open' : '');
       var a = document.createElement('a'); a.href = '#' + c.id;
-      var n = txt($('.cnum', c));
+      var n = txt($(NUM_SEL, c));
       a.innerHTML = (n ? '<span class="tn-n">' + n + '</span>' : '') + '<span></span>';
-      a.lastChild.textContent = txt($('.ct', c));
+      a.lastChild.textContent = txt($(TITLE_SEL, c));
       a.addEventListener('click', function (e) { e.preventDefault(); goCard(c); });
       li.appendChild(a);
       if (c === open) { var sub = buildSub(c); if (sub.children.length) li.appendChild(sub); }
@@ -204,7 +224,7 @@
     if (!card) return;
     drop.innerHTML = '';
     var h = document.createElement('div'); h.className = 'tn-h';
-    h.textContent = (txt($('.cnum', card)) + ' ' + txt($('.ct', card))).trim();
+    h.textContent = (txt($(NUM_SEL, card)) + ' ' + txt($(TITLE_SEL, card))).trim();
     drop.appendChild(h); drop.appendChild(buildSub(card));
     drop.__card = card; drop.__btn = btn;
     drop.style.top = Math.max(0, topPx) + 'px';
@@ -217,7 +237,7 @@
   function cardButton(card) {
     $$('.tn-cardbtn').forEach(function (b) { if (!card || !card.contains(b)) b.remove(); });
     if (!card || $('.tn-cardbtn', card)) return;
-    var row = $('.ch .cm', card) || $('.ch', card); if (!row) return;
+    var row = $(BTNROW_SEL, card) || $(HEADER_SEL, card); if (!row) return;
     var b = document.createElement('button');
     b.type = 'button'; b.className = 'tn-cardbtn'; b.setAttribute('aria-expanded', 'false');
     b.innerHTML = '&#9776; ' + T.sec;
@@ -227,7 +247,7 @@
       openDrop(card, b.getBoundingClientRect().bottom + 6, b);
     });
     b.addEventListener('keydown', function (e) { e.stopPropagation(); });
-    var chev = $('.chev', row); row.insertBefore(b, chev || null);
+    var chev = $(CHEV_SEL, row); row.insertBefore(b, chev || null);
   }
 
   function closeDrop() {
@@ -270,7 +290,7 @@
   }
 
   function init() {
-    if (!$('.main .sec')) return;
+    if (!$(SEC_ANY)) return;
     css();
     side = document.createElement('div'); side.className = 'tn-side'; side.setAttribute('role', 'navigation'); side.setAttribute('aria-label', T.tab);
     document.body.appendChild(side);
@@ -289,7 +309,7 @@
     new MutationObserver(function (muts) {
       for (var i = 0; i < muts.length; i++) {
         var t = muts[i].target;
-        if (muts[i].type === 'childList' || (t.classList && (t.classList.contains('sec') || t.classList.contains('card')))) { schedule(); return; }
+        if (muts[i].type === 'childList' || (t.classList && (t.classList.contains(SEC_CLS) || t.classList.contains(CARD_CLS)))) { schedule(); return; }
       }
     }).observe($('.main'), { subtree: true, childList: true, attributes: true, attributeFilter: ['class'] });
     addEventListener('scroll', function () { closeDrop(); attachBarButton(); spy(); }, { passive: true });
