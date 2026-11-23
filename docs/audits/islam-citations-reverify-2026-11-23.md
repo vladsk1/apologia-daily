@@ -186,8 +186,9 @@ Isaiah 29:12; add "London: AuthorHouse UK" to the Bridges entry.
 
 - H3: our Bukhari 4987 quotation omits the translator's parenthesis "(Qur'an)".
 - H6: "uncovered and read aloud" — the narrations say the verse was uncovered and seen, not read aloud. The phrase
-  comes from `library/islam-dilemma.html` (outside this pass's file list; also on `ev-m-canon.html`). Logged in
-  the backlog.
+  comes from `library/islam-dilemma.html` (outside this pass's file list). **Fixed 2026-11-24, see §10.**
+  ⚠ Correction: this note first said the phrase was "also on `ev-m-canon.html`". It is not. That page's "read
+  aloud" is about apostolic letters read aloud in worship, a different sentence; it was a bare text-search hit.
 - H7: "we do not find the verse of stoning in the Book of Allah" is our literal rendering of Bukhari 6830's
   Arabic, not Khan's printed English.
 - H5: sunnah.com's English panel at Bukhari 3758 shows the wrong narration; the Arabic there, and the English at
@@ -213,3 +214,36 @@ Counted by script from the Verdict column of the tables in §§1–6, 2026-11-23
 (all four fixed and re-gated, §7), 2 STILL UNVERIFIED (S1a, S5), 1 not cited in these files (B12).** Several
 VERIFIED rows carry a note; the notes are gathered in §8. Every VERIFIED row has a page that was opened in this
 session or by one of its agents; none rests on memory.
+
+## 10. Follow-up, 2026-11-24 (owner-directed)
+
+**H6 fixed.** `library/islam-dilemma.html:143` and card 02 (`worldviews.html:434`). "Read aloud" is removed. The
+citations lens then found a second slip in the same sentence: "Muhammad calls for the Torah". In al-Bukhari 4556
+and 6819 it is Abdullah ibn Salam who asks for the Torah; only Muslim 1699 has Muhammad ask. The sentence now reads
+"Muhammad asks the Jews what their Torah prescribes for adultery; the Torah is brought…", which all three
+narrations support (6819: "What is the legal punishment (for this sin) in your Book (Torah)?").
+
+**Four answers from the WV-ISL-1 residue were written into the essays and ported to the cards:**
+
+| Reply | Essay | Card | Primary pages opened |
+|---|---|---|---|
+| Sela in Isaiah 42:11 is Mount Sal' in Medina | `library/islam-prophecy.html:182` | card 11, `worldviews.html:1411` | 2 Kings 14:7, Isaiah 16:1, Judges 1:36, Isaiah 42:11 (ESV and KJV, biblegateway.com); Strong's/BDB 5553 (biblehub.com) |
+| Seir in Deuteronomy 33:2 stands for Jesus | `library/islam-prophecy.html:185` | card 11, `worldviews.html:1470` | Deut 1:2; 2:1–5; Genesis 32:3; 36:8–9; Judges 5:4–5; Joshua 15:10; Mark 3:7–8 (ESV, biblegateway.com) |
+| *Tamida* means "sway", not "quake" | `library/islam-science.html:143` | card 15, `worldviews.html:1825` | al-Tabari (Arabic) on 16:15 and Ibn Kathir (English) on 21:31 and 16:15, quran.com; Bridges' translation of 16:15 ("lest it sway with you"), quran.com |
+| Psalm 104:5 convicts the Bible by the same test | `library/islam-science.html:144` | card 15, `worldviews.html:1826` | Psalm 104:1–6 (ESV, biblegateway.com) |
+
+**Gate.** Three rounds, read-only agents, checksums identical before and after each. Round 1 (four lenses, first
+draft, all of it authored and declared so): 0 HERESY, 0 BREAK, 0 citation errors; wording findings on every item,
+the weightiest on the Psalm 104 answer (three sentences could be lifted out to read as "the Bible is convicted" or
+as putting the Qur'an on a par with Scripture). One fix pass. Round 2 (fixed text): citations STAMPABLE, argument
+STAMPABLE, orthodoxy CLEAN, neutrality STAMPABLE, with four replacement sentences, applied verbatim. Round 3
+(those four sentences): argument SOUND and STAMPABLE, orthodoxy CLEAN with clarifier candidates none (one Explore agent, Fable); neutrality OK and STAMPABLE (Explore agent, Opus), which also re-opened 2 Kings 14:7, Judges 1:36 and Isaiah 16:1 in the ESV. No further change.
+
+**Resting on secondary pages only:** where first-century Idumea lay (encyclopedia entries; Britannica refused the
+request), and the one sentence on mountain roots (an open geology textbook and encyclopedia summaries).
+
+**Offered by the lenses and not applied (scope frozen):** Isaiah 42:13 ("man of war" is the LORD, not the
+Servant); Habakkuk 3:3 (Paran paired with Teman); that Hebrew *sela* and Arabic *sal'* are cognate (could not be
+verified, so the clause was cut); Psalm 104:5 cited against Copernicus; the "prophetic perfect" reply to "the
+verbs are past tense"; "a teacher" (essay) against "a reader" (card 02) for the man who covers the verse — each
+matches a narration it cites; and the Muslim reply that Muhammad used the Torah only to expose concealment.
