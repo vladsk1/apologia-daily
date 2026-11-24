@@ -20,7 +20,23 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
-> **⭐ LATEST — 2026-11-24. NEW MANDATORY LENS + RULE: the READER-IN-THE-PEW RULE (owner-directed).**
+> **⭐ LATEST — 2026-11-25. PEW-2 DONE ON THE JESUS-TAB CARDS: the critics'-default dating/authorship frame.**
+> Owner order: critics' framing first, then the six weakest cards (PEW-1), then the rest of the tab. 13 cards in
+> `ev-s3.html` (+MK +ES) no longer state critical positions as settled: Mark is "the Gospel most scholars date
+> earliest" or the aside is cut; Matthew/Luke's use of Mark is "on the dominant Two-Source hypothesis"; the
+> pre-70 Gospel dating and the sixth-century Daniel date are stated beside the critical ones; the Colossians and
+> Pastorals doubts are said once, in the Deep Dive, as "even granting", with the defence beside them. Two rounds,
+> five lenses; round 2 clean on all five; the table is in the audit file ("What was fixed 2026-11-25").
+> ⚠ **THE SIGNATURE, AGAIN, AND MEASURED: in round 1 every CUT passed and nearly every sentence ADDED drew a
+> finding** (4 of 5 lenses failed it; the two sentences I added to state the traditional view on `multiatt` and
+> `john11` each broke their own paragraph). Round 2 passed by withdrawing additions, not by rewording them. So
+> a critics'-default fix is mostly a CUT or a three-word attribution; a new sentence stating the conservative
+> view needs a certified sentence to port AND the right place to put it.
+> ⚠ **The cards are now ahead of their essays.** `library/humanity.html` still says "John, or a writer close to
+> him"; `library/daniel70.html` names no sixth-century defender; so the cards could not say "the apostle John"
+> or name one. Fixing those essays unlocks the rest. What the round left: `docs/content-backlog.md` PEW-9.
+>
+> **2026-11-24. NEW MANDATORY LENS + RULE: the READER-IN-THE-PEW RULE (owner-directed).**
 > A pastor's-eye audit of the Jesus tab (`ev-s3.html`, all 26 cards read cover to cover) found **0 doctrinal
 > errors** and still rated **6 cards NOT YET, 16 "with a word of guidance", 4 hand-it-over** — because of
 > accumulated hedging, not error. Measured that day (hedge words by grep, names by the new counter):

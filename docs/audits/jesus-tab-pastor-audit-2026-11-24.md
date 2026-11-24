@@ -134,6 +134,23 @@ The four rated HAND IT OVER: `arg-jesus_as_god_nt`, `arg-earlycreed`, `arg-uniqu
 | "John, or a writer close to him" | humanity (two places) |
 | John late and not an eyewitness | john11 |
 
+## What was fixed 2026-11-25 (PEW-2, the critical-default frame)
+
+Scope frozen to the table above. 13 cards in `ev-s3.html`, mirrored to Macedonian and Spanish in the same change.
+
+| Critical default | What the cards say now |
+|---|---|
+| Gospels dated AD 70–100 | "on the standard dating", with the pre-70 dating of Robinson and Hemer named beside it as "a respected minority position"; the point holds "on either dating" (`hist_jesus`, Research) |
+| Mark first | "the earliest Gospel" cut where the date does no work (four places); elsewhere "the Gospel most scholars date earliest" (five places) |
+| Matthew and Luke copying Mark | framed "on the dominant 'Two-Source' hypothesis" (`multiatt` ×2, `respred` ×2) |
+| Daniel in the second century BC | free tier states the traditional sixth-century date first; Deep Dive says it "is still defended", gives the grounds, and adds how Jesus received the book (Matthew 24:15); "even a second-century-BC author" |
+| Colossians doubtful | said once per card in the Deep Dive as "even granting", with Douglas J. Moo named as a defender; cut from two plain tiers and two Research boxes |
+| Pastorals doubtful | "A word of candor" replaced by "even granting that doubt for the sake of argument", with the defence stated in the same sentence |
+| "John, or a writer close to him" | cut from both plain tiers ("John's first letter draws…") |
+| John late and not an eyewitness | NOT fixed — the added sentence broke its paragraph and was withdrawn (PEW-9 item 2) |
+
+Gate: two rounds, five lenses each (citations, argument, orthodoxy, neutrality, pastor), read-only, file hashed before and after. Round 1 failed four of five lenses; every cut passed and nearly every finding was on a sentence that had been added. Round 2, which mostly withdrew those additions, passed all five. The pastor lens's answer to "did the change make this card worse?" was no on all 13. Counter after the round: defenders 177, dissent 99, hedges 171 (was 176 / 99 / 172). What the round left is `docs/content-backlog.md` PEW-9.
+
 ## What should stay
 
 Retiring the probability figures and the *echad* argument; "even on the critics' date, Daniel predates Jesus"

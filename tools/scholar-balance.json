@@ -57,6 +57,7 @@
     { "name": "Luke Timothy Johnson", "pattern": "Luke Timothy Johnson" },
     { "name": "Paul Owen", "pattern": "Paul Owen" },
     { "name": "Michael F. Bird", "pattern": "Michael (F\\. )?Bird" },
+    { "name": "Colin Hemer", "pattern": "\\bHemer\\b" },
     { "name": "Leonhard Goppelt", "pattern": "\\bGoppelt\\b" },
     { "name": "Richard M. Davidson", "pattern": "Richard (M\\. )?Davidson" },
     { "name": "Benjamin Gladd", "pattern": "\\bGladd\\b" },
@@ -106,6 +107,7 @@
     { "name": "Samuel Sandmel", "pattern": "\\bSandmel\\b", "note": "The Jewish scholar whose 'parallelomania' caution (1961) our typology pages ADOPT as a control on their own method. He was not writing against Christian typology, so he is not counted as dissent." },
     { "name": "E. P. Sanders", "pattern": "E\\.\\s?P\\.\\s?Sanders" },
     { "name": "John P. Meier", "pattern": "\\bMeier\\b" },
+    { "name": "John A. T. Robinson", "pattern": "A\\.\\s?T\\.\\s?Robinson", "note": "A liberal Anglican bishop (Honest to God) whose Redating the New Testament (1976) argued the whole New Testament was written before AD 70. Theologically liberal and 'no friend of conservative apologetics' (library/earlydate.html); cited for that case only, so counted for neither side." },
     { "name": "Paula Fredriksen", "pattern": "\\bFredriksen\\b", "note": "Mixed by default: she holds that Jesus was hailed as Messiah before Easter and died under the title (against Wrede), but doubts he publicly claimed it. Where a page makes her its named objection, record her under unitRoles.dissenter for that page." },
     { "name": "Ulrich Luz", "pattern": "Ulrich Luz", "note": "Cited for the distinction between a 'miracle secret' and a 'messianic secret' in Mark (ZNW 56, 1965), which our reply to Wrede uses. NOT a defender of a historical origin for the secrecy, nor of Jesus's messianic claim — so he is counted for neither side (neutrality + pastor lenses, 2026-11-24). Never say he 'argued against Wrede'." }
   ],
