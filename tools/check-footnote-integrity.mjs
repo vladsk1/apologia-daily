@@ -179,4 +179,7 @@ function main() {
 // guard the CLI body: importing this module must not exit the importer.
 // (check-retired-claims.mjs learned this the hard way — an unguarded process.exit
 //  silently collapsed the test suite from 90 tests to 76, all green.)
-if (import.meta.url === `file://${process.argv[1]}`) main();
+// Cross-platform "run as a script" guard. The old form compared against `file://${process.argv[1]}`,
+// which is never true on Windows (argv[1] is C:\\…), so the tool silently checked nothing and exited 0.
+import { pathToFileURL as __toFileURL } from 'node:url';
+if (process.argv[1] && import.meta.url === __toFileURL(process.argv[1]).href) main();

@@ -34,7 +34,7 @@
  */
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, join, relative } from 'node:path';
+import { dirname, join, relative, isAbsolute } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const BASELINE = join(ROOT, 'tools', 'scripture-refs-baseline.json');
@@ -92,7 +92,7 @@ function servedHtml(dir, acc = []) {
   for (const entry of readdirSync(dir)) {
     if (entry.startsWith('.')) continue;
     const full = join(dir, entry);
-    const top = relative(ROOT, full).split('/')[0];
+    const top = relative(ROOT, full).split(/[\\/]/)[0];   // Windows separators too
     if (EXCLUDE_DIRS.has(top)) continue;
     const st = statSync(full);
     if (st.isDirectory()) servedHtml(full, acc);
@@ -111,7 +111,7 @@ const stripTags = (html) =>
 export function findBadRefs(files, readFile) {
   const bad = [];
   for (const f of files) {
-    const rel = typeof f === 'string' && f.includes('/') ? relative(ROOT, f) : f;
+    const rel = typeof f === 'string' && isAbsolute(f) ? relative(ROOT, f) : f;
     const text = stripTags(readFile(f));
     let m;
     REF_RE.lastIndex = 0;
@@ -166,4 +166,7 @@ function main() {
   process.exit(1);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) main();
+// Cross-platform "run as a script" guard. The old form compared against `file://${process.argv[1]}`,
+// which is never true on Windows (argv[1] is C:\\…), so the tool silently checked nothing and exited 0.
+import { pathToFileURL as __toFileURL } from 'node:url';
+if (process.argv[1] && import.meta.url === __toFileURL(process.argv[1]).href) main();

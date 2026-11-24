@@ -50,6 +50,17 @@
 > `virginbirth`, `god-crucified`, `jesus-messiah-claim`), the critics'-default dating/authorship frame, the
 > thin conservative bench, the other 16 cards, and every other tab — `docs/content-backlog.md` PEW-1 to
 > PEW-8; the audit itself is `docs/audits/jesus-tab-pastor-audit-2026-11-24.md`.
+> 🔴 **FOUND WHILE PUBLISHING — FOUR CHECK TOOLS WERE SILENT NO-OPS ON WINDOWS, AND `main`'s
+> `orthodoxy-guards` CI JOB HAD BEEN RED FOR 10+ COMMITS.** `check-scripture-refs`, `check-required-fences`,
+> `check-footnote-integrity` and `check-sitemap-parity` guarded `main()` with
+> ``import.meta.url === `file://${process.argv[1]}` `` — never true on Windows — so on the owner's machine each
+> exited 0 **having checked nothing and printed nothing**. On Linux CI `check-scripture-refs` did run, and
+> failed on five references inside the Church Fathers pages' own correction notes ("Psalm 168:5 → Psalm
+> 148:5 — there is no Psalm 168"), added 2026-11-18/22; because it failed first, **every later step in that
+> job was skipped on every push** (required-fences, footnote integrity, and now the scholar-bench check).
+> Fixed 2026-11-24: guards use `pathToFileURL`, the Scripture tool's two backslash-path bugs are fixed, and the
+> five correction-note references are accepted in `tools/scripture-refs-baseline.json`. ⚠ **A check that
+> prints no ✓ line did not run.** Read the output, not the exit code — and look at the CI result after a push.
 >
 > **🅿 PARKED FOR LATER — 2026-09-23 (owner: "keep all this for later"). Strategy only, nothing below is built
 > except the date fix.** Five docs + two mockups, read them before re-deriving any of it:
