@@ -20,6 +20,37 @@
 > *why* behind a past decision; read this file for current state. **Keep it that way:** when an entry
 > here stops affecting a decision, move it to `HANDOFF.md` rather than letting this file grow back.
 >
+> **⭐ LATEST — 2026-11-24. NEW MANDATORY LENS + RULE: the READER-IN-THE-PEW RULE (owner-directed).**
+> A pastor's-eye audit of the Jesus tab (`ev-s3.html`, all 26 cards read cover to cover) found **0 doctrinal
+> errors** and still rated **6 cards NOT YET, 16 "with a word of guidance", 4 hand-it-over** — because of
+> accumulated hedging, not error. Measured that day (hedge words by grep, names by the new counter):
+> "contested" 83×, "debated" 54×, "disputed" 45×; named dissent 129 + 42 hostile-witness uses (Ehrman 50,
+> Dunn 41, McGrath 32) against named defence 153 — level in total, but **82% of that defence is four scholars
+> (Bauckham 38, Hurtado 37, Wright 29, Fee 22), often themselves introduced as "debated"; Blomberg, Keener,
+> Craig, Habermas and Licona are named 0×; 8 of 26 cards name more dissent than defence; 7 cards name a
+> dissenter in a plain tier (19 mentions).** Whole English library the same day: 199 cards/essays, 64 flagged
+> by the counter (a coarse net — unjudged). ⚠ **Root causes were in
+> our own rules:** the author rubric said "name a real scholar who disagrees" with no matching duty to name
+> one who agrees; pipeline rule 7 was being read as "copy every hedge into every tier"; and the owner's
+> **2026-11-04/05 "lighter cautions" pass** (commits `1a263aa4`, `de625bb5`, `27ca7ebe`) and its
+> inspiration-safe rule were **never written into this file**, so the hedges grew back one mining row at a
+> time. Now fixed in the rules: see **"READER-IN-THE-PEW RULE"** below, the new read-only **`apologia-pastor`**
+> lens (pipeline step 4b), and `tools/check-scholar-balance.mjs` (its bench check is **CI-blocking**).
+> ⭐ **FIRST ROUND UNDER THE RULE, same day — the scholar bench on the Jesus tab (EN + MK + ES).** Four gate
+> rounds. Measured with the final registry, live site v the edited file: named defence 171 → 174, named dissent
+> 120 → 99, dissenters named in a plain tier 17 → 10, **cards naming more dissent than defence 6 → 1**. The one
+> left is `arg-jesus-messiah-claim` (1 v 8 → 3 v 5): improved, still short, recorded as OPEN DEBT in
+> `tools/scholar-balance-baseline.json` (38 units site-wide) and **not passed** — it needs a scholar who
+> actually argues its thesis, not a name. ⚠ **Lessons, each caught by a lens and none by self-review:** a cut
+> can leave a pronoun pointing at the wrong question; de-naming a critic to improve a count is exactly what
+> the rule forbids; a ported sentence can move the count more than the reader; and **the counter itself was
+> wrong twice** (it left out a card's headline critic and counted a scholar cited only for a distinction) —
+> the pastor lens caught it, so *check who the counter is counting before trusting its number*. ⬜ **STILL
+> OPEN, nothing below is started:** the six NOT-YET cards (`jesus_claims`, `titles`, `daniel70`,
+> `virginbirth`, `god-crucified`, `jesus-messiah-claim`), the critics'-default dating/authorship frame, the
+> thin conservative bench, the other 16 cards, and every other tab — `docs/content-backlog.md` PEW-1 to
+> PEW-8; the audit itself is `docs/audits/jesus-tab-pastor-audit-2026-11-24.md`.
+>
 > **🅿 PARKED FOR LATER — 2026-09-23 (owner: "keep all this for later"). Strategy only, nothing below is built
 > except the date fix.** Five docs + two mockups, read them before re-deriving any of it:
 > `docs/LOGOS_OF_APOLOGETICS.md` (what "the Logos of apologetics" means: an argument graph + guides + a talk
@@ -1333,6 +1364,13 @@ in order. Do not deploy content that has skipped a stage.
 4. **Argument-soundness review** — `apologia-argument` (read-only): logical validity,
    premise strength, fair steelmanning of the strongest objection, no overstatement,
    honest concession.
+4b. **Reader-in-the-pew review** — `apologia-pastor` (read-only): reads the WHOLE card / essay /
+   answer, every tier, as a pastor deciding whether to hand it to his congregation. It enforces the
+   READER-IN-THE-PEW RULE below (caveats once and answered, defenders named, no critical default,
+   no inspiration concession, verdict last). Runs in the same parallel round as the other lenses,
+   and reads the text **again after their fixes are applied** — it is the only lens that sees the
+   hedges the others add. A **NOT YET** blocks deploy. Run `node tools/check-scholar-balance.mjs
+   <file>` first and paste its numbers into the brief.
 5. **Copy-edit** — `apologia-editor`: typos, grammar, tone consistency, broken markup/links.
 6. **Apply fixes + verify footnote integrity** — every `<sup>N</sup>` must map to exactly
    one `<li>`; preserve that mapping across all edits.
@@ -1426,6 +1464,12 @@ in order. Do not deploy content that has skipped a stage.
 > SAME pass** — the deep dive, the free "In plain English" tier, the "How to explain this" script, the
 > spoken "In conversation:" line, and the `orthonote` box. On 2026-08-08 the same shape surfaced in
 > **four different layers**, and each successive lens found a surface the previous grep had missed.
+> ⚠ **CLARIFIED 2026-11-24 — this rule means "remove the contradiction", NOT "copy the hedge into every
+> tier".** Read literally it became the engine of hedge creep: one McGrath caveat was pasted into the free
+> tier, the Case Plainly, the deep dive and the Research box of card after card. The unhedged twin in a
+> plain tier is fixed by **rewording the plain sentence so it no longer overclaims** (drop the superlative,
+> state our reading as our reading). The caveat itself is stated **once, in the deep tier, with its answer**
+> — see the READER-IN-THE-PEW RULE. Corrections of *error* still propagate to every tier; hedges do not.
 >
 > ### ⚠⚠ 8–10: THE THREE RULES THAT WOULD HAVE MADE 2026-08-11 A TWO-ROUND JOB. (Added 2026-08-11.)
 >
@@ -1563,6 +1607,73 @@ unearned-symmetry defect (see "Orthodoxy outranks charity" above and the `apolog
   diverge," and never as "the same God." When in doubt, fence with an `orthonote` ("A shared word, not a
   shared doctrine"). (Established by the 2026-07-20 owner-directed Islam sweep.)
 
+## READER-IN-THE-PEW RULE — caveats once and answered, defenders named, the case built on believing scholarship (mandatory; owner-directed 2026-11-24; `apologia-pastor` enforces it)
+
+**Every card, essay and answer must be something a pastor could hand to his whole congregation** — new
+believers, teenagers, lifelong members who have never met a critical scholar, quiet doubters — and have them
+finish it *more* confident, not carrying doubts they did not arrive with. The other lenses judge one claim at
+a time, so each hedge they add is defensible; nobody was reading the page whole. This rule and its lens do.
+(Why it exists: the 2026-11-24 Jesus-tab audit in the status entry at the top of this file.)
+
+1. **A caveat is said ONCE, in the deepest tier that needs it, with its answer — and the verdict comes after
+   it.** Not once per tier: once per card or essay. Never in the free summary, "The Case, Plainly", a "How to
+   explain this" / "In conversation" script, a title or subtitle, or as the last sentence of a section or
+   verdict box. **A believer is never coached to volunteer a doubt.** (The one bounded "this strand alone does
+   not prove it" limit per card lives in the verdict box, stated before the verdict, per the 2026-11-04 owner
+   ruling. `orthonote` doctrinal fences and the argument-specific rules — preservation is not truth, data
+   conceded / design inferred — are guardrails, not hedges, and stay.)
+2. **A dissent is never left standing.** If a dissenting scholar or critical position is named, the same
+   paragraph gives **the reason we hold our reading** and ends on it. A bare "X disputes this", "itself
+   debated", "arguably", "genuinely contested", "specialists remain divided" is an unanswered doubt, not
+   honesty: answer it or cut it. *Answering is not claiming defeat* — the `docs/scholar-labels.md` forms
+   hold (Dunn and McGrath are "granted, not crushed"): give our reason, land our verdict, do not say the
+   dissent is "defeated".
+3. **Scholar balance.** (a) Wherever a dissenting scholar is named, a scholar who **defends** our reading is
+   named beside him, with that scholar's reason. (b) **Across any card or essay, named defence is never
+   outweighed by named dissent — this one is CI-BLOCKING** (`node tools/check-scholar-balance.mjs --check`;
+   owner ruling 2026-11-24: "a real worry"). Fix the page, not the count: port a certified sentence naming a
+   scholar who defends the reading, or cut a dissent that is repeated or unanswered. Never add a name to move
+   the number, and never swap a critic's name for a pronoun just to hide the mention. (c) No dissenting scholar is named in the free summary, "The Case, Plainly"
+   or an explain script — state the objection there without a name, or not at all. (d) **A hostile witness is
+   different and welcome anywhere:** a sceptic *conceding* a fact ("even Ehrman grants Jesus existed") counts
+   *for* the case.
+4. **Build the case on believing scholarship; critical scholarship is not the default frame.** The positive
+   case rests first on Scripture, then on verified primary sources, then on scholars who affirm the historic
+   faith — drawn from Catholic, Orthodox and Protestant scholarship alike. Critical scholarship enters as a
+   hostile witness or as an objection to answer. When a critical position is granted for the sake of
+   argument (late Gospel dates, Markan priority, Q, a disputed Pauline letter, a late Daniel, doubt from
+   single attestation), **say "even granting…" and state the traditional view and who holds it beside it.**
+   Never volunteer an authorship, dating or authenticity doubt the argument does not need.
+5. **Inspiration-safe (the 2026-11-04 owner rule, written down here because it was lost).** Never concede in
+   our own voice that a Gospel writer invented, composed, shaped, embellished, "sharpened in the retelling"
+   or "wrote back" words or scenes of Jesus. The shape: **assert authenticity · honour the text · refuse the
+   written-back theory · don't claim verbatim.** The sceptic's objection may be stated fairly in an objection
+   section, and we may say the case does not rest on exact wording.
+6. **The honesty floor — this rule does not license overstatement.** It changes *weight, placement and whose
+   voice builds the case*, never the facts. No overstated consensus (`tools/retired-claims.json` still
+   binds). The strongest objection is still steelmanned — once, in the essay or deep tier. **Every scholar
+   newly named as a defender is verified by `apologia-citations` like any other citation; a name is never
+   added from memory to improve the count.** The fences in `docs/scholar-labels.md` stand (Bauckham's
+   universalism fence, Kitchen-with-his-critic, Wright's scope). Where believing scholarship is genuinely the
+   minority on a point, say so once, with the reasons it holds its view. Confidence must be earned by truth
+   (see "The mission" below) — a page that hides a real difficulty fails this rule as surely as one that
+   drums on it.
+
+**Enforcement.** (i) `apologia-pastor` (pipeline step 4b) rates each piece HAND IT OVER / WITH A WORD OF
+GUIDANCE / **NOT YET** (blocks deploy); record its date in the stamp `by` note. (ii) Any lens that recommends
+a hedge must give its tier, its reason and its defender, and must `Grep` the page for one already there
+(written into `apologia-neutrality`, `apologia-argument`, `apologia-author`, `apologia-evidence`).
+(iii) `node tools/check-scholar-balance.mjs <file>` (`--changed`, `--audit`) counts named defenders vs
+dissenters per tier, hedge density and repeated caveats. **The bench is blocking:** `--check` fails CI when
+a card or essay not in `tools/scholar-balance-baseline.json` names more dissent than defence, or when a
+baselined gap grows; the baseline is recorded debt that may only shrink (`--update` after fixing a unit —
+never hand-edit it to get a build green). The other counts are a non-blocking report. The registry of who
+counts as which lives in `tools/scholar-balance.json` — add a scholar there in the same change that first
+names him; where a listed "dissenter" is in fact arguing *for* the page's claim (Ehrman and Casey against
+the mythicists), record it under `unitRoles` with the reason. (iv) **A mining row that adds a dissent adds it once, in the deep tier, already answered** — never
+"every tier". (v) Existing content is brought up to the rule as it is next touched; any fix is new content
+and re-opens the full gate, mirrors included.
+
 ## The mission — a check every agent applies
 
 Apologia Daily exists to **strengthen Christians' confidence in the faith and equip them to give a
@@ -1639,6 +1750,7 @@ agent's definition states how.
 | `apologia-citations` | Fact-checks every scripture/source citation | read-only |
 | `apologia-argument` | Judges argument soundness / steelmanning / overstatement | read-only |
 | `apologia-editor` | Copy-edit: typos, grammar, markup, links | write |
+| `apologia-pastor` | **Reader-in-the-pew lens** — reads the whole piece as a pastor would; hunts hedge creep, dissent left standing, the unbalanced bench, critical defaults, inspiration concessions | read-only |
 | `apologia-orthodoxy` | **Final doctrinal gate** — runs last, certifies orthodoxy | read-only |
 | `apologia-engineer` | **Code-quality & security reviewer** — api/*.js, RLS, tools, paywall (correctness, security, DRY smells); runs the test suite | read-only |
 | `apologia-strategist` / `-research` / `-product` / `-growth` / `-seo` / `-social` | Growth/strategy/content research (not part of essay QA) | varies |

@@ -116,6 +116,8 @@ jobs:
         run: node tools/check-crosscheck-block.mjs
       - name: Footnote apparatus (markers + internal cross-references resolve)
         run: node tools/check-footnote-integrity.mjs --changed
+      - name: Scholar bench — named dissent may not outweigh named defence (blocking)
+        run: node tools/check-scholar-balance.mjs --check
       - name: Stamp-integrity report (non-blocking)
         run: node tools/check-stamp-integrity.mjs --warn
       # Non-blocking by design: translations legitimately lag, and a guard that
@@ -124,6 +126,13 @@ jobs:
       # ev-s3.mk.html through four gate rounds on 2026-08-11.
       - name: Translated-mirror parity report (non-blocking)
         run: node tools/check-mirror-parity.mjs --warn
+      # Non-blocking by design: a coarse counter, not a judge. It reports where named
+      # dissent outweighs named defence, where a dissenter is named in a plain tier, and
+      # where the same caveat is repeated — the hedge creep the 2026-11-24 Jesus-tab audit
+      # found after every other gate had passed. The apologia-pastor lens is the judge
+      # (CLAUDE.md -> READER-IN-THE-PEW RULE).
+      - name: Scholar-balance and hedge report (non-blocking)
+        run: node tools/check-scholar-balance.mjs --audit --top 20 --warn
 
   tests:
     # Deterministic code/content invariants (node:test, no dependencies): nav
