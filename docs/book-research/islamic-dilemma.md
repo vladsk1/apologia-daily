@@ -375,6 +375,17 @@ Note the shape of the miss: it was not a wrong verdict, it was **no verdict** �
 never got compared to anything. A search-driven cross-check tests the leads you thought to search for;
 reading the essay is what tells you which of the book's sections have no counterpart at all.
 
+### ✅ 2026-11-24 — one more Part 4 lead shipped: Q 5:15 in the concealment reply
+Note read cover to cover again on 2026-11-24 against two live replies (owner-directed). **Shipped:** the Part 4
+lead that the concealment charge at **Q 5:15** presupposes the text is now in `library/islam-dilemma.html` :143
+and Islam card 02 (`worldviews.html`), inside the answer to "he only exposed what the rabbis concealed", with
+the Ibn 'Abbas saying Ibn Kathir quotes on that verse and Ibn Kathir's wider gloss stated openly. Gated by all
+four lenses, two rounds. Record: `docs/audits/islam-citations-reverify-2026-11-23.md` §12.
+**Checked and NOT added:** Abu Dawud 4452 / Makkot 7a (the paragraph already carries al-Bukhari, Abu Dawud 4449
+and Sahih Muslim 1700). **This note has nothing on Deuteronomy 33:2, Seir, Paran or Habakkuk 3:3** — the book's
+Muhammad-in-the-Bible section covers the Paraclete, Deuteronomy 18 and Isaiah 29 only — so do not look here for
+the "prophetic past tense" reply; it lives in `library/islam-prophecy.html` :185.
+
 ### Residual, genuinely still absent (do NOT treat as a new row without checking intent)
 **Cave of Treasures** and **Life of Adam and Eve** remain absent site-wide. But row 110's Done note records
 that the shipped apocrypha subsection was **deliberately scoped** to the Infancy Gospel material. Treat this
