@@ -36,6 +36,22 @@
 > him"; `library/daniel70.html` names no sixth-century defender; so the cards could not say "the apostle John"
 > or name one. Fixing those essays unlocks the rest. What the round left: `docs/content-backlog.md` PEW-9.
 >
+> **⭐ SAME DAY — PEW-1 DONE ON THE CARDS: none of the six NOT-YET Jesus-tab cards is NOT YET any more.** `jesus_claims`,
+> `titles`, `daniel70`, `virginbirth`, `god-crucified` and `jesus-messiah-claim` are each rated "hand it over with a word
+> of guidance" by the pastor lens after two gate rounds (round 2 clean on all five lenses; table in the audit file →
+> "What was fixed 2026-11-25 (PEW-1)"). 117 edits, almost all cuts of repeated caveats and distancing frames ("could be
+> Luke's theology rather than Jesus' own words", "Matthew came to believe", "One may judge Mark's framing to be theology")
+> plus verbatim ports of answers the essays already had. Tab hedges 171 → 138. **`jesus-messiah-claim` is still in bench
+> debt (3 v 5) — not fixed, and two count-moving shortcuts were refused.**
+> ⚠⚠ **THE NEW LESSON, AND IT CUTS THE OTHER WAY: DE-HEDGING HAS ITS OWN FAILURE MODE.** Five of the 117 edits were reversed (four in full, one in part)
+> by the gate. The worst removed the only flag on a FALSE figure: the Daniel card's "From March 14, 445 BC to April 6, AD 32
+> = 173,880 days" is two days out (173,882; Friday to Sunday), and two lenses computed it independently. The flag is back, now on the equation itself. **Before
+> cutting a caveat, ask whether the sentence it qualifies is true without it.** Two more shapes: a cut in one tier can
+> strand a question in another (its answer went with it), and a ported answer needs the premise its home card stated.
+> ⚠ Method that worked and is worth repeating: one read-only PLANNER per card (reads card + essay in full, proposes
+> exact-match CUT > MOVE > PORT edits), a script that asserts every OLD string matches once and every PORT is verbatim in
+> its source, then the lenses split by card group. What the round left: `docs/content-backlog.md` PEW-10.
+>
 > **2026-11-24. NEW MANDATORY LENS + RULE: the READER-IN-THE-PEW RULE (owner-directed).**
 > A pastor's-eye audit of the Jesus tab (`ev-s3.html`, all 26 cards read cover to cover) found **0 doctrinal
 > errors** and still rated **6 cards NOT YET, 16 "with a word of guidance", 4 hand-it-over** — because of
