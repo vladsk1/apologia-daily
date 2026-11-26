@@ -66,6 +66,26 @@
 > 🔴 **P1, NOT DONE, carry it into the next change on `ev-s3.html`:** `messianic_prophecy` still presents Psalm 22 as a
 > description of crucifixion in The Case, Plainly (L868, a plain tier) and in the deeper tiers — a framing the essay's own
 > gate retired on 2026-10-09. Exact lines and the offered cuts: `docs/content-backlog.md` PEW-11.
+> ✅ **That P1 was fixed on 2026-11-27 (next entry).**
+>
+> **⭐ 2026-11-27 — PEW-3 BATCH B DONE ON THE CARDS, AND PSALM 22 FIXED.** `hist_jesus`, `john11`, `phil2`, `isaiah53`,
+> `humanity`, `nt-use-of-ot`, plus the carried P1 on `messianic_prophecy`: **no tier of that card now says Psalm 22
+> describes a crucifixion** — it says what the certified essay says, and the 22:16 "they pierced" caveat stands once, in
+> the Deep Dive. 41 places changed; two gate rounds; round 2 passed all five lenses; every card "hand it over with a
+> word of guidance" and better than live. Tab hedges 128 → 120. Table: the audit file → "What was fixed 2026-11-27
+> (PEW-3 batch B)". What it left: `docs/content-backlog.md` PEW-12. **Still to do: batch C** (`worship-of-jesus`,
+> `jesus-is-yahweh`, `paul-divinity`, `christ-before-bethlehem`, `jesus_as_god_nt`, `earlycreed`, `uniqueness`,
+> `crucified-messiah`).
+> ⭐ **THE DE-HEDGING LESSON, APPLIED BEFORE THE GATE THIS TIME, HELD: no round-1 cut was reversed.** The session read
+> every planner edit against one question — *what claim did this text qualify, and does that claim still stand in this
+> tier?* — and declined six of them before any reviewer saw them. Every lens agreed with each decline.
+> ⚠ **THE NEW SHAPE TO WATCH IS IN THE PORTS, NOT THE CUTS.** (1) A ported witness can contradict the paragraph he is
+> ported into: Gordon Fee was cited for "Paul everywhere assumes pre-existence" under a sentence saying Paul was "not
+> composing" the hymn — Fee argues Paul composed it. **Before porting a scholar as a witness, read what the essay says
+> he holds on the rest of that paragraph.** (2) A port lifted out of its passage can lose its bridge and its example —
+> carry the essay's passage whole, in the essay's order, or expect the gate to ask for the missing sentences. (3) A
+> true sentence becomes a half-truth when its qualifier is cut and the next sentence uses it for more than it bears
+> (the Targum names the Servant "Messiah" and keeps the suffering off him).
 >
 > **2026-11-24. NEW MANDATORY LENS + RULE: the READER-IN-THE-PEW RULE (owner-directed).**
 > A pastor's-eye audit of the Jesus tab (`ev-s3.html`, all 26 cards read cover to cover) found **0 doctrinal
