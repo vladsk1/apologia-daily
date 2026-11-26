@@ -52,6 +52,21 @@
 > exact-match CUT > MOVE > PORT edits), a script that asserts every OLD string matches once and every PORT is verbatim in
 > its source, then the lenses split by card group. What the round left: `docs/content-backlog.md` PEW-10.
 >
+> **⭐ 2026-11-26 — PEW-3 BATCH A DONE ON THE CARDS (the rest of the Jesus tab, first of three batches):** `hands`,
+> `messianic_prophecy`, `multiatt`, `jesuschar`, `respred`, `typology`. 76 net edits, almost all cuts of repeated caveats
+> and limit-endings, plus verbatim ports of answers the essays already had. Two gate rounds; round 2 passed all five
+> lenses; each card is rated "hand it over with a word of guidance" and better than live. Tab hedges 138 → 128. Table:
+> the audit file → "What was fixed 2026-11-26 (PEW-3 batch A)". **Still to do: batch B** (`john11`, `phil2`, `isaiah53`,
+> `nt-use-of-ot`, `humanity`, `hist_jesus`) **and batch C** (`worship-of-jesus`, `jesus-is-yahweh`, `paul-divinity`,
+> `christ-before-bethlehem`, `jesus_as_god_nt`, `earlycreed`, `uniqueness`, `crucified-messiah`).
+> ⚠ **THE DE-HEDGING FAILURE MODE HAPPENED AGAIN, ONE DAY AFTER IT WAS WRITTEN DOWN.** Cutting Psalm 22:16 ("they
+> pierced") and its caveat from the free tier left the two sentences beside it still saying the psalm describes a
+> crucifixion — flag gone, claim stayed. The planners had the rule in their brief. **So check it mechanically: after
+> cutting a verse or a caveat, grep the same tier for every sentence that leaned on it.**
+> 🔴 **P1, NOT DONE, carry it into the next change on `ev-s3.html`:** `messianic_prophecy` still presents Psalm 22 as a
+> description of crucifixion in The Case, Plainly (L868, a plain tier) and in the deeper tiers — a framing the essay's own
+> gate retired on 2026-10-09. Exact lines and the offered cuts: `docs/content-backlog.md` PEW-11.
+>
 > **2026-11-24. NEW MANDATORY LENS + RULE: the READER-IN-THE-PEW RULE (owner-directed).**
 > A pastor's-eye audit of the Jesus tab (`ev-s3.html`, all 26 cards read cover to cover) found **0 doctrinal
 > errors** and still rated **6 cards NOT YET, 16 "with a word of guidance", 4 hand-it-over** — because of
