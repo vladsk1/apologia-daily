@@ -108,6 +108,15 @@
 > the neutrality lens caught it. Caveat and claim go together — if the caveat goes from a list item, ask whether the
 > item should go too.
 >
+> **⭐ 2026-11-27 — THE THREE OWNER'S CALLS LEFT BY THE PEW BATCHES ARE DECIDED AND APPLIED** (four edits, no new
+> words; one gate round, all five lenses pass, no fix pass). (1) `multiatt`: the first of the two "though this is
+> itself debated" notes about John is cut; **the second MUST stay** (the women-at-the-tomb example rests on Mark and
+> John alone), and **the flag must not be put back on the stream-count sentence** even though `docs/known-traps.md`
+> quotes the sentence with it. (2) `phil2` free tier: "— and it treats Jesus as divine" is out of the "if". (3)
+> `jesus-is-yahweh`: both Dunn passages now end on our reply, same words re-ordered; the essay, the mastery page and
+> the Dunn ledger row keep the old order, and **either order is within the ledger** — do not "correct" the card back.
+> Left: `docs/content-backlog.md` PEW-13 items 34–38. Table: the audit file → "the three owner's calls".
+>
 > **2026-11-24. NEW MANDATORY LENS + RULE: the READER-IN-THE-PEW RULE (owner-directed).**
 > A pastor's-eye audit of the Jesus tab (`ev-s3.html`, all 26 cards read cover to cover) found **0 doctrinal
 > errors** and still rated **6 cards NOT YET, 16 "with a word of guidance", 4 hand-it-over** — because of
