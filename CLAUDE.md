@@ -87,6 +87,27 @@
 > true sentence becomes a half-truth when its qualifier is cut and the next sentence uses it for more than it bears
 > (the Targum names the Servant "Messiah" and keeps the suffering off him).
 >
+> **⭐ 2026-11-27 — PEW-3 BATCH C DONE ON THE CARDS: ALL 26 JESUS-TAB CARDS HAVE NOW BEEN THROUGH THE PEW PASS.**
+> `paul-divinity`, `worship-of-jesus`, `jesus-is-yahweh`, `christ-before-bethlehem`, `jesus_as_god_nt`, `earlycreed`,
+> `uniqueness`, `crucified-messiah`. 31 places changed; two gate rounds; round 2 passed all five lenses. Pastor lens:
+> four "hand it over", four "hand it over with a word of guidance" (`jesus-is-yahweh` is the weakest). Tab hedges
+> 120 → 100 (138 before batch A); plain-tier dissent 10 → 2. Table: the audit file → "What was fixed 2026-11-27
+> (PEW-3 batch C)". What it left: `docs/content-backlog.md` PEW-13. **The owner's order (critics' framing → the six
+> weakest cards → the whole tab) is complete on the card layer.** NOT done, and logged: the essays and mastery pages
+> still carry sentences the cards lost (PEW-6); the leftovers in PEW-7, PEW-9 … PEW-13; the thin bench (PEW-3).
+> ⭐ **THE THIRD COURSE: KEEP THE ATTRIBUTION, CUT THE DOUBT-WORDS.** When cutting a flag would leave its claim bare
+> and keeping it leaves a hedge in a free tier, cut only the adjectives of doubt. "On the influential, arguably
+> dominant (though contested) reading" became "on the influential reading": still marked as a reading, no doubt
+> volunteered, and the pastor lens counts it as an attribution, not a hedge.
+> ⚠ **"ARGUABLY DOMINANT" (of the inside-the-Shema reading of 1 Corinthians 8:6) COULD NOT BE VERIFIED** by the
+> neutrality lens. It is gone from two cards and still stands in four Deep Dives, nine mastery pages, eight essays and
+> the pocket/daily/brief layer; its source is `library/shema.html`'s footnoted judgement. One decision is owed
+> (PEW-13 item 3): keep it as the essay's judgement, or cut it everywhere. Do not add it anywhere new.
+> ⚠ **THE PRE-GATE CHECK IS NOT A GATE.** The session's own "what claim did this qualify?" read declined one edit
+> correctly and still passed one cut that left its claim standing (`earlycreed`, the "Semitic fingerprint" item);
+> the neutrality lens caught it. Caveat and claim go together — if the caveat goes from a list item, ask whether the
+> item should go too.
+>
 > **2026-11-24. NEW MANDATORY LENS + RULE: the READER-IN-THE-PEW RULE (owner-directed).**
 > A pastor's-eye audit of the Jesus tab (`ev-s3.html`, all 26 cards read cover to cover) found **0 doctrinal
 > errors** and still rated **6 cards NOT YET, 16 "with a word of guidance", 4 hand-it-over** — because of
