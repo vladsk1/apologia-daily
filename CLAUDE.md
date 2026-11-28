@@ -117,6 +117,28 @@
 > the Dunn ledger row keep the old order, and **either order is within the ledger** — do not "correct" the card back.
 > Left: `docs/content-backlog.md` PEW-13 items 34–38. Table: the audit file → "the three owner's calls".
 >
+> **⭐ 2026-11-28 — PEW-6 HAS STARTED: THE ESSAYS AND MASTERY PAGES BEHIND THE JESUS TAB. BATCH 1 DONE (3 of 26 essays, 3 of 27 mastery pages).**
+> `jesus-messiah-claim`, `god-crucified`, `virginbirth` — essay and `ev-m-*` page each. 113 places changed; two gate
+> rounds (thirteen reviewers, then seven); round 2 passed every lens. Pastor lens: all six files "hand it over with a
+> word of guidance" — two essays and all three mastery pages were NOT YET. Table: the audit file → "What was fixed
+> 2026-11-28 (PEW-6 batch 1)". Leftovers: `docs/content-backlog.md` PEW-14. **23 essays and 24 mastery pages remain** (owner said "Yes, start"
+> on 2026-11-27; work in batches of about three pairs; ask before each publish).
+> ⭐ **AN ESSAY IS THE DEEP TIER — DO NOT STRIP IT.** The rule in an essay is: each real difficulty ONCE, with the reason
+> we hold our reading, the section ending on that reason; our own voice never conceding that an evangelist shaped Jesus'
+> words (rule 5) or working from a critical default (rule 4). The steelman, the named critics and the honest
+> concessions stay.
+> ⚠ **A MASTERY PAGE NEEDS ITS OWN PASS.** All three mastery pages were still NOT YET after round 1, because they were
+> planned as the essay's twin. What blocked them was page-only: flashcard prompts that ask for "the limit", drill model
+> answers the reader is told are certified, the graded rubric, labels like "A fairness most defenders skip". **Plan a
+> mastery page from its memorised layer outward, and check every essay cut for its twin on the page (and the reverse)
+> before the gate.**
+> ⚠ **A CUT CAN STRAND WHAT POINTED AT IT** — a row heading listing four scholars over a sentence that no longer
+> described them, a "they" without its noun, "every side" without its sides. After cutting a sentence, Grep for what
+> referred to it.
+> 🔴 **FOUND IN PASSING, NOT FIXED (PEW-15): on ten mastery pages the offline fallback scorer throws** — the 2026-10-12
+> rebuild (`6fcce766`) dropped `FENCE` / `badSent` / `badHit` / `t0`. The doctrinal "cannot pass" guard is not live in the
+> fallback, and stamps that describe testing it describe code that is gone.
+>
 > **2026-11-24. NEW MANDATORY LENS + RULE: the READER-IN-THE-PEW RULE (owner-directed).**
 > A pastor's-eye audit of the Jesus tab (`ev-s3.html`, all 26 cards read cover to cover) found **0 doctrinal
 > errors** and still rated **6 cards NOT YET, 16 "with a word of guidance", 4 hand-it-over** — because of
